@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Real Time Traders | Buy, sell, hire &amp; get work done in Brisbane</title>
-  <meta name="description" content="Real Time Traders is one Brisbane platform: a marketplace to buy and sell, a jobs and tenders board, tool, plant and trailer hire, and 24/7 precious metal scrapping. We come to you.">
+  <title>Membership &amp; Pricing | Real Time Traders</title>
+  <meta name="description" content="Browse free, or join from $4.99 a month. Compare Basic, Bronze, Silver and Gold memberships. Introductory pricing, inc. GST.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
   <meta name="theme-color" content="#011839">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="page-index">
+<body class="page-membership">
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
   <symbol id="i-facebook" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v6h4v-6h3l1-4h-4V8a0 0 0 0 1 0 0z" fill="currentColor" stroke="none"/></symbol>
   <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20" /></symbol>
@@ -133,7 +133,7 @@
     <nav class="nav" id="site-nav" aria-label="Main">
       <div class="container nav__inner">
         <ul class="nav__list">
-          <li><a href="index.html" class="is-active" aria-current="page">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="marketplace.html">Marketplace</a></li>
           <li><a href="jobs.html">Jobs &amp; Tenders</a></li>
           <li class="has-sub">
@@ -154,7 +154,7 @@
               <li><a href="jobs.html#tradie" data-tab-link="tab-tradie">Find a Tradie</a></li>
             </ul>
           </li>
-          <li><a href="membership.html" class="nav__member">Membership</a></li>
+          <li><a href="membership.html" class="nav__member is-active" aria-current="page">Membership</a></li>
           <li><a href="community.html">Community</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -168,170 +168,96 @@
 
   <main id="main">
 
-    <!-- ============ HERO ============ -->
-    <section class="hero">
-      <div class="container hero__inner">
-        <div class="hero__copy">
-          <p class="eyebrow eyebrow--pill"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD · Marketplace · Jobs &amp; Tenders · Hire</p>
-          <h1>Buy, sell, hire &amp; get work done. <span>All in one place.</span></h1>
-          <p class="hero__lead">Real Time Traders is one Brisbane platform with three parts: a <strong>marketplace</strong> to buy and sell, a <strong>jobs &amp; tenders</strong> board to post work or quote for it, and <strong>tool, plant &amp; trailer hire</strong>. Plus 24/7 precious metal scrapping. We come to you.</p>
-          <div class="hero__ctas">
-            <a href="#pillars" class="btn btn--primary btn--lg">Start browsing <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-            <button type="button" class="btn btn--light btn--lg" data-auth="join"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg> Join / membership</button>
-          </div>
-          <p class="hero__note"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Browse free, no account needed. Join to buy, sell, post jobs and quote.</p>
-          <ul class="hero__quick" aria-label="Quick links">
-            <li><a href="marketplace.html"><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg> Marketplace</a></li>
-            <li><a href="jobs.html#browse" data-tab-link="tab-jobs-browse"><svg class="icon" aria-hidden="true"><use href="#i-handshake"/></svg> Jobs &amp; Tenders</a></li>
-            <li><a href="jobs.html#post" data-tab-link="tab-jobs-post"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Post a job</a></li>
-            <li><a href="hire.html#tool" data-tab-link="tab-tool"><svg class="icon" aria-hidden="true"><use href="#i-drill"/></svg> Tool &amp; plant hire</a></li>
-            <li><a href="hire.html#plant" data-tab-link="tab-plant"><svg class="icon" aria-hidden="true"><use href="#i-toilet"/></svg> Portable toilets</a></li>
-            <li><a href="services.html#scrap" data-tab-link="tab-scrap"><svg class="icon" aria-hidden="true"><use href="#i-coins"/></svg> Scrap metal 24/7</a></li>
-          </ul>
-        </div>
-        <div class="hero__media" aria-hidden="true">
-          <img class="hero__img hero__img--a" src="images/service-1.jpg" alt="">
-          <img class="hero__img hero__img--b" src="images/photo-mechanic.jpg" alt="">
-          <img class="hero__img hero__img--c" src="images/product-4.jpg" alt="">
-          <div class="hero__badge"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span><strong>24/7</strong> We come to you</span></div>
-        </div>
+    <!-- ============ PAGE BANNER ============ -->
+    <section class="page-banner">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Membership</li></ol></nav>
+        <h1>Membership &amp; pricing</h1>
       </div>
     </section>
 
-    <!-- ============ THREE PILLARS ============ -->
-    <section class="section pillars" id="pillars">
+    <!-- ============ MEMBERSHIP ============ -->
+    <section class="section membership" id="membership">
       <div class="container">
         <div class="section-head section-head--center">
-          <p class="eyebrow">One platform, three ways to trade</p>
-          <h2>Marketplace. Jobs &amp; Tenders. Hire.</h2>
-          <p class="section-head__sub">Browse everything for free. Join to buy, sell, post jobs and quote for work.</p>
+          <p class="section-head__sub">Anyone can look at everything. Pick a membership to buy, sell, post jobs and quote for work.</p>
+          <p class="price-note">Introductory pricing, inc. GST</p>
         </div>
-        <div class="pillar-grid">
-          <article class="pillar">
-            <span class="pillar__icon"><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg></span>
-            <h3>Marketplace</h3>
-            <p>Buy and sell anything, from everyday goods to scrap metal, vehicles and antiques, or give items away to someone who needs them.</p>
-            <ul class="checklist checklist--sm">
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Buy &amp; sell</span></li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Scrap metal &amp; recycling</span></li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Vehicles &amp; antiques</span></li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Donations</span></li>
-            </ul>
-            <div class="pillar__ctas">
-              <a href="marketplace.html" class="btn btn--outline">Browse marketplace</a>
-              <a href="#" class="btn btn--primary members-only" data-tier="Basic" data-tip="Basic membership or higher"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Sell an item<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a>
-            </div>
+        <div class="tier-grid">
+          <article class="tier">
+            
+            <h3 class="tier__name tier__name--guest">Guest</h3>
+            <p class="tier__tag">Look around, no account needed</p>
+            <p class="tier__price"><strong>Free</strong> <span></span></p>
+            <p class="tier__annual">No account needed</p>
+            <a href="marketplace.html" class="btn btn--outline btn--block">Start browsing</a>
+            <ul class="tier__list"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Browse the marketplace, jobs &amp; hire</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Search and view all listings</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Request hire &amp; service quotes</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Call the 24/7 scrap hotline</span></li><li class="is-no"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg><span>Buy, sell or post jobs</span></li><li class="is-no"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg><span>Quote on jobs</span></li></ul>
           </article>
-          <article class="pillar pillar--accent">
-            <span class="pillar__icon"><svg class="icon" aria-hidden="true"><use href="#i-handshake"/></svg></span>
-            <h3>Jobs &amp; Tenders</h3>
-            <p>Post a job and receive quotes, or browse jobs and quote for work. A local tender board for Brisbane, plus Find a Tradie.</p>
-            <ul class="checklist checklist--sm">
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Post a job, get quotes</span></li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Browse jobs &amp; quote for work</span></li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Find a Tradie by trade &amp; suburb</span></li>
-            </ul>
-            <div class="pillar__ctas">
-              <a href="jobs.html#browse" class="btn btn--outline" data-tab-link="tab-jobs-browse">Browse jobs</a>
-              <a href="jobs.html#post" class="btn btn--primary members-only" data-tier="Basic" data-tip="Basic membership or higher" data-tab-link="tab-jobs-post"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Post a job<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a>
-            </div>
+          <article class="tier">
+            
+            <h3 class="tier__name tier__name--basic">Basic</h3>
+            <p class="tier__tag">Buy, sell &amp; post jobs</p>
+            <p class="tier__price"><strong>$4.99</strong> <span>/month</span></p>
+            <p class="tier__annual">or $49.90/year <em>(2 months free)</em></p>
+            <button type="button" class="btn btn--navy btn--block" data-auth="join" data-join-tier="Basic">Join Basic</button>
+            <ul class="tier__list"><li class="tier__lead">Everything in Guest, plus:</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Buy items in the marketplace</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Sell up to 10 active listings</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Post jobs &amp; receive quotes (up to 5 open jobs)</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Message buyers, sellers &amp; tradies</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Saved searches &amp; alerts</span></li></ul>
           </article>
-          <article class="pillar">
-            <span class="pillar__icon"><svg class="icon" aria-hidden="true"><use href="#i-drill"/></svg></span>
-            <h3>Hire</h3>
-            <p>Tools, plant and trailers when you need them, from a drill or pressure washer to a mini excavator, site fencing or portable toilets.</p>
-            <ul class="checklist checklist--sm">
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Tool hire</span></li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Plant hire incl. portable toilets</span></li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Trailer hire</span></li>
-            </ul>
-            <div class="pillar__ctas">
-              <a href="hire.html#tool" class="btn btn--outline" data-tab-link="tab-tool">Browse hire</a>
-              <a href="contact.html?service=Tool%20Hire#quote" class="btn btn--primary" data-service="Tool Hire">Request hire</a>
-            </div>
+          <article class="tier">
+            
+            <h3 class="tier__name tier__name--bronze">Bronze</h3>
+            <p class="tier__tag">Quote for work as a worker or tradie</p>
+            <p class="tier__price"><strong>$19.99</strong> <span>/month</span></p>
+            <p class="tier__annual">or $199.90/year <em>(2 months free)</em></p>
+            <button type="button" class="btn btn--navy btn--block" data-auth="join" data-join-tier="Bronze">Join Bronze</button>
+            <ul class="tier__list"><li class="tier__lead">Everything in Basic, plus:</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Quote on jobs &amp; tenders (20 quotes/month)</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Up to 30 active listings</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Unlimited open jobs (fair use)</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Worker / tradie profile</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Donate &amp; request help in Community</span></li></ul>
+          </article>
+          <article class="tier tier--featured">
+            <span class="tier__badge">Recommended</span>
+            <h3 class="tier__name tier__name--silver">Silver</h3>
+            <p class="tier__tag">Stand out and hire smarter</p>
+            <p class="tier__price"><strong>$39.99</strong> <span>/month</span></p>
+            <p class="tier__annual">or $399.90/year <em>(2 months free)</em></p>
+            <button type="button" class="btn btn--primary btn--block" data-auth="join" data-join-tier="Silver">Join Silver</button>
+            <ul class="tier__list"><li class="tier__lead">Everything in Bronze, plus:</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>60 quotes/month &amp; 100 active listings</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>2 featured listings a month</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Verified member badge</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Hire booking priority</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>5% member discount on hire</span></li></ul>
+          </article>
+          <article class="tier">
+            
+            <h3 class="tier__name tier__name--gold">Gold</h3>
+            <p class="tier__tag">For businesses and power users</p>
+            <p class="tier__price"><strong>$79.99</strong> <span>/month</span></p>
+            <p class="tier__annual">or $799.90/year <em>(2 months free)</em></p>
+            <button type="button" class="btn btn--navy btn--block" data-auth="join" data-join-tier="Gold">Join Gold</button>
+            <ul class="tier__list"><li class="tier__lead">Everything in Silver, plus:</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Unlimited quotes &amp; listings (fair use)</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>10 featured listings a month + top placement</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Business profile / storefront</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Listing &amp; job analytics</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>10% member discount on hire</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Priority support</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Team access (up to 5 users)</span></li></ul>
           </article>
         </div>
-        <div class="member-strip">
-          <p><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> <span><strong>Browse free, no account needed.</strong> Buying, selling, posting jobs and quoting need a membership.</span></p>
-          <a href="membership.html" class="link-arrow">See membership options <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-        </div>
-      </div>
-    </section>
 
-    <!-- ============ SERVICES TEASER (index) ============ -->
-    <section class="section section--soft teasers" id="services-overview">
-      <div class="container">
-        <div class="section-head section-head--split">
-          <div>
-            <p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-wrench"/></svg> Services</p>
-            <h2>24/7 scrapping and local services</h2>
-            <p class="section-head__sub">Precious metal scrapping around the clock, plus vehicle, towing and home services across Brisbane.</p>
-          </div>
-          <a href="services.html" class="btn btn--outline">All services <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        <h3 class="subhead compare-title">Compare memberships</h3>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="Membership comparison table (scrolls sideways on small screens)">
+          <table class="compare">
+            <thead><tr><th scope="col">Feature</th><th scope="col">Guest</th><th scope="col">Basic</th><th scope="col">Bronze</th><th scope="col" class="is-featured">Silver</th><th scope="col">Gold</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Monthly price (inc. GST)</th><td>Free</td><td>$4.99</td><td>$19.99</td><td class="is-featured">$39.99</td><td>$79.99</td></tr>
+              <tr><th scope="row">Annual price (2 months free)</th><td>Free</td><td>$49.90</td><td>$199.90</td><td class="is-featured">$399.90</td><td>$799.90</td></tr>
+              <tr><th scope="row">Browse marketplace, jobs &amp; hire</th><td><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td><td><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td><td><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td><td class="is-featured"><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td><td><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td></tr>
+              <tr><th scope="row">Request hire &amp; service quotes</th><td><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td><td><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td><td><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td><td class="is-featured"><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td><td><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td></tr>
+              <tr><th scope="row">Buy in the marketplace</th><td><span class="no" aria-label="Not included">–</span></td><td><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td><td><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td><td class="is-featured"><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td><td><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td></tr>
+              <tr><th scope="row">Sell (active listings)</th><td><span class="no" aria-label="Not included">–</span></td><td>10</td><td>30</td><td class="is-featured">100</td><td>Unlimited*</td></tr>
+              <tr><th scope="row">Message buyers, sellers &amp; tradies</th><td><span class="no" aria-label="Not included">–</span></td><td><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td><td><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td><td class="is-featured"><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td><td><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td></tr>
+              <tr><th scope="row">Saved searches &amp; alerts</th><td><span class="no" aria-label="Not included">–</span></td><td><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td><td><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td><td class="is-featured"><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td><td><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td></tr>
+              <tr><th scope="row">Post jobs &amp; receive quotes</th><td><span class="no" aria-label="Not included">–</span></td><td>Up to 5 open jobs</td><td>Unlimited*</td><td class="is-featured">Unlimited*</td><td>Unlimited*</td></tr>
+              <tr><th scope="row">Quote on jobs &amp; tenders</th><td><span class="no" aria-label="Not included">–</span></td><td><span class="no" aria-label="Not included">–</span></td><td>20/month</td><td class="is-featured">60/month</td><td>Unlimited*</td></tr>
+              <tr><th scope="row">Featured listings</th><td><span class="no" aria-label="Not included">–</span></td><td><span class="no" aria-label="Not included">–</span></td><td><span class="no" aria-label="Not included">–</span></td><td class="is-featured">2/month</td><td>10/month + top placement</td></tr>
+              <tr><th scope="row">Verified member badge</th><td><span class="no" aria-label="Not included">–</span></td><td><span class="no" aria-label="Not included">–</span></td><td><span class="no" aria-label="Not included">–</span></td><td class="is-featured"><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td><td><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td></tr>
+              <tr><th scope="row">Hire booking priority</th><td><span class="no" aria-label="Not included">–</span></td><td><span class="no" aria-label="Not included">–</span></td><td><span class="no" aria-label="Not included">–</span></td><td class="is-featured"><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td><td><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td></tr>
+              <tr><th scope="row">Member discount on hire</th><td><span class="no" aria-label="Not included">–</span></td><td><span class="no" aria-label="Not included">–</span></td><td><span class="no" aria-label="Not included">–</span></td><td class="is-featured">5%</td><td>10%</td></tr>
+              <tr><th scope="row">Business profile / storefront</th><td><span class="no" aria-label="Not included">–</span></td><td><span class="no" aria-label="Not included">–</span></td><td><span class="no" aria-label="Not included">–</span></td><td class="is-featured"><span class="no" aria-label="Not included">–</span></td><td><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td></tr>
+              <tr><th scope="row">Listing &amp; job analytics</th><td><span class="no" aria-label="Not included">–</span></td><td><span class="no" aria-label="Not included">–</span></td><td><span class="no" aria-label="Not included">–</span></td><td class="is-featured"><span class="no" aria-label="Not included">–</span></td><td><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td></tr>
+              <tr><th scope="row">Priority support</th><td><span class="no" aria-label="Not included">–</span></td><td><span class="no" aria-label="Not included">–</span></td><td><span class="no" aria-label="Not included">–</span></td><td class="is-featured"><span class="no" aria-label="Not included">–</span></td><td><span class="yes" aria-label="Included"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></td></tr>
+              <tr><th scope="row">Team access</th><td><span class="no" aria-label="Not included">–</span></td><td><span class="no" aria-label="Not included">–</span></td><td><span class="no" aria-label="Not included">–</span></td><td class="is-featured"><span class="no" aria-label="Not included">–</span></td><td>Up to 5 users</td></tr>
+            </tbody>
+          </table>
         </div>
-        <div class="teaser-grid">
-          <a class="teaser" href="services.html#scrap">
-            <span class="teaser__media"><img src="images/photo-scrap-pile.jpg" alt="" loading="lazy" width="600" height="400"></span>
-            <span class="teaser__body">
-              <span class="teaser__icon"><svg class="icon" aria-hidden="true"><use href="#i-coins"/></svg></span>
-              <strong>Precious Metal Scrapping 24/7</strong>
-              <span>We come to you, day or night.</span>
-              <span class="link-arrow">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
-            </span>
-          </a>
-          <a class="teaser" href="services.html#vehicle">
-            <span class="teaser__media"><img src="images/photo-mechanic.jpg" alt="" loading="lazy" width="600" height="400"></span>
-            <span class="teaser__body">
-              <span class="teaser__icon"><svg class="icon" aria-hidden="true"><use href="#i-car"/></svg></span>
-              <strong>Vehicle Services</strong>
-              <span>Buying, selling and servicing vehicles.</span>
-              <span class="link-arrow">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
-            </span>
-          </a>
-          <a class="teaser" href="services.html#towing">
-            <span class="teaser__media"><img src="images/photo-towing.jpg" alt="" loading="lazy" width="600" height="400"></span>
-            <span class="teaser__body">
-              <span class="teaser__icon"><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg></span>
-              <strong>Towing &amp; Car Removal</strong>
-              <span>Towing and scrap car pickup.</span>
-              <span class="link-arrow">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
-            </span>
-          </a>
-          <a class="teaser" href="services.html#home">
-            <span class="teaser__media"><img src="images/service-2.jpg" alt="" loading="lazy" width="600" height="400"></span>
-            <span class="teaser__body">
-              <span class="teaser__icon"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg></span>
-              <strong>Home Services</strong>
-              <span>Removals, cleaning, handyman and more.</span>
-              <span class="link-arrow">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
-            </span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ MEMBERSHIP TEASER (index) ============ -->
-    <section class="section member-teaser">
-      <div class="container">
-        <div class="member-teaser__box">
-          <div class="member-teaser__copy">
-            <p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg> Membership</p>
-            <h2>Browse free. Join from $4.99 a month.</h2>
-            <p>Basic lets you buy, sell and post jobs. Bronze and up let you quote for work, with featured listings and hire discounts in Silver and Gold.</p>
-            <div class="member-teaser__ctas">
-              <a href="membership.html" class="btn btn--primary">Compare memberships <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-              <button type="button" class="btn btn--outline" data-auth="join">Join now</button>
-            </div>
-          </div>
-          <ul class="member-teaser__prices">
-            <li><span>Guest</span><strong>Free</strong></li>
-            <li><span>Basic</span><strong>$4.99<small>/mo</small></strong></li>
-            <li><span>Bronze</span><strong>$19.99<small>/mo</small></strong></li>
-            <li class="is-featured"><span>Silver</span><strong>$39.99<small>/mo</small></strong></li>
-            <li><span>Gold</span><strong>$79.99<small>/mo</small></strong></li>
-          </ul>
-        </div>
-        <p class="note member-teaser__note">Introductory pricing, inc. GST. Pay yearly and get 2 months free.</p>
+        <p class="note">Prices in AUD, including GST. Introductory pricing; pricing and features may change. *Unlimited is subject to fair use. Member hire discounts apply to Real Time Traders hire bookings.</p>
       </div>
     </section>
 
@@ -362,22 +288,6 @@
             <p>Buy and sell, post jobs or quote for work, and hire what you need. Our 24/7 services are always a call away.</p>
           </li>
         </ol>
-      </div>
-    </section>
-
-    <!-- ============ WHY CHOOSE US ============ -->
-    <section class="section why">
-      <div class="container">
-        <div class="section-head section-head--center">
-          <p class="eyebrow">Why Real Time Traders</p>
-          <h2>Why choose us</h2>
-        </div>
-        <div class="why-grid">
-          <div class="why-card"><span class="why-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></span><h3>24/7 hotline</h3><p>Call any time, day or night. A real person answers the scrapping hotline.</p></div>
-          <div class="why-card"><span class="why-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg></span><h3>We come to you</h3><p>Mobile pickups and on-site services, so you don't have to haul anything.</p></div>
-          <div class="why-card"><span class="why-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-handshake"/></svg></span><h3>One place for it all</h3><p>Services, trades, trailer hire and a marketplace under one roof.</p></div>
-          <div class="why-card"><span class="why-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span><h3>Brisbane local</h3><p>A local business supporting local people, tradies and community groups.</p></div>
-        </div>
       </div>
     </section>
 

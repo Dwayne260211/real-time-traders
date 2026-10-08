@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Real Time Traders | Buy, sell, hire &amp; get work done in Brisbane</title>
-  <meta name="description" content="Real Time Traders is one Brisbane platform: a marketplace to buy and sell, a jobs and tenders board, tool, plant and trailer hire, and 24/7 precious metal scrapping. We come to you.">
+  <title>Services: Precious Metal Scrapping 24/7 &amp; more | Real Time Traders</title>
+  <meta name="description" content="Precious metal scrapping 24/7, we come to you. Plus vehicle services, towing and car removal, and home services across Brisbane.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
   <meta name="theme-color" content="#011839">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="page-index">
+<body class="page-services">
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
   <symbol id="i-facebook" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v6h4v-6h3l1-4h-4V8a0 0 0 0 1 0 0z" fill="currentColor" stroke="none"/></symbol>
   <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20" /></symbol>
@@ -133,7 +133,7 @@
     <nav class="nav" id="site-nav" aria-label="Main">
       <div class="container nav__inner">
         <ul class="nav__list">
-          <li><a href="index.html" class="is-active" aria-current="page">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="marketplace.html">Marketplace</a></li>
           <li><a href="jobs.html">Jobs &amp; Tenders</a></li>
           <li class="has-sub">
@@ -145,12 +145,12 @@
             </ul>
           </li>
           <li class="has-sub">
-            <button type="button" class="nav__sub-toggle" aria-expanded="false">Services <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></button>
+            <button type="button" class="nav__sub-toggle is-active" aria-expanded="false">Services <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></button>
             <ul class="nav__sub">
-              <li><a href="services.html#scrap" data-tab-link="tab-scrap">Precious Metal Scrapping 24/7</a></li>
-              <li><a href="services.html#vehicle" data-tab-link="tab-vehicle">Vehicle Services</a></li>
-              <li><a href="services.html#towing" data-tab-link="tab-towing">Towing &amp; Car Removal</a></li>
-              <li><a href="services.html#home" data-tab-link="tab-home">Home Services</a></li>
+              <li><a href="#scrap" data-tab-link="tab-scrap">Precious Metal Scrapping 24/7</a></li>
+              <li><a href="#vehicle" data-tab-link="tab-vehicle">Vehicle Services</a></li>
+              <li><a href="#towing" data-tab-link="tab-towing">Towing &amp; Car Removal</a></li>
+              <li><a href="#home" data-tab-link="tab-home">Home Services</a></li>
               <li><a href="jobs.html#tradie" data-tab-link="tab-tradie">Find a Tradie</a></li>
             </ul>
           </li>
@@ -168,215 +168,164 @@
 
   <main id="main">
 
-    <!-- ============ HERO ============ -->
-    <section class="hero">
-      <div class="container hero__inner">
-        <div class="hero__copy">
-          <p class="eyebrow eyebrow--pill"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD · Marketplace · Jobs &amp; Tenders · Hire</p>
-          <h1>Buy, sell, hire &amp; get work done. <span>All in one place.</span></h1>
-          <p class="hero__lead">Real Time Traders is one Brisbane platform with three parts: a <strong>marketplace</strong> to buy and sell, a <strong>jobs &amp; tenders</strong> board to post work or quote for it, and <strong>tool, plant &amp; trailer hire</strong>. Plus 24/7 precious metal scrapping. We come to you.</p>
-          <div class="hero__ctas">
-            <a href="#pillars" class="btn btn--primary btn--lg">Start browsing <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-            <button type="button" class="btn btn--light btn--lg" data-auth="join"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg> Join / membership</button>
-          </div>
-          <p class="hero__note"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Browse free, no account needed. Join to buy, sell, post jobs and quote.</p>
-          <ul class="hero__quick" aria-label="Quick links">
-            <li><a href="marketplace.html"><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg> Marketplace</a></li>
-            <li><a href="jobs.html#browse" data-tab-link="tab-jobs-browse"><svg class="icon" aria-hidden="true"><use href="#i-handshake"/></svg> Jobs &amp; Tenders</a></li>
-            <li><a href="jobs.html#post" data-tab-link="tab-jobs-post"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Post a job</a></li>
-            <li><a href="hire.html#tool" data-tab-link="tab-tool"><svg class="icon" aria-hidden="true"><use href="#i-drill"/></svg> Tool &amp; plant hire</a></li>
-            <li><a href="hire.html#plant" data-tab-link="tab-plant"><svg class="icon" aria-hidden="true"><use href="#i-toilet"/></svg> Portable toilets</a></li>
-            <li><a href="services.html#scrap" data-tab-link="tab-scrap"><svg class="icon" aria-hidden="true"><use href="#i-coins"/></svg> Scrap metal 24/7</a></li>
-          </ul>
-        </div>
-        <div class="hero__media" aria-hidden="true">
-          <img class="hero__img hero__img--a" src="images/service-1.jpg" alt="">
-          <img class="hero__img hero__img--b" src="images/photo-mechanic.jpg" alt="">
-          <img class="hero__img hero__img--c" src="images/product-4.jpg" alt="">
-          <div class="hero__badge"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span><strong>24/7</strong> We come to you</span></div>
-        </div>
+    <!-- ============ PAGE BANNER ============ -->
+    <section class="page-banner">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Services</li></ol></nav>
+        <h1>Services</h1>
       </div>
     </section>
 
-    <!-- ============ THREE PILLARS ============ -->
-    <section class="section pillars" id="pillars">
+    <!-- ============ SERVICES (TABS) ============ -->
+    <section class="section services" id="services">
       <div class="container">
         <div class="section-head section-head--center">
-          <p class="eyebrow">One platform, three ways to trade</p>
-          <h2>Marketplace. Jobs &amp; Tenders. Hire.</h2>
-          <p class="section-head__sub">Browse everything for free. Join to buy, sell, post jobs and quote for work.</p>
+          <p class="section-head__sub">Services run by the Real Time Traders team. Pick one to see the details, then book or request a quote. For urgent scrap pickups, call the 24/7 hotline.</p>
         </div>
-        <div class="pillar-grid">
-          <article class="pillar">
-            <span class="pillar__icon"><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg></span>
-            <h3>Marketplace</h3>
-            <p>Buy and sell anything, from everyday goods to scrap metal, vehicles and antiques, or give items away to someone who needs them.</p>
-            <ul class="checklist checklist--sm">
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Buy &amp; sell</span></li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Scrap metal &amp; recycling</span></li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Vehicles &amp; antiques</span></li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Donations</span></li>
-            </ul>
-            <div class="pillar__ctas">
-              <a href="marketplace.html" class="btn btn--outline">Browse marketplace</a>
-              <a href="#" class="btn btn--primary members-only" data-tier="Basic" data-tip="Basic membership or higher"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Sell an item<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a>
-            </div>
-          </article>
-          <article class="pillar pillar--accent">
-            <span class="pillar__icon"><svg class="icon" aria-hidden="true"><use href="#i-handshake"/></svg></span>
-            <h3>Jobs &amp; Tenders</h3>
-            <p>Post a job and receive quotes, or browse jobs and quote for work. A local tender board for Brisbane, plus Find a Tradie.</p>
-            <ul class="checklist checklist--sm">
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Post a job, get quotes</span></li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Browse jobs &amp; quote for work</span></li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Find a Tradie by trade &amp; suburb</span></li>
-            </ul>
-            <div class="pillar__ctas">
-              <a href="jobs.html#browse" class="btn btn--outline" data-tab-link="tab-jobs-browse">Browse jobs</a>
-              <a href="jobs.html#post" class="btn btn--primary members-only" data-tier="Basic" data-tip="Basic membership or higher" data-tab-link="tab-jobs-post"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Post a job<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a>
-            </div>
-          </article>
-          <article class="pillar">
-            <span class="pillar__icon"><svg class="icon" aria-hidden="true"><use href="#i-drill"/></svg></span>
-            <h3>Hire</h3>
-            <p>Tools, plant and trailers when you need them, from a drill or pressure washer to a mini excavator, site fencing or portable toilets.</p>
-            <ul class="checklist checklist--sm">
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Tool hire</span></li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Plant hire incl. portable toilets</span></li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Trailer hire</span></li>
-            </ul>
-            <div class="pillar__ctas">
-              <a href="hire.html#tool" class="btn btn--outline" data-tab-link="tab-tool">Browse hire</a>
-              <a href="contact.html?service=Tool%20Hire#quote" class="btn btn--primary" data-service="Tool Hire">Request hire</a>
-            </div>
-          </article>
-        </div>
-        <div class="member-strip">
-          <p><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> <span><strong>Browse free, no account needed.</strong> Buying, selling, posting jobs and quoting need a membership.</span></p>
-          <a href="membership.html" class="link-arrow">See membership options <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-        </div>
-      </div>
-    </section>
 
-    <!-- ============ SERVICES TEASER (index) ============ -->
-    <section class="section section--soft teasers" id="services-overview">
-      <div class="container">
-        <div class="section-head section-head--split">
-          <div>
-            <p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-wrench"/></svg> Services</p>
-            <h2>24/7 scrapping and local services</h2>
-            <p class="section-head__sub">Precious metal scrapping around the clock, plus vehicle, towing and home services across Brisbane.</p>
+        <span class="tab-anchor" id="scrap"></span><span class="tab-anchor" id="vehicle"></span><span class="tab-anchor" id="towing"></span><span class="tab-anchor" id="home"></span>
+        <div class="tabs" data-tabs>
+          <div class="tabs__list" role="tablist" aria-label="Services">
+            <button class="tab is-active" role="tab" id="tab-scrap" data-hash="scrap" aria-controls="panel-scrap" aria-selected="true"><svg class="icon" aria-hidden="true"><use href="#i-coins"/></svg> Precious Metal Scrapping <span class="badge">24/7</span></button>
+            <button class="tab" role="tab" id="tab-vehicle" data-hash="vehicle" aria-controls="panel-vehicle" aria-selected="false" tabindex="-1"><svg class="icon" aria-hidden="true"><use href="#i-car"/></svg> Vehicle Services</button>
+            <button class="tab" role="tab" id="tab-towing" data-hash="towing" aria-controls="panel-towing" aria-selected="false" tabindex="-1"><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg> Towing &amp; Car Removal</button>
+            <button class="tab" role="tab" id="tab-home" data-hash="home" aria-controls="panel-home" aria-selected="false" tabindex="-1"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg> Home Services</button>
           </div>
-          <a href="services.html" class="btn btn--outline">All services <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-        </div>
-        <div class="teaser-grid">
-          <a class="teaser" href="services.html#scrap">
-            <span class="teaser__media"><img src="images/photo-scrap-pile.jpg" alt="" loading="lazy" width="600" height="400"></span>
-            <span class="teaser__body">
-              <span class="teaser__icon"><svg class="icon" aria-hidden="true"><use href="#i-coins"/></svg></span>
-              <strong>Precious Metal Scrapping 24/7</strong>
-              <span>We come to you, day or night.</span>
-              <span class="link-arrow">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
-            </span>
-          </a>
-          <a class="teaser" href="services.html#vehicle">
-            <span class="teaser__media"><img src="images/photo-mechanic.jpg" alt="" loading="lazy" width="600" height="400"></span>
-            <span class="teaser__body">
-              <span class="teaser__icon"><svg class="icon" aria-hidden="true"><use href="#i-car"/></svg></span>
-              <strong>Vehicle Services</strong>
-              <span>Buying, selling and servicing vehicles.</span>
-              <span class="link-arrow">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
-            </span>
-          </a>
-          <a class="teaser" href="services.html#towing">
-            <span class="teaser__media"><img src="images/photo-towing.jpg" alt="" loading="lazy" width="600" height="400"></span>
-            <span class="teaser__body">
-              <span class="teaser__icon"><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg></span>
-              <strong>Towing &amp; Car Removal</strong>
-              <span>Towing and scrap car pickup.</span>
-              <span class="link-arrow">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
-            </span>
-          </a>
-          <a class="teaser" href="services.html#home">
-            <span class="teaser__media"><img src="images/service-2.jpg" alt="" loading="lazy" width="600" height="400"></span>
-            <span class="teaser__body">
-              <span class="teaser__icon"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg></span>
-              <strong>Home Services</strong>
-              <span>Removals, cleaning, handyman and more.</span>
-              <span class="link-arrow">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
-            </span>
-          </a>
-        </div>
-      </div>
-    </section>
 
-    <!-- ============ MEMBERSHIP TEASER (index) ============ -->
-    <section class="section member-teaser">
-      <div class="container">
-        <div class="member-teaser__box">
-          <div class="member-teaser__copy">
-            <p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg> Membership</p>
-            <h2>Browse free. Join from $4.99 a month.</h2>
-            <p>Basic lets you buy, sell and post jobs. Bronze and up let you quote for work, with featured listings and hire discounts in Silver and Gold.</p>
-            <div class="member-teaser__ctas">
-              <a href="membership.html" class="btn btn--primary">Compare memberships <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-              <button type="button" class="btn btn--outline" data-auth="join">Join now</button>
+          <!-- Panel: Precious metal scrapping -->
+          <div class="tab-panel is-active" role="tabpanel" id="panel-scrap" aria-labelledby="tab-scrap">
+            <div class="panel-grid">
+              <div class="panel-media panel-media--stack">
+                <img src="images/product-4.jpg" alt="Assorted scrap metal parts" loading="lazy">
+                <img src="images/photo-scrap-pile.jpg" alt="Scrap metal and car recycling pile" loading="lazy">
+              </div>
+              <div class="panel-copy">
+                <p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> 24 hours · 7 days</p>
+                <h3>Precious metal scrapping, 24/7. We come to you.</h3>
+                <p>Got precious or valuable scrap metal? Call any time, day or night, and our mobile team will come to your home, worksite or business to collect it. No need to load up the ute.</p>
+                <ul class="checklist">
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Mobile pickup across Brisbane <em class="ph">[service area placeholder]</em></span></li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Gold, silver, copper, brass, aluminium, catalytic converters and more</span></li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Quote first, then pickup at a time that suits you</span></li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>General scrap &amp; recycling also accepted</span></li>
+                </ul>
+                <div class="chips" aria-label="Examples of what we collect">
+                  <span class="chip chip--soft">Gold</span><span class="chip chip--soft">Silver</span><span class="chip chip--soft">Copper</span><span class="chip chip--soft">Brass</span><span class="chip chip--soft">Catalytic converters</span><span class="chip chip--soft">Electric motors</span>
+                </div>
+                <div class="panel-ctas">
+                  <a href="contact.html?service=Precious%20Metal%20Scrapping%20%2824/7%20pickup%29#quote" class="btn btn--primary" data-service="Precious Metal Scrapping (24/7 pickup)">Book a pickup</a>
+                  <a href="tel:+61422909739" class="btn btn--outline"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call 24/7</a>
+                </div>
+              </div>
             </div>
           </div>
-          <ul class="member-teaser__prices">
-            <li><span>Guest</span><strong>Free</strong></li>
-            <li><span>Basic</span><strong>$4.99<small>/mo</small></strong></li>
-            <li><span>Bronze</span><strong>$19.99<small>/mo</small></strong></li>
-            <li class="is-featured"><span>Silver</span><strong>$39.99<small>/mo</small></strong></li>
-            <li><span>Gold</span><strong>$79.99<small>/mo</small></strong></li>
-          </ul>
-        </div>
-        <p class="note member-teaser__note">Introductory pricing, inc. GST. Pay yearly and get 2 months free.</p>
-      </div>
-    </section>
 
-    <!-- ============ HOW IT WORKS ============ -->
-    <section class="section section--soft how">
-      <div class="container">
-        <div class="section-head section-head--center">
-          <p class="eyebrow">Simple from start to finish</p>
-          <h2>How Real Time Traders works</h2>
-        </div>
-        <ol class="steps">
-          <li class="step">
-            <span class="step__num">1</span>
-            <span class="step__icon"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg></span>
-            <h3>Browse for free</h3>
-            <p>No account needed. Look through the marketplace, open jobs and the hire range.</p>
-          </li>
-          <li class="step">
-            <span class="step__num">2</span>
-            <span class="step__icon"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg></span>
-            <h3>Pick a membership</h3>
-            <p>Basic ($4.99/month) lets you buy, sell and post jobs. Bronze and up let you quote for work, with more perks in Silver and Gold.</p>
-          </li>
-          <li class="step">
-            <span class="step__num">3</span>
-            <span class="step__icon"><svg class="icon" aria-hidden="true"><use href="#i-handshake"/></svg></span>
-            <h3>Trade, hire &amp; get work done</h3>
-            <p>Buy and sell, post jobs or quote for work, and hire what you need. Our 24/7 services are always a call away.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
+          <!-- Panel: Vehicle services -->
+          <div class="tab-panel" role="tabpanel" id="panel-vehicle" aria-labelledby="tab-vehicle" hidden>
+            <div class="panel-grid">
+              <div class="panel-media"><img src="images/photo-mechanic.jpg" alt="Mechanic working on a vehicle wheel" loading="lazy"></div>
+              <div class="panel-copy">
+                <h3>Vehicle services</h3>
+                <p>From buying or selling a car to getting it serviced or taken away, our vehicle team and partners have you covered.</p>
+                <div class="mini-grid mini-grid--2">
+                  
+              <article class="mini-card">
+                <img src="images/photo-car-buying.jpg" alt="Car Buying / Selling" loading="lazy">
+                <div class="mini-card__body">
+                  <h4>Car Buying / Selling</h4>
+                  <p>Placeholder copy: get help buying or selling your vehicle.</p>
+                  <a href="contact.html?service=Vehicle%20Services%20%E2%80%93%20Car%20Buying%20/%20Selling#quote" class="btn btn--primary btn--sm" data-service="Vehicle Services – Car Buying / Selling">Buy/Sell Now</a>
+                </div>
+              </article>
+                  
+              <article class="mini-card">
+                <img src="images/photo-scrap-car.jpg" alt="Scrap Car Pickup" loading="lazy">
+                <div class="mini-card__body">
+                  <h4>Scrap Car Pickup</h4>
+                  <p>Placeholder copy: old or unwanted car? We'll collect it.</p>
+                  <a href="contact.html?service=Towing%20%26%20Car%20Removal%20%E2%80%93%20Scrap%20Car%20Pickup#quote" class="btn btn--primary btn--sm" data-service="Towing &amp; Car Removal – Scrap Car Pickup">Book Now</a>
+                </div>
+              </article>
+                </div>
+                <div class="panel-ctas">
+                  <a href="contact.html?service=Vehicle%20Services#quote" class="btn btn--primary" data-service="Vehicle Services">Get a quote</a>
+                  <span class="price-tag">Price on request</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    <!-- ============ WHY CHOOSE US ============ -->
-    <section class="section why">
-      <div class="container">
-        <div class="section-head section-head--center">
-          <p class="eyebrow">Why Real Time Traders</p>
-          <h2>Why choose us</h2>
-        </div>
-        <div class="why-grid">
-          <div class="why-card"><span class="why-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></span><h3>24/7 hotline</h3><p>Call any time, day or night. A real person answers the scrapping hotline.</p></div>
-          <div class="why-card"><span class="why-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg></span><h3>We come to you</h3><p>Mobile pickups and on-site services, so you don't have to haul anything.</p></div>
-          <div class="why-card"><span class="why-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-handshake"/></svg></span><h3>One place for it all</h3><p>Services, trades, trailer hire and a marketplace under one roof.</p></div>
-          <div class="why-card"><span class="why-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span><h3>Brisbane local</h3><p>A local business supporting local people, tradies and community groups.</p></div>
+          <!-- Panel: Towing -->
+          <div class="tab-panel" role="tabpanel" id="panel-towing" aria-labelledby="tab-towing" hidden>
+            <div class="panel-grid">
+              <div class="panel-media panel-media--stack panel-media--small">
+                <img src="images/photo-towing.jpg" alt="Tow truck carrying a car" loading="lazy">
+                <img src="images/photo-scrap-car.jpg" alt="Scrap cars being lifted by a crane grab" loading="lazy">
+              </div>
+              <div class="panel-copy">
+                <h3>Towing &amp; car removal</h3>
+                <p>Broken down, need a vehicle moved, or want an old car gone? Call the hotline and we'll arrange towing or a scrap car pickup.</p>
+                <ul class="checklist">
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Towing services <em class="ph">[coverage &amp; hours placeholder]</em></span></li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Scrap and unwanted car pickup</span></li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Vehicle transport by car trailer</span></li>
+                </ul>
+                <div class="panel-ctas">
+                  <a href="contact.html?service=Towing%20%26%20Car%20Removal#quote" class="btn btn--primary" data-service="Towing &amp; Car Removal">Book towing</a>
+                  <a href="tel:+61422909739" class="btn btn--outline"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call 24/7</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel: Home services -->
+          <div class="tab-panel" role="tabpanel" id="panel-home" aria-labelledby="tab-home" hidden>
+            <div class="panel-intro">
+              <div>
+                <h3>Home services</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+              </div>
+              <a href="contact.html?service=Home%20Services#quote" class="btn btn--outline" data-service="Home Services">See All Services</a>
+            </div>
+            <div class="mini-grid mini-grid--4">
+              
+              <article class="mini-card">
+                <img src="images/service-1.jpg" alt="Removals" loading="lazy">
+                <div class="mini-card__body">
+                  <h4>Removals</h4>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  <a href="contact.html?service=Home%20Services%20%E2%80%93%20Removals#quote" class="btn btn--primary btn--sm" data-service="Home Services – Removals">Book Now</a>
+                </div>
+              </article>
+              
+              <article class="mini-card">
+                <img src="images/service-2.jpg" alt="Cleaning" loading="lazy">
+                <div class="mini-card__body">
+                  <h4>Cleaning</h4>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  <a href="contact.html?service=Home%20Services%20%E2%80%93%20Cleaning#quote" class="btn btn--primary btn--sm" data-service="Home Services – Cleaning">Book Now</a>
+                </div>
+              </article>
+              
+              <article class="mini-card">
+                <img src="images/service-3.jpg" alt="Car Wash &amp; Detailing" loading="lazy">
+                <div class="mini-card__body">
+                  <h4>Car Wash &amp; Detailing</h4>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  <a href="contact.html?service=Home%20Services%20%E2%80%93%20Car%20Wash%20%26%20Detailing#quote" class="btn btn--primary btn--sm" data-service="Home Services – Car Wash &amp; Detailing">Book Now</a>
+                </div>
+              </article>
+              
+              <article class="mini-card">
+                <img src="images/service-4.jpg" alt="Handyman" loading="lazy">
+                <div class="mini-card__body">
+                  <h4>Handyman</h4>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  <a href="contact.html?service=Home%20Services%20%E2%80%93%20Handyman#quote" class="btn btn--primary btn--sm" data-service="Home Services – Handyman">Book Now</a>
+                </div>
+              </article>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -439,10 +388,10 @@
       <div class="footer__col">
         <h4>Services</h4>
         <ul>
-          <li><a href="services.html#scrap" data-tab-link="tab-scrap">Precious Metal Scrapping 24/7</a></li>
-          <li><a href="services.html#vehicle" data-tab-link="tab-vehicle">Vehicle Services</a></li>
-          <li><a href="services.html#towing" data-tab-link="tab-towing">Towing &amp; Car Removal</a></li>
-          <li><a href="services.html#home" data-tab-link="tab-home">Home Services</a></li>
+          <li><a href="#scrap" data-tab-link="tab-scrap">Precious Metal Scrapping 24/7</a></li>
+          <li><a href="#vehicle" data-tab-link="tab-vehicle">Vehicle Services</a></li>
+          <li><a href="#towing" data-tab-link="tab-towing">Towing &amp; Car Removal</a></li>
+          <li><a href="#home" data-tab-link="tab-home">Home Services</a></li>
         </ul>
       </div>
       <div class="footer__col">

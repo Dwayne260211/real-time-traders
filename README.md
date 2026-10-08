@@ -1,16 +1,32 @@
-# Real Time Traders: homepage
+# Real Time Traders: website
 
-Plain HTML + CSS + vanilla JS. No framework, no build step. Open `index.html` in a browser, or upload the folder to any host.
+A multi-page static site built with plain HTML, CSS and vanilla JS. There's no framework and no build step. Open `index.html` in a browser, or upload the folder to any host. All links are relative, so it works under GitHub Pages at `/real-time-traders/`.
+
+Live site: https://dwayne260211.github.io/real-time-traders/
 
 ```
-index.html        page markup (all sections, inline SVG icon sprite at top of <body>)
+index.html        overview: hero, three pillars, service teasers, membership teaser, how it works, why choose us
+marketplace.html  categories, Featured / Antiques & Rare Finds / Donate tabs (#featured #rare #donate), trending, promo
+jobs.html         Jobs & Tenders: Browse jobs / Post a job / Find a Tradie tabs (#browse #post #tradie), how it works
+hire.html         Tool / Plant & Portable Toilets / Trailer hire tabs (#tool #plant #trailer)
+services.html     Precious Metal Scrapping 24/7 / Vehicle / Towing / Home tabs (#scrap #vehicle #towing #home)
+membership.html   tier cards, comparison table, how it works
+community.html    community help & donations, Just Landing (blog), testimonial
+contact.html      quote/contact form (#quote), hotline, director, FAQ (#faq)
 css/style.css     all styles, mobile-first; colour tokens in :root at the top
-js/main.js        mobile menu, tabs (marketplace, jobs, hire, services), donate carousel, wishlist hearts, quote form,
-                  post-a-job form checks, membership gating, Join/Login modal mockup
+js/main.js        menu, tabs (+ opening a tab from the URL hash), carousel, hearts, quote form + ?service= prefill,
+                  post-a-job checks, membership locks, Join/Login modal mockup, member preview (kept across pages)
 images/           logo files, favicons, photos cropped from the original mockup
-screenshots/      headless-Chrome renders (desktop 1920 / mobile 390)
+screenshots/      headless-Chrome renders: desktop.png / mobile.png (home page), <page>-desktop.png (1920) and
+                  <page>-mobile.png (390) for the other pages, mobile-viewport.png
 docs/             pricing-research.md (competitor pricing, sources, rationale)
 ```
+
+### How the pages fit together
+- Every page shares the same top bar, header, nav, subscribe bar, footer, sticky mobile call bar and Join/Login modal. These are copied into each HTML file, so if you edit them by hand, change every page. The current page is highlighted in the nav (`aria-current="page"`), and Hire and Services highlight their dropdown.
+- **Deep links open tabs.** For example, `hire.html#plant` opens the Plant tab and `jobs.html#post` opens Post a job. Clicking a tab updates the URL, so it can be shared.
+- **Book / Hire / Request buttons** link to `contact.html?service=<name>#quote`. The contact page pre-selects that service in the form (and pre-fills the details for Find a Tradie trades).
+- The "Preview as member" demo switch is remembered while you move between pages (sessionStorage, this browser tab only).
 
 ## Business model (v3)
 The site has three main sections ("pillars"), and the 24/7 services sit alongside them:

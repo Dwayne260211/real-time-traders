@@ -731,3 +731,52 @@ body:not(.is-member) .members-only:hover::after, body:not(.is-member) .members-o
 .price-note { display: inline-block; margin: 12px 0 0; font-size: 13px; font-weight: 600; color: var(--muted); letter-spacing: .01em; }
 .compare tbody tr:first-child td { font-weight: 700; color: var(--navy); }
 .footer__brand .footer__director { margin: 0 0 18px; font-weight: 600; color: var(--navy); }
+
+/* =========================================================
+   v5: multi-page site
+   ========================================================= */
+.nav__sub-toggle.is-active { color: var(--brand-text); font-weight: 600; box-shadow: inset 0 -3px 0 var(--red); }
+.tab-anchor { display: block; height: 0; scroll-margin-top: 150px; }
+
+/* Page banner with breadcrumb (sub-pages) */
+.page-banner { background: var(--navy); color: #fff; padding: 34px 0 30px; position: relative; overflow: hidden; }
+.page-banner::after { content: ""; position: absolute; right: -80px; top: -120px; width: 360px; height: 360px; border-radius: 50%; border: 50px solid rgba(255, 255, 255, .04); pointer-events: none; }
+.page-banner h1 { color: #fff; font-size: clamp(28px, 4.2vw, 42px); line-height: 1.15; margin: 6px 0 8px; letter-spacing: -.02em; }
+.page-banner p { color: #d5def0; max-width: 680px; margin: 0; font-size: 16px; }
+.breadcrumb ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; font-size: 13.5px; color: #d5def0; }
+.breadcrumb li + li::before { content: "›"; margin-right: 6px; color: var(--accent); }
+.breadcrumb a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.breadcrumb [aria-current] { color: #d5def0; }
+.page-banner + .section { padding-top: 48px; }
+@media (min-width: 1024px) { .page-banner { padding: 44px 0 40px; } }
+
+/* Index: service teasers */
+.teaser-grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
+@media (min-width: 560px) { .teaser-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .teaser-grid { grid-template-columns: repeat(4, 1fr); } }
+.teaser { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: box-shadow .2s, transform .2s; color: inherit; }
+.teaser:hover, .teaser:focus-visible { box-shadow: var(--shadow); transform: translateY(-2px); }
+.teaser__media img { display: block; width: 100%; height: 170px; object-fit: cover; }
+.teaser__body { display: flex; flex-direction: column; gap: 6px; padding: 16px 18px 18px; position: relative; flex: 1; }
+.teaser__icon { position: absolute; top: -22px; right: 16px; width: 44px; height: 44px; border-radius: 12px; background: var(--brand); color: #fff; display: grid; place-items: center; box-shadow: 0 6px 16px rgba(221, 3, 2, .25); }
+.teaser__icon .icon { width: 22px; height: 22px; }
+.teaser__body strong { color: var(--navy); font-size: 17px; padding-right: 50px; }
+.teaser__body > span:not(.teaser__icon):not(.link-arrow) { color: var(--muted); font-size: 14.5px; }
+.teaser .link-arrow { margin-top: auto; padding-top: 6px; }
+
+/* Index: membership teaser */
+.member-teaser__box { display: grid; gap: 24px; align-items: center; background: var(--brand-50); border: 1px solid #cfdcf6; border-radius: var(--radius-lg); padding: 26px 22px; }
+@media (min-width: 1024px) { .member-teaser__box { grid-template-columns: 1.1fr 1fr; padding: 36px 40px; gap: 40px; } }
+.member-teaser__copy h2 { margin: 0 0 10px; }
+.member-teaser__copy p { color: var(--steel); margin: 0 0 18px; }
+.member-teaser__ctas { display: flex; flex-wrap: wrap; gap: 10px; }
+.member-teaser__prices { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+@media (min-width: 560px) { .member-teaser__prices { grid-template-columns: repeat(5, 1fr); } }
+@media (min-width: 1024px) { .member-teaser__prices { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1200px) { .member-teaser__prices { grid-template-columns: repeat(5, 1fr); } }
+.member-teaser__prices li { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 10px; text-align: center; display: flex; flex-direction: column; gap: 2px; }
+.member-teaser__prices li span { font-size: 13px; font-weight: 600; color: var(--steel); text-transform: uppercase; letter-spacing: .06em; }
+.member-teaser__prices li strong { font-size: 20px; color: var(--navy); }
+.member-teaser__prices li small { font-size: 12px; color: var(--steel); font-weight: 500; }
+.member-teaser__prices li.is-featured { border: 2px solid var(--red); }
+.member-teaser__note { margin-top: 12px; }

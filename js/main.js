@@ -68,11 +68,39 @@
     });
   });
 
-  /* Links that open a specific tab, e.g. nav "Trailer Hire" -> services tab */
+  /* Links that open a specific tab, e.g. nav "Trailer Hire" -> hire.html#trailer.
+     Same page: switch tab in place. Other page: follow the link; the hash opens the tab on arrival. */
+  function scrollToTabs(tab) {
+    var box = tab.closest(".tabs") || tab.closest("[role=tablist]");
+    var header = document.querySelector(".header");
+    var offset = header && getComputedStyle(header).position === "sticky" ? header.offsetHeight + 12 : 12;
+    var y = box.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+  }
+  function tabFromHash(hash) {
+    if (!hash || hash.length < 2) return null;
+    return document.querySelector('[role=tab][data-hash="' + hash.slice(1).replace(/"/g, "") + '"]');
+  }
   document.querySelectorAll("[data-tab-link]").forEach(function (link) {
-    link.addEventListener("click", function () {
+    link.addEventListener("click", function (e) {
       var tab = document.getElementById(link.getAttribute("data-tab-link"));
-      if (tab) activateTab(tab);
+      if (!tab) return;                       // tab lives on another page: normal navigation
+      e.preventDefault();
+      activateTab(tab);
+      scrollToTabs(tab);
+      if (tab.dataset.hash && history.replaceState) history.replaceState(null, "", "#" + tab.dataset.hash);
+    });
+  });
+  function openHashTab() {
+    var tab = tabFromHash(location.hash);
+    if (tab) { activateTab(tab); setTimeout(function () { scrollToTabs(tab); }, 60); }
+  }
+  openHashTab();
+  window.addEventListener("hashchange", openHashTab);
+  /* Keep the URL in sync when a tab is clicked, so it can be shared/bookmarked */
+  document.querySelectorAll("[role=tab][data-hash]").forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      if (history.replaceState) history.replaceState(null, "", "#" + tab.dataset.hash);
     });
   });
 
@@ -99,22 +127,34 @@
     });
   });
 
-  /* ---------- "Book" buttons preselect the service in the quote form ---------- */
+  /* ---------- "Book" buttons preselect the service in the quote form ----------
+     The form lives on contact.html. Elsewhere the link goes to contact.html?service=...#quote */
   var serviceSelect = document.getElementById("quote-service");
+  function prefillService(service) {
+    if (!serviceSelect || !service) return;
+    var wanted = service.toLowerCase();
+    var opts = Array.prototype.slice.call(serviceSelect.options);
+    var match = opts.find(function (o) {
+      var t = o.text.toLowerCase();
+      return wanted.indexOf(t.split(" (")[0].split(" /")[0]) === 0 || t.indexOf(wanted) === 0;
+    }) || opts.find(function (o) { return wanted.indexOf(o.text.toLowerCase().split(" ")[0]) === 0; });
+    if (match) serviceSelect.value = match.value || match.text;
+    var details = document.querySelector("#quote-form textarea");
+    if (details && !details.value && wanted.indexOf("–") > -1) details.value = service + ": ";
+  }
   document.querySelectorAll("[data-service]").forEach(function (el) {
-    el.addEventListener("click", function () {
-      if (!serviceSelect) return;
-      var wanted = el.getAttribute("data-service").toLowerCase();
-      var opts = Array.prototype.slice.call(serviceSelect.options);
-      var match = opts.find(function (o) {
-        var t = o.text.toLowerCase();
-        return wanted.indexOf(t.split(" (")[0].split(" /")[0]) === 0 || t.indexOf(wanted) === 0;
-      }) || opts.find(function (o) { return wanted.indexOf(o.text.toLowerCase().split(" ")[0]) === 0; });
-      if (match) serviceSelect.value = match.value || match.text;
-      var details = document.querySelector("#quote-form textarea");
-      if (details && !details.value && wanted.indexOf("–") > -1) details.value = el.getAttribute("data-service") + ": ";
+    el.addEventListener("click", function (e) {
+      if (!serviceSelect) return;             // no form here: go to contact.html?service=...
+      e.preventDefault();
+      prefillService(el.getAttribute("data-service"));
+      var target = document.getElementById("quote");
+      if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
+  if (serviceSelect && window.URLSearchParams) {
+    var qsService = new URLSearchParams(location.search).get("service");
+    if (qsService) prefillService(qsService);
+  }
 
   /* =========================================================
      Membership mockup: Join/Login modal, members-only gating,
@@ -199,6 +239,7 @@
 
   function setMember(on) {
     body.classList.toggle("is-member", on);
+    try { sessionStorage.setItem("rtt-demo-member", on ? "1" : "0"); } catch (err) {}
     document.querySelectorAll("[data-demo-toggle]").forEach(function (b) { b.textContent = on ? "Back to guest view" : "Preview as member"; });
     document.querySelectorAll(".header__login").forEach(function (a) { a.textContent = on ? "My account (demo)" : "Login / Join"; });
   }
@@ -210,6 +251,9 @@
       toast(on ? "Previewing as a member: locks removed (demo only)." : "Back to guest view.");
     });
   });
+
+  /* Remember the demo member preview while moving between pages (this tab only) */
+  try { if (sessionStorage.getItem("rtt-demo-member") === "1") setMember(true); } catch (err) {}
 
   /* Post a job form (only reachable as a member, front-end only) */
   var jobForm = document.getElementById("post-job-form");

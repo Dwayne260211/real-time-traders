@@ -724,3 +724,10 @@ body:not(.is-member) .members-only:hover::after, body:not(.is-member) .members-o
 .hotline strong { white-space: nowrap; font-size: 19px; }
 .head-actions a, .head-actions button { white-space: nowrap; }
 .header__login { white-space: nowrap; }
+/* v4: real pricing */
+.tier__price { margin-bottom: 2px; }
+.tier__annual { margin: 0 0 16px; font-size: 13px; color: var(--muted); }
+.tier__annual em { font-style: normal; color: var(--brand-text); font-weight: 600; }
+.price-note { display: inline-block; margin: 12px 0 0; font-size: 13px; font-weight: 600; color: var(--muted); letter-spacing: .01em; }
+.compare tbody tr:first-child td { font-weight: 700; color: var(--navy); }
+.footer__brand .footer__director { margin: 0 0 18px; font-weight: 600; color: var(--navy); }

@@ -9,6 +9,7 @@ js/main.js        mobile menu, tabs (marketplace, jobs, hire, services), donate 
                   post-a-job form checks, membership gating, Join/Login modal mockup
 images/           logo files, favicons, photos cropped from the original mockup
 screenshots/      headless-Chrome renders (desktop 1920 / mobile 390)
+docs/             pricing-research.md (competitor pricing, sources, rationale)
 ```
 
 ## Business model (v3)
@@ -23,21 +24,23 @@ The site has three main sections ("pillars"), and the 24/7 services sit alongsid
 
 The nav, hero copy, quick links, footer, quote-form dropdown and FAQ all follow this structure.
 
-## Membership (v3): suggested, to be confirmed
-| Tier | Price | Suggested features |
-|---|---|---|
-| Guest | Free, no account | Browse everything, request hire and service quotes, call the hotline. No buying, selling, posting or quoting. |
-| Basic | `$__ /month` | Buy, sell (up to [N] active listings), message buyers and sellers, saved searches and alerts |
-| Bronze | `$__ /month` | Everything in Basic, plus post jobs and receive quotes, quote on jobs ([N]/month), up to [N] listings, donate and request in Community |
-| Silver (shown as "Recommended") | `$__ /month` | Everything in Bronze, plus more listings and quotes, [N] featured listings a month, verified badge, hire booking priority, member hire discount [__%] |
-| Gold | `$__ /month` | Everything in Silver, plus unlimited listings and quotes (TBC), business profile/storefront, analytics, top placement, priority support, team access ([N] users) |
+## Membership (v4): introductory pricing, AUD inc. GST
+| Tier | Monthly | Annual (2 months free) | What's included |
+|---|---|---|---|
+| Guest | Free | Free | Browse everything, request hire and service quotes, call the hotline. No buying, selling, posting or quoting. |
+| Basic | $4.99 | $49.90 | Buy, sell up to 10 active listings, **post jobs** (up to 5 open), messaging, saved searches and alerts |
+| Bronze | $19.99 | $199.90 | Everything in Basic, plus **quote on jobs & tenders (20/month)**, 30 listings, unlimited open jobs (fair use), worker/tradie profile, Community donate and request |
+| Silver ("Recommended") | $39.99 | $399.90 | Everything in Bronze, plus 60 quotes/month, 100 listings, 2 featured listings/month, verified badge, hire booking priority, 5% off hire |
+| Gold | $79.99 | $799.90 | Everything in Silver, plus unlimited quotes and listings (fair use), 10 featured listings/month with top placement, business profile/storefront, analytics, 10% off hire, priority support, up to 5 team users |
 
-- **Every price, limit ([N]), discount ([__%]) and the split of features between tiers is a placeholder.** Nothing on the page states a real price or a real popularity figure. Silver is highlighted with a "Recommended" badge, which is a design choice and does not claim it is the most popular tier.
-- **Members-only buttons:** guests see a lock icon and a "Basic membership or higher" (or "Bronze…") tooltip. Clicking one opens the Join modal with a message explaining why.
-  - Buy, Sell an item, + Listing: Basic or higher
-  - Post a job, Quote now: Bronze or higher, tooltip "Bronze membership or higher". This follows the suggested ladder. If posting and quoting should be open at Basic, change `data-tier`/`data-tip` on those buttons in `index.html` and update the table.
+- The competitor research (with sources and dates) and the pricing rationale are in [`docs/pricing-research.md`](docs/pricing-research.md).
+- On the page, the yellow "placeholders" banner is replaced by a small "Introductory pricing, inc. GST" note. The note under the table says "pricing and features may change" and explains that unlimited means fair use. Silver's "Recommended" badge is a design choice and does not claim it is the most popular tier.
+- **Members-only buttons:** guests see a lock icon and a tooltip. Clicking opens the Join modal with that tier preselected.
+  - Buy, Sell an item, + Listing, **Post a job**: "Basic membership or higher"
+  - Quote now (jobs & tenders): "Bronze membership or higher"
   - Request hire, Get a quote, Call: open to everyone
-- The comparison table under the tier cards scrolls sideways on phones, and the first column stays fixed.
+- The comparison table scrolls sideways on phones, and the first column stays fixed.
+- Still to confirm before launch: fee model (any commission or connection fee), cancellation, refund and pro-rata terms (placeholder in the FAQ), fair-use limits, and the margin on member hire discounts.
 
 ### Accounts and payments need a backend
 The Join/Login modal and every Join button are **mockups only**. They do not create accounts, log anyone in, take payments or store anything. The "Preview as member" switch in the modal just removes the locks in the browser, so you can see what members would see. Real memberships need a backend before launch, either a marketplace platform (e.g. Sharetribe, or WordPress + a membership/marketplace plugin) or a custom build. That backend has to handle:
@@ -46,6 +49,10 @@ The Join/Login modal and every Join button are **mockups only**. They do not cre
 - server-side checks of what each tier can do (the front-end locks are cosmetic only)
 - listings, job posts, quotes, messaging and moderation, stored in a database
 - terms, privacy policy and payment/refund rules
+
+## Contact details (live)
+- Hotline: **0422 909 739** (24/7). All `tel:` links use `tel:+61422909739`. The number is set once at the top of the generator (`HOT` / `TEL`).
+- Director: **John Carter**, shown in the footer and the contact section.
 
 ## Brand (v2 logo colourway)
 Colours were sampled from `images/logo-source-v2.png`:
@@ -63,7 +70,7 @@ Every text/background pair meets WCAG AA (4.5:1 or better). The font is Inter (G
 The logo files `logo-lockup.png` (horizontal, header/footer), `logo-full.png` (stacked) and `logo-icon.png` (icon only), plus `favicon-*.png`, `favicon.ico` and `apple-touch-icon.png`, are transparent cut-outs of the v2 logo. Use them on light backgrounds, because the navy lettering disappears on dark ones. The previous orange/charcoal logo set is kept, unused, in `images/logo-orange/`. The original orange donation category icon is in `images/legacy/`.
 
 ## Before going live: placeholders to replace
-- Hotline `(025) 3686 25 16` and `contact@demolink.com` (the `tel:` links use `02536862516`)
+- `contact@demolink.com` and the street address
 - Service area/suburbs, address, hours for non-scrapping services, and the list of accepted metals
 - Trailer types, sizes and prices (all show "Price on request"), plus the trailer images (icons for now)
 - Tool Hire range (power tools, concrete & compaction, pressure washers, generators, ladders & scaffold, air compressors): the types, availability, hire periods, deposits and prices are all placeholders ("Price on request"), and the cards use icons instead of photos
@@ -71,8 +78,8 @@ The logo files `logo-lockup.png` (horizontal, header/footer), `logo-full.png` (s
 - Product, antique and donation cards ("Product Name Here", $399.00, "Location Here", etc.), the blog posts and the "Product Name / A healthy leap ahead" promo, all from the old mockup
 - The testimonial is a labelled placeholder. Replace it with a real review or remove it.
 - The "10% OFF" subscribe offer (from the mockup)
-- The FAQ answers marked [Placeholder], including the new membership and jobs & tenders answers
-- Membership prices (`$__ /month`), limits `[N]`, discounts `[__%]` and the Bronze/Silver/Gold feature split (suggested, to be confirmed)
+- The FAQ answers marked [Placeholder], including jobs & tenders fees and membership cancellation terms
+- Membership cancellation/refund terms (FAQ placeholder). Prices and limits are now set (see above), but re-check them against competitors before launch
 - Job cards in Jobs & Tenders are labelled **Example**: titles, suburbs, "Budget: Placeholder", "X quotes" and "Posted X days ago" are placeholders
 - Post a job form, Join/Login modal and Join buttons are front-end only (see "Accounts and payments need a backend")
 - Forms (quote, post a job, job filter, tradie search, site search, subscribe, join/login) are front-end only. Connect them to email, a booking tool, or a backend.

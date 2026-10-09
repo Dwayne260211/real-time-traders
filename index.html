@@ -179,7 +179,7 @@
             <a href="#pillars" class="btn btn--primary btn--lg">Start browsing <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
             <button type="button" class="btn btn--light btn--lg" data-auth="join"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg> Join / membership</button>
           </div>
-          <p class="hero__note"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Browse free, no account needed. Join to buy, sell, post jobs and quote.</p>
+          <p class="hero__note"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Browse free, no account needed. Post jobs with a free account; join to buy, sell and quote.</p>
           <ul class="hero__quick" aria-label="Quick links">
             <li><a href="marketplace.html"><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg> Marketplace</a></li>
             <li><a href="jobs.html#browse" data-tab-link="tab-jobs-browse"><svg class="icon" aria-hidden="true"><use href="#i-handshake"/></svg> Jobs &amp; Tenders</a></li>
@@ -204,7 +204,7 @@
         <div class="section-head section-head--center">
           <p class="eyebrow">One platform, three ways to trade</p>
           <h2>Marketplace. Jobs &amp; Tenders. Hire.</h2>
-          <p class="section-head__sub">Browse everything for free. Join to buy, sell, post jobs and quote for work.</p>
+          <p class="section-head__sub">Browse everything for free. Post jobs with a free account, and join to buy, sell and quote for work.</p>
         </div>
         <div class="pillar-grid">
           <article class="pillar">
@@ -233,7 +233,7 @@
             </ul>
             <div class="pillar__ctas">
               <a href="jobs.html#browse" class="btn btn--outline" data-tab-link="tab-jobs-browse">Browse jobs</a>
-              <a href="jobs.html#post" class="btn btn--primary members-only" data-tier="Basic" data-tip="Basic membership or higher" data-tab-link="tab-jobs-post"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Post a job<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a>
+              <a href="jobs.html#post" class="btn btn--primary account-only" data-tier="Free" data-tip="Free account needed (sign up free)" data-tab-link="tab-jobs-post"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Post a job<span class="sr-only guest-only"> (free account needed)</span></a>
             </div>
           </article>
           <article class="pillar">
@@ -252,7 +252,7 @@
           </article>
         </div>
         <div class="member-strip">
-          <p><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> <span><strong>Browse free, no account needed.</strong> Buying, selling, posting jobs and quoting need a membership.</span></p>
+          <p><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> <span><strong>Browse free, no account needed.</strong> Posting a job needs a free account; buying, selling and quoting need a membership.</span></p>
           <a href="membership.html" class="link-arrow">See membership options <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
         </div>
       </div>
@@ -316,15 +316,15 @@
         <div class="member-teaser__box">
           <div class="member-teaser__copy">
             <p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg> Membership</p>
-            <h2>Browse free. Join from $4.99 a month.</h2>
-            <p>Basic lets you buy, sell and post jobs. Bronze and up let you quote for work, with featured listings and hire discounts in Silver and Gold.</p>
+            <h2>Post jobs free. Join from $4.99 a month.</h2>
+            <p>Browse without an account, and post jobs with a free account (a connection fee applies per job). Basic adds buying, selling and no connection fees. Bronze and up let you quote for work.</p>
             <div class="member-teaser__ctas">
               <a href="membership.html" class="btn btn--primary">Compare memberships <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-              <button type="button" class="btn btn--outline" data-auth="join">Join now</button>
+              <button type="button" class="btn btn--outline" data-auth="join" data-join-tier="Free">Create free account</button>
             </div>
           </div>
           <ul class="member-teaser__prices">
-            <li><span>Guest</span><strong>Free</strong></li>
+            <li><span>Free account</span><strong>Free</strong></li>
             <li><span>Basic</span><strong>$4.99<small>/mo</small></strong></li>
             <li><span>Bronze</span><strong>$19.99<small>/mo</small></strong></li>
             <li class="is-featured"><span>Silver</span><strong>$39.99<small>/mo</small></strong></li>
@@ -352,8 +352,8 @@
           <li class="step">
             <span class="step__num">2</span>
             <span class="step__icon"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg></span>
-            <h3>Pick a membership</h3>
-            <p>Basic ($4.99/month) lets you buy, sell and post jobs. Bronze and up let you quote for work, with more perks in Silver and Gold.</p>
+            <h3>Sign up free or join</h3>
+            <p>A free account lets you post jobs. Basic ($4.99/month) adds buying, selling and no job connection fees. Bronze and up let you quote for work.</p>
           </li>
           <li class="step">
             <span class="step__num">3</span>
@@ -490,9 +490,9 @@
             <label class="field"><span>Email</span><input type="email" autocomplete="email" required></label>
             <label class="field"><span>Password</span><input type="password" autocomplete="new-password" required></label>
             <label class="field"><span>Membership</span>
-              <select id="join-tier"><option value="Basic">Basic: $4.99/month</option><option value="Bronze">Bronze: $19.99/month</option><option value="Silver" selected>Silver: $39.99/month</option><option value="Gold">Gold: $79.99/month</option></select>
+              <select id="join-tier"><option value="Free">Free account: $0 (connection fee per job)</option><option value="Basic">Basic: $4.99/month</option><option value="Bronze">Bronze: $19.99/month</option><option value="Silver" selected>Silver: $39.99/month</option><option value="Gold">Gold: $79.99/month</option></select>
             </label>
-            <p class="note">Basic $4.99, Bronze $19.99, Silver $39.99, Gold $79.99 a month (inc. GST), or pay yearly and get 2 months free. <a href="membership.html" data-close>Compare memberships</a></p>
+            <p class="note">A free account can post jobs (connection fee $9.95–$59.95 per assigned job). Basic $4.99, Bronze $19.99, Silver $39.99, Gold $79.99 a month (inc. GST), or pay yearly and get 2 months free. <a href="membership.html" data-close>Compare memberships</a></p>
             <button type="submit" class="btn btn--primary btn--block">Create account</button>
             <p class="form-status" role="status" aria-live="polite"></p>
           </form>
@@ -508,8 +508,11 @@
         </div>
       </div>
       <div class="modal__demo">
-        <p><strong>Mockup only.</strong> No real accounts or payments: these need a backend. Use the switch below to preview what members would see.</p>
-        <button type="button" class="btn btn--outline btn--sm" data-demo-toggle>Preview as member</button>
+        <p><strong>Mockup only.</strong> No real accounts or payments: these need a backend. Use the switches below to preview what a free account or a paid member would see.</p>
+        <div class="modal__demo-btns">
+          <button type="button" class="btn btn--outline btn--sm" data-demo-free>Preview with free account</button>
+          <button type="button" class="btn btn--outline btn--sm" data-demo-toggle>Preview as member</button>
+        </div>
       </div>
     </div>
   </dialog>

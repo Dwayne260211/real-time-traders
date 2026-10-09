@@ -516,9 +516,9 @@
             <label class="field"><span>Email</span><input type="email" autocomplete="email" required></label>
             <label class="field"><span>Password</span><input type="password" autocomplete="new-password" required></label>
             <label class="field"><span>Membership</span>
-              <select id="join-tier"><option value="Basic">Basic: $4.99/month</option><option value="Bronze">Bronze: $19.99/month</option><option value="Silver" selected>Silver: $39.99/month</option><option value="Gold">Gold: $79.99/month</option></select>
+              <select id="join-tier"><option value="Free">Free account: $0 (connection fee per job)</option><option value="Basic">Basic: $4.99/month</option><option value="Bronze">Bronze: $19.99/month</option><option value="Silver" selected>Silver: $39.99/month</option><option value="Gold">Gold: $79.99/month</option></select>
             </label>
-            <p class="note">Basic $4.99, Bronze $19.99, Silver $39.99, Gold $79.99 a month (inc. GST), or pay yearly and get 2 months free. <a href="membership.html" data-close>Compare memberships</a></p>
+            <p class="note">A free account can post jobs (connection fee $9.95–$59.95 per assigned job). Basic $4.99, Bronze $19.99, Silver $39.99, Gold $79.99 a month (inc. GST), or pay yearly and get 2 months free. <a href="membership.html" data-close>Compare memberships</a></p>
             <button type="submit" class="btn btn--primary btn--block">Create account</button>
             <p class="form-status" role="status" aria-live="polite"></p>
           </form>
@@ -534,8 +534,11 @@
         </div>
       </div>
       <div class="modal__demo">
-        <p><strong>Mockup only.</strong> No real accounts or payments: these need a backend. Use the switch below to preview what members would see.</p>
-        <button type="button" class="btn btn--outline btn--sm" data-demo-toggle>Preview as member</button>
+        <p><strong>Mockup only.</strong> No real accounts or payments: these need a backend. Use the switches below to preview what a free account or a paid member would see.</p>
+        <div class="modal__demo-btns">
+          <button type="button" class="btn btn--outline btn--sm" data-demo-free>Preview with free account</button>
+          <button type="button" class="btn btn--outline btn--sm" data-demo-toggle>Preview as member</button>
+        </div>
       </div>
     </div>
   </dialog>

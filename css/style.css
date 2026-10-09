@@ -814,3 +814,15 @@ body:not(.is-member) .members-only:hover::after, body:not(.is-member) .members-o
   .fee-table th, .fee-table td { white-space: normal; padding: 8px 7px; }
   .fee-table thead th { font-size: 12px; }
 }
+
+/* v7: free accounts (post jobs without a paid membership) */
+.account-only { position: relative; }
+.is-member .account-only .guest-only, .has-account .account-only .guest-only { display: none; }
+body:not(.is-member):not(.has-account) .account-only::after {
+  content: attr(data-tip); position: absolute; left: 50%; bottom: calc(100% + 10px); transform: translate(-50%, 4px);
+  background: var(--navy); color: #fff; font-size: 12px; font-weight: 500; line-height: 1.3; padding: 7px 10px; border-radius: 8px;
+  white-space: nowrap; pointer-events: none; opacity: 0; transition: opacity .15s, transform .15s; z-index: 30; box-shadow: var(--shadow);
+}
+body:not(.is-member):not(.has-account) .account-only:hover::after, body:not(.is-member):not(.has-account) .account-only:focus-visible::after { opacity: 1; transform: translate(-50%, 0); }
+.modal__demo-btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.compare thead th small { font-weight: 500; opacity: .85; font-size: 11px; }

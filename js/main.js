@@ -189,7 +189,8 @@
     }
     var tier = document.getElementById("join-tier");
     if (opts.tier && tier) tier.value = opts.tier;
-    modal.querySelector(".modal__title").textContent = mode === "login" ? "Log in to Real Time Traders" : "Join Real Time Traders";
+    modal.querySelector(".modal__title").textContent = mode === "login" ? "Log in to Real Time Traders"
+      : (opts.tier === "Free" ? "Create a free account" : "Join Real Time Traders");
     var tab = document.getElementById(mode === "login" ? "tab-login" : "tab-join");
     if (tab) activateTab(tab);
     modal.querySelectorAll(".form-status").forEach(function (s) { s.textContent = ""; });
@@ -201,19 +202,28 @@
     if (typeof modal.close === "function") modal.close(); else modal.removeAttribute("open");
   }
 
-  /* Capture phase: runs before any other click handler on the target */
+  /* Capture phase: runs before any other click handler on the target.
+     .members-only = paid membership needed; .account-only = a free account is enough (e.g. Post a job) */
+  function cleanLabel(el) { return el.textContent.replace(/\((members only|free account).*\)/, "").trim(); }
   document.addEventListener("click", function (e) {
-    var gated = e.target.closest(".members-only");
-    if (gated && !body.classList.contains("is-member")) {
+    var gated = e.target.closest(".members-only, .account-only");
+    if (!gated) return;
+    var member = body.classList.contains("is-member");
+    var allowed = member || (gated.classList.contains("account-only") && body.classList.contains("has-account"));
+    if (!allowed) {
       e.preventDefault();
       e.stopPropagation();
-      var label = gated.textContent.replace(/\(members only.*\)/, "").trim();
-      openAuth("join", { gate: "“" + label + "” needs " + gated.getAttribute("data-tip").toLowerCase().replace(/^(\w)/, function (c) { return c.toUpperCase(); }) + ".", tier: gated.getAttribute("data-tier") === "Bronze" ? "Bronze" : "Basic" });
+      var label = cleanLabel(gated);
+      if (gated.classList.contains("account-only")) {
+        openAuth("join", { gate: "“" + label + "” needs a free account. Sign up free: a connection fee applies when you accept a quote, or pay $0 with Basic.", tier: "Free" });
+      } else {
+        openAuth("join", { gate: "“" + label + "” needs " + gated.getAttribute("data-tip").toLowerCase().replace(/^(\w)/, function (c) { return c.toUpperCase(); }) + ".", tier: gated.getAttribute("data-tier") === "Bronze" ? "Bronze" : "Basic" });
+      }
       return;
     }
-    if (gated && body.classList.contains("is-member") && gated.tagName === "A" && gated.getAttribute("href") === "#") {
+    if (gated.tagName === "A" && gated.getAttribute("href") === "#") {
       e.preventDefault();
-      toast("Member preview: this would open the “" + gated.textContent.replace(/\(members only.*\)/, "").trim() + "” flow (needs a backend).");
+      toast((member ? "Member" : "Free account") + " preview: this would open the “" + cleanLabel(gated) + "” flow (needs a backend).");
     }
   }, true);
 
@@ -237,23 +247,39 @@
     });
   }
 
-  function setMember(on) {
-    body.classList.toggle("is-member", on);
-    try { sessionStorage.setItem("rtt-demo-member", on ? "1" : "0"); } catch (err) {}
-    document.querySelectorAll("[data-demo-toggle]").forEach(function (b) { b.textContent = on ? "Back to guest view" : "Preview as member"; });
-    document.querySelectorAll(".header__login").forEach(function (a) { a.textContent = on ? "My account (demo)" : "Login / Join"; });
+  /* Demo account state: "guest" (no account), "free" (free account) or "member" (paid). Kept per browser tab. */
+  function setMode(mode) {
+    body.classList.toggle("is-member", mode === "member");
+    body.classList.toggle("has-account", mode === "free");
+    try { sessionStorage.setItem("rtt-demo-mode", mode); } catch (err) {}
+    document.querySelectorAll("[data-demo-toggle]").forEach(function (b) { b.textContent = mode === "member" ? "Back to guest view" : "Preview as member"; });
+    document.querySelectorAll("[data-demo-free]").forEach(function (b) { b.textContent = mode === "free" ? "Back to guest view" : "Preview with free account"; });
+    document.querySelectorAll(".header__login").forEach(function (a) {
+      a.textContent = mode === "member" ? "My account (demo)" : mode === "free" ? "Free account (demo)" : "Login / Join";
+    });
   }
+  function currentMode() { return body.classList.contains("is-member") ? "member" : body.classList.contains("has-account") ? "free" : "guest"; }
   document.querySelectorAll("[data-demo-toggle]").forEach(function (btn) {
     btn.addEventListener("click", function () {
-      var on = !body.classList.contains("is-member");
-      setMember(on);
-      closeAuth();
-      toast(on ? "Previewing as a member: locks removed (demo only)." : "Back to guest view.");
+      var mode = currentMode() === "member" ? "guest" : "member";
+      setMode(mode); closeAuth();
+      toast(mode === "member" ? "Previewing as a paid member: all locks removed (demo only)." : "Back to guest view.");
+    });
+  });
+  document.querySelectorAll("[data-demo-free]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var mode = currentMode() === "free" ? "guest" : "free";
+      setMode(mode); closeAuth();
+      toast(mode === "free" ? "Previewing with a free account: you can post jobs; buying, selling and quoting stay locked (demo only)." : "Back to guest view.");
     });
   });
 
-  /* Remember the demo member preview while moving between pages (this tab only) */
-  try { if (sessionStorage.getItem("rtt-demo-member") === "1") setMember(true); } catch (err) {}
+  /* Remember the demo preview while moving between pages (this tab only) */
+  try {
+    var saved = sessionStorage.getItem("rtt-demo-mode");
+    if (!saved && sessionStorage.getItem("rtt-demo-member") === "1") saved = "member";
+    if (saved === "member" || saved === "free") setMode(saved);
+  } catch (err) {}
 
   /* Post a job form (only reachable as a member, front-end only) */
   var jobForm = document.getElementById("post-job-form");

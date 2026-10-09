@@ -43,19 +43,22 @@ The nav, hero copy, quick links, footer, quote-form dropdown and FAQ all follow 
 ## Membership (v4): introductory pricing, AUD inc. GST
 | Tier | Monthly | Annual (2 months free) | What's included |
 |---|---|---|---|
-| Guest | Free | Free | Browse everything, request hire and service quotes, call the hotline. No buying, selling, posting or quoting. |
-| Basic | $4.99 | $49.90 | Buy, sell up to 10 active listings, **post jobs** (up to 5 open), messaging, saved searches and alerts |
+| Guest (no account) | Free | Free | Browse everything, request hire and service quotes, call the hotline |
+| **Free account** | Free | Free | Everything a guest can do, plus **post jobs** (up to 5 open) and message workers about them. **Pays the job connection fee** ($9.95–$59.95) on each job assigned. No buying, selling or quoting |
+| Basic | $4.99 | $49.90 | Everything in Free account, plus **no job connection fees**, buying, selling up to 10 active listings, messaging buyers and sellers, saved searches and alerts |
 | Bronze | $19.99 | $199.90 | Everything in Basic, plus **quote on jobs & tenders (20/month)**, 30 listings, unlimited open jobs (fair use), worker/tradie profile, Community donate and request |
 | Silver ("Recommended") | $39.99 | $399.90 | Everything in Bronze, plus 60 quotes/month, 100 listings, 2 featured listings/month, verified badge, hire booking priority, 5% off hire |
 | Gold | $79.99 | $799.90 | Everything in Silver, plus unlimited quotes and listings (fair use), 10 featured listings/month with top placement, business profile/storefront, analytics, 10% off hire, priority support, up to 5 team users |
 
 - The competitor research (with sources and dates) and the pricing rationale are in [`docs/pricing-research.md`](docs/pricing-research.md).
 - On the page, the yellow "placeholders" banner is replaced by a small "Introductory pricing, inc. GST" note. The note under the table says "pricing and features may change" and explains that unlimited means fair use. Silver's "Recommended" badge is a design choice and does not claim it is the most popular tier.
-- **Members-only buttons:** guests see a lock icon and a tooltip. Clicking opens the Join modal with that tier preselected.
-  - Buy, Sell an item, + Listing, **Post a job**: "Basic membership or higher"
+- **Post a job** needs only a free account. It has no lock icon, and the tooltip reads "Free account needed (sign up free)". Clicking it as a guest opens the modal as **"Create a free account"** with Free account preselected.
+- **Members-only buttons:** guests and free accounts see a lock icon and a tooltip. Clicking opens the Join modal with that tier preselected.
+  - Buy, Sell an item, + Listing: "Basic membership or higher"
   - Quote now (jobs & tenders): "Bronze membership or higher"
   - Request hire, Get a quote, Call: open to everyone
-- The comparison table scrolls sideways on phones, and the first column stays fixed.
+- The comparison table has six columns (Guest, Free account, Basic, Bronze, Silver, Gold). It scrolls sideways on phones, and the first column stays fixed.
+- The demo modal has two switches, "Preview with free account" and "Preview as member". The choice is kept across pages for the browser tab.
 - Still to confirm before launch: cancellation, refund and pro-rata terms (placeholder in the FAQ), fair-use limits, and the margin on member hire discounts.
 
 ## Job fees (Jobs & Tenders): same as Airtasker, checked 9 Oct 2026
@@ -63,7 +66,7 @@ Shown in the "Job fees" block on `jobs.html#fees`, a short note and two table ro
 
 | Who | Fee | When |
 |---|---|---|
-| Job poster | Connection fee by accepted quote price: under $50 $9.95, $50–99.99 $14.95, $100–149.99 $19.95, $150–199.99 $29.95, $200–249.99 $39.95, $250–299.99 $49.95, $300+ $59.95 (inc. GST). **Waived for Basic, Bronze, Silver and Gold members.** Posting needs Basic, so members never pay it. | Once, when a quote is accepted and the job assigned |
+| Job poster | Connection fee by accepted quote price: under $50 $9.95, $50–99.99 $14.95, $100–149.99 $19.95, $150–199.99 $29.95, $200–249.99 $39.95, $250–299.99 $49.95, $300+ $59.95 (inc. GST). Paid by **free accounts**; **waived for Basic, Bronze, Silver and Gold members**. Example: a $180 quote costs a free account $180 + $29.95 = $209.95, and a Basic member $180. | Once, when a quote is accepted and the job assigned |
 | Worker/tradie | Service fee by level: Level 1 (under $880 earned in the last 30 days) 20%, Level 2 ($880+) 18.5%, Level 3 ($2,650+) 14.9%, Level 4 ($5,300+) 12.5%. All **+ GST**, and the completion rate over the last 20 jobs must also meet the level | On jobs won, deducted at payout |
 | Marketplace / hire | No extra fees beyond membership | n/a |
 

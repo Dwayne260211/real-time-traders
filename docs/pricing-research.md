@@ -25,14 +25,15 @@ Accessed 9 October 2026 (AEST). All figures are in AUD. Where a source gives pri
 
 | Tier | Monthly | Annual (2 months free) | Listings | Jobs | Quotes | Featured | Hire discount | Other |
 |---|---|---|---|---|---|---|---|---|
-| Guest | Free | Free | none (browse only) | none | none | none | none | Browse, request hire/service quotes |
-| Basic | **$4.99** | $49.90 | 10 active | Post jobs, up to 5 open | none | none | none | Buy, messaging, saved searches & alerts |
+| Guest (no account) | Free | Free | none (browse only) | none | none | none | none | Browse, request hire/service quotes |
+| Free account | Free | Free | none | Post jobs, up to 5 open (connection fee per assigned job) | none | none | none | Message workers about your jobs |
+| Basic | **$4.99** | $49.90 | 10 active | Post jobs, up to 5 open, **no connection fee** | none | none | none | Buy, messaging, saved searches & alerts |
 | Bronze | **$19.99** | $199.90 | 30 active | Unlimited (fair use) | 20/month | none | none | Worker/tradie profile, Community donate & request |
 | Silver (Recommended) | **$39.99** | $399.90 | 100 active | Unlimited (fair use) | 60/month | 2/month | 5% | Verified badge, hire booking priority |
 | Gold | **$79.99** | $799.90 | Unlimited (fair use) | Unlimited (fair use) | Unlimited (fair use) | 10/month + top placement | 10% | Business profile, analytics, priority support, up to 5 team users |
 
 ## Rationale
-- **Basic is a low barrier, and it can post jobs.** Facebook Marketplace and most of Gumtree are free to list, so a new paid marketplace has to cost very little. At $4.99/month, Basic is cheaper than Airtasker's customer membership ($89/year, about $7.42/month) and much cheaper than eBay Pro Basic ($27.45/month). Posting jobs is what creates demand for the tradies who pay, so it goes in Basic rather than Bronze. Airtasker charges posters $9.95 to $59.95 per task; here a Basic member can post up to 5 open jobs for $4.99 a month.
+- **Basic is a low barrier** (posting jobs is now open to free accounts, see the fee model below). Facebook Marketplace and most of Gumtree are free to list, so a new paid marketplace has to cost very little. At $4.99/month, Basic is cheaper than Airtasker's customer membership ($89/year, about $7.42/month) and much cheaper than eBay Pro Basic ($27.45/month). Posting jobs is what creates demand for the tradies who pay, so anyone can post with a free account. As on Airtasker, a free account pays $9.95 to $59.95 per assigned job, while a Basic member ($4.99/month) pays no connection fee at all.
 - **Quoting is where workers pay, and it's cheaper than lead platforms.** Bronze at $19.99/month (20 quotes) and Silver at $39.99/month (60 quotes) cost a fraction of hipages Starter ($152.90/month inc. GST for 155 credits) or ServiceSeeking (from $129/month). On top of that, workers pay the same per-job service fee as Airtasker (see "Job fee model" below), so quoting costs much less than on lead platforms and the per-job fees are no higher than Airtasker's. The recommendation is **no lock-in term**, unlike hipages' 6-month intro term.
 - **Gold is for businesses.** At $79.99/month it sits just under eBay Pro Featured ($82.45) and well below hipages Starter, and it bundles unlimited listings and quotes (fair use), a storefront, analytics and team seats.
 - **Annual billing is "2 months free"** (about 17% off). That's more generous than hipages (5%) and simpler than ServiceSeeking's custom 20% to 40% discounts.
@@ -63,13 +64,13 @@ Caveats: Airtasker says fees may vary temporarily under its "randomised fee stud
 | Level 3 | $2,650+ | Good | 14.9% | Gold |
 | Level 4 | $5,300+ | Excellent | 12.5% | Platinum |
 
-**Posters (connection fee per assigned job, inc. GST).** The fee bands are identical to Airtasker's ($9.95 to $59.95), and the fee is **waived for Basic, Bronze, Silver and Gold members**, the same way Airtasker's membership waives it. Because posting a job currently needs Basic, members never actually pay it. The table is shown so members can see the saving. If you later let guests post with a free account, they would pay these fees.
+**Posters (connection fee per assigned job, inc. GST).** The fee bands are identical to Airtasker's ($9.95 to $59.95), and the fee is **waived for Basic, Bronze, Silver and Gold members**, the same way Airtasker's membership waives it. **Update (9 Oct 2026, Dwayne's decision):** like Airtasker, anyone can post jobs with a **free account** and pays the connection fee when they accept a quote. Paid members (Basic and up) have it waived, so Basic at $4.99/month pays for itself on a single job.
 
-**Marketplace and hire:** no commission or extra fees beyond membership (unchanged).
+**Marketplace and hire:** no extra fees beyond membership (unchanged).
 
 **To confirm before launch:** the completion-rate % for each level, how cancellations are treated (Airtasker keeps the connection fee if the poster is responsible), payment holding/escrow and payout timing. These all need the payments backend.
 
 ## Assumptions and open items
-- The site does **not** claim "no commission" (there is a job service fee) or "no lock-in" (still to decide). Confirm cancellation and refund terms, and what "fair use" means before launch.
+- The site does **not** claim to be fee-free (there is a job service fee) or "no lock-in" (still to decide). Confirm cancellation and refund terms, and what "fair use" means before launch.
 - Competitor prices change often. Re-check these figures before launch.
 - Real accounts, subscriptions and payments need a backend (for example Stripe Billing plus a marketplace platform or a custom build).

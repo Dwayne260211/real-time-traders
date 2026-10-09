@@ -224,23 +224,23 @@
           </details>
           <details class="faq__item">
             <summary>Do I need a membership to use the site?<svg class="icon faq__icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
-            <div class="faq__answer"><p>No. Anyone can browse the marketplace, jobs and hire range without an account. To buy, sell or post jobs you'll need Basic membership ($4.99/month); to quote on jobs you'll need Bronze or higher.</p></div>
+            <div class="faq__answer"><p>No. Anyone can browse the marketplace, jobs and hire range without an account. To post a job you only need a free account (a connection fee applies when you accept a quote). To buy or sell you need Basic ($4.99/month), and to quote on jobs Bronze or higher.</p></div>
           </details>
           <details class="faq__item">
             <summary>What do Basic, Bronze, Silver and Gold include?<svg class="icon faq__icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
-            <div class="faq__answer"><p>Basic covers buying, selling (10 active listings) and posting jobs (up to 5 open at a time). Bronze adds quoting on jobs and tenders (20 quotes a month) and 30 listings. Silver adds 60 quotes, 100 listings, 2 featured listings a month, a verified badge, hire priority and 5% off hire. Gold adds unlimited quotes and listings (fair use), 10 featured listings, a business profile, analytics, 10% off hire, priority support and up to 5 team users. See the comparison table. Pricing and features may change.</p></div>
+            <div class="faq__answer"><p>A free account lets you post jobs (up to 5 open at a time) and pay a connection fee per assigned job. Basic adds buying, selling (10 active listings) and waives the job connection fee. Bronze adds quoting on jobs and tenders (20 quotes a month), 30 listings and unlimited open jobs. Silver adds 60 quotes, 100 listings, 2 featured listings a month, a verified badge, hire priority and 5% off hire. Gold adds unlimited quotes and listings (fair use), 10 featured listings, a business profile, analytics, 10% off hire, priority support and up to 5 team users. See the comparison table. Pricing and features may change.</p></div>
           </details>
           <details class="faq__item">
             <summary>How much does membership cost?<svg class="icon faq__icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
-            <div class="faq__answer"><p>Introductory pricing, including GST: Guest is free, Basic $4.99/month, Bronze $19.99/month, Silver $39.99/month and Gold $79.99/month. Pay yearly and get 2 months free ($49.90, $199.90, $399.90 or $799.90 a year). Pricing and features may change.</p></div>
+            <div class="faq__answer"><p>Introductory pricing, including GST: browsing and a free account cost nothing (free accounts pay a connection fee per assigned job). Basic is $4.99/month, Bronze $19.99/month, Silver $39.99/month and Gold $79.99/month. Pay yearly and get 2 months free ($49.90, $199.90, $399.90 or $799.90 a year). Pricing and features may change.</p></div>
           </details>
           <details class="faq__item">
             <summary>How do jobs and tenders work?<svg class="icon faq__icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
-            <div class="faq__answer"><p>Post a job with a title, category, suburb, budget and description. Members send quotes (tenders), you compare them and choose who does the work. Members pay no connection fee, and the worker you choose pays a service fee on the job. <em>[Placeholder: confirm payments, deposits and the dispute process.]</em></p></div>
+            <div class="faq__answer"><p>Post a job with a title, category, suburb, budget and description. Workers send quotes (tenders), you compare them and choose who does the work. You only need a free account to post. A connection fee applies when you accept a quote unless you're a paid member, and the worker you choose pays a service fee on the job. <em>[Placeholder: confirm payments, deposits and the dispute process.]</em></p></div>
           </details>
           <details class="faq__item">
             <summary>What fees apply to jobs and tenders?<svg class="icon faq__icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
-            <div class="faq__answer"><p>Two fees, and only once a quote is accepted. Posters pay a one-off connection fee of $9.95 to $59.95 (inc. GST, based on the accepted quote price), which is <strong>waived for all members</strong>. Since posting needs Basic membership, members never pay it. Workers pay a service fee of 12.5% to 20% + GST on jobs they win, deducted when they're paid. See <a href="jobs.html#fees">job fees</a>.</p></div>
+            <div class="faq__answer"><p>Two fees, and only once a quote is accepted. Posters on a free account pay a one-off connection fee of $9.95 to $59.95 (inc. GST, based on the accepted quote price). It's <strong>waived for paid members</strong> (Basic and up). Workers pay a service fee of 12.5% to 20% + GST on jobs they win, deducted when they're paid. See <a href="jobs.html#fees">job fees</a>.</p></div>
           </details>
           <details class="faq__item">
             <summary>How is the worker service fee worked out?<svg class="icon faq__icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
@@ -399,9 +399,9 @@
             <label class="field"><span>Email</span><input type="email" autocomplete="email" required></label>
             <label class="field"><span>Password</span><input type="password" autocomplete="new-password" required></label>
             <label class="field"><span>Membership</span>
-              <select id="join-tier"><option value="Basic">Basic: $4.99/month</option><option value="Bronze">Bronze: $19.99/month</option><option value="Silver" selected>Silver: $39.99/month</option><option value="Gold">Gold: $79.99/month</option></select>
+              <select id="join-tier"><option value="Free">Free account: $0 (connection fee per job)</option><option value="Basic">Basic: $4.99/month</option><option value="Bronze">Bronze: $19.99/month</option><option value="Silver" selected>Silver: $39.99/month</option><option value="Gold">Gold: $79.99/month</option></select>
             </label>
-            <p class="note">Basic $4.99, Bronze $19.99, Silver $39.99, Gold $79.99 a month (inc. GST), or pay yearly and get 2 months free. <a href="membership.html" data-close>Compare memberships</a></p>
+            <p class="note">A free account can post jobs (connection fee $9.95–$59.95 per assigned job). Basic $4.99, Bronze $19.99, Silver $39.99, Gold $79.99 a month (inc. GST), or pay yearly and get 2 months free. <a href="membership.html" data-close>Compare memberships</a></p>
             <button type="submit" class="btn btn--primary btn--block">Create account</button>
             <p class="form-status" role="status" aria-live="polite"></p>
           </form>
@@ -417,8 +417,11 @@
         </div>
       </div>
       <div class="modal__demo">
-        <p><strong>Mockup only.</strong> No real accounts or payments: these need a backend. Use the switch below to preview what members would see.</p>
-        <button type="button" class="btn btn--outline btn--sm" data-demo-toggle>Preview as member</button>
+        <p><strong>Mockup only.</strong> No real accounts or payments: these need a backend. Use the switches below to preview what a free account or a paid member would see.</p>
+        <div class="modal__demo-btns">
+          <button type="button" class="btn btn--outline btn--sm" data-demo-free>Preview with free account</button>
+          <button type="button" class="btn btn--outline btn--sm" data-demo-toggle>Preview as member</button>
+        </div>
       </div>
     </div>
   </dialog>

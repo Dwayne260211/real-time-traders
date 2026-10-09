@@ -826,3 +826,7 @@ body:not(.is-member):not(.has-account) .account-only::after {
 body:not(.is-member):not(.has-account) .account-only:hover::after, body:not(.is-member):not(.has-account) .account-only:focus-visible::after { opacity: 1; transform: translate(-50%, 0); }
 .modal__demo-btns { display: flex; flex-wrap: wrap; gap: 8px; }
 .compare thead th small { font-weight: 500; opacity: .85; font-size: 11px; }
+
+/* ---- v8 company details ---- */
+.footer__legal span { white-space: nowrap; }
+.contact__company small + * { font-weight: 400; }

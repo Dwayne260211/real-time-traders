@@ -4,6 +4,8 @@ A multi-page static site built with plain HTML, CSS and vanilla JS. There's no f
 
 Live site: https://dwayne260211.github.io/real-time-traders/
 
+Business: **Real Time Traders Pty Ltd** (Australian private company), ABN 54 642 170 438, ACN 642 170 438, Brisbane QLD. Not registered for GST. The footer on every page shows "© 2026 Real Time Traders Pty Ltd · ABN · ACN" and "Director: John Carter"; contact.html lists the company details. No street address is published.
+
 ```
 index.html        overview: hero, three pillars, service teasers, membership teaser, how it works, why choose us
 marketplace.html  categories, Featured / Antiques & Rare Finds / Donate tabs (#featured #rare #donate), trending, promo
@@ -12,7 +14,7 @@ hire.html         Tool / Plant & Portable Toilets / Trailer hire tabs (#tool #pl
 services.html     Precious Metal Scrapping 24/7 / Vehicle / Towing / Home tabs (#scrap #vehicle #towing #home)
 membership.html   tier cards, comparison table, how it works
 community.html    community help & donations, Just Landing (blog), testimonial
-contact.html      quote/contact form (#quote), hotline, director, FAQ (#faq)
+contact.html      quote/contact form (#quote), hotline, director, company details, FAQ (#faq)
 css/style.css     all styles, mobile-first; colour tokens in :root at the top
 js/main.js        menu, tabs (+ opening a tab from the URL hash), carousel, hearts, quote form + ?service= prefill,
                   post-a-job checks, membership locks, Join/Login modal mockup, member preview (kept across pages)
@@ -40,7 +42,10 @@ The site has three main sections ("pillars"), and the 24/7 services sit alongsid
 
 The nav, hero copy, quick links, footer, quote-form dropdown and FAQ all follow this structure.
 
-## Membership (v4): introductory pricing, AUD inc. GST
+## Membership (v4): introductory pricing, AUD
+
+> **GST:** Real Time Traders Pty Ltd is not registered for GST, so no GST is charged; register once turnover reaches the $75,000 threshold and update pricing then.
+
 | Tier | Monthly | Annual (2 months free) | What's included |
 |---|---|---|---|
 | Guest (no account) | Free | Free | Browse everything, request hire and service quotes, call the hotline |
@@ -51,7 +56,7 @@ The nav, hero copy, quick links, footer, quote-form dropdown and FAQ all follow 
 | Gold | $79.99 | $799.90 | Everything in Silver, plus unlimited quotes and listings (fair use), 10 featured listings/month with top placement, business profile/storefront, analytics, 10% off hire, priority support, up to 5 team users |
 
 - The competitor research (with sources and dates) and the pricing rationale are in [`docs/pricing-research.md`](docs/pricing-research.md).
-- On the page, the yellow "placeholders" banner is replaced by a small "Introductory pricing, inc. GST" note. The note under the table says "pricing and features may change" and explains that unlimited means fair use. Silver's "Recommended" badge is a design choice and does not claim it is the most popular tier.
+- On the page, the yellow "placeholders" banner is replaced by a small "Introductory pricing, AUD" note. The note under the table says "pricing and features may change" and explains that unlimited means fair use. Silver's "Recommended" badge is a design choice and does not claim it is the most popular tier.
 - **Post a job** needs only a free account. It has no lock icon, and the tooltip reads "Free account needed (sign up free)". Clicking it as a guest opens the modal as **"Create a free account"** with Free account preselected.
 - **Members-only buttons:** guests and free accounts see a lock icon and a tooltip. Clicking opens the Join modal with that tier preselected.
   - Buy, Sell an item, + Listing: "Basic membership or higher"
@@ -66,8 +71,8 @@ Shown in the "Job fees" block on `jobs.html#fees`, a short note and two table ro
 
 | Who | Fee | When |
 |---|---|---|
-| Job poster | Connection fee by accepted quote price: under $50 $9.95, $50–99.99 $14.95, $100–149.99 $19.95, $150–199.99 $29.95, $200–249.99 $39.95, $250–299.99 $49.95, $300+ $59.95 (inc. GST). Paid by **free accounts**; **waived for Basic, Bronze, Silver and Gold members**. Example: a $180 quote costs a free account $180 + $29.95 = $209.95, and a Basic member $180. | Once, when a quote is accepted and the job assigned |
-| Worker/tradie | Service fee by level: Level 1 (under $880 earned in the last 30 days) 20%, Level 2 ($880+) 18.5%, Level 3 ($2,650+) 14.9%, Level 4 ($5,300+) 12.5%. All **+ GST**, and the completion rate over the last 20 jobs must also meet the level | On jobs won, deducted at payout |
+| Job poster | Connection fee by accepted quote price: under $50 $9.95, $50–99.99 $14.95, $100–149.99 $19.95, $150–199.99 $29.95, $200–249.99 $39.95, $250–299.99 $49.95, $300+ $59.95. Paid by **free accounts**; **waived for Basic, Bronze, Silver and Gold members**. Example: a $180 quote costs a free account $180 + $29.95 = $209.95, and a Basic member $180. | Once, when a quote is accepted and the job assigned |
+| Worker/tradie | Service fee by level: Level 1 (under $880 earned in the last 30 days) 20%, Level 2 ($880+) 18.5%, Level 3 ($2,650+) 14.9%, Level 4 ($5,300+) 12.5% of the job price. Example: a $200 job at Level 1 has a $40 fee, so the worker receives $160. The completion rate over the last 20 jobs must also meet the level | On jobs won, deducted at payout |
 | Marketplace / hire | No extra fees beyond membership | n/a |
 
 Sources and caveats are in `docs/pricing-research.md`. The exact completion-rate % for each level isn't published by Airtasker and is still to be decided. Taking fees requires the payments backend.
@@ -100,8 +105,8 @@ Every text/background pair meets WCAG AA (4.5:1 or better). The font is Inter (G
 The logo files `logo-lockup.png` (horizontal, header/footer), `logo-full.png` (stacked) and `logo-icon.png` (icon only), plus `favicon-*.png`, `favicon.ico` and `apple-touch-icon.png`, are transparent cut-outs of the v2 logo. Use them on light backgrounds, because the navy lettering disappears on dark ones. The previous orange/charcoal logo set is kept, unused, in `images/logo-orange/`. The original orange donation category icon is in `images/legacy/`.
 
 ## Before going live: placeholders to replace
-- `contact@demolink.com` and the street address
-- Service area/suburbs, address, hours for non-scrapping services, and the list of accepted metals
+- `contact@demolink.com` (do not publish a street address; the site shows "Brisbane, QLD" only)
+- Service area/suburbs, hours for non-scrapping services, and the list of accepted metals
 - Trailer types, sizes and prices (all show "Price on request"), plus the trailer images (icons for now)
 - Tool Hire range (power tools, concrete & compaction, pressure washers, generators, ladders & scaffold, air compressors): the types, availability, hire periods, deposits and prices are all placeholders ("Price on request"), and the cards use icons instead of photos
 - Plant Hire range (portable toilets, site fencing, mini excavators & bobcats, skip bins, site sheds, water carts): the types, delivery area, operator/licence requirements, toilet servicing and prices are all placeholders ("Price on request"), and the cards use icons instead of photos

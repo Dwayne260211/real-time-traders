@@ -187,8 +187,9 @@
           <ul class="contact__list">
             <li><span class="contact__icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span><span><small>Hotline 24/7</small><a href="tel:+61422909739">0422 909 739</a></span></li>
             <li><span class="contact__icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span><span><small>Email</small><a href="mailto:contact@demolink.com">contact@demolink.com</a></span></li>
-            <li><span class="contact__icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span><span><small>Location</small>Brisbane, QLD <em class="ph">[address placeholder]</em></span></li>
+            <li><span class="contact__icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span><span><small>Location</small>Brisbane, QLD (we come to you) <em class="ph">[service area placeholder]</em></span></li>
             <li><span class="contact__icon"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg></span><span><small>Company director</small>John Carter</span></li>
+            <li class="contact__company"><span class="contact__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span><span><small>Company details</small>Real Time Traders Pty Ltd<br>ABN 54 642 170 438<br>ACN 642 170 438</span></li>
           </ul>
         </div>
         <form class="quote-form" id="quote-form" action="#" novalidate>
@@ -232,7 +233,7 @@
           </details>
           <details class="faq__item">
             <summary>How much does membership cost?<svg class="icon faq__icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
-            <div class="faq__answer"><p>Introductory pricing, including GST: browsing and a free account cost nothing (free accounts pay a connection fee per assigned job). Basic is $4.99/month, Bronze $19.99/month, Silver $39.99/month and Gold $79.99/month. Pay yearly and get 2 months free ($49.90, $199.90, $399.90 or $799.90 a year). Pricing and features may change.</p></div>
+            <div class="faq__answer"><p>Introductory pricing, in AUD: browsing and a free account cost nothing (free accounts pay a connection fee per assigned job). Basic is $4.99/month, Bronze $19.99/month, Silver $39.99/month and Gold $79.99/month. Pay yearly and get 2 months free ($49.90, $199.90, $399.90 or $799.90 a year). Pricing and features may change.</p></div>
           </details>
           <details class="faq__item">
             <summary>How do jobs and tenders work?<svg class="icon faq__icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
@@ -240,11 +241,11 @@
           </details>
           <details class="faq__item">
             <summary>What fees apply to jobs and tenders?<svg class="icon faq__icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
-            <div class="faq__answer"><p>Two fees, and only once a quote is accepted. Posters on a free account pay a one-off connection fee of $9.95 to $59.95 (inc. GST, based on the accepted quote price). It's <strong>waived for paid members</strong> (Basic and up). Workers pay a service fee of 12.5% to 20% + GST on jobs they win, deducted when they're paid. See <a href="jobs.html#fees">job fees</a>.</p></div>
+            <div class="faq__answer"><p>Two fees, and only once a quote is accepted. Posters on a free account pay a one-off connection fee of $9.95 to $59.95 (based on the accepted quote price). It's <strong>waived for paid members</strong> (Basic and up). Workers pay a service fee of 12.5% to 20% of the job price on jobs they win, deducted when they're paid. See <a href="jobs.html#fees">job fees</a>.</p></div>
           </details>
           <details class="faq__item">
             <summary>How is the worker service fee worked out?<svg class="icon faq__icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
-            <div class="faq__answer"><p>It depends on your fee level, which is based on what you've earned in the last 30 days and your completion rate over your last 20 assigned jobs. Level 1 (under $880) pays 20%, Level 2 ($880+) 18.5%, Level 3 ($2,650+) 14.9% and Level 4 ($5,300+) 12.5%, all plus GST. If you don't win a job, you don't pay.</p></div>
+            <div class="faq__answer"><p>It depends on your fee level, which is based on what you've earned in the last 30 days and your completion rate over your last 20 assigned jobs. Level 1 (under $880) pays 20%, Level 2 ($880+) 18.5%, Level 3 ($2,650+) 14.9% and Level 4 ($5,300+) 12.5% of the job price. If you don't win a job, you don't pay.</p></div>
           </details>
           <details class="faq__item">
             <summary>Are there fees on marketplace sales or hire?<svg class="icon faq__icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
@@ -365,7 +366,7 @@
     </div>
     <div class="footer__bottom">
       <div class="container footer__bottom-inner">
-        <p>© 2026 <strong>Real Time Traders</strong>. All Rights Reserved</p>
+        <p class="footer__legal"><span>© 2026 Real Time Traders Pty Ltd</span> · <span>ABN 54 642 170 438</span> · <span>ACN 642 170 438</span></p>
         <img src="images/payments.png" alt="Accepted payments: PayPal, Stripe, Mastercard, Klarna, Visa" width="300" height="38" loading="lazy">
         <div class="footer__selects">
           <label class="select-plain"><span class="sr-only">Currency</span><select><option>AUD</option><option>USD</option></select></label>
@@ -401,7 +402,7 @@
             <label class="field"><span>Membership</span>
               <select id="join-tier"><option value="Free">Free account: $0 (connection fee per job)</option><option value="Basic">Basic: $4.99/month</option><option value="Bronze">Bronze: $19.99/month</option><option value="Silver" selected>Silver: $39.99/month</option><option value="Gold">Gold: $79.99/month</option></select>
             </label>
-            <p class="note">A free account can post jobs (connection fee $9.95–$59.95 per assigned job). Basic $4.99, Bronze $19.99, Silver $39.99, Gold $79.99 a month (inc. GST), or pay yearly and get 2 months free. <a href="membership.html" data-close>Compare memberships</a></p>
+            <p class="note">A free account can post jobs (connection fee $9.95–$59.95 per assigned job). Basic $4.99, Bronze $19.99, Silver $39.99, Gold $79.99 a month, or pay yearly and get 2 months free. <a href="membership.html" data-close>Compare memberships</a></p>
             <button type="submit" class="btn btn--primary btn--block">Create account</button>
             <p class="form-status" role="status" aria-live="polite"></p>
           </form>

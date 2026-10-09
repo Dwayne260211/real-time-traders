@@ -386,12 +386,12 @@
           <div class="fees__grid">
             <article class="fee-card">
               <h4><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg> Job posters: connection fee</h4>
-              <p>A one-off connection fee is charged when you accept a quote and assign the job. It's set by the accepted quote price, includes GST, and doesn't change if the price changes later.</p>
+              <p>A one-off connection fee is charged when you accept a quote and assign the job. It's set by the accepted quote price and doesn't change if the price changes later.</p>
               <p class="fee-card__waived"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span><strong>Paid members pay $0.</strong> With a free account you pay the connection fee below on each job you assign. Basic ($4.99/month) and higher memberships have it waived.</span></p>
               <div class="table-wrap table-wrap--plain">
                 <table class="fee-table">
                   <caption>Connection fee per assigned job (free accounts)</caption>
-                  <thead><tr><th scope="col">Accepted quote price</th><th scope="col">Connection fee (inc. GST)</th></tr></thead>
+                  <thead><tr><th scope="col">Accepted quote price</th><th scope="col">Connection fee</th></tr></thead>
                   <tbody><tr><td>Under $50</td><td>$9.95</td></tr><tr><td>$50 – $99.99</td><td>$14.95</td></tr><tr><td>$100 – $149.99</td><td>$19.95</td></tr><tr><td>$150 – $199.99</td><td>$29.95</td></tr><tr><td>$200 – $249.99</td><td>$39.95</td></tr><tr><td>$250 – $299.99</td><td>$49.95</td></tr><tr><td>$300 and over</td><td>$59.95</td></tr><tr class="is-member"><td>Basic membership and up (any quote price)</td><td><strong>$0 (waived)</strong></td></tr></tbody>
                 </table>
               </div>
@@ -404,10 +404,10 @@
                 <table class="fee-table">
                   <caption>Worker fee levels (higher level, lower fee)</caption>
                   <thead><tr><th scope="col">Level</th><th scope="col">Earned in last 30 days</th><th scope="col">Completion rate*</th><th scope="col">Service fee</th></tr></thead>
-                  <tbody><tr><th scope="row">Level 1</th><td>Under $880</td><td>Starting level</td><td><strong>20%</strong> + GST</td></tr><tr><th scope="row">Level 2</th><td>$880+</td><td>Okay</td><td><strong>18.5%</strong> + GST</td></tr><tr><th scope="row">Level 3</th><td>$2,650+</td><td>Good</td><td><strong>14.9%</strong> + GST</td></tr><tr><th scope="row">Level 4</th><td>$5,300+</td><td>Excellent</td><td><strong>12.5%</strong> + GST</td></tr></tbody>
+                  <tbody><tr><th scope="row">Level 1</th><td>Under $880</td><td>Starting level</td><td><strong>20%</strong></td></tr><tr><th scope="row">Level 2</th><td>$880+</td><td>Okay</td><td><strong>18.5%</strong></td></tr><tr><th scope="row">Level 3</th><td>$2,650+</td><td>Good</td><td><strong>14.9%</strong></td></tr><tr><th scope="row">Level 4</th><td>$5,300+</td><td>Excellent</td><td><strong>12.5%</strong></td></tr></tbody>
                 </table>
               </div>
-              <p class="fee-card__example"><strong>Example:</strong> a $200 job at Level 1 has a 20% fee ($40) plus GST ($4), so you receive $156.</p>
+              <p class="fee-card__example"><strong>Example:</strong> a $200 job at Level 1 has a 20% fee ($40), so you receive $160.</p>
             </article>
           </div>
           <p class="note">*Completion rate is the share of your last 20 assigned jobs that you completed. You need to meet both the earnings and the completion requirement to reach a level. Fees are in AUD. Pricing and features may change.</p>
@@ -490,7 +490,7 @@
     </div>
     <div class="footer__bottom">
       <div class="container footer__bottom-inner">
-        <p>© 2026 <strong>Real Time Traders</strong>. All Rights Reserved</p>
+        <p class="footer__legal"><span>© 2026 Real Time Traders Pty Ltd</span> · <span>ABN 54 642 170 438</span> · <span>ACN 642 170 438</span></p>
         <img src="images/payments.png" alt="Accepted payments: PayPal, Stripe, Mastercard, Klarna, Visa" width="300" height="38" loading="lazy">
         <div class="footer__selects">
           <label class="select-plain"><span class="sr-only">Currency</span><select><option>AUD</option><option>USD</option></select></label>
@@ -526,7 +526,7 @@
             <label class="field"><span>Membership</span>
               <select id="join-tier"><option value="Free">Free account: $0 (connection fee per job)</option><option value="Basic">Basic: $4.99/month</option><option value="Bronze">Bronze: $19.99/month</option><option value="Silver" selected>Silver: $39.99/month</option><option value="Gold">Gold: $79.99/month</option></select>
             </label>
-            <p class="note">A free account can post jobs (connection fee $9.95–$59.95 per assigned job). Basic $4.99, Bronze $19.99, Silver $39.99, Gold $79.99 a month (inc. GST), or pay yearly and get 2 months free. <a href="membership.html" data-close>Compare memberships</a></p>
+            <p class="note">A free account can post jobs (connection fee $9.95–$59.95 per assigned job). Basic $4.99, Bronze $19.99, Silver $39.99, Gold $79.99 a month, or pay yearly and get 2 months free. <a href="membership.html" data-close>Compare memberships</a></p>
             <button type="submit" class="btn btn--primary btn--block">Create account</button>
             <p class="form-status" role="status" aria-live="polite"></p>
           </form>

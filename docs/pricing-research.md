@@ -21,7 +21,9 @@ Accessed 9 October 2026 (AEST). All figures are in AUD. Where a source gives pri
 | **Carsales** (private sellers) | Prices are dynamic, based on the vehicle and postcode, and carsales doesn't publish them. A user reports $229 Standard / $344 Premium / $414 Ultimate (June 2026). **Not confirmed by carsales** | https://help.carsales.com.au/hc/en-gb/articles/34235710344217-How-much-does-an-ad-cost and https://www.ozbargain.com.au/node/962347 | 9 Oct 2026 |
 | **Kennards Hire** (trade) | No paid membership. A free Trade/Credit Account with "custom trade rates", 30-day invoicing and the account portal. **No standard discount % is published** | https://www.kennards.com.au/trade and https://www.kennards.com.au/credit-account-application | 9 Oct 2026 |
 
-## Chosen pricing (introductory, AUD inc. GST)
+## Chosen pricing (introductory, AUD)
+
+> **GST:** Real Time Traders Pty Ltd is not registered for GST, so no GST is charged; register once turnover reaches the $75,000 threshold and update pricing then. (GST figures in the competitor table above describe those competitors' own pricing.)
 
 | Tier | Monthly | Annual (2 months free) | Listings | Jobs | Quotes | Featured | Hire discount | Other |
 |---|---|---|---|---|---|---|---|---|
@@ -55,16 +57,16 @@ Dwayne's decision was to take what Airtasker takes on Jobs & Tenders. The figure
 Caveats: Airtasker says fees may vary temporarily under its "randomised fee studies". A user comment on the tiers article (17 Jul 2026) claims Bronze shows 22%, but the official table still says 20%, so the site uses 20%.
 
 ### What Real Time Traders uses
-**Workers (service fee on jobs won, deducted at payout, plus GST).** The levels are renamed "Level 1–4" so they don't clash with our Bronze/Silver/Gold memberships.
+**Workers (service fee on jobs won, deducted at payout, as a % of the job price).** The levels are renamed "Level 1–4" so they don't clash with our Bronze/Silver/Gold memberships.
 
-| Level | Earned in last 30 days | Completion (last 20 jobs) | Service fee (ex GST) | Airtasker equivalent |
+| Level | Earned in last 30 days | Completion (last 20 jobs) | Service fee (% of job price) | Airtasker equivalent |
 |---|---|---|---|---|
 | Level 1 | Under $880 | Starting level | 20% | Bronze |
 | Level 2 | $880+ | Okay | 18.5% | Silver |
 | Level 3 | $2,650+ | Good | 14.9% | Gold |
 | Level 4 | $5,300+ | Excellent | 12.5% | Platinum |
 
-**Posters (connection fee per assigned job, inc. GST).** The fee bands are identical to Airtasker's ($9.95 to $59.95), and the fee is **waived for Basic, Bronze, Silver and Gold members**, the same way Airtasker's membership waives it. **Update (9 Oct 2026, Dwayne's decision):** like Airtasker, anyone can post jobs with a **free account** and pays the connection fee when they accept a quote. Paid members (Basic and up) have it waived, so Basic at $4.99/month pays for itself on a single job.
+**Posters (connection fee per assigned job).** The fee bands are identical to Airtasker's ($9.95 to $59.95), and the fee is **waived for Basic, Bronze, Silver and Gold members**, the same way Airtasker's membership waives it. **Update (9 Oct 2026, Dwayne's decision):** like Airtasker, anyone can post jobs with a **free account** and pays the connection fee when they accept a quote. Paid members (Basic and up) have it waived, so Basic at $4.99/month pays for itself on a single job.
 
 **Marketplace and hire:** no extra fees beyond membership (unchanged).
 

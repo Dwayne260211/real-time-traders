@@ -11,14 +11,28 @@
     toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     toggle.querySelector("use").setAttribute("href", open ? "#i-close" : "#i-menu");
   }
+  var mqDesktop = window.matchMedia("(min-width: 1024px)");
   if (toggle && nav) {
     toggle.addEventListener("click", function () { setMenu(!nav.classList.contains("is-open")); });
     nav.addEventListener("click", function (e) {
-      if (e.target.closest("a") && window.matchMedia("(max-width: 1023px)").matches) setMenu(false);
+      if (e.target.closest("a") && !mqDesktop.matches) setMenu(false);
     });
+    /* Escape closes the mobile menu and returns focus to the toggle */
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "Escape") return;
+      var openSub = document.querySelector(".has-sub.is-open");
+      if (openSub) { closeSub(openSub); openSub.querySelector(".nav__sub-toggle").focus(); return; }
+      if (nav.classList.contains("is-open")) { setMenu(false); toggle.focus(); }
+    });
+    var onMq = function () { if (mqDesktop.matches) setMenu(false); };
+    if (mqDesktop.addEventListener) mqDesktop.addEventListener("change", onMq);
   }
 
   /* Sub-menu toggle (click on mobile, also works with keyboard on desktop) */
+  function closeSub(li) {
+    li.classList.remove("is-open");
+    li.querySelector(".nav__sub-toggle").setAttribute("aria-expanded", "false");
+  }
   document.querySelectorAll(".nav__sub-toggle").forEach(function (btn) {
     btn.addEventListener("click", function () {
       var li = btn.closest(".has-sub");
@@ -27,12 +41,15 @@
       btn.setAttribute("aria-expanded", String(open));
     });
   });
+  /* Desktop: close a keyboard-opened sub-menu when focus leaves it */
+  document.querySelectorAll(".has-sub").forEach(function (li) {
+    li.addEventListener("focusout", function (e) {
+      if (mqDesktop.matches && li.classList.contains("is-open") && !li.contains(e.relatedTarget)) closeSub(li);
+    });
+  });
   document.addEventListener("click", function (e) {
     document.querySelectorAll(".has-sub.is-open").forEach(function (li) {
-      if (!li.contains(e.target)) {
-        li.classList.remove("is-open");
-        li.querySelector(".nav__sub-toggle").setAttribute("aria-expanded", "false");
-      }
+      if (!li.contains(e.target)) closeSub(li);
     });
   });
 
@@ -118,42 +135,15 @@
     });
   });
 
-  /* ---------- Wishlist hearts (visual only) ---------- */
-  document.querySelectorAll(".product-card .icon-btn--plain").forEach(function (btn) {
-    btn.setAttribute("aria-pressed", "false");
-    btn.addEventListener("click", function () {
-      var on = btn.classList.toggle("is-saved");
-      btn.setAttribute("aria-pressed", String(on));
-    });
-  });
-
-  /* ---------- "Book" buttons preselect the service in the quote form ----------
-     The form lives on contact.html. Elsewhere the link goes to contact.html?service=...#quote */
-  var serviceSelect = document.getElementById("quote-service");
-  function prefillService(service) {
-    if (!serviceSelect || !service) return;
-    var wanted = service.toLowerCase();
-    var opts = Array.prototype.slice.call(serviceSelect.options);
-    var match = opts.find(function (o) {
-      var t = o.text.toLowerCase();
-      return wanted.indexOf(t.split(" (")[0].split(" /")[0]) === 0 || t.indexOf(wanted) === 0;
-    }) || opts.find(function (o) { return wanted.indexOf(o.text.toLowerCase().split(" ")[0]) === 0; });
-    if (match) serviceSelect.value = match.value || match.text;
-    var details = document.querySelector("#quote-form textarea");
-    if (details && !details.value && wanted.indexOf("–") > -1) details.value = service + ": ";
-  }
-  document.querySelectorAll("[data-service]").forEach(function (el) {
-    el.addEventListener("click", function (e) {
-      if (!serviceSelect) return;             // no form here: go to contact.html?service=...
-      e.preventDefault();
-      prefillService(el.getAttribute("data-service"));
-      var target = document.getElementById("quote");
-      if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  });
-  if (serviceSelect && window.URLSearchParams) {
-    var qsService = new URLSearchParams(location.search).get("service");
-    if (qsService) prefillService(qsService);
+  /* ---------- Contact page: show which service the visitor came from ----------
+     Links like contact.html?service=Trailer%20Hire#quote land on the call card. */
+  var enquiryService = document.querySelector("[data-enquiry-service]");
+  if (enquiryService && window.URLSearchParams) {
+    var svc = new URLSearchParams(location.search).get("service");
+    if (svc) {
+      enquiryService.textContent = svc.slice(0, 80);
+      enquiryService.closest(".enquiry-card__service").hidden = false;
+    }
   }
 
   /* =========================================================
@@ -221,9 +211,9 @@
       }
       return;
     }
-    if (gated.tagName === "A" && gated.getAttribute("href") === "#") {
+    if ((gated.tagName === "A" && gated.getAttribute("href") === "#") || (gated.tagName === "BUTTON" && gated.type !== "submit")) {
       e.preventDefault();
-      toast((member ? "Member" : "Free account") + " preview: this would open the “" + cleanLabel(gated) + "” flow (needs a backend).");
+      toast((member ? "Member" : "Free account") + " preview: “" + cleanLabel(gated) + "” goes live when accounts launch. Nothing was saved.");
     }
   }, true);
 
@@ -235,6 +225,11 @@
   });
 
   if (modal) {
+    modal.querySelectorAll("[data-forgot]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        b.closest("form").querySelector(".form-status").textContent = "Password reset will be available when accounts launch.";
+      });
+    });
     modal.addEventListener("click", function (e) {
       if (e.target === modal) closeAuth();            // backdrop click
       if (e.target.closest("[data-close]")) closeAuth();
@@ -242,7 +237,7 @@
     modal.querySelectorAll("[data-demo-form]").forEach(function (f) {
       f.addEventListener("submit", function (e) {
         e.preventDefault();
-        f.querySelector(".form-status").textContent = "Mockup only: no account was created. Real sign-up and payments need a backend.";
+        f.querySelector(".form-status").textContent = "Preview only: accounts and payments are coming soon, so no account was created and nothing was sent.";
       });
     });
   }
@@ -281,7 +276,31 @@
     if (saved === "member" || saved === "free") setMode(saved);
   } catch (err) {}
 
-  /* Post a job form (only reachable as a member, front-end only) */
+  /* ---------- Header search: no search backend yet, so it opens the matching section ---------- */
+  document.querySelectorAll("[data-site-search]").forEach(function (f) {
+    f.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var target = (f.querySelector("select") || {}).value || "marketplace.html";
+      var q = (f.querySelector("input[type=search]") || {}).value || "";
+      var parts = target.split("#");
+      location.href = parts[0] + (q.trim() ? "?q=" + encodeURIComponent(q.trim()) : "") + (parts[1] ? "#" + parts[1] : "");
+    });
+  });
+  if (window.URLSearchParams) {
+    var q = new URLSearchParams(location.search).get("q");
+    if (q) setTimeout(function () { toast("Live search is coming soon. Browse this section, or call us and we'll help you find “" + q.slice(0, 40) + "”."); }, 300);
+  }
+
+  /* ---------- Filter / directory forms that are previews only ---------- */
+  document.querySelectorAll("form[data-preview-msg]").forEach(function (f) {
+    f.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var status = f.querySelector(".form-status");
+      if (status) status.textContent = f.getAttribute("data-preview-msg");
+    });
+  });
+
+  /* Post a job form (only reachable with an account preview; front-end only) */
   var jobForm = document.getElementById("post-job-form");
   if (jobForm) {
     jobForm.addEventListener("submit", function (e) {
@@ -294,31 +313,8 @@
         if (bad) ok = false;
       });
       status.classList.toggle("is-error", !ok);
-      status.textContent = ok ? "Job ready to post (demo only: nothing was sent or saved)." : "Please add a title, category, suburb and description.";
-      if (ok) jobForm.reset();
+      status.textContent = ok ? "Preview only: posting goes live when accounts launch. Nothing was sent or saved." : "Please add a title, category, suburb and description.";
     });
   }
 
-  /* ---------- Quote form (front-end only placeholder) ---------- */
-  var form = document.getElementById("quote-form");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var status = form.querySelector(".form-status");
-      var ok = true;
-      form.querySelectorAll("[required]").forEach(function (input) {
-        var bad = !input.value.trim();
-        input.closest(".field").classList.toggle("is-invalid", bad);
-        if (bad) ok = false;
-      });
-      if (!ok) {
-        status.textContent = "Please fill in your name, phone and suburb.";
-        status.classList.add("is-error");
-        return;
-      }
-      status.classList.remove("is-error");
-      status.textContent = "Thanks! Your request is ready to send. (Demo only: connect this form to email or a booking system.)";
-      form.reset();
-    });
-  }
 })();

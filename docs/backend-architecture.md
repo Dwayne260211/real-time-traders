@@ -1,6 +1,8 @@
-# Backend architecture (recommended, not built yet)
+# Backend architecture
 
 Status, October 2026: the live site is a static preview on GitHub Pages. Accounts, logins, payments, subscriptions, password reset, listings, job posting, quoting and online enquiries do **not** work yet, and the site says so wherever they appear. Nothing in this repo holds an API key, secret or live billing setting. This document describes how to add the backend safely when the client is ready.
+
+**Update, October 2026:** the **equipment hire system** is now built on Supabase and Stripe (code in `supabase/` and `js/hire-*.js`). It stays switched off until the owner connects a Supabase project. See the [Equipment hire system](#equipment-hire-system-built) section below and the owner guide `docs/hire-system-setup.md`. Everything else in this document (memberships, marketplace, jobs) is still a recommendation and hasn't been built.
 
 ## Goals
 
@@ -94,3 +96,104 @@ Only publishable values (Stripe publishable key, auth client ID, Turnstile site 
 2. Create a Formspree or Web3Forms form that delivers to it (free tiers are enough to start).
 3. Add the form back to `contact.html` with `action` pointing at that endpoint, a honeypot field and a spam check, and an honest success message only after the service returns 200.
 4. Test end to end, then remove the "Online enquiries are coming soon" notice.
+
+## Equipment hire system (built)
+
+Status: built and tested, but not connected. `js/hire-config.js` is empty, so the live pages show honest "coming soon / call us" states and make no requests. Owner steps are in `docs/hire-system-setup.md`.
+
+### Components
+
+| Part | Where | Notes |
+|---|---|---|
+| Catalogue | `hire.html`, `js/hire-catalogue.js` | Filters: Cleaning, Gardening, Power tools, General, Plant & portable toilets, Trailers. Shows published items only. Old `#tool`, `#plant`, `#trailer` links still work. |
+| Item page | `hire-item.html?id=<uuid>`, `js/hire-item.js` | Gallery, rates, terms ("Terms to be confirmed" when blank), live availability, booking request, Stripe Checkout redirect when payments are on. `noindex`. |
+| Customer bookings | `my-bookings.html`, `js/my-bookings.js` | Magic-link sign-in. Lists the customer's own bookings, lets them pay (when live) and cancel. `noindex`. |
+| Admin | `admin.html`, `js/hire-admin.js` | Equipment and rates, publish switch, photos, bookings, maintenance blocks, condition reports with private photos, settings. `noindex, nofollow`, not in the sitemap, disallowed in `robots.txt`. Access enforced by RLS. |
+| Shared browser code | `js/hire-common.js`, `js/vendor/supabase-js-2.117.3.min.js` | supabase-js is loaded only when configured. The config loader refuses `service_role` / `sb_secret_` keys. |
+| Database | `supabase/migrations/20261010000000_hire_system.sql` | Tables, functions, RLS, storage buckets. |
+| Edge Functions (Deno) | `supabase/functions/*` | `create-checkout-session`, `stripe-webhook`, `send-confirmation`, `cancel-booking`, shared code in `_shared/`. |
+| Tests | `supabase/tests/*.sql`, `supabase/functions/tests/handlers_test.ts` | SQL assertions (rolled back) and function tests with Stripe and email mocked. |
+
+### Data model
+
+- `hire_categories`: the six categories. These are example categories, not confirmed inventory.
+- `equipment` has `is_published` (default false) and `enquiry_only`.
+- `equipment_photos` live in the public bucket `equipment-photos`, with admin-only writes, up to 5 MB, JPEG/PNG/WebP.
+- `equipment_rates` hold daily, weekend and weekly rates in cents, all nullable.
+- `hire_settings` is a single row. Every policy field is nullable with **no default**. `payments_live` defaults to false. `pricing_rule` is null until the owner approves one.
+- `bookings`:
+  - `reference`, an equipment name snapshot, customer details, and inclusive `start_date`–`end_date` (`hire_days` is generated).
+  - The price snapshot: `price_breakdown`, `hire_total_cents`, `deposit_cents` and `discount_percent`.
+  - `status`: pending / confirmed / cancelled / completed.
+  - `payment_status`: unpaid / checkout_open / paid / paid_conflict / refund_pending / refunded / partially_refunded.
+  - Stripe ids, and `cancel_requested_at`.
+- `maintenance_blocks`, and `condition_reports` with `condition_report_photos` (in the private bucket `condition-photos`, viewed through signed URLs).
+- `stripe_events` (webhook idempotency) and `email_log` (one email of each kind per booking).
+
+### Double-booking guard
+
+Every period that makes an item unavailable is a row in `equipment_holds`:
+
+| Hold kind | Created when | Removed when |
+|---|---|---|
+| `booking` | A booking becomes confirmed or completed (trigger) | It's cancelled |
+| `maintenance` | A maintenance block is added (trigger) | The block is removed |
+| `checkout` | A customer opens Stripe Checkout | It expires |
+
+The rule itself is `EXCLUDE USING gist (equipment_id WITH =, period WITH &&)` on an inclusive `daterange` (needs `btree_gist`). The database therefore physically refuses two overlapping holds, whatever the browser does. Admins confirming a clashing booking get "Those dates clash…".
+
+Checkout holds expire 5 minutes after the Stripe session's `expires_at`. Expired holds are purged before every check. If a payment still arrives for dates that were taken meanwhile, `confirm_paid_booking` marks it `paid_conflict` and alerts the admin. It never double-books.
+
+### Pricing
+
+`calculate_hire_price` is immutable and runs on the server; the browser never sends a price.
+
+- `exact_period`:
+  - Saturday→Sunday with a weekend rate: the weekend rate.
+  - Whole weeks with a weekly rate: the weekly rate.
+  - Otherwise: daily × days.
+- `customer_choice`:
+  - Daily, weekend (Saturday–Sunday only) or weekly (rounded up).
+- A missing rate means "price on request".
+- With `pricing_rule` null, the site shows estimates only and online payment is refused. **The owner must choose and approve a rule.**
+- Member discount (Silver 5%, Gold 10%): the admin sets `discount_percent` per booking. It's applied to the hire amount at checkout. Memberships aren't connected yet, so it isn't automatic.
+
+### Access control (RLS)
+
+| Who | Can |
+|---|---|
+| Anyone (anon key) | Read categories, **published** equipment with its photos and rates, and settings. Call `check_availability`, `get_unavailable_periods` and `quote_hire`, which return dates only and never customer data. |
+| Signed-in customer | `request_booking`: pending only, max 5 pending per user, no past dates, no enquiry-only items, refuses unavailable dates. Read their own bookings. Can't update bookings directly. |
+| Admin (`user_roles.role = 'admin'`) | Everything above plus all CRUD, storage writes and condition photos. Nobody can grant themselves admin. |
+| Service role (Edge Functions only) | `begin_checkout`, `attach_checkout_session`, `release_checkout`, `confirm_paid_booking`, `decide_cancellation`, `record_refund`, `claim_email` and `record_stripe_event`. `EXECUTE` is revoked from `public`, `anon` and `authenticated`. |
+
+### Payments flow (hire)
+
+1. The customer requests dates, and `request_booking` creates a pending booking.
+2. If `payments_live` and `pricing_rule` are both set, the browser calls `create-checkout-session` with only the booking id.
+3. The function re-prices on the server, places a checkout hold and creates a Stripe Checkout Session:
+   - `payment` mode, AUD, with an idempotency key and `receipt_email`;
+   - the deposit as a separate line when it's collected online.
+4. `stripe-webhook` verifies the `Stripe-Signature` (HMAC-SHA256, 5-minute tolerance) and ignores duplicate events. Then:
+   - on `checkout.session.completed` or `async_payment_succeeded` it calls `confirm_paid_booking`, which confirms the booking or marks it `paid_conflict`;
+   - on `expired` or `async_payment_failed` it releases the hold.
+5. Switches: a test key needs `PAYMENTS_LIVE=true` **or** the admin switch. A live key (`sk_live_`) needs **both**.
+6. `cancel-booking`:
+   - An unpaid request is cancelled at once, and any open Checkout Session is expired.
+   - When the owner has set auto-refund terms and the notice is long enough, the booking is cancelled and a Stripe refund is made for the set %.
+   - Otherwise it goes to admin review (`cancel_requested_at`). With no terms, there are no automatic refunds.
+7. `send-confirmation` is provider-agnostic (`EMAIL_PROVIDER=resend` today) and de-duplicated through `email_log`. If no provider is set it returns `{sent:false, reason:"email_not_configured"}`, and the UI says so instead of claiming an email went out.
+
+### Hire secrets (Edge Function env only)
+
+```
+STRIPE_SECRET_KEY=        # sk_test_... while testing; sk_live_... only when going live
+STRIPE_WEBHOOK_SECRET=    # whsec_...
+PAYMENTS_LIVE=            # "true" only when going live
+SITE_URL=                 # https://dwayne260211.github.io/real-time-traders
+ALLOWED_ORIGINS=          # https://dwayne260211.github.io
+EMAIL_PROVIDER= EMAIL_API_KEY= EMAIL_FROM= EMAIL_REPLY_TO= ADMIN_NOTIFY_EMAIL=
+# SUPABASE_URL / SUPABASE_ANON_KEY / SUPABASE_SERVICE_ROLE_KEY are injected by Supabase.
+```
+
+The browser only ever gets the Supabase URL and the public anon key, from `js/hire-config.js`.

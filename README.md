@@ -4,7 +4,7 @@ Static website for **Real Time Traders Pty Ltd** (ABN 54 642 170 438, ACN 642 17
 
 Live preview: https://dwayne260211.github.io/real-time-traders/
 
-> This is a preview. Accounts, payments, subscriptions, listings, job posting, quoting and online enquiries are not live yet, and the site labels them that way. Visitors are directed to the call buttons. See `docs/backend-architecture.md` for the plan.
+> This is a preview. The equipment hire system is built but switched off until the owner connects Supabase and Stripe (see `docs/hire-system-setup.md`). Accounts, payments, subscriptions, listings, job posting, quoting and online enquiries are not live yet, and the site labels them that way. Visitors are directed to the call buttons. See `docs/backend-architecture.md` for the plan.
 
 ## Files
 
@@ -12,20 +12,27 @@ Live preview: https://dwayne260211.github.io/real-time-traders/
 index.html        home: hero, at-a-glance strip, three pillars, services, membership teaser, how it works
 marketplace.html  categories and sample listings (labelled "Sample listing"): featured, antiques & rare finds, donated items
 jobs.html         Jobs & Tenders: example jobs, post a job (preview), Find a Tradie, job fees (#fees)
-hire.html         tool hire (#tool), plant hire & portable toilets (#plant), trailer hire (#trailer)
+hire.html         equipment hire catalogue: Cleaning, Gardening, Power tools, General, Plant & portable toilets, Trailers
+hire-item.html    one hire item (?id=): photos, rates, terms, availability, booking request (noindex)
+my-bookings.html  customer sign-in (email link) and their hire bookings (noindex)
+admin.html        hire admin: equipment, bookings, maintenance, condition reports, settings (noindex, not in sitemap)
 services.html     precious metal scrapping 24/7, vehicle services, towing & car removal, home services
 membership.html   tiers and comparison table (introductory pricing, AUD)
 community.html    donating and asking for help
 contact.html      call card, company details, FAQ
 css/style.css     all styles, mobile-first; colour tokens in :root
 js/main.js        menu, tabs, carousel, header search routing, preview gating and the Join/Login preview modal
+js/hire-*.js      hire system front end; js/hire-config.js holds the PUBLIC Supabase URL + anon key (empty = switched off)
+js/my-bookings.js customer bookings page
+js/vendor/        supabase-js (MIT), loaded only when the hire system is configured
+supabase/         hire system database migration, Edge Functions (Stripe checkout/webhook, email, cancellation) and tests
 images/           logo v2 (logo-lockup-560.png/.webp used on the site), photos with .webp versions, og-image.jpg
 images/logo-orange/  the earlier orange logo set (not used)
-docs/             pricing-research.md, backend-architecture.md
+docs/             pricing-research.md, backend-architecture.md, hire-system-setup.md (owner guide for switching on hire)
 sitemap.xml, robots.txt
 ```
 
-No build step. Edit the HTML directly. The header, footer, call strip and Join/Login modal are repeated on every page, so change them on all eight pages.
+No build step. Edit the HTML directly. The header, footer, call strip and Join/Login modal are repeated on every page, so change them on all eight main pages. The four hire pages (`hire.html`, `hire-item.html`, `my-bookings.html`, `admin.html`) share the same header and footer.
 
 ## Contact
 
@@ -71,6 +78,7 @@ All text colours meet WCAG 2.2 AA contrast. Yellow is never used for text on whi
 - Build accounts and Stripe billing in test mode first; publish terms, privacy, cancellation and refund policies.
 - Replace sample listings and example jobs with real data, and stock photos with real photos.
 - Confirm the service area, hire range and pricing, and the accepted scrap materials.
+- Hire: follow `docs/hire-system-setup.md` (Supabase, Stripe, email, inventory, prices, terms, pricing-rule approval).
 
 ## Deploying
 

@@ -33,12 +33,43 @@ Accessed 9 October 2026 (AEST). All figures are in AUD. Where a source gives pri
 
 ## Rationale
 - **Basic is a low barrier, and it can post jobs.** Facebook Marketplace and most of Gumtree are free to list, so a new paid marketplace has to cost very little. At $4.99/month, Basic is cheaper than Airtasker's customer membership ($89/year, about $7.42/month) and much cheaper than eBay Pro Basic ($27.45/month). Posting jobs is what creates demand for the tradies who pay, so it goes in Basic rather than Bronze. Airtasker charges posters $9.95 to $59.95 per task; here a Basic member can post up to 5 open jobs for $4.99 a month.
-- **Quoting is where workers pay, and it's cheaper than lead platforms.** Bronze at $19.99/month (20 quotes) and Silver at $39.99/month (60 quotes) cost a fraction of hipages Starter ($152.90/month inc. GST for 155 credits) or ServiceSeeking (from $129/month). They also avoid Airtasker's 12.5% to 20% cut of each job. The recommendation is **no lock-in term**, unlike hipages' 6-month intro term.
+- **Quoting is where workers pay, and it's cheaper than lead platforms.** Bronze at $19.99/month (20 quotes) and Silver at $39.99/month (60 quotes) cost a fraction of hipages Starter ($152.90/month inc. GST for 155 credits) or ServiceSeeking (from $129/month). On top of that, workers pay the same per-job service fee as Airtasker (see "Job fee model" below), so quoting costs much less than on lead platforms and the per-job fees are no higher than Airtasker's. The recommendation is **no lock-in term**, unlike hipages' 6-month intro term.
 - **Gold is for businesses.** At $79.99/month it sits just under eBay Pro Featured ($82.45) and well below hipages Starter, and it bundles unlimited listings and quotes (fair use), a storefront, analytics and team seats.
 - **Annual billing is "2 months free"** (about 17% off). That's more generous than hipages (5%) and simpler than ServiceSeeking's custom 20% to 40% discounts.
 - **Hire discounts (5% Silver / 10% Gold)** reward the higher tiers. Kennards gives trade customers custom rates rather than a published %, so a clear member % is a simple selling point. Check the margin on hire and plant before launch.
 
+## Job fee model (added 9 Oct 2026): matches Airtasker
+Dwayne's decision was to take what Airtasker takes on Jobs & Tenders. The figures below were checked against Airtasker's official Australian support pages on **9 October 2026**.
+
+### Airtasker's structure (source figures)
+| Item | Airtasker (AU) | Source | Accessed |
+|---|---|---|---|
+| Tasker service fee | Charged on tasks you're assigned (if you don't win, you don't pay) and deducted from the payment when it's released after completion. The rate depends on your tier and is 12.5% to 20% of the task price, **excluding GST** (GST is added to the fee) | https://support.airtasker.com/hc/en-au/articles/200294499-What-is-the-service-fee (updated 5 Oct 2026) | 9 Oct 2026 |
+| Tasker tiers | **Bronze 20%**: poor completion in last 20 tasks / earned under $880 in the last 30 days. **Silver 18.5%**: okay completion / $880+. **Gold 14.9%**: good completion / $2,650+. **Platinum 12.5%**: excellent completion / $5,300+. You must meet both the earnings and the completion requirement. These are read from the tier table image in the official article | https://support.airtasker.com/hc/en-au/articles/900003895046-What-are-Tasker-tiers (updated 5 Oct 2026). Table image: https://support.airtasker.com/hc/article_attachments/34455335967257 | 9 Oct 2026 |
+| Gold rate cross-check | The Pro Pass page also states Gold is "currently 14.9%, excl. GST" | https://www.airtasker.com/au/lp/airtasker-pro-pass/ | 9 Oct 2026 |
+| Completion rate | The share of tasks completed out of the last 20 assigned. Airtasker publishes a general guide (90–100% highly reliable, 80–89% reliable, 65–79% average, 50–64% unreliable, 0–49% extremely unreliable), but **does not publish which % counts as "poor/okay/good/excellent" for each tier** | https://support.airtasker.com/hc/en-au/articles/225875007-What-are-Completion-Rates | 9 Oct 2026 |
+| Customer Connection Fee | A one-off fee when a Tasker is assigned, set by task price, inc. GST, fixed once assigned (not re-charged on price changes or bonuses). Under $50 $9.95; $50–99.99 $14.95; $100–149.99 $19.95; $150–199.99 $29.95; $200–249.99 $39.95; $250–299.99 $49.95; $300+ $59.95 | https://support.airtasker.com/hc/en-au/articles/360031769372-What-is-the-Connection-Fee (updated 14 Jul 2026) | 9 Oct 2026 |
+| Membership waiver | An Airtasker customer membership ($89/yr inc. GST) waives Connection Fees | Same page, plus https://www.airtasker.com/au/airtasker-membership-terms/ | 9 Oct 2026 |
+
+Caveats: Airtasker says fees may vary temporarily under its "randomised fee studies". A user comment on the tiers article (17 Jul 2026) claims Bronze shows 22%, but the official table still says 20%, so the site uses 20%.
+
+### What Real Time Traders uses
+**Workers (service fee on jobs won, deducted at payout, plus GST).** The levels are renamed "Level 1–4" so they don't clash with our Bronze/Silver/Gold memberships.
+
+| Level | Earned in last 30 days | Completion (last 20 jobs) | Service fee (ex GST) | Airtasker equivalent |
+|---|---|---|---|---|
+| Level 1 | Under $880 | Starting level | 20% | Bronze |
+| Level 2 | $880+ | Okay | 18.5% | Silver |
+| Level 3 | $2,650+ | Good | 14.9% | Gold |
+| Level 4 | $5,300+ | Excellent | 12.5% | Platinum |
+
+**Posters (connection fee per assigned job, inc. GST).** The fee bands are identical to Airtasker's ($9.95 to $59.95), and the fee is **waived for Basic, Bronze, Silver and Gold members**, the same way Airtasker's membership waives it. Because posting a job currently needs Basic, members never actually pay it. The table is shown so members can see the saving. If you later let guests post with a free account, they would pay these fees.
+
+**Marketplace and hire:** no commission or extra fees beyond membership (unchanged).
+
+**To confirm before launch:** the completion-rate % for each level, how cancellations are treated (Airtasker keeps the connection fee if the poster is responsible), payment holding/escrow and payout timing. These all need the payments backend.
+
 ## Assumptions and open items
-- The site does **not** state that there is no commission or no lock-in; those are recommendations only. Confirm the fee model (whether there's any commission or connection fee on jobs or sales), cancellation and refund terms, and what "fair use" means before launch.
+- The site does **not** claim "no commission" (there is a job service fee) or "no lock-in" (still to decide). Confirm cancellation and refund terms, and what "fair use" means before launch.
 - Competitor prices change often. Re-check these figures before launch.
 - Real accounts, subscriptions and payments need a backend (for example Stripe Billing plus a marketplace platform or a custom build).

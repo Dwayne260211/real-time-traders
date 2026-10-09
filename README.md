@@ -56,7 +56,18 @@ The nav, hero copy, quick links, footer, quote-form dropdown and FAQ all follow 
   - Quote now (jobs & tenders): "Bronze membership or higher"
   - Request hire, Get a quote, Call: open to everyone
 - The comparison table scrolls sideways on phones, and the first column stays fixed.
-- Still to confirm before launch: fee model (any commission or connection fee), cancellation, refund and pro-rata terms (placeholder in the FAQ), fair-use limits, and the margin on member hire discounts.
+- Still to confirm before launch: cancellation, refund and pro-rata terms (placeholder in the FAQ), fair-use limits, and the margin on member hire discounts.
+
+## Job fees (Jobs & Tenders): same as Airtasker, checked 9 Oct 2026
+Shown in the "Job fees" block on `jobs.html#fees`, a short note and two table rows on `membership.html`, and FAQ entries on `contact.html`.
+
+| Who | Fee | When |
+|---|---|---|
+| Job poster | Connection fee by accepted quote price: under $50 $9.95, $50–99.99 $14.95, $100–149.99 $19.95, $150–199.99 $29.95, $200–249.99 $39.95, $250–299.99 $49.95, $300+ $59.95 (inc. GST). **Waived for Basic, Bronze, Silver and Gold members.** Posting needs Basic, so members never pay it. | Once, when a quote is accepted and the job assigned |
+| Worker/tradie | Service fee by level: Level 1 (under $880 earned in the last 30 days) 20%, Level 2 ($880+) 18.5%, Level 3 ($2,650+) 14.9%, Level 4 ($5,300+) 12.5%. All **+ GST**, and the completion rate over the last 20 jobs must also meet the level | On jobs won, deducted at payout |
+| Marketplace / hire | No extra fees beyond membership | n/a |
+
+Sources and caveats are in `docs/pricing-research.md`. The exact completion-rate % for each level isn't published by Airtasker and is still to be decided. Taking fees requires the payments backend.
 
 ### Accounts and payments need a backend
 The Join/Login modal and every Join button are **mockups only**. They do not create accounts, log anyone in, take payments or store anything. The "Preview as member" switch in the modal just removes the locks in the browser, so you can see what members would see. Real memberships need a backend before launch, either a marketplace platform (e.g. Sharetribe, or WordPress + a membership/marketplace plugin) or a custom build. That backend has to handle:

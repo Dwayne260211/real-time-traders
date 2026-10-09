@@ -780,3 +780,37 @@ body:not(.is-member) .members-only:hover::after, body:not(.is-member) .members-o
 .member-teaser__prices li small { font-size: 12px; color: var(--steel); font-weight: 500; }
 .member-teaser__prices li.is-featured { border: 2px solid var(--red); }
 .member-teaser__note { margin-top: 12px; }
+
+/* v6: job fees */
+.fees { margin-top: 40px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 24px 18px; box-shadow: var(--shadow); scroll-margin-top: 150px; }
+@media (min-width: 768px) { .fees { padding: 32px; } }
+.fees__head { max-width: 760px; margin-bottom: 22px; }
+.fees__title { font-size: clamp(22px, 2.6vw, 28px); margin: 0 0 8px; }
+.fees__head p:last-child { color: var(--steel); margin: 0; }
+.fees__grid { display: grid; gap: 18px; }
+@media (min-width: 1024px) { .fees__grid { grid-template-columns: 1fr 1.25fr; align-items: start; } }
+.fee-card { border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; background: var(--soft); min-width: 0; }
+.fee-card h4 { display: flex; align-items: center; gap: 8px; margin: 0 0 8px; font-size: 18px; color: var(--navy); }
+.fee-card h4 .icon { width: 20px; height: 20px; color: var(--brand-text); }
+.fee-card > p { font-size: 14.5px; color: var(--steel); margin: 0 0 12px; }
+.fee-card__waived { display: flex; gap: 10px; align-items: flex-start; background: #e7f6ec; border: 1px solid #b7e2c4; color: #14532d !important; border-radius: var(--radius-sm); padding: 10px 12px; }
+.fee-card__waived .icon { width: 18px; height: 18px; flex: none; margin-top: 2px; color: #15803d; }
+.fee-card__example { background: #fff; border-left: 3px solid var(--accent); padding: 10px 12px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-top: 12px !important; }
+.table-wrap--plain { overflow-x: auto; }
+.fee-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: var(--radius-sm); overflow: hidden; font-size: 14px; }
+.fee-table caption { text-align: left; font-size: 13px; font-weight: 600; color: var(--navy); padding: 0 0 8px; caption-side: top; }
+.fee-table th, .fee-table td { padding: 9px 12px; border-bottom: 1px solid var(--line); text-align: left; white-space: nowrap; }
+.fee-table thead th { background: var(--navy); color: #fff; font-weight: 600; font-size: 13px; }
+.fee-table tbody th { color: var(--navy); font-weight: 700; }
+.fee-table tr.is-member td { background: #e7f6ec; color: #14532d; }
+.fees .note { margin-top: 16px; }
+.fees-mini { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: center; justify-content: space-between; background: var(--soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 18px; }
+.fees-mini p { margin: 0; flex: 1 1 520px; color: var(--navy); font-size: 14.5px; }
+.fees-mini .icon { width: 16px; height: 16px; vertical-align: -3px; color: var(--brand-text); }
+@media (max-width: 559px) {
+  .fees { padding: 20px 14px; }
+  .fee-card { padding: 14px 12px; }
+  .fee-table { font-size: 13px; }
+  .fee-table th, .fee-table td { white-space: normal; padding: 8px 7px; }
+  .fee-table thead th { font-size: 12px; }
+}

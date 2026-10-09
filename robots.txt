@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /screenshots/
+
+Sitemap: https://dwayne260211.github.io/real-time-traders/sitemap.xml

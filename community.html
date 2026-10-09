@@ -3,11 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Community | Real Time Traders</title>
-  <meta name="description" content="Give back in Brisbane: donate and request items, read the latest from Real Time Traders and what customers say.">
+  <title>Community: donate items &amp; ask for help | Real Time Traders</title>
+  <meta name="description" content="Give unwanted items to people who need them, or ask for help, through the Real Time Traders community in Brisbane.">
+  <link rel="canonical" href="https://dwayne260211.github.io/real-time-traders/community.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Real Time Traders">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:title" content="Community: donate items &amp; ask for help | Real Time Traders">
+  <meta property="og:description" content="Give unwanted items to people who need them, or ask for help, through the Real Time Traders community in Brisbane.">
+  <meta property="og:url" content="https://dwayne260211.github.io/real-time-traders/community.html">
+  <meta property="og:image" content="https://dwayne260211.github.io/real-time-traders/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Real Time Traders logo: Marketplace, Jobs &amp; Tenders and Hire in Brisbane">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Community: donate items &amp; ask for help | Real Time Traders">
+  <meta name="twitter:description" content="Give unwanted items to people who need them, or ask for help, through the Real Time Traders community in Brisbane.">
+  <meta name="twitter:image" content="https://dwayne260211.github.io/real-time-traders/images/og-image.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <link rel="icon" href="images/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
@@ -79,42 +94,28 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ============ TOP BAR ============ -->
-  <div class="topbar">
+  <div class="topbar" role="region" aria-label="24/7 hotline">
     <div class="container topbar__inner">
-      <div class="topbar__social">
-          <a href="#" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg></a>
-          <a href="#" aria-label="X (Twitter)"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a>
-          <a href="#" aria-label="YouTube"><svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg></a>
-      </div>
+      <p class="topbar__area"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD (we come to you)</p>
       <p class="topbar__msg">
-        <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> <span>24/7 Hotline</span> <a href="tel:+61422909739" class="topbar__phone">Call now</a>
-        <span class="topbar__sep" aria-hidden="true"></span>
-        <a href="contact.html#quote" class="topbar__link"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> A question? Visit our contact page</a>
+        <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> <span>24/7 hotline</span> <a href="tel:+61422909739" class="topbar__phone">Call now</a>
       </p>
-      <div class="topbar__selects">
-        <label class="select-plain"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg><span class="sr-only">Language</span>
-          <select><option>English</option></select>
-        </label>
-        <label class="select-plain"><span class="sr-only">Currency</span>
-          <select><option>Australia (AUD $)</option><option>United States (USD $)</option></select>
-        </label>
-      </div>
+      <a href="contact.html#faq" class="topbar__link">Questions? Read the FAQ</a>
     </div>
   </div>
 
   <!-- ============ HEADER ============ -->
   <header class="header" id="top">
     <div class="container header__inner">
-      <a href="index.html" class="logo" aria-label="Real Time Traders home"><img src="images/logo-lockup.png" alt="Real Time Traders" width="822" height="200"></a>
+      <a href="index.html" class="logo" aria-label="Real Time Traders home"><picture><source srcset="images/logo-lockup-560.webp" type="image/webp"><img src="images/logo-lockup-560.png" alt="Real Time Traders" width="560" height="136"></picture></a>
 
-      <form class="search" role="search" action="#" onsubmit="return false">
-        <label class="sr-only" for="search-cat">Category</label>
-        <select id="search-cat" class="search__cat">
-          <option>All Categories</option><option>Marketplace</option><option>Jobs &amp; Tenders</option><option>Hire</option><option>Tool Hire</option><option>Plant Hire</option><option>Trailer Hire</option><option>Tradies</option><option>Scrap Metal</option><option>Vehicles</option><option>Antiques</option>
+      <form class="search" role="search" action="marketplace.html" data-site-search>
+        <label class="sr-only" for="search-cat">Search in</label>
+        <select id="search-cat" name="in" class="search__cat">
+          <option value="marketplace.html">Marketplace</option><option value="jobs.html#browse">Jobs &amp; Tenders</option><option value="jobs.html#tradie">Find a Tradie</option><option value="hire.html#tool">Tool Hire</option><option value="hire.html#plant">Plant Hire</option><option value="hire.html#trailer">Trailer Hire</option><option value="services.html#scrap">Scrap Metal</option><option value="services.html#vehicle">Vehicles</option>
         </select>
         <label class="sr-only" for="search-q">Search</label>
-        <input id="search-q" type="search" placeholder="Search items, jobs, hire or tradies…">
+        <input id="search-q" name="q" type="search" placeholder="Search items, jobs, hire or tradies…">
         <button type="submit" class="search__btn" aria-label="Search"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg></button>
       </form>
 
@@ -123,8 +124,8 @@
           <span class="hotline__icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
           <span><small>Hotline 24/7</small><strong>Call now</strong></span>
         </a>
-        <a href="#" class="header__login" data-auth="login">Login / Join</a>
-        <a href="#" class="btn btn--outline btn--sm header__listing members-only" data-tier="Basic" data-tip="Basic membership or higher"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Listing<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a>
+        <button type="button" class="header__login" data-auth="login">Login / Join</button>
+        <button type="button" class="btn btn--outline btn--sm header__listing members-only" data-tier="Basic" data-tip="Basic membership or higher"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Listing<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button>
         <a href="tel:+61422909739" class="btn btn--primary btn--call"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call 24/7</a>
         <button class="icon-btn nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
       </div>
@@ -137,16 +138,16 @@
           <li><a href="marketplace.html">Marketplace</a></li>
           <li><a href="jobs.html">Jobs &amp; Tenders</a></li>
           <li class="has-sub">
-            <button type="button" class="nav__sub-toggle" aria-expanded="false">Hire <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></button>
-            <ul class="nav__sub">
+            <button type="button" class="nav__sub-toggle" aria-expanded="false" aria-controls="sub-hire">Hire <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></button>
+            <ul class="nav__sub" id="sub-hire">
               <li><a href="hire.html#tool" data-tab-link="tab-tool">Tool Hire</a></li>
               <li><a href="hire.html#plant" data-tab-link="tab-plant">Plant Hire &amp; Portable Toilets</a></li>
               <li><a href="hire.html#trailer" data-tab-link="tab-trailer">Trailer Hire</a></li>
             </ul>
           </li>
           <li class="has-sub">
-            <button type="button" class="nav__sub-toggle" aria-expanded="false">Services <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></button>
-            <ul class="nav__sub">
+            <button type="button" class="nav__sub-toggle" aria-expanded="false" aria-controls="sub-services">Services <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></button>
+            <ul class="nav__sub" id="sub-services">
               <li><a href="services.html#scrap" data-tab-link="tab-scrap">Precious Metal Scrapping 24/7</a></li>
               <li><a href="services.html#vehicle" data-tab-link="tab-vehicle">Vehicle Services</a></li>
               <li><a href="services.html#towing" data-tab-link="tab-towing">Towing &amp; Car Removal</a></li>
@@ -159,8 +160,8 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="nav__mobile-extra">
-          <a href="#" class="btn btn--outline btn--block" data-auth="login"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg> Login / Join</a>
-          <a href="#" class="btn btn--outline btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Listing<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a>
+          <a href="tel:+61422909739" class="btn btn--primary btn--block"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call 24/7</a>
+          <button type="button" class="btn btn--outline btn--block" data-auth="login"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg> Login / Join</button>
         </div>
       </div>
     </nav>
@@ -173,7 +174,7 @@
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Community</li></ol></nav>
         <h1>Community</h1>
-        <p>Donate items, ask for help and keep up with the latest from Real Time Traders.</p>
+        <p>Give unwanted items to people who need them, or ask for help in your local community.</p>
       </div>
     </section>
 
@@ -182,117 +183,78 @@
       <div class="container community__inner">
         <div class="community__copy">
           <p class="eyebrow">Community Help</p>
-          <h2>Support Your Community, Make a Difference</h2>
+          <h2>Support your community, make a difference</h2>
           <p>Give back or get the help you need. Whether you're donating items, offering your time, or requesting support, our community is built on helping each other grow stronger together.</p>
           <div class="panel-ctas">
-            <a href="marketplace.html#donate" class="btn btn--primary" data-tab-link="tab-donate">Donate Items</a>
-            <a href="contact.html?service=Donations%20%26%20Community#quote" class="btn btn--outline" data-service="Donations &amp; Community">Request Help</a>
+            <a href="marketplace.html#donate" class="btn btn--primary" data-tab-link="tab-donate">Donate items</a>
+            <a href="contact.html?service=Donations%20%26%20Community#quote" class="btn btn--outline" data-service="Donations &amp; Community">Ask for help</a>
           </div>
         </div>
-        <img class="community__img" src="images/donation-illustration.png" alt="Illustration of people holding a donation banner over a box of donated goods" loading="lazy" width="320" height="290">
+        <picture><source srcset="images/donation-illustration.webp" type="image/webp"><img class="community__img" src="images/donation-illustration.png" alt="Illustration of people holding a donation banner over a box of donated goods" loading="lazy" width="320" height="290"></picture>
       </div>
     </section>
 
-    <!-- ============ NEWS + TESTIMONIAL ============ -->
-    <section class="section section--tight">
-      <div class="container duo">
-        <div class="duo__panel">
-          <div class="section-head section-head--split">
-            <h2 class="h3">Just Landing</h2>
-            <a href="#" class="link-arrow">View All <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"/></svg></a>
-          </div>
-          <article class="post">
-            <img src="images/blog-1.jpg" alt="" loading="lazy" width="156" height="96">
-            <div>
-              <h3><a href="#">How to choose size of Television fit to your living room</a></h3>
-              <p class="post__meta">45 Minutes ago in <strong>EXPERIENCE</strong></p>
-            </div>
-          </article>
-          <article class="post">
-            <img src="images/blog-2.jpg" alt="" loading="lazy" width="156" height="96">
-            <div>
-              <h3><a href="#">Introduce New Generation of Eluxtro Washing Machine 2023</a></h3>
-              <p class="post__meta">2 Days ago in <strong>TECHNOLOGY</strong></p>
-            </div>
-          </article>
+    <!-- ============ HOW COMMUNITY HELP WORKS ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow">How it works</p>
+          <h2>Giving and getting help</h2>
+          <p class="section-head__sub">Simple ways to pass on what you don't need and find support nearby.</p>
         </div>
-        <div class="duo__panel">
-          <div class="section-head section-head--split">
-            <h2 class="h3">What customers say</h2>
-            <span class="ph-tag">Placeholder</span>
-          </div>
-          <figure class="review">
-            <div class="review__stars" aria-label="5 out of 5 stars"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></div>
-            <blockquote>
-              <p class="review__title">Fast shipping and flexible price!</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sample testimonial text. Replace with a genuine customer review before launch.</p>
-            </blockquote>
-            <figcaption>
-              <img src="images/avatar.jpg" alt="" width="40" height="40">
-              <span><strong>Customer Name</strong><small>Brisbane, QLD</small></span>
-            </figcaption>
-          </figure>
+        <div class="why-grid why-grid--3">
+          <div class="why-card"><span class="why-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-gift"/></svg></span><h3>Give items away</h3><p>List unwanted goods for free in Donated items so someone nearby can use them. Listing needs a member account (coming soon).</p><a href="marketplace.html#donate" class="link-arrow" data-tab-link="tab-donate">See donated items <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
+          <div class="why-card"><span class="why-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-handshake"/></svg></span><h3>Ask for help</h3><p>Need a hand or an item you can't afford? Call us and tell us what you need. We'll see what we can do.</p><a href="tel:+61422909739" class="link-arrow">Call us now <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
+          <div class="why-card"><span class="why-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg></span><h3>Community noticeboard</h3><p>Local news, tips and updates from Real Time Traders are coming soon.</p></div>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ============ SUBSCRIBE ============ -->
-  <section class="subscribe">
-    <div class="container subscribe__inner">
-      <p class="subscribe__title"><strong>Subscribe</strong> &amp; Get <span>10% OFF</span> for first order</p>
-      <form class="subscribe__form" action="#" onsubmit="return false">
-        <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
-        <label class="sr-only" for="sub-email">Email address</label>
-        <input id="sub-email" type="email" placeholder="Enter your email address">
-        <button type="submit" class="btn btn--dark btn--sm">Subscribe</button>
-      </form>
-    </div>
-  </section>
-
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
+    <!-- ============ CALL STRIP ============ -->
+    <div class="callstrip" role="region" aria-labelledby="callstrip-title">
+      <div class="container callstrip__inner">
+        <div>
+          <h2 id="callstrip-title" class="callstrip__title">Need something now? <span>We come to you, 24/7.</span></h2>
+          <p>Precious metal scrapping, hire, listings, jobs or membership: one call and we'll point you the right way.</p>
+        </div>
+        <a href="tel:+61422909739" class="btn btn--primary btn--lg"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call 24/7</a>
+      </div>
+    </div>
+
     <div class="container footer__inner">
       <div class="footer__brand">
-        <a href="index.html" class="logo" aria-label="Real Time Traders home"><img src="images/logo-lockup.png" alt="Real Time Traders" width="822" height="200" loading="lazy"></a>
-        <p class="footer__hot"><small>HOTLINE 24/7</small><a href="tel:+61422909739">Call now</a></p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br><a href="mailto:contact@demolink.com">contact@demolink.com</a></p>
+        <a href="index.html" class="logo" aria-label="Real Time Traders home"><picture><source srcset="images/logo-lockup-560.webp" type="image/webp"><img src="images/logo-lockup-560.png" alt="Real Time Traders" width="560" height="136" loading="lazy"></picture></a>
+        <p>One Brisbane platform to buy, sell, hire and get work done, plus 24/7 precious metal scrapping.</p>
+        <p class="footer__meta"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD (we come to you)</p>
         <p class="footer__director">Director: John Carter</p>
-        <div class="footer__social">
-          <a href="#" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg></a>
-          <a href="#" aria-label="X (Twitter)"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a>
-          <a href="#" aria-label="YouTube"><svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg></a>
-        </div>
+        <a href="tel:+61422909739" class="btn btn--primary btn--sm"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call 24/7</a>
       </div>
       <div class="footer__col">
-        <h4>Marketplace</h4>
+        <h2 class="footer__title">Marketplace</h2>
         <ul>
-          <li><a href="marketplace.html">Buy &amp; Sell</a></li>
-          <li><a href="marketplace.html">Scrap Metal &amp; Recycling</a></li>
-          <li><a href="marketplace.html">Vehicles</a></li>
+          <li><a href="marketplace.html#featured" data-tab-link="tab-featured">Buy &amp; Sell</a></li>
           <li><a href="marketplace.html#rare" data-tab-link="tab-rare">Antiques &amp; Rare Finds</a></li>
           <li><a href="marketplace.html#donate" data-tab-link="tab-donate">Donations</a></li>
+          <li><a href="services.html#scrap" data-tab-link="tab-scrap">Scrap Metal &amp; Recycling</a></li>
         </ul>
       </div>
       <div class="footer__col">
-        <h4>Jobs &amp; Tenders</h4>
+        <h2 class="footer__title">Jobs &amp; Hire</h2>
         <ul>
           <li><a href="jobs.html#browse" data-tab-link="tab-jobs-browse">Browse jobs</a></li>
           <li><a href="jobs.html#post" data-tab-link="tab-jobs-post">Post a job</a></li>
           <li><a href="jobs.html#tradie" data-tab-link="tab-tradie">Find a Tradie</a></li>
-          <li><a href="membership.html">Quote for work</a></li>
-        </ul>
-        <h4 class="mt">Hire</h4>
-        <ul>
           <li><a href="hire.html#tool" data-tab-link="tab-tool">Tool Hire</a></li>
           <li><a href="hire.html#plant" data-tab-link="tab-plant">Plant Hire &amp; Portable Toilets</a></li>
           <li><a href="hire.html#trailer" data-tab-link="tab-trailer">Trailer Hire</a></li>
         </ul>
       </div>
       <div class="footer__col">
-        <h4>Services</h4>
+        <h2 class="footer__title">Services</h2>
         <ul>
           <li><a href="services.html#scrap" data-tab-link="tab-scrap">Precious Metal Scrapping 24/7</a></li>
           <li><a href="services.html#vehicle" data-tab-link="tab-vehicle">Vehicle Services</a></li>
@@ -301,22 +263,20 @@
         </ul>
       </div>
       <div class="footer__col">
-        <h4>Company</h4>
-        <ul><li><a href="membership.html">Membership</a></li><li><a href="#">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="#">Blog</a></li><li><a href="#">Career</a></li><li><a href="#">Advertise</a></li><li><a href="#">Partnership</a></li></ul>
-      </div>
-      <div class="footer__col">
-        <h4>Help Center</h4>
-        <ul><li><a href="#">Customer Service</a></li><li><a href="#">Policy</a></li><li><a href="#">Terms &amp; Conditions</a></li><li><a href="contact.html#faq">FAQs</a></li><li><a href="#" data-auth="login">My Account</a></li><li><a href="#">Product Support</a></li></ul>
+        <h2 class="footer__title">Company</h2>
+        <ul>
+          <li><a href="membership.html">Membership &amp; pricing</a></li>
+          <li><a href="jobs.html#fees">Job fees</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="contact.html#faq">FAQs</a></li>
+        </ul>
       </div>
     </div>
     <div class="footer__bottom">
       <div class="container footer__bottom-inner">
         <p class="footer__legal"><span>© 2026 Real Time Traders Pty Ltd</span> · <span>ABN 54 642 170 438</span> · <span>ACN 642 170 438</span></p>
-        <img src="images/payments.png" alt="Accepted payments: PayPal, Stripe, Mastercard, Klarna, Visa" width="300" height="38" loading="lazy">
-        <div class="footer__selects">
-          <label class="select-plain"><span class="sr-only">Currency</span><select><option>AUD</option><option>USD</option></select></label>
-          <label class="select-plain"><span class="sr-only">Language</span><select><option>Eng</option></select></label>
-        </div>
+        <p class="footer__preview">Preview site: accounts, payments and online enquiries are coming soon.</p>
       </div>
     </div>
   </footer>
@@ -327,43 +287,44 @@
     <button type="button" class="btn btn--light" data-auth="join"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg> Join</button>
   </div>
 
-  <!-- Join / Login modal (front-end mockup only, no real accounts) -->
+  <!-- Join / Login modal: preview only, no real accounts -->
   <dialog class="modal" id="auth-modal" aria-labelledby="auth-title">
     <div class="modal__box">
       <button type="button" class="modal__close icon-btn" data-close aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
-      <img class="modal__logo" src="images/logo-lockup.png" alt="Real Time Traders" width="822" height="200">
+      <picture><source srcset="images/logo-lockup-560.webp" type="image/webp"><img class="modal__logo" src="images/logo-lockup-560.png" alt="Real Time Traders" width="560" height="136" loading="lazy"></picture>
+      <p class="preview-flag"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> Preview: accounts and payments are coming soon</p>
       <h2 id="auth-title" class="modal__title">Join Real Time Traders</h2>
       <p class="modal__gate" hidden><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> <span class="modal__gate-text">This needs Basic membership or higher.</span></p>
       <div class="tabs tabs--compact" data-tabs>
         <div class="tabs__list" role="tablist" aria-label="Join or log in">
-          <button class="tab is-active" role="tab" id="tab-join" aria-controls="panel-join" aria-selected="true">Join</button>
-          <button class="tab" role="tab" id="tab-login" aria-controls="panel-login" aria-selected="false" tabindex="-1">Log in</button>
+          <button type="button" class="tab is-active" role="tab" id="tab-join" aria-controls="panel-join" aria-selected="true">Join</button>
+          <button type="button" class="tab" role="tab" id="tab-login" aria-controls="panel-login" aria-selected="false" tabindex="-1">Log in</button>
         </div>
         <div class="tab-panel is-active" role="tabpanel" id="panel-join" aria-labelledby="tab-join">
           <form class="auth-form" data-demo-form action="#" novalidate>
-            <label class="field"><span>Name</span><input type="text" autocomplete="name" required></label>
-            <label class="field"><span>Email</span><input type="email" autocomplete="email" required></label>
-            <label class="field"><span>Password</span><input type="password" autocomplete="new-password" required></label>
+            <label class="field"><span>Name</span><input type="text" name="name" autocomplete="name" required></label>
+            <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
+            <label class="field"><span>Password</span><input type="password" name="password" autocomplete="new-password" required></label>
             <label class="field"><span>Membership</span>
-              <select id="join-tier"><option value="Free">Free account: $0 (connection fee per job)</option><option value="Basic">Basic: $4.99/month</option><option value="Bronze">Bronze: $19.99/month</option><option value="Silver" selected>Silver: $39.99/month</option><option value="Gold">Gold: $79.99/month</option></select>
+              <select id="join-tier" name="tier"><option value="Free">Free account: $0 (connection fee per job)</option><option value="Basic">Basic: $4.99/month</option><option value="Bronze">Bronze: $19.99/month</option><option value="Silver" selected>Silver: $39.99/month</option><option value="Gold">Gold: $79.99/month</option></select>
             </label>
-            <p class="note">A free account can post jobs (connection fee $9.95–$59.95 per assigned job). Basic $4.99, Bronze $19.99, Silver $39.99, Gold $79.99 a month, or pay yearly and get 2 months free. <a href="membership.html" data-close>Compare memberships</a></p>
-            <button type="submit" class="btn btn--primary btn--block">Create account</button>
-            <p class="form-status" role="status" aria-live="polite"></p>
+            <p class="note">A free account can post jobs (connection fee $9.95–$59.95 per assigned job). Basic $4.99, Bronze $19.99, Silver $39.99, Gold $79.99 a month, or pay yearly and get 2 months free. <a href="membership.html">Compare memberships</a></p>
+            <button type="submit" class="btn btn--primary btn--block">Create account (preview)</button>
+            <p class="form-status form-status--info" role="status" aria-live="polite"></p>
           </form>
         </div>
         <div class="tab-panel" role="tabpanel" id="panel-login" aria-labelledby="tab-login" hidden>
           <form class="auth-form" data-demo-form action="#" novalidate>
-            <label class="field"><span>Email</span><input type="email" autocomplete="email" required></label>
-            <label class="field"><span>Password</span><input type="password" autocomplete="current-password" required></label>
-            <button type="submit" class="btn btn--primary btn--block">Log in</button>
-            <a href="#" class="note">Forgot password?</a>
-            <p class="form-status" role="status" aria-live="polite"></p>
+            <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
+            <label class="field"><span>Password</span><input type="password" name="password" autocomplete="current-password" required></label>
+            <button type="submit" class="btn btn--primary btn--block">Log in (preview)</button>
+            <button type="button" class="link-btn" data-forgot>Forgot password?</button>
+            <p class="form-status form-status--info" role="status" aria-live="polite"></p>
           </form>
         </div>
       </div>
       <div class="modal__demo">
-        <p><strong>Mockup only.</strong> No real accounts or payments: these need a backend. Use the switches below to preview what a free account or a paid member would see.</p>
+        <p><strong>Preview only.</strong> No accounts are created and no payments are taken yet. To see how the site will work, preview it as a free account or a paid member. Questions? <a href="tel:+61422909739">Call us now</a>.</p>
         <div class="modal__demo-btns">
           <button type="button" class="btn btn--outline btn--sm" data-demo-free>Preview with free account</button>
           <button type="button" class="btn btn--outline btn--sm" data-demo-toggle>Preview as member</button>

@@ -3,11 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Marketplace | Real Time Traders</title>
-  <meta name="description" content="Buy and sell everyday goods, scrap metal, vehicles and antiques, or donate items, on the Real Time Traders marketplace in Brisbane.">
+  <title>Marketplace: buy, sell &amp; donate in Brisbane | Real Time Traders</title>
+  <meta name="description" content="Browse local listings in Brisbane: everyday goods, scrap metal, vehicles, antiques and free donated items. Basic members can buy and sell.">
+  <link rel="canonical" href="https://dwayne260211.github.io/real-time-traders/marketplace.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Real Time Traders">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:title" content="Marketplace: buy, sell &amp; donate in Brisbane | Real Time Traders">
+  <meta property="og:description" content="Browse local listings in Brisbane: everyday goods, scrap metal, vehicles, antiques and free donated items. Basic members can buy and sell.">
+  <meta property="og:url" content="https://dwayne260211.github.io/real-time-traders/marketplace.html">
+  <meta property="og:image" content="https://dwayne260211.github.io/real-time-traders/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Real Time Traders logo: Marketplace, Jobs &amp; Tenders and Hire in Brisbane">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Marketplace: buy, sell &amp; donate in Brisbane | Real Time Traders">
+  <meta name="twitter:description" content="Browse local listings in Brisbane: everyday goods, scrap metal, vehicles, antiques and free donated items. Basic members can buy and sell.">
+  <meta name="twitter:image" content="https://dwayne260211.github.io/real-time-traders/images/og-image.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <link rel="icon" href="images/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
@@ -79,42 +94,28 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ============ TOP BAR ============ -->
-  <div class="topbar">
+  <div class="topbar" role="region" aria-label="24/7 hotline">
     <div class="container topbar__inner">
-      <div class="topbar__social">
-          <a href="#" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg></a>
-          <a href="#" aria-label="X (Twitter)"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a>
-          <a href="#" aria-label="YouTube"><svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg></a>
-      </div>
+      <p class="topbar__area"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD (we come to you)</p>
       <p class="topbar__msg">
-        <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> <span>24/7 Hotline</span> <a href="tel:+61422909739" class="topbar__phone">Call now</a>
-        <span class="topbar__sep" aria-hidden="true"></span>
-        <a href="contact.html#quote" class="topbar__link"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> A question? Visit our contact page</a>
+        <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> <span>24/7 hotline</span> <a href="tel:+61422909739" class="topbar__phone">Call now</a>
       </p>
-      <div class="topbar__selects">
-        <label class="select-plain"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg><span class="sr-only">Language</span>
-          <select><option>English</option></select>
-        </label>
-        <label class="select-plain"><span class="sr-only">Currency</span>
-          <select><option>Australia (AUD $)</option><option>United States (USD $)</option></select>
-        </label>
-      </div>
+      <a href="contact.html#faq" class="topbar__link">Questions? Read the FAQ</a>
     </div>
   </div>
 
   <!-- ============ HEADER ============ -->
   <header class="header" id="top">
     <div class="container header__inner">
-      <a href="index.html" class="logo" aria-label="Real Time Traders home"><img src="images/logo-lockup.png" alt="Real Time Traders" width="822" height="200"></a>
+      <a href="index.html" class="logo" aria-label="Real Time Traders home"><picture><source srcset="images/logo-lockup-560.webp" type="image/webp"><img src="images/logo-lockup-560.png" alt="Real Time Traders" width="560" height="136"></picture></a>
 
-      <form class="search" role="search" action="#" onsubmit="return false">
-        <label class="sr-only" for="search-cat">Category</label>
-        <select id="search-cat" class="search__cat">
-          <option>All Categories</option><option>Marketplace</option><option>Jobs &amp; Tenders</option><option>Hire</option><option>Tool Hire</option><option>Plant Hire</option><option>Trailer Hire</option><option>Tradies</option><option>Scrap Metal</option><option>Vehicles</option><option>Antiques</option>
+      <form class="search" role="search" action="marketplace.html" data-site-search>
+        <label class="sr-only" for="search-cat">Search in</label>
+        <select id="search-cat" name="in" class="search__cat">
+          <option value="marketplace.html">Marketplace</option><option value="jobs.html#browse">Jobs &amp; Tenders</option><option value="jobs.html#tradie">Find a Tradie</option><option value="hire.html#tool">Tool Hire</option><option value="hire.html#plant">Plant Hire</option><option value="hire.html#trailer">Trailer Hire</option><option value="services.html#scrap">Scrap Metal</option><option value="services.html#vehicle">Vehicles</option>
         </select>
         <label class="sr-only" for="search-q">Search</label>
-        <input id="search-q" type="search" placeholder="Search items, jobs, hire or tradies…">
+        <input id="search-q" name="q" type="search" placeholder="Search items, jobs, hire or tradies…">
         <button type="submit" class="search__btn" aria-label="Search"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg></button>
       </form>
 
@@ -123,8 +124,8 @@
           <span class="hotline__icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
           <span><small>Hotline 24/7</small><strong>Call now</strong></span>
         </a>
-        <a href="#" class="header__login" data-auth="login">Login / Join</a>
-        <a href="#" class="btn btn--outline btn--sm header__listing members-only" data-tier="Basic" data-tip="Basic membership or higher"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Listing<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a>
+        <button type="button" class="header__login" data-auth="login">Login / Join</button>
+        <button type="button" class="btn btn--outline btn--sm header__listing members-only" data-tier="Basic" data-tip="Basic membership or higher"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Listing<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button>
         <a href="tel:+61422909739" class="btn btn--primary btn--call"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call 24/7</a>
         <button class="icon-btn nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
       </div>
@@ -137,16 +138,16 @@
           <li><a href="marketplace.html" class="is-active" aria-current="page">Marketplace</a></li>
           <li><a href="jobs.html">Jobs &amp; Tenders</a></li>
           <li class="has-sub">
-            <button type="button" class="nav__sub-toggle" aria-expanded="false">Hire <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></button>
-            <ul class="nav__sub">
+            <button type="button" class="nav__sub-toggle" aria-expanded="false" aria-controls="sub-hire">Hire <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></button>
+            <ul class="nav__sub" id="sub-hire">
               <li><a href="hire.html#tool" data-tab-link="tab-tool">Tool Hire</a></li>
               <li><a href="hire.html#plant" data-tab-link="tab-plant">Plant Hire &amp; Portable Toilets</a></li>
               <li><a href="hire.html#trailer" data-tab-link="tab-trailer">Trailer Hire</a></li>
             </ul>
           </li>
           <li class="has-sub">
-            <button type="button" class="nav__sub-toggle" aria-expanded="false">Services <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></button>
-            <ul class="nav__sub">
+            <button type="button" class="nav__sub-toggle" aria-expanded="false" aria-controls="sub-services">Services <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></button>
+            <ul class="nav__sub" id="sub-services">
               <li><a href="services.html#scrap" data-tab-link="tab-scrap">Precious Metal Scrapping 24/7</a></li>
               <li><a href="services.html#vehicle" data-tab-link="tab-vehicle">Vehicle Services</a></li>
               <li><a href="services.html#towing" data-tab-link="tab-towing">Towing &amp; Car Removal</a></li>
@@ -159,8 +160,8 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="nav__mobile-extra">
-          <a href="#" class="btn btn--outline btn--block" data-auth="login"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg> Login / Join</a>
-          <a href="#" class="btn btn--outline btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Listing<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a>
+          <a href="tel:+61422909739" class="btn btn--primary btn--block"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call 24/7</a>
+          <button type="button" class="btn btn--outline btn--block" data-auth="login"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg> Login / Join</button>
         </div>
       </div>
     </nav>
@@ -173,6 +174,7 @@
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Marketplace</li></ol></nav>
         <h1>Marketplace</h1>
+        <p>Buy, sell and give away goods across Brisbane: everyday items, scrap metal, vehicles, antiques and donations.</p>
       </div>
     </section>
 
@@ -181,206 +183,171 @@
       <div class="container">
         <div class="section-head section-head--split">
           <div>
-            <p class="section-head__sub">Everyday goods, scrap metal, vehicles, antiques and donations. Browsing is free; buying and selling need Basic membership or higher.</p>
+            <h2 class="subhead">Popular categories</h2>
+            <p class="section-head__sub">Browsing is free. Buying and selling need Basic membership or higher.</p>
           </div>
           <div class="head-actions">
-            <a href="#" class="link-arrow">View All <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"/></svg></a>
-            <a href="#" class="btn btn--primary members-only" data-tier="Basic" data-tip="Basic membership or higher"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Sell an item<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a>
+            <button type="button" class="btn btn--primary members-only" data-tier="Basic" data-tip="Basic membership or higher"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Sell an item<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button>
           </div>
         </div>
 
-        <h3 class="subhead">Popular Categories</h3>
         <ul class="cats">
-          <li><a href="marketplace.html" class="cat"><span class="cat__img"><img src="images/cat-buy-sell.png" alt="" width="115" height="115" loading="lazy"></span><span class="cat__label">Buy &amp; Sell</span></a></li>
-          <li><a href="marketplace.html" class="cat"><span class="cat__img"><img src="images/cat-scrap-metal.png" alt="" width="115" height="115" loading="lazy"></span><span class="cat__label">Scrap Metal</span></a></li>
-          <li><a href="marketplace.html" class="cat"><span class="cat__img"><img src="images/cat-vehicles.png" alt="" width="115" height="115" loading="lazy"></span><span class="cat__label">Vehicles</span></a></li>
-          <li><a href="marketplace.html" class="cat"><span class="cat__img"><img src="images/cat-services.png" alt="" width="115" height="115" loading="lazy"></span><span class="cat__label">Services</span></a></li>
-          <li><a href="marketplace.html" class="cat"><span class="cat__img"><img src="images/cat-donations.png" alt="" width="115" height="115" loading="lazy"></span><span class="cat__label">Donations</span></a></li>
-          <li><a href="marketplace.html" class="cat"><span class="cat__img"><img src="images/cat-scrap-recycling.png" alt="" width="115" height="115" loading="lazy"></span><span class="cat__label">Scrap &amp; Recycling</span></a></li>
-          <li><a href="marketplace.html" class="cat"><span class="cat__img"><img src="images/cat-vehicle-services.png" alt="" width="115" height="115" loading="lazy"></span><span class="cat__label">Vehicle Services</span></a></li>
-          <li><a href="marketplace.html" class="cat"><span class="cat__img"><img src="images/cat-antiques.png" alt="" width="115" height="115" loading="lazy"></span><span class="cat__label">Antiques Items</span></a></li>
+          <li><a href="#featured" class="cat" data-tab-link="tab-featured"><span class="cat__img"><picture><source srcset="images/cat-buy-sell.webp" type="image/webp"><img src="images/cat-buy-sell.png" alt="" loading="lazy" width="115" height="115"></picture></span><span class="cat__label">Buy &amp; Sell</span></a></li>
+          <li><a href="services.html#scrap" class="cat" data-tab-link="tab-scrap"><span class="cat__img"><picture><source srcset="images/cat-scrap-metal.webp" type="image/webp"><img src="images/cat-scrap-metal.png" alt="" loading="lazy" width="115" height="115"></picture></span><span class="cat__label">Scrap Metal</span></a></li>
+          <li><a href="services.html#vehicle" class="cat" data-tab-link="tab-vehicle"><span class="cat__img"><picture><source srcset="images/cat-vehicles.webp" type="image/webp"><img src="images/cat-vehicles.png" alt="" loading="lazy" width="115" height="115"></picture></span><span class="cat__label">Vehicles</span></a></li>
+          <li><a href="services.html" class="cat"><span class="cat__img"><picture><source srcset="images/cat-services.webp" type="image/webp"><img src="images/cat-services.png" alt="" loading="lazy" width="115" height="115"></picture></span><span class="cat__label">Services</span></a></li>
+          <li><a href="#donate" class="cat" data-tab-link="tab-donate"><span class="cat__img"><picture><source srcset="images/cat-donations.webp" type="image/webp"><img src="images/cat-donations.png" alt="" loading="lazy" width="115" height="115"></picture></span><span class="cat__label">Donations</span></a></li>
+          <li><a href="services.html#scrap" class="cat" data-tab-link="tab-scrap"><span class="cat__img"><picture><source srcset="images/cat-scrap-recycling.webp" type="image/webp"><img src="images/cat-scrap-recycling.png" alt="" loading="lazy" width="115" height="115"></picture></span><span class="cat__label">Scrap &amp; Recycling</span></a></li>
+          <li><a href="services.html#vehicle" class="cat" data-tab-link="tab-vehicle"><span class="cat__img"><picture><source srcset="images/cat-vehicle-services.webp" type="image/webp"><img src="images/cat-vehicle-services.png" alt="" loading="lazy" width="115" height="115"></picture></span><span class="cat__label">Vehicle Services</span></a></li>
+          <li><a href="#rare" class="cat" data-tab-link="tab-rare"><span class="cat__img"><picture><source srcset="images/cat-antiques.webp" type="image/webp"><img src="images/cat-antiques.png" alt="" loading="lazy" width="115" height="115"></picture></span><span class="cat__label">Antiques</span></a></li>
         </ul>
 
+        <div class="notice notice--info"><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg> <p><strong>Sample listings.</strong> The items below are examples that show how the marketplace will look. Real listings will appear when member accounts launch.</p></div>
+
+        <h2 class="subhead">Browse listings</h2>
         <span class="tab-anchor" id="featured"></span><span class="tab-anchor" id="rare"></span><span class="tab-anchor" id="donate"></span>
         <div class="tabs tabs--compact" data-tabs>
-          <div class="tabs__list" role="tablist" aria-label="Marketplace">
-            <button class="tab is-active" role="tab" id="tab-featured" data-hash="featured" aria-controls="panel-featured" aria-selected="true">Featured Products</button>
-            <button class="tab" role="tab" id="tab-rare" data-hash="rare" aria-controls="panel-rare" aria-selected="false" tabindex="-1">Discover Rare Finds</button>
-            <button class="tab" role="tab" id="tab-donate" data-hash="donate" aria-controls="panel-donate" aria-selected="false" tabindex="-1">Donate Items</button>
+          <div class="tabs__list" role="tablist" aria-label="Marketplace listings">
+            <button type="button" class="tab is-active" role="tab" id="tab-featured" data-hash="featured" aria-controls="panel-featured" aria-selected="true">Featured listings</button>
+            <button type="button" class="tab" role="tab" id="tab-rare" data-hash="rare" aria-controls="panel-rare" aria-selected="false" tabindex="-1">Antiques &amp; rare finds</button>
+            <button type="button" class="tab" role="tab" id="tab-donate" data-hash="donate" aria-controls="panel-donate" aria-selected="false" tabindex="-1">Donated items</button>
           </div>
 
           <div class="tab-panel is-active" role="tabpanel" id="panel-featured" aria-labelledby="tab-featured">
             <div class="product-grid">
-          <article class="product-card">
-            <div class="product-card__media"><img src="images/product-1.jpg" alt="Smart home hub" loading="lazy" width="316" height="309"></div>
-            <div class="product-card__body">
-              <div class="product-card__top">
-                <span class="product-card__price">$399.00</span>
-                <button class="icon-btn icon-btn--plain" type="button" aria-label="Save to wishlist"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></button>
-              </div>
-              <h3 class="product-card__title"><a href="#">Product Name Here</a></h3>
-              <p class="product-card__desc">Description: Model <span>|</span> Mode <span>|</span> Year</p>
-              <div class="product-card__meta"><span>Location Here</span><time datetime="2026-06-12">12 June 2026</time></div>
-              <div class="product-card__actions"><a href="#" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a></div>
+              <article class="product-card">
+                <div class="product-card__media"><span class="sample-tag">Sample listing</span><picture><source srcset="images/product-1.webp" type="image/webp"><img src="images/product-1.jpg" alt="Smart home hub on a table" loading="lazy" width="315" height="309"></picture></div>
+                <div class="product-card__body">
+                  <p class="product-card__price">$89</p>
+                  <h3 class="product-card__title">Smart home hub</h3>
+                  <p class="product-card__desc">Used, in working order.</p>
+                  <p class="product-card__meta"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD</p>
+                  <div class="product-card__actions"><button type="button" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button></div>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-card__media"><span class="sample-tag">Sample listing</span><picture><source srcset="images/product-2.webp" type="image/webp"><img src="images/product-2.jpg" alt="Laptop computer" loading="lazy" width="316" height="309"></picture></div>
+                <div class="product-card__body">
+                  <p class="product-card__price">$450</p>
+                  <h3 class="product-card__title">Laptop</h3>
+                  <p class="product-card__desc">Used laptop with charger.</p>
+                  <p class="product-card__meta"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD</p>
+                  <div class="product-card__actions"><button type="button" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button></div>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-card__media"><span class="sample-tag">Sample listing</span><picture><source srcset="images/product-3.webp" type="image/webp"><img src="images/product-3.jpg" alt="Electric motor" loading="lazy" width="316" height="309"></picture></div>
+                <div class="product-card__body">
+                  <p class="product-card__price">$120</p>
+                  <h3 class="product-card__title">Electric motor</h3>
+                  <p class="product-card__desc">Pre-owned electric motor.</p>
+                  <p class="product-card__meta"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD</p>
+                  <div class="product-card__actions"><button type="button" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button></div>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-card__media"><span class="sample-tag">Sample listing</span><picture><source srcset="images/product-4.webp" type="image/webp"><img src="images/product-4.jpg" alt="Box of assorted scrap electric motors" loading="lazy" width="316" height="309"></picture></div>
+                <div class="product-card__body">
+                  <p class="product-card__price">$60</p>
+                  <h3 class="product-card__title">Assorted scrap motors</h3>
+                  <p class="product-card__desc">Mixed motors, sold as scrap.</p>
+                  <p class="product-card__meta"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD</p>
+                  <div class="product-card__actions"><button type="button" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button></div>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-card__media"><span class="sample-tag">Sample listing</span><picture><source srcset="images/product-5.webp" type="image/webp"><img src="images/product-5.jpg" alt="Smart speaker set" loading="lazy" width="315" height="309"></picture></div>
+                <div class="product-card__body">
+                  <p class="product-card__price">$95</p>
+                  <h3 class="product-card__title">Smart speaker set</h3>
+                  <p class="product-card__desc">Pair of smart speakers.</p>
+                  <p class="product-card__meta"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD</p>
+                  <div class="product-card__actions"><button type="button" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button></div>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-card__media"><span class="sample-tag">Sample listing</span><picture><source srcset="images/product-6.webp" type="image/webp"><img src="images/product-6.jpg" alt="Smartphone" loading="lazy" width="316" height="309"></picture></div>
+                <div class="product-card__body">
+                  <p class="product-card__price">$220</p>
+                  <h3 class="product-card__title">Smartphone</h3>
+                  <p class="product-card__desc">Unlocked, light wear.</p>
+                  <p class="product-card__meta"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD</p>
+                  <div class="product-card__actions"><button type="button" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button></div>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-card__media"><span class="sample-tag">Sample listing</span><picture><source srcset="images/product-7.webp" type="image/webp"><img src="images/product-7.jpg" alt="Laptop and phone together" loading="lazy" width="316" height="309"></picture></div>
+                <div class="product-card__body">
+                  <p class="product-card__price">$520</p>
+                  <h3 class="product-card__title">Laptop and phone bundle</h3>
+                  <p class="product-card__desc">Sold together as a bundle.</p>
+                  <p class="product-card__meta"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD</p>
+                  <div class="product-card__actions"><button type="button" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button></div>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-card__media"><span class="sample-tag">Sample listing</span><picture><source srcset="images/product-8.webp" type="image/webp"><img src="images/product-8.jpg" alt="Stack of used laptops" loading="lazy" width="316" height="309"></picture></div>
+                <div class="product-card__body">
+                  <p class="product-card__price">$300</p>
+                  <h3 class="product-card__title">Bulk lot of laptops</h3>
+                  <p class="product-card__desc">Untested, for parts or repair.</p>
+                  <p class="product-card__meta"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD</p>
+                  <div class="product-card__actions"><button type="button" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button></div>
+                </div>
+              </article>
             </div>
-          </article>
-          <article class="product-card">
-            <div class="product-card__media"><img src="images/product-2.jpg" alt="Laptop" loading="lazy" width="316" height="309"></div>
-            <div class="product-card__body">
-              <div class="product-card__top">
-                <span class="product-card__price">$399.00</span>
-                <button class="icon-btn icon-btn--plain" type="button" aria-label="Save to wishlist"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></button>
-              </div>
-              <h3 class="product-card__title"><a href="#">Product Name Here</a></h3>
-              <p class="product-card__desc">Description: Model <span>|</span> Mode <span>|</span> Year</p>
-              <div class="product-card__meta"><span>Location Here</span><time datetime="2026-06-12">12 June 2026</time></div>
-              <div class="product-card__actions"><a href="#" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a></div>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="product-card__media"><img src="images/product-3.jpg" alt="Electric motor" loading="lazy" width="316" height="309"></div>
-            <div class="product-card__body">
-              <div class="product-card__top">
-                <span class="product-card__price">$399.00</span>
-                <button class="icon-btn icon-btn--plain" type="button" aria-label="Save to wishlist"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></button>
-              </div>
-              <h3 class="product-card__title"><a href="#">Product Name Here</a></h3>
-              <p class="product-card__desc">Description: Model <span>|</span> Mode <span>|</span> Year</p>
-              <div class="product-card__meta"><span>Location Here</span><time datetime="2026-06-12">12 June 2026</time></div>
-              <div class="product-card__actions"><a href="#" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a></div>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="product-card__media"><img src="images/product-4.jpg" alt="Assorted scrap motors" loading="lazy" width="316" height="309"></div>
-            <div class="product-card__body">
-              <div class="product-card__top">
-                <span class="product-card__price">$399.00</span>
-                <button class="icon-btn icon-btn--plain" type="button" aria-label="Save to wishlist"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></button>
-              </div>
-              <h3 class="product-card__title"><a href="#">Product Name Here</a></h3>
-              <p class="product-card__desc">Description: Model <span>|</span> Mode <span>|</span> Year</p>
-              <div class="product-card__meta"><span>Location Here</span><time datetime="2026-06-12">12 June 2026</time></div>
-              <div class="product-card__actions"><a href="#" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a></div>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="product-card__media"><img src="images/product-5.jpg" alt="Smart speaker set" loading="lazy" width="316" height="309"></div>
-            <div class="product-card__body">
-              <div class="product-card__top">
-                <span class="product-card__price">$399.00</span>
-                <button class="icon-btn icon-btn--plain" type="button" aria-label="Save to wishlist"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></button>
-              </div>
-              <h3 class="product-card__title"><a href="#">Product Name Here</a></h3>
-              <p class="product-card__desc">Description: Model <span>|</span> Mode <span>|</span> Year</p>
-              <div class="product-card__meta"><span>Location Here</span><time datetime="2026-06-12">12 June 2026</time></div>
-              <div class="product-card__actions"><a href="#" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a></div>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="product-card__media"><img src="images/product-6.jpg" alt="Smartphone" loading="lazy" width="316" height="309"></div>
-            <div class="product-card__body">
-              <div class="product-card__top">
-                <span class="product-card__price">$399.00</span>
-                <button class="icon-btn icon-btn--plain" type="button" aria-label="Save to wishlist"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></button>
-              </div>
-              <h3 class="product-card__title"><a href="#">Product Name Here</a></h3>
-              <p class="product-card__desc">Description: Model <span>|</span> Mode <span>|</span> Year</p>
-              <div class="product-card__meta"><span>Location Here</span><time datetime="2026-06-12">12 June 2026</time></div>
-              <div class="product-card__actions"><a href="#" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a></div>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="product-card__media"><img src="images/product-7.jpg" alt="Laptop and phone" loading="lazy" width="316" height="309"></div>
-            <div class="product-card__body">
-              <div class="product-card__top">
-                <span class="product-card__price">$399.00</span>
-                <button class="icon-btn icon-btn--plain" type="button" aria-label="Save to wishlist"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></button>
-              </div>
-              <h3 class="product-card__title"><a href="#">Product Name Here</a></h3>
-              <p class="product-card__desc">Description: Model <span>|</span> Mode <span>|</span> Year</p>
-              <div class="product-card__meta"><span>Location Here</span><time datetime="2026-06-12">12 June 2026</time></div>
-              <div class="product-card__actions"><a href="#" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a></div>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="product-card__media"><img src="images/product-8.jpg" alt="Stack of laptops" loading="lazy" width="316" height="309"></div>
-            <div class="product-card__body">
-              <div class="product-card__top">
-                <span class="product-card__price">$399.00</span>
-                <button class="icon-btn icon-btn--plain" type="button" aria-label="Save to wishlist"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></button>
-              </div>
-              <h3 class="product-card__title"><a href="#">Product Name Here</a></h3>
-              <p class="product-card__desc">Description: Model <span>|</span> Mode <span>|</span> Year</p>
-              <div class="product-card__meta"><span>Location Here</span><time datetime="2026-06-12">12 June 2026</time></div>
-              <div class="product-card__actions"><a href="#" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a></div>
-            </div>
-          </article>
-            </div>
-            <div class="center"><a href="#" class="btn btn--primary btn--lg">See All Products (63)</a></div>
           </div>
 
           <div class="tab-panel" role="tabpanel" id="panel-rare" aria-labelledby="tab-rare" hidden>
             <div class="rare-banner">
-              <img src="images/photo-rare-finds.jpg" alt="Antique pocket watch" loading="lazy">
+              <picture><source srcset="images/photo-rare-finds.webp" type="image/webp"><img src="images/photo-rare-finds.jpg" alt="Antique pocket watch" loading="lazy" width="446" height="450"></picture>
               <div class="rare-banner__copy">
-                <h3>Discover Rare Finds</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                <a href="#" class="btn btn--white">Shop Now</a>
+                <h3>Discover rare finds</h3>
+                <p>Antiques, collectables and one-off pieces from local sellers. Have something special to sell? List it with Basic membership or higher.</p>
+                <button type="button" class="btn btn--white members-only" data-tier="Basic" data-tip="Basic membership or higher">Sell a rare find<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button>
               </div>
             </div>
             <div class="product-grid">
-          <article class="product-card">
-            <div class="product-card__media"><img src="images/antique-1.jpg" alt="Antique gold clock" loading="lazy" width="316" height="309"></div>
-            <div class="product-card__body">
-              <div class="product-card__top">
-                <span class="product-card__price">$399.00</span>
-                <button class="icon-btn icon-btn--plain" type="button" aria-label="Save to wishlist"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></button>
-              </div>
-              <h3 class="product-card__title"><a href="#">Product Name Here</a></h3>
-              <p class="product-card__desc">Description: Model <span>|</span> Mode <span>|</span> Year</p>
-              <div class="product-card__meta"><span>Location Here</span><time datetime="2026-06-12">12 June 2026</time></div>
-              <div class="product-card__actions"><a href="#" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a></div>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="product-card__media"><img src="images/antique-2.jpg" alt="Antique trinket box" loading="lazy" width="316" height="309"></div>
-            <div class="product-card__body">
-              <div class="product-card__top">
-                <span class="product-card__price">$399.00</span>
-                <button class="icon-btn icon-btn--plain" type="button" aria-label="Save to wishlist"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></button>
-              </div>
-              <h3 class="product-card__title"><a href="#">Product Name Here</a></h3>
-              <p class="product-card__desc">Description: Model <span>|</span> Mode <span>|</span> Year</p>
-              <div class="product-card__meta"><span>Location Here</span><time datetime="2026-06-12">12 June 2026</time></div>
-              <div class="product-card__actions"><a href="#" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a></div>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="product-card__media"><img src="images/antique-3.jpg" alt="Antique iron" loading="lazy" width="316" height="309"></div>
-            <div class="product-card__body">
-              <div class="product-card__top">
-                <span class="product-card__price">$399.00</span>
-                <button class="icon-btn icon-btn--plain" type="button" aria-label="Save to wishlist"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></button>
-              </div>
-              <h3 class="product-card__title"><a href="#">Product Name Here</a></h3>
-              <p class="product-card__desc">Description: Model <span>|</span> Mode <span>|</span> Year</p>
-              <div class="product-card__meta"><span>Location Here</span><time datetime="2026-06-12">12 June 2026</time></div>
-              <div class="product-card__actions"><a href="#" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a></div>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="product-card__media"><img src="images/antique-4.jpg" alt="Antique pocket watch chatelaine" loading="lazy" width="316" height="309"></div>
-            <div class="product-card__body">
-              <div class="product-card__top">
-                <span class="product-card__price">$399.00</span>
-                <button class="icon-btn icon-btn--plain" type="button" aria-label="Save to wishlist"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></button>
-              </div>
-              <h3 class="product-card__title"><a href="#">Product Name Here</a></h3>
-              <p class="product-card__desc">Description: Model <span>|</span> Mode <span>|</span> Year</p>
-              <div class="product-card__meta"><span>Location Here</span><time datetime="2026-06-12">12 June 2026</time></div>
-              <div class="product-card__actions"><a href="#" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a></div>
-            </div>
-          </article>
+              <article class="product-card">
+                <div class="product-card__media"><span class="sample-tag">Sample listing</span><picture><source srcset="images/antique-1.webp" type="image/webp"><img src="images/antique-1.jpg" alt="Antique gold-coloured mantel clock" loading="lazy" width="315" height="307"></picture></div>
+                <div class="product-card__body">
+                  <p class="product-card__price">$380</p>
+                  <h3 class="product-card__title">Antique mantel clock</h3>
+                  <p class="product-card__desc">Decorative mantel clock.</p>
+                  <p class="product-card__meta"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD</p>
+                  <div class="product-card__actions"><button type="button" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button></div>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-card__media"><span class="sample-tag">Sample listing</span><picture><source srcset="images/antique-2.webp" type="image/webp"><img src="images/antique-2.jpg" alt="Antique trinket box" loading="lazy" width="316" height="307"></picture></div>
+                <div class="product-card__body">
+                  <p class="product-card__price">$140</p>
+                  <h3 class="product-card__title">Antique trinket box</h3>
+                  <p class="product-card__desc">Small decorative box.</p>
+                  <p class="product-card__meta"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD</p>
+                  <div class="product-card__actions"><button type="button" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button></div>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-card__media"><span class="sample-tag">Sample listing</span><picture><source srcset="images/antique-3.webp" type="image/webp"><img src="images/antique-3.jpg" alt="Antique cast iron" loading="lazy" width="316" height="307"></picture></div>
+                <div class="product-card__body">
+                  <p class="product-card__price">$75</p>
+                  <h3 class="product-card__title">Antique flat iron</h3>
+                  <p class="product-card__desc">Vintage cast-iron flat iron.</p>
+                  <p class="product-card__meta"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD</p>
+                  <div class="product-card__actions"><button type="button" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button></div>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-card__media"><span class="sample-tag">Sample listing</span><picture><source srcset="images/antique-4.webp" type="image/webp"><img src="images/antique-4.jpg" alt="Antique pocket watch on a chatelaine" loading="lazy" width="316" height="307"></picture></div>
+                <div class="product-card__body">
+                  <p class="product-card__price">$260</p>
+                  <h3 class="product-card__title">Pocket watch chatelaine</h3>
+                  <p class="product-card__desc">Vintage pocket watch and chain.</p>
+                  <p class="product-card__meta"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD</p>
+                  <div class="product-card__actions"><button type="button" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Buy<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button></div>
+                </div>
+              </article>
             </div>
           </div>
 
@@ -389,159 +356,124 @@
               <div class="carousel__head">
                 <p>Items offered free to people in the community who need them.</p>
                 <div class="carousel__arrows">
-                  <button class="icon-btn icon-btn--round" type="button" data-prev aria-label="Previous"><svg class="icon" aria-hidden="true"><use href="#i-chevron-left"/></svg></button>
-                  <button class="icon-btn icon-btn--round" type="button" data-next aria-label="Next"><svg class="icon" aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
+                  <button class="icon-btn icon-btn--round" type="button" data-prev aria-label="Previous items"><svg class="icon" aria-hidden="true"><use href="#i-chevron-left"/></svg></button>
+                  <button class="icon-btn icon-btn--round" type="button" data-next aria-label="Next items"><svg class="icon" aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
                 </div>
               </div>
-              <div class="carousel__track" tabindex="0">
-          <article class="product-card">
-            <div class="product-card__media"><img src="images/donate-1.jpg" alt="Pressure cooker" loading="lazy" width="316" height="309"></div>
-            <div class="product-card__body">
-              <div class="product-card__top">
-                <span class="product-card__price product-card__price--free">Free</span>
-                <button class="icon-btn icon-btn--plain" type="button" aria-label="Save to wishlist"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></button>
-              </div>
-              <h3 class="product-card__title"><a href="#">Product Name Here</a></h3>
-              <p class="product-card__desc">Description: Model <span>|</span> Mode <span>|</span> Year</p>
-              <div class="product-card__meta"><span>Location Here</span><time datetime="2026-06-12">12 June 2026</time></div>
-              <div class="product-card__actions"><a href="#" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Request item<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a></div>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="product-card__media"><img src="images/donate-2.jpg" alt="Fridge and oven" loading="lazy" width="316" height="309"></div>
-            <div class="product-card__body">
-              <div class="product-card__top">
-                <span class="product-card__price product-card__price--free">Free</span>
-                <button class="icon-btn icon-btn--plain" type="button" aria-label="Save to wishlist"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></button>
-              </div>
-              <h3 class="product-card__title"><a href="#">Product Name Here</a></h3>
-              <p class="product-card__desc">Description: Model <span>|</span> Mode <span>|</span> Year</p>
-              <div class="product-card__meta"><span>Location Here</span><time datetime="2026-06-12">12 June 2026</time></div>
-              <div class="product-card__actions"><a href="#" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Request item<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a></div>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="product-card__media"><img src="images/donate-3.jpg" alt="Laptop" loading="lazy" width="316" height="309"></div>
-            <div class="product-card__body">
-              <div class="product-card__top">
-                <span class="product-card__price product-card__price--free">Free</span>
-                <button class="icon-btn icon-btn--plain" type="button" aria-label="Save to wishlist"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></button>
-              </div>
-              <h3 class="product-card__title"><a href="#">Product Name Here</a></h3>
-              <p class="product-card__desc">Description: Model <span>|</span> Mode <span>|</span> Year</p>
-              <div class="product-card__meta"><span>Location Here</span><time datetime="2026-06-12">12 June 2026</time></div>
-              <div class="product-card__actions"><a href="#" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Request item<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a></div>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="product-card__media"><img src="images/product-6.jpg" alt="Smartphone" loading="lazy" width="316" height="309"></div>
-            <div class="product-card__body">
-              <div class="product-card__top">
-                <span class="product-card__price product-card__price--free">Free</span>
-                <button class="icon-btn icon-btn--plain" type="button" aria-label="Save to wishlist"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></button>
-              </div>
-              <h3 class="product-card__title"><a href="#">Product Name Here</a></h3>
-              <p class="product-card__desc">Description: Model <span>|</span> Mode <span>|</span> Year</p>
-              <div class="product-card__meta"><span>Location Here</span><time datetime="2026-06-12">12 June 2026</time></div>
-              <div class="product-card__actions"><a href="#" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Request item<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a></div>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="product-card__media"><img src="images/product-1.jpg" alt="Smart home hub" loading="lazy" width="316" height="309"></div>
-            <div class="product-card__body">
-              <div class="product-card__top">
-                <span class="product-card__price product-card__price--free">Free</span>
-                <button class="icon-btn icon-btn--plain" type="button" aria-label="Save to wishlist"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></button>
-              </div>
-              <h3 class="product-card__title"><a href="#">Product Name Here</a></h3>
-              <p class="product-card__desc">Description: Model <span>|</span> Mode <span>|</span> Year</p>
-              <div class="product-card__meta"><span>Location Here</span><time datetime="2026-06-12">12 June 2026</time></div>
-              <div class="product-card__actions"><a href="#" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Request item<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></a></div>
-            </div>
-          </article>
+              <div class="carousel__track" tabindex="0" role="region" aria-label="Donated items (scrolls sideways)">
+              <article class="product-card">
+                <div class="product-card__media"><span class="sample-tag">Sample listing</span><picture><source srcset="images/donate-1.webp" type="image/webp"><img src="images/donate-1.jpg" alt="Pressure cooker" loading="lazy" width="309" height="309"></picture></div>
+                <div class="product-card__body">
+                  <p class="product-card__price product-card__price--free">Free</p>
+                  <h3 class="product-card__title">Pressure cooker</h3>
+                  <p class="product-card__desc">Free to someone who needs it.</p>
+                  <p class="product-card__meta"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD</p>
+                  <div class="product-card__actions"><button type="button" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Request item<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button></div>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-card__media"><span class="sample-tag">Sample listing</span><picture><source srcset="images/donate-2.webp" type="image/webp"><img src="images/donate-2.jpg" alt="Fridge and oven" loading="lazy" width="309" height="309"></picture></div>
+                <div class="product-card__body">
+                  <p class="product-card__price product-card__price--free">Free</p>
+                  <h3 class="product-card__title">Fridge and oven</h3>
+                  <p class="product-card__desc">Free, pickup only.</p>
+                  <p class="product-card__meta"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD</p>
+                  <div class="product-card__actions"><button type="button" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Request item<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button></div>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-card__media"><span class="sample-tag">Sample listing</span><picture><source srcset="images/donate-3.webp" type="image/webp"><img src="images/donate-3.jpg" alt="Laptop" loading="lazy" width="309" height="309"></picture></div>
+                <div class="product-card__body">
+                  <p class="product-card__price product-card__price--free">Free</p>
+                  <h3 class="product-card__title">Laptop for a student</h3>
+                  <p class="product-card__desc">Free to a student or family.</p>
+                  <p class="product-card__meta"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD</p>
+                  <div class="product-card__actions"><button type="button" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Request item<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button></div>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-card__media"><span class="sample-tag">Sample listing</span><picture><source srcset="images/product-6.webp" type="image/webp"><img src="images/product-6.jpg" alt="Smartphone" loading="lazy" width="316" height="309"></picture></div>
+                <div class="product-card__body">
+                  <p class="product-card__price product-card__price--free">Free</p>
+                  <h3 class="product-card__title">Smartphone</h3>
+                  <p class="product-card__desc">Free to someone in need.</p>
+                  <p class="product-card__meta"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD</p>
+                  <div class="product-card__actions"><button type="button" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Request item<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button></div>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-card__media"><span class="sample-tag">Sample listing</span><picture><source srcset="images/product-1.webp" type="image/webp"><img src="images/product-1.jpg" alt="Smart home hub" loading="lazy" width="315" height="309"></picture></div>
+                <div class="product-card__body">
+                  <p class="product-card__price product-card__price--free">Free</p>
+                  <h3 class="product-card__title">Smart home hub</h3>
+                  <p class="product-card__desc">Free, pickup only.</p>
+                  <p class="product-card__meta"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD</p>
+                  <div class="product-card__actions"><button type="button" class="btn btn--primary btn--sm btn--block members-only" data-tier="Basic" data-tip="Basic membership or higher">Request item<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button></div>
+                </div>
+              </article>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="trending">
-          <h3 class="subhead">Trending Search</h3>
-          <ul class="chips"><li><a href="#" class="chip">Vacuum Robot</a></li><li><a href="#" class="chip">Bluetooth Speaker</a></li><li><a href="#" class="chip">Oled TV</a></li><li><a href="#" class="chip">Security Camera</a></li><li><a href="#" class="chip">Macbook M1</a></li><li><a href="#" class="chip">Smart Washing Machine</a></li><li><a href="#" class="chip">IPad Mini 2023</a></li><li><a href="#" class="chip">PS5</a></li><li><a href="#" class="chip">Earbuds</a></li><li><a href="#" class="chip">Air Condition Inverter</a></li><li><a href="#" class="chip">Flycam</a></li><li><a href="#" class="chip">Electric Bike</a></li><li><a href="#" class="chip">Gaming Computer</a></li><li><a href="#" class="chip">Smart Air Purifier</a></li><li><a href="#" class="chip">Apple Watch</a></li></ul>
-        </div>
-
-        <div class="promo">
-          <div class="promo__left">
-            <p class="promo__title">PRODUCT NAME</p>
-            <p class="promo__small">BE THE FIRST TO OWN</p>
-            <p class="promo__price">$399.00</p>
+        <div class="cta-band">
+          <div>
+            <h2 class="subhead">Got scrap metal or a car to move on?</h2>
+            <p>Skip the listing. We collect precious and general scrap metal 24/7, and we can arrange scrap car pickup.</p>
           </div>
-          <img class="promo__img" src="images/promo-watch.jpg" alt="Smart watch" loading="lazy">
-          <div class="promo__mid">
-            <p class="promo__kicker">Opplo Watch Sport<br>Series 8</p>
-            <p class="promo__headline">A healthy leap ahead</p>
+          <div class="cta-band__btns">
+            <a href="tel:+61422909739" class="btn btn--primary"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call 24/7</a>
+            <a href="services.html#scrap" class="btn btn--outline" data-tab-link="tab-scrap">Scrapping details</a>
           </div>
-          <a href="#" class="btn btn--white">Donate Now</a>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ============ SUBSCRIBE ============ -->
-  <section class="subscribe">
-    <div class="container subscribe__inner">
-      <p class="subscribe__title"><strong>Subscribe</strong> &amp; Get <span>10% OFF</span> for first order</p>
-      <form class="subscribe__form" action="#" onsubmit="return false">
-        <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
-        <label class="sr-only" for="sub-email">Email address</label>
-        <input id="sub-email" type="email" placeholder="Enter your email address">
-        <button type="submit" class="btn btn--dark btn--sm">Subscribe</button>
-      </form>
-    </div>
-  </section>
-
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
+    <!-- ============ CALL STRIP ============ -->
+    <div class="callstrip" role="region" aria-labelledby="callstrip-title">
+      <div class="container callstrip__inner">
+        <div>
+          <h2 id="callstrip-title" class="callstrip__title">Need something now? <span>We come to you, 24/7.</span></h2>
+          <p>Precious metal scrapping, hire, listings, jobs or membership: one call and we'll point you the right way.</p>
+        </div>
+        <a href="tel:+61422909739" class="btn btn--primary btn--lg"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call 24/7</a>
+      </div>
+    </div>
+
     <div class="container footer__inner">
       <div class="footer__brand">
-        <a href="index.html" class="logo" aria-label="Real Time Traders home"><img src="images/logo-lockup.png" alt="Real Time Traders" width="822" height="200" loading="lazy"></a>
-        <p class="footer__hot"><small>HOTLINE 24/7</small><a href="tel:+61422909739">Call now</a></p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br><a href="mailto:contact@demolink.com">contact@demolink.com</a></p>
+        <a href="index.html" class="logo" aria-label="Real Time Traders home"><picture><source srcset="images/logo-lockup-560.webp" type="image/webp"><img src="images/logo-lockup-560.png" alt="Real Time Traders" width="560" height="136" loading="lazy"></picture></a>
+        <p>One Brisbane platform to buy, sell, hire and get work done, plus 24/7 precious metal scrapping.</p>
+        <p class="footer__meta"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD (we come to you)</p>
         <p class="footer__director">Director: John Carter</p>
-        <div class="footer__social">
-          <a href="#" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg></a>
-          <a href="#" aria-label="X (Twitter)"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a>
-          <a href="#" aria-label="YouTube"><svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg></a>
-        </div>
+        <a href="tel:+61422909739" class="btn btn--primary btn--sm"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call 24/7</a>
       </div>
       <div class="footer__col">
-        <h4>Marketplace</h4>
+        <h2 class="footer__title">Marketplace</h2>
         <ul>
-          <li><a href="marketplace.html">Buy &amp; Sell</a></li>
-          <li><a href="marketplace.html">Scrap Metal &amp; Recycling</a></li>
-          <li><a href="marketplace.html">Vehicles</a></li>
+          <li><a href="#featured" data-tab-link="tab-featured">Buy &amp; Sell</a></li>
           <li><a href="#rare" data-tab-link="tab-rare">Antiques &amp; Rare Finds</a></li>
           <li><a href="#donate" data-tab-link="tab-donate">Donations</a></li>
+          <li><a href="services.html#scrap" data-tab-link="tab-scrap">Scrap Metal &amp; Recycling</a></li>
         </ul>
       </div>
       <div class="footer__col">
-        <h4>Jobs &amp; Tenders</h4>
+        <h2 class="footer__title">Jobs &amp; Hire</h2>
         <ul>
           <li><a href="jobs.html#browse" data-tab-link="tab-jobs-browse">Browse jobs</a></li>
           <li><a href="jobs.html#post" data-tab-link="tab-jobs-post">Post a job</a></li>
           <li><a href="jobs.html#tradie" data-tab-link="tab-tradie">Find a Tradie</a></li>
-          <li><a href="membership.html">Quote for work</a></li>
-        </ul>
-        <h4 class="mt">Hire</h4>
-        <ul>
           <li><a href="hire.html#tool" data-tab-link="tab-tool">Tool Hire</a></li>
           <li><a href="hire.html#plant" data-tab-link="tab-plant">Plant Hire &amp; Portable Toilets</a></li>
           <li><a href="hire.html#trailer" data-tab-link="tab-trailer">Trailer Hire</a></li>
         </ul>
       </div>
       <div class="footer__col">
-        <h4>Services</h4>
+        <h2 class="footer__title">Services</h2>
         <ul>
           <li><a href="services.html#scrap" data-tab-link="tab-scrap">Precious Metal Scrapping 24/7</a></li>
           <li><a href="services.html#vehicle" data-tab-link="tab-vehicle">Vehicle Services</a></li>
@@ -550,22 +482,20 @@
         </ul>
       </div>
       <div class="footer__col">
-        <h4>Company</h4>
-        <ul><li><a href="membership.html">Membership</a></li><li><a href="#">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="#">Blog</a></li><li><a href="#">Career</a></li><li><a href="#">Advertise</a></li><li><a href="#">Partnership</a></li></ul>
-      </div>
-      <div class="footer__col">
-        <h4>Help Center</h4>
-        <ul><li><a href="#">Customer Service</a></li><li><a href="#">Policy</a></li><li><a href="#">Terms &amp; Conditions</a></li><li><a href="contact.html#faq">FAQs</a></li><li><a href="#" data-auth="login">My Account</a></li><li><a href="#">Product Support</a></li></ul>
+        <h2 class="footer__title">Company</h2>
+        <ul>
+          <li><a href="membership.html">Membership &amp; pricing</a></li>
+          <li><a href="jobs.html#fees">Job fees</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="contact.html#faq">FAQs</a></li>
+        </ul>
       </div>
     </div>
     <div class="footer__bottom">
       <div class="container footer__bottom-inner">
         <p class="footer__legal"><span>© 2026 Real Time Traders Pty Ltd</span> · <span>ABN 54 642 170 438</span> · <span>ACN 642 170 438</span></p>
-        <img src="images/payments.png" alt="Accepted payments: PayPal, Stripe, Mastercard, Klarna, Visa" width="300" height="38" loading="lazy">
-        <div class="footer__selects">
-          <label class="select-plain"><span class="sr-only">Currency</span><select><option>AUD</option><option>USD</option></select></label>
-          <label class="select-plain"><span class="sr-only">Language</span><select><option>Eng</option></select></label>
-        </div>
+        <p class="footer__preview">Preview site: accounts, payments and online enquiries are coming soon.</p>
       </div>
     </div>
   </footer>
@@ -576,43 +506,44 @@
     <button type="button" class="btn btn--light" data-auth="join"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg> Join</button>
   </div>
 
-  <!-- Join / Login modal (front-end mockup only, no real accounts) -->
+  <!-- Join / Login modal: preview only, no real accounts -->
   <dialog class="modal" id="auth-modal" aria-labelledby="auth-title">
     <div class="modal__box">
       <button type="button" class="modal__close icon-btn" data-close aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
-      <img class="modal__logo" src="images/logo-lockup.png" alt="Real Time Traders" width="822" height="200">
+      <picture><source srcset="images/logo-lockup-560.webp" type="image/webp"><img class="modal__logo" src="images/logo-lockup-560.png" alt="Real Time Traders" width="560" height="136" loading="lazy"></picture>
+      <p class="preview-flag"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> Preview: accounts and payments are coming soon</p>
       <h2 id="auth-title" class="modal__title">Join Real Time Traders</h2>
       <p class="modal__gate" hidden><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> <span class="modal__gate-text">This needs Basic membership or higher.</span></p>
       <div class="tabs tabs--compact" data-tabs>
         <div class="tabs__list" role="tablist" aria-label="Join or log in">
-          <button class="tab is-active" role="tab" id="tab-join" aria-controls="panel-join" aria-selected="true">Join</button>
-          <button class="tab" role="tab" id="tab-login" aria-controls="panel-login" aria-selected="false" tabindex="-1">Log in</button>
+          <button type="button" class="tab is-active" role="tab" id="tab-join" aria-controls="panel-join" aria-selected="true">Join</button>
+          <button type="button" class="tab" role="tab" id="tab-login" aria-controls="panel-login" aria-selected="false" tabindex="-1">Log in</button>
         </div>
         <div class="tab-panel is-active" role="tabpanel" id="panel-join" aria-labelledby="tab-join">
           <form class="auth-form" data-demo-form action="#" novalidate>
-            <label class="field"><span>Name</span><input type="text" autocomplete="name" required></label>
-            <label class="field"><span>Email</span><input type="email" autocomplete="email" required></label>
-            <label class="field"><span>Password</span><input type="password" autocomplete="new-password" required></label>
+            <label class="field"><span>Name</span><input type="text" name="name" autocomplete="name" required></label>
+            <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
+            <label class="field"><span>Password</span><input type="password" name="password" autocomplete="new-password" required></label>
             <label class="field"><span>Membership</span>
-              <select id="join-tier"><option value="Free">Free account: $0 (connection fee per job)</option><option value="Basic">Basic: $4.99/month</option><option value="Bronze">Bronze: $19.99/month</option><option value="Silver" selected>Silver: $39.99/month</option><option value="Gold">Gold: $79.99/month</option></select>
+              <select id="join-tier" name="tier"><option value="Free">Free account: $0 (connection fee per job)</option><option value="Basic">Basic: $4.99/month</option><option value="Bronze">Bronze: $19.99/month</option><option value="Silver" selected>Silver: $39.99/month</option><option value="Gold">Gold: $79.99/month</option></select>
             </label>
-            <p class="note">A free account can post jobs (connection fee $9.95–$59.95 per assigned job). Basic $4.99, Bronze $19.99, Silver $39.99, Gold $79.99 a month, or pay yearly and get 2 months free. <a href="membership.html" data-close>Compare memberships</a></p>
-            <button type="submit" class="btn btn--primary btn--block">Create account</button>
-            <p class="form-status" role="status" aria-live="polite"></p>
+            <p class="note">A free account can post jobs (connection fee $9.95–$59.95 per assigned job). Basic $4.99, Bronze $19.99, Silver $39.99, Gold $79.99 a month, or pay yearly and get 2 months free. <a href="membership.html">Compare memberships</a></p>
+            <button type="submit" class="btn btn--primary btn--block">Create account (preview)</button>
+            <p class="form-status form-status--info" role="status" aria-live="polite"></p>
           </form>
         </div>
         <div class="tab-panel" role="tabpanel" id="panel-login" aria-labelledby="tab-login" hidden>
           <form class="auth-form" data-demo-form action="#" novalidate>
-            <label class="field"><span>Email</span><input type="email" autocomplete="email" required></label>
-            <label class="field"><span>Password</span><input type="password" autocomplete="current-password" required></label>
-            <button type="submit" class="btn btn--primary btn--block">Log in</button>
-            <a href="#" class="note">Forgot password?</a>
-            <p class="form-status" role="status" aria-live="polite"></p>
+            <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
+            <label class="field"><span>Password</span><input type="password" name="password" autocomplete="current-password" required></label>
+            <button type="submit" class="btn btn--primary btn--block">Log in (preview)</button>
+            <button type="button" class="link-btn" data-forgot>Forgot password?</button>
+            <p class="form-status form-status--info" role="status" aria-live="polite"></p>
           </form>
         </div>
       </div>
       <div class="modal__demo">
-        <p><strong>Mockup only.</strong> No real accounts or payments: these need a backend. Use the switches below to preview what a free account or a paid member would see.</p>
+        <p><strong>Preview only.</strong> No accounts are created and no payments are taken yet. To see how the site will work, preview it as a free account or a paid member. Questions? <a href="tel:+61422909739">Call us now</a>.</p>
         <div class="modal__demo-btns">
           <button type="button" class="btn btn--outline btn--sm" data-demo-free>Preview with free account</button>
           <button type="button" class="btn btn--outline btn--sm" data-demo-toggle>Preview as member</button>

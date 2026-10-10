@@ -1246,3 +1246,13 @@ p { text-wrap: pretty; }
 .compare-table tr.is-member td a { color: #14532d; }
 /* Let the job fee tables wrap in the two-column layout so they never need sideways scrolling */
 @media (max-width: 1279px) { .fees .fee-table th, .fees .fee-table td { white-space: normal; } }
+/* Phones: shorter cover photo so the hero buttons sit higher */
+@media (max-width: 767px) {
+  .hero--cover .hero__photo img { height: 190px; max-height: none; object-position: center 30%; }
+  .hero--cover .hero__inner { padding-top: 10px; padding-bottom: 32px; }
+  .hero__eyebrow { font-size: 13px; margin-bottom: 8px; }
+  .hero.hero--cover h1 { font-size: 30px; margin-bottom: 10px; }
+  .hero__sub { font-size: 18px; margin-bottom: 8px; }
+  .hero--cover .hero__lead { font-size: 15.5px; line-height: 1.55; }
+  .hero--cover .hero__ctas { margin: 18px 0 14px; }
+}

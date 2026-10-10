@@ -317,4 +317,57 @@
     });
   }
 
+
+  /* ---------- Phone hours: "Open now" / "Closed – opens at X" (Australia/Brisbane, no DST) ----------
+     Static hours stay in the HTML as the fallback if this doesn't run. */
+  var RTT_HOURS = { label: "Mon–Fri 5am–9pm, Sat–Sun 7am–4pm", week: [[7, 16], [5, 21], [5, 21], [5, 21], [5, 21], [5, 21], [7, 16]] }; // index 0 = Sunday, [open, close) hours
+  window.RTT_HOURS = RTT_HOURS;
+  var DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  function fmtHour(h) { return (h % 12 || 12) + (h < 12 ? "am" : "pm"); }
+  function brisbaneNow() {
+    try {
+      var parts = new Intl.DateTimeFormat("en-AU", { timeZone: "Australia/Brisbane", weekday: "short", hour: "numeric", minute: "numeric", hourCycle: "h23" }).formatToParts(new Date());
+      var o = {}; parts.forEach(function (p) { o[p.type] = p.value; });
+      var day = DAYS.indexOf(o.weekday.slice(0, 3));
+      if (day < 0) return null;
+      return { day: day, mins: parseInt(o.hour, 10) % 24 * 60 + parseInt(o.minute, 10) };
+    } catch (e) { return null; }
+  }
+  function openStatus() {
+    var now = brisbaneNow();
+    if (!now) return null;
+    var t = RTT_HOURS.week[now.day];
+    if (now.mins >= t[0] * 60 && now.mins < t[1] * 60) return { open: true, text: "Open now – until " + fmtHour(t[1]) };
+    for (var i = 0; i < 8; i++) {
+      var d = (now.day + i) % 7, w = RTT_HOURS.week[d];
+      if (i === 0 && now.mins >= w[0] * 60) continue;
+      var when = i === 0 ? "today" : i === 1 ? "tomorrow" : DAYS[d];
+      return { open: false, text: "Closed – opens " + fmtHour(w[0]) + " " + when };
+    }
+    return null;
+  }
+  window.RTT_openStatus = openStatus;
+  function renderStatus() {
+    var st = openStatus();
+    if (!st) return;
+    document.querySelectorAll("[data-open-status]").forEach(function (el) {
+      var txt = st.text + (el.hasAttribute("data-open-long") ? " (Brisbane time)." : "");
+      if (el.hasAttribute("data-open-hours")) {
+        el.textContent = "";
+        el.appendChild(document.createTextNode(txt));
+        var h = document.createElement("span");
+        h.className = "open-hours";
+        h.textContent = " · " + RTT_HOURS.label;
+        el.appendChild(h);
+      } else {
+        el.textContent = txt;
+      }
+      el.classList.toggle("is-open", st.open);
+      el.classList.toggle("is-closed", !st.open);
+      el.hidden = false;
+    });
+  }
+  renderStatus();
+  setInterval(renderStatus, 60000);
+
 })();

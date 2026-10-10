@@ -1,6 +1,6 @@
 # Real Time Traders
 
-Static website for **Real Time Traders Pty Ltd** (ABN 54 642 170 438, ACN 642 170 438), Brisbane, QLD. One platform with three parts: a **Marketplace**, **Jobs & Tenders** (Airtasker-style) and **Hire** (tools, plant including portable toilets, and trailers), plus 24/7 precious metal scrapping. We come to you.
+Static website for **Real Time Traders Pty Ltd** (ABN 54 642 170 438, ACN 642 170 438), Brisbane, QLD. One platform with three parts: a **Marketplace**, **Jobs & Tenders** (Airtasker-style) and **Hire** (tools, plant including portable toilets, and trailers), plus scrap metal pickup (we come to you to collect it). Phone hours Mon–Fri 5am–9pm, Sat–Sun 7am–4pm.
 
 Live preview: https://dwayne260211.github.io/real-time-traders/
 
@@ -16,7 +16,8 @@ hire.html         equipment hire catalogue: Cleaning, Gardening, Power tools, Ge
 hire-item.html    one hire item (?id=): photos, rates, terms, availability, booking request (noindex)
 my-bookings.html  customer sign-in (email link) and their hire bookings (noindex)
 admin.html        hire admin: equipment, bookings, maintenance, condition reports, settings (noindex, not in sitemap)
-services.html     precious metal scrapping 24/7, vehicle services, towing & car removal, home services
+post.html         how to post a listing / job (online posting coming soon)
+services.html     scrap metal pickup (we come to you), vehicle services, towing & car removal, home services
 membership.html   tiers and comparison table (introductory pricing, AUD)
 community.html    donating and asking for help
 contact.html      call card, company details, FAQ
@@ -36,9 +37,9 @@ No build step. Edit the HTML directly. The header, footer, call strip and Join/L
 
 ## Contact
 
-The 24/7 hotline number is only used behind the **Call now** / **Call 24/7** buttons (`tel:` links). The client doesn't want it shown as visible text, so don't add it to page copy. There is no confirmed email address yet, so none is published.
+The phone number is only used behind the **Call us** / **Call now** buttons (`tel:` links). The client doesn't want it shown as visible text, so don't add it to page copy. There is no confirmed email address yet, so none is published.
 
-Director: John Carter. No street address is published; the site shows "Brisbane, QLD (we come to you)".
+Director: John Carter. No street address is published; the site shows "Brisbane, QLD". Phone hours: Mon–Fri 5am–9pm, Sat–Sun 7am–4pm (Brisbane time). Do not claim 24/7.
 
 ## Pricing (do not change without the client)
 
@@ -83,3 +84,7 @@ All text colours meet WCAG 2.2 AA contrast. Yellow is never used for text on whi
 ## Deploying
 
 GitHub Pages builds from `main` (root). `.nojekyll` is present so files are served as-is. Push a normal commit to `main` and Pages redeploys in a minute or two.
+
+
+## Chat assistant
+`js/chat.js` is a client-side, rules-based assistant (no external services). See `docs/chat-assistant.md`.

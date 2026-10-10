@@ -96,11 +96,11 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ============ TOP BAR ============ -->
-  <div class="topbar" role="region" aria-label="24/7 hotline">
+  <div class="topbar" role="region" aria-label="Phone hours and contact">
     <div class="container topbar__inner">
-      <p class="topbar__area"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD (we come to you)</p>
+      <p class="topbar__area"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD</p>
       <p class="topbar__msg">
-        <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> <span>24/7 hotline</span> <a href="tel:+61422909739" class="topbar__phone">Call now</a> <span class="topbar__sep" aria-hidden="true">·</span> <a href="contact.html" class="topbar__contact">Contact us</a>
+        <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> <span class="topbar__hours"><span class="sr-only">Phone hours: </span><span data-open-status data-open-hours>Mon–Fri 5am–9pm, Sat–Sun 7am–4pm</span></span> <a href="tel:+61422909739" class="topbar__phone">Call us</a> <span class="topbar__sep" aria-hidden="true">·</span> <a href="contact.html" class="topbar__contact">Contact us</a>
       </p>
       <a href="contact.html#faq" class="topbar__link">Questions? Read the FAQ</a>
     </div>
@@ -122,20 +122,16 @@
       </form>
 
       <div class="header__actions">
-        <a href="tel:+61422909739" class="hotline">
-          <span class="hotline__icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
-          <span><small>Hotline 24/7</small><strong>Call now</strong></span>
-        </a>
         <a href="contact.html" class="header__contact"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> Contact</a>
         <button type="button" class="header__login" data-auth="login">Login / Join</button>
-        <button type="button" class="btn btn--outline btn--sm header__listing members-only" data-tier="Basic" data-tip="Basic membership or higher"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Listing<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button>
-        <a href="tel:+61422909739" class="btn btn--primary btn--call"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call 24/7</a>
+        <a href="post.html" class="btn btn--primary btn--call header__post"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Post<span class="header__post-more"> a listing</span></a>
         <button class="icon-btn nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
       </div>
     </div>
 
     <nav class="nav" id="site-nav" aria-label="Main">
       <div class="container nav__inner">
+        <a href="post.html" class="btn btn--primary btn--block nav__post"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Post a listing</a>
         <ul class="nav__list">
           <li><a href="index.html" class="is-active" aria-current="page">Home</a></li>
           <li><a href="marketplace.html">Marketplace</a></li>
@@ -151,7 +147,7 @@
           <li class="has-sub">
             <button type="button" class="nav__sub-toggle" aria-expanded="false" aria-controls="sub-services">Services <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></button>
             <ul class="nav__sub" id="sub-services">
-              <li><a href="services.html#scrap" data-tab-link="tab-scrap">Precious Metal Scrapping 24/7</a></li>
+              <li><a href="services.html#scrap" data-tab-link="tab-scrap">Scrap Metal Pickup</a></li>
               <li><a href="services.html#vehicle" data-tab-link="tab-vehicle">Vehicle Services</a></li>
               <li><a href="services.html#towing" data-tab-link="tab-towing">Towing &amp; Car Removal</a></li>
               <li><a href="services.html#home" data-tab-link="tab-home">Home Services</a></li>
@@ -163,7 +159,6 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="nav__mobile-extra">
-          <a href="tel:+61422909739" class="btn btn--primary btn--block"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call 24/7</a>
           <button type="button" class="btn btn--outline btn--block" data-auth="login"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg> Login / Join</button>
         </div>
       </div>
@@ -182,71 +177,59 @@
       </div>
       <div class="container hero__inner">
         <div class="hero__copy">
-          <p class="hero__eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> <span>Brisbane &amp; South East Queensland · We come to you</span></p>
-          <h1 id="hero-title"><span class="hero__brand">Real Time Traders —</span> <span class="hero__tagline">Buy, Sell &amp; Hire in Brisbane</span></h1>
+          <p class="hero__eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> <span>Brisbane &amp; South East Queensland</span></p>
+          <h1 id="hero-title">Buy, Sell &amp; Hire in Brisbane</h1>
           <p class="hero__sub">Find local services and get jobs done</p>
-          <p class="hero__lead">Buy and sell locally, hire tools and equipment, find a tradie or post a job. It's all in one place, and a real person answers the phone.</p>
-          <div class="hero__ctas">
-            <a href="#categories" class="btn btn--primary btn--lg">Start browsing <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-            <a href="tel:+61422909739" class="btn btn--white btn--lg"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call 24/7</a>
-          </div>
-          <p class="hero__note"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> <span>Browse free, no account needed. Questions? <a href="contact.html">Contact us</a>.</span></p>
+          <p class="hero__lead">A local marketplace, equipment hire, tradies and jobs, all in one place.</p>
+          <nav class="quick" aria-label="Get started">
+            <a href="marketplace.html" class="quick__btn quick__btn--buy"><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg> <span>Buy &amp; Sell</span></a>
+            <a href="hire.html" class="quick__btn quick__btn--hire"><svg class="icon" aria-hidden="true"><use href="#i-drill"/></svg> <span>Hire Equipment</span></a>
+            <a href="jobs.html#tradie" class="quick__btn" data-tab-link="tab-tradie"><svg class="icon" aria-hidden="true"><use href="#i-wrench"/></svg> <span>Find a Tradie</span></a>
+            <a href="jobs.html#post" class="quick__btn" data-tab-link="tab-jobs-post"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> <span>Post a Job</span></a>
+          </nav>
+          <p class="hero__help"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg> <span>Need help posting? <a href="tel:+61422909739">Call us</a> and we'll guide you. <span class="hero__hours">Phone hours: Mon–Fri 5am–9pm, Sat–Sun 7am–4pm.</span></span></p>
         </div>
       </div>
     </section>
 
-    <!-- ============ CATEGORIES ============ -->
+    <!-- ============ MORE WAYS (secondary categories) ============ -->
     <section class="home-cats" id="categories" aria-labelledby="cats-title">
       <div class="container">
         <div class="section-head section-head--center">
-          <p class="eyebrow">Start here</p>
-          <h2 id="cats-title">What do you need today?</h2>
+          <p class="eyebrow">More on Real Time Traders</p>
+          <h2 id="cats-title">Jobs, services and selling</h2>
         </div>
-        <div class="home-cats__main">
-          <article class="cat-card cat-card--buy">
-            <span class="cat-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg></span>
-            <div class="cat-card__body">
-              <h3>Buy &amp; Sell</h3>
-              <p>A local marketplace for everyday goods, tools, vehicles, antiques and scrap metal. You can also give things away to someone who needs them.</p>
-              <div class="cat-card__ctas">
-                <a href="marketplace.html" class="btn btn--primary">Browse the marketplace</a>
-                <button type="button" class="btn btn--outline members-only" data-tier="Basic" data-tip="Basic membership or higher"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Sell an item<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button>
-              </div>
-            </div>
-          </article>
-          <article class="cat-card cat-card--hire">
-            <span class="cat-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-drill"/></svg></span>
-            <div class="cat-card__body">
-              <h3>Equipment Hire</h3>
-              <p>Tools, plant (including portable toilets) and trailers. Check what's available and request a booking.</p>
-              <div class="cat-card__ctas">
-                <a href="hire.html" class="btn btn--primary">Browse hire</a>
-                <a href="contact.html?service=Tool%20Hire#quote" class="btn btn--outline" data-service="Tool Hire">Request hire</a>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="home-cats__more">
+        <div class="home-cats__more home-cats__more--3">
           <div class="cat-sub">
             <span class="cat-sub__icon"><svg class="icon" aria-hidden="true"><use href="#i-handshake"/></svg></span>
             <div>
               <h3>Jobs &amp; Tenders</h3>
-              <p>Post a job and get quotes, or quote for local work.</p>
+              <p>Post a job and get quotes, or quote for local work. Tradies come to your place.</p>
               <ul class="cat-sub__links">
                 <li><a href="jobs.html#browse" data-tab-link="tab-jobs-browse">Browse jobs</a></li>
-                <li><a href="jobs.html#post" data-tab-link="tab-jobs-post">Post a job</a></li>
+                <li><a href="jobs.html#fees">Job fees</a></li>
               </ul>
             </div>
           </div>
           <div class="cat-sub">
-            <span class="cat-sub__icon"><svg class="icon" aria-hidden="true"><use href="#i-wrench"/></svg></span>
+            <span class="cat-sub__icon"><svg class="icon" aria-hidden="true"><use href="#i-coins"/></svg></span>
             <div>
               <h3>Services</h3>
-              <p>24/7 scrap metal pickup, local tradies, vehicle, towing and home services.</p>
+              <p>We come to you to collect scrap metal. Plus vehicle, towing and home services.</p>
               <ul class="cat-sub__links">
-                <li><a href="services.html#scrap" data-tab-link="tab-scrap">Scrap metal pickup 24/7</a></li>
-                <li><a href="jobs.html#tradie" data-tab-link="tab-tradie">Find a tradie</a></li>
+                <li><a href="services.html#scrap" data-tab-link="tab-scrap">Scrap metal pickup</a></li>
                 <li><a href="services.html">All services</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="cat-sub">
+            <span class="cat-sub__icon"><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg></span>
+            <div>
+              <h3>Sell or advertise</h3>
+              <p>List an item for sale, advertise your trade or service, or post a job.</p>
+              <ul class="cat-sub__links">
+                <li><a href="post.html">Post a listing</a></li>
+                <li><a href="membership.html">Memberships</a></li>
               </ul>
             </div>
           </div>
@@ -287,27 +270,26 @@
           <h2 id="why-title">Why choose us</h2>
         </div>
         <div class="why-grid">
-          <div class="why-card"><span class="why-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span><h3>Brisbane local</h3><p>We're a Brisbane business. For pickups and on-site services, we come to you.</p></div>
-          <div class="why-card"><span class="why-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span><h3>Talk to a real person</h3><p>Got a question? Call us 24/7 and talk it through with a person.</p></div>
+          <div class="why-card"><span class="why-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span><h3>Brisbane local</h3><p>We're a Brisbane business. We come to you to collect scrap metal, and tradies come to your place.</p></div>
+          <div class="why-card"><span class="why-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span><h3>Talk to a real person</h3><p>Got a question? Call us during phone hours and talk it through with a person.</p></div>
           <div class="why-card"><span class="why-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-coins"/></svg></span><h3>Lower fees for members</h3><p>Members pay no connection fee on jobs, and membership starts at $4.99 a month.</p></div>
           <div class="why-card"><span class="why-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-handshake"/></svg></span><h3>All in one place</h3><p>Buying, selling, equipment hire and local services, all on one site.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- ============ CONTACT ============ -->
+    <!-- ============ CONTACT & HOURS ============ -->
     <section class="section section--soft contact-home" id="contact-us" aria-labelledby="contact-home-title">
       <div class="container">
         <div class="contact-home__box">
           <div class="contact-home__copy">
-            <p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg> Get in touch</p>
+            <p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> Contact &amp; hours</p>
             <h2 id="contact-home-title">Talk to us</h2>
-            <p>The quickest way to reach us is a phone call, day or night. You can also visit our contact page for FAQs and more ways to get help.</p>
+            <p>Phone hours (Brisbane time): <strong>Mon–Fri 5am–9pm, Sat–Sun 7am–4pm</strong>. <span data-open-status data-open-long></span></p>
             <p class="preview-flag"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> Online enquiries: coming soon</p>
           </div>
           <div class="contact-home__ctas">
-            <a href="tel:+61422909739" class="btn btn--primary btn--lg"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call now</a>
-            <a href="contact.html" class="btn btn--outline btn--lg"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> Contact page</a>
+            <a href="contact.html" class="btn btn--outline btn--lg"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> Contact page &amp; FAQs</a>
           </div>
         </div>
       </div>
@@ -319,8 +301,8 @@
         <div class="section-head section-head--split">
           <div>
             <p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-wrench"/></svg> Services</p>
-            <h2>24/7 scrapping and local services</h2>
-            <p class="section-head__sub">Precious metal scrapping around the clock, plus vehicle, towing and home services across Brisbane.</p>
+            <h2>Scrap metal pickup and local services</h2>
+            <p class="section-head__sub">We come to you to collect scrap metal, plus vehicle, towing and home services across Brisbane.</p>
           </div>
           <a href="services.html" class="btn btn--outline">All services <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
         </div>
@@ -329,8 +311,8 @@
             <span class="teaser__media"><picture><source srcset="images/photo-scrap-metal.webp" type="image/webp"><img src="images/photo-scrap-metal.jpg" alt="" loading="lazy" width="738" height="460"></picture></span>
             <span class="teaser__body">
               <span class="teaser__icon"><svg class="icon" aria-hidden="true"><use href="#i-coins"/></svg></span>
-              <strong>Precious Metal Scrapping 24/7</strong>
-              <span>We come to you, day or night.</span>
+              <strong>Scrap Metal Pickup</strong>
+              <span>We come to you to collect scrap metal.</span>
               <span class="link-arrow">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
             </span>
           </a>
@@ -414,7 +396,7 @@
             <span class="step__num">3</span>
             <span class="step__icon"><svg class="icon" aria-hidden="true"><use href="#i-handshake"/></svg></span>
             <h3>Trade, hire &amp; get work done</h3>
-            <p>Buy and sell, post jobs or quote for work, and hire what you need. Our 24/7 services are always a call away.</p>
+            <p>Buy and sell, post jobs or quote for work, and hire what you need. Need a hand? Call us during phone hours.</p>
           </li>
         </ol>
       </div>
@@ -425,24 +407,14 @@
 
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
-    <!-- ============ CALL STRIP ============ -->
-    <div class="callstrip" role="region" aria-labelledby="callstrip-title">
-      <div class="container callstrip__inner">
-        <div>
-          <h2 id="callstrip-title" class="callstrip__title">Need something now? <span>We come to you, 24/7.</span></h2>
-          <p>Precious metal scrapping, hire, listings, jobs or membership: one call and we'll point you the right way.</p>
-        </div>
-        <a href="tel:+61422909739" class="btn btn--primary btn--lg"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call 24/7</a>
-      </div>
-    </div>
 
     <div class="container footer__inner">
       <div class="footer__brand">
         <a href="index.html" class="logo" aria-label="Real Time Traders home"><picture><source srcset="images/logo-lockup-560.webp" type="image/webp"><img src="images/logo-lockup-560.png" alt="Real Time Traders" width="560" height="136" loading="lazy"></picture></a>
-        <p>One Brisbane platform to buy, sell, hire and get work done, plus 24/7 precious metal scrapping.</p>
-        <p class="footer__meta"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD (we come to you)</p>
+        <p>One Brisbane platform to buy, sell, hire and get work done, plus scrap metal pickup: we come to you to collect it.</p>
+        <p class="footer__meta"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD</p>
+        <div class="footer__hours"><h2 class="footer__title">Phone hours</h2><p>Mon–Fri 5am–9pm<br>Sat–Sun 7am–4pm<br><small>Brisbane time</small></p><p class="footer__status" data-open-status data-open-long hidden></p></div>
         <p class="footer__director">Director: John Carter</p>
-        <a href="tel:+61422909739" class="btn btn--primary btn--sm"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call 24/7</a>
       </div>
       <div class="footer__col">
         <h2 class="footer__title">Marketplace</h2>
@@ -467,7 +439,7 @@
       <div class="footer__col">
         <h2 class="footer__title">Services</h2>
         <ul>
-          <li><a href="services.html#scrap" data-tab-link="tab-scrap">Precious Metal Scrapping 24/7</a></li>
+          <li><a href="services.html#scrap" data-tab-link="tab-scrap">Scrap Metal Pickup</a></li>
           <li><a href="services.html#vehicle" data-tab-link="tab-vehicle">Vehicle Services</a></li>
           <li><a href="services.html#towing" data-tab-link="tab-towing">Towing &amp; Car Removal</a></li>
           <li><a href="services.html#home" data-tab-link="tab-home">Home Services</a></li>
@@ -494,8 +466,8 @@
 
   <!-- Sticky mobile call bar -->
   <div class="mobile-cta" role="region" aria-label="Quick contact">
-    <a href="tel:+61422909739" class="btn btn--primary"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call 24/7</a>
-    <button type="button" class="btn btn--light" data-auth="join"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg> Join</button>
+    <p class="mobile-cta__status"><span class="sr-only">Phone hours: </span><span data-open-status>Mon–Fri 5am–9pm, Sat–Sun 7am–4pm</span></p>
+    <a href="tel:+61422909739" class="btn btn--primary btn--sm"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call us</a>
   </div>
 
   <!-- Join / Login modal: preview only, no real accounts -->
@@ -545,5 +517,6 @@
   </dialog>
 
   <script src="js/main.js" defer></script>
+  <script src="js/chat.js" defer></script>
 </body>
 </html>

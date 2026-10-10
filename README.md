@@ -2,7 +2,7 @@
 
 Static website for **Real Time Traders Pty Ltd** (ABN 54 642 170 438, ACN 642 170 438), Brisbane, QLD. One platform with three parts: a **Marketplace**, **Jobs & Tenders** (Airtasker-style) and **Hire** (tools, plant including portable toilets, and trailers), plus scrap metal pickup (we come to you to collect it). Phone hours Mon–Fri 5am–9pm, Sat–Sun 7am–4pm.
 
-Live preview: https://dwayne260211.github.io/real-time-traders/
+Live site: https://realtimetradersbrisbane.au/ (custom domain via the `CNAME` file; `www.realtimetradersbrisbane.au` redirects to it. The old GitHub Pages URL https://dwayne260211.github.io/real-time-traders/ redirects there once the custom domain is set.)
 
 > This is a preview. The equipment hire system is built but switched off until the owner connects Supabase and Stripe (see `docs/hire-system-setup.md`). Accounts, payments, subscriptions, listings, job posting, quoting and online enquiries are not live yet, and the site labels them that way. Visitors are directed to the call buttons. See `docs/backend-architecture.md` for the plan.
 

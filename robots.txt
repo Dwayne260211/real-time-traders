@@ -1,15 +1,11 @@
 User-agent: *
 Allow: /
-Disallow: /screenshots/
 Disallow: /admin.html
 Disallow: /admin-login.html
 Disallow: /my-bookings.html
-Disallow: /real-time-traders/admin.html
-Disallow: /real-time-traders/admin-login.html
-Disallow: /real-time-traders/my-bookings.html
+Disallow: /screenshots/
 
-# Note: crawlers only read robots.txt at a domain's root. On GitHub Pages project
-# hosting (/real-time-traders/) this file takes effect once a custom domain is used.
-# The pages also carry <meta name="robots" content="noindex">, which works today.
+# Served from the domain root (custom domain realtimetradersbrisbane.au).
+# admin, admin-login and my-bookings also carry <meta name="robots" content="noindex">.
 
-Sitemap: https://dwayne260211.github.io/real-time-traders/sitemap.xml
+Sitemap: https://realtimetradersbrisbane.au/sitemap.xml

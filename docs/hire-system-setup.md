@@ -55,12 +55,16 @@ It creates **no** equipment, prices or terms.
 ## 3. Sign-in settings (Supabase → Authentication)
 
 1. **URL Configuration**:
-   - Set **Site URL** to `https://dwayne260211.github.io/real-time-traders/` (or your custom domain later).
-   - Add these to **Redirect URLs**:
+   - Set **Site URL** to `https://realtimetradersbrisbane.au/`.
+   - Add these to **Redirect URLs** (keep the old GitHub Pages ones too, so links in emails sent before the switch still work):
+     - `https://realtimetradersbrisbane.au/my-bookings.html`
+     - `https://realtimetradersbrisbane.au/hire-item.html*`
+     - `https://realtimetradersbrisbane.au/admin.html`
+     - `https://realtimetradersbrisbane.au/admin-login.html` (staff email links and password resets land here)
      - `https://dwayne260211.github.io/real-time-traders/my-bookings.html`
      - `https://dwayne260211.github.io/real-time-traders/hire-item.html*`
      - `https://dwayne260211.github.io/real-time-traders/admin.html`
-     - `https://dwayne260211.github.io/real-time-traders/admin-login.html` (staff email links and password resets land here)
+     - `https://dwayne260211.github.io/real-time-traders/admin-login.html`
 2. **Providers → Email**:
    - Keep Email enabled. Customers sign in with a one-time link, so there are no passwords to manage.
    - For real volumes, set up **custom SMTP** under Authentication → Emails, using your email provider. Supabase's built-in sender is rate-limited and meant for testing.
@@ -102,7 +106,7 @@ select id, 'admin' from auth.users where email = 'you@yourbusiness.com.au'
 on conflict do nothing;
 ```
 
-3. **Sign in.** Open `https://dwayne260211.github.io/real-time-traders/admin-login.html` and sign in with that email and password. You'll land on `admin.html` with the Equipment, Bookings, Maintenance, Condition reports and Settings tabs.
+3. **Sign in.** Open `https://realtimetradersbrisbane.au/admin-login.html` and sign in with that email and password. You'll land on `admin.html` with the Equipment, Bookings, Maintenance, Condition reports and Settings tabs.
 4. **More staff.**
    - Repeat steps 1 and 2 for each person.
    - To remove someone's access, run `delete from public.user_roles where user_id = (select id from auth.users where email = '...');`. You can also delete the user under Authentication → Users.
@@ -126,8 +130,8 @@ Set the secrets. They live only in Supabase, never in git:
 
 ```bash
 supabase secrets set \
-  SITE_URL=https://dwayne260211.github.io/real-time-traders \
-  ALLOWED_ORIGINS=https://dwayne260211.github.io \
+  SITE_URL=https://realtimetradersbrisbane.au \
+  ALLOWED_ORIGINS=https://realtimetradersbrisbane.au,https://www.realtimetradersbrisbane.au,https://dwayne260211.github.io \
   STRIPE_SECRET_KEY=sk_test_... \
   STRIPE_WEBHOOK_SECRET=whsec_... \
   EMAIL_PROVIDER=resend \

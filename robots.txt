@@ -2,8 +2,10 @@ User-agent: *
 Allow: /
 Disallow: /screenshots/
 Disallow: /admin.html
+Disallow: /admin-login.html
 Disallow: /my-bookings.html
 Disallow: /real-time-traders/admin.html
+Disallow: /real-time-traders/admin-login.html
 Disallow: /real-time-traders/my-bookings.html
 
 # Note: crawlers only read robots.txt at a domain's root. On GitHub Pages project

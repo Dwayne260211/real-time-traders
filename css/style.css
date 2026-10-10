@@ -1450,3 +1450,21 @@ p { text-wrap: pretty; }
 .hire-call :focus-visible { outline-color: var(--accent); }
 .equip-card p.equip-avail { font-size: 13px; }
 .header__post-more { margin-left: .28em; }
+
+/* ---------- Admin sign-in (admin-login.html) ---------- */
+.admin-login__card { max-width: 480px; margin: 0 auto; background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--red); border-radius: var(--radius-lg); padding: 26px 22px; box-shadow: var(--shadow); }
+.admin-login__form fieldset { border: 0; margin: 0; padding: 0; min-width: 0; display: grid; gap: 14px; }
+.admin-login__form h2 { font-size: 24px; margin: 0; }
+.admin-login__form p { margin: 0; color: var(--muted); }
+.admin-login__form .form-status { color: var(--navy); font-weight: 600; min-height: 1px; }
+.admin-login__form .form-status.is-error { color: #8a1110; }
+.admin-login__form .field input:disabled { background: #f2f4f8; cursor: not-allowed; }
+.admin-login__links { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.admin-login__links .link-btn { color: var(--brand-700); }
+.admin-login__links .link-btn:disabled { cursor: not-allowed; }
+.notice--warn { display: block; background: #fff8d6; border: 1px solid #e0b400; color: var(--navy); font-weight: 400; }
+.admin-login__note { display: flex; gap: 8px; align-items: flex-start; margin: 18px 0 0; font-size: 13px; color: var(--muted); }
+.admin-login__note .icon { width: 16px; height: 16px; flex: none; margin-top: 2px; color: var(--blue); }
+@media (min-width: 768px) { .admin-login__card { padding: 34px 36px; } }
+.footer__admin { margin: 0; font-size: 12px; }
+.footer__admin a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 6px; color: #4a5263; text-decoration: underline; text-underline-offset: 3px; }

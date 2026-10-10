@@ -8,7 +8,7 @@ The code is built and tested, but **it isn't connected to anything yet**. While 
 
 - shows the hire categories with the honest message "Equipment coming soon. Call us to ask about hire.";
 - makes no network requests, shows no prices or availability, and takes no bookings or payments;
-- shows "Online bookings aren't switched on yet" on `my-bookings.html` and `admin.html`.
+- shows "Online bookings aren't switched on yet" on `my-bookings.html`. `admin.html` sends visitors to `admin-login.html`, which says sign-in will work once Supabase is connected.
 
 Nothing is advertised as available until **you** add an item, give it photos and prices, and tick **Published** on the admin page.
 
@@ -60,6 +60,7 @@ It creates **no** equipment, prices or terms.
      - `https://dwayne260211.github.io/real-time-traders/my-bookings.html`
      - `https://dwayne260211.github.io/real-time-traders/hire-item.html*`
      - `https://dwayne260211.github.io/real-time-traders/admin.html`
+     - `https://dwayne260211.github.io/real-time-traders/admin-login.html` (staff email links and password resets land here)
 2. **Providers → Email**:
    - Keep Email enabled. Customers sign in with a one-time link, so there are no passwords to manage.
    - For real volumes, set up **custom SMTP** under Authentication → Emails, using your email provider. Supabase's built-in sender is rate-limited and meant for testing.
@@ -79,19 +80,38 @@ Commit and push. GitHub Pages updates in a minute or two.
 
 The pages refuse to start if a secret key (`service_role` or `sb_secret_…`) is pasted here by mistake. Even so, check twice before committing.
 
-## 5. Make yourself an admin
+## 5. Make yourself an admin (create the first admin user)
 
-1. Open `https://dwayne260211.github.io/real-time-traders/my-bookings.html` and sign in with your email. This creates your user.
-2. In Supabase, open **SQL Editor** and run:
+Staff sign in at **`admin-login.html`**. There's also a small "Admin" link at the bottom of every page. It uses Supabase Auth with email and password, has a "Forgot password?" reset and an optional email sign-in link. After sign-in the page asks the database `public.is_admin()`:
+- Admins are sent to `admin.html`.
+- Anyone else sees "This account doesn't have admin access" and is signed out.
+
+`admin.html` sends signed-out visitors back to `admin-login.html`. That redirect is only for convenience: **the real protection is row-level security**, so only accounts in `public.user_roles` with role `admin` can read or change admin data.
+
+To create the first admin:
+
+1. **Create the user.** In Supabase, go to **Authentication → Users → Add user → Create new user**.
+   - Enter your business email and a strong password, and tick **Auto Confirm User**.
+   - Or click **Send invitation** and set the password from the email.
+   - Never put a password in the website code or in git.
+2. **Give it the admin role.** Open **SQL Editor** and run (with your email):
 
 ```sql
 insert into public.user_roles (user_id, role)
-select id, 'admin' from auth.users where email = 'you@yourbusiness.com.au';
+select id, 'admin' from auth.users where email = 'you@yourbusiness.com.au'
+on conflict do nothing;
 ```
 
-3. Open `admin.html` and sign in. You'll see the Equipment, Bookings, Maintenance, Condition reports and Settings tabs.
+3. **Sign in.** Open `https://dwayne260211.github.io/real-time-traders/admin-login.html` and sign in with that email and password. You'll land on `admin.html` with the Equipment, Bookings, Maintenance, Condition reports and Settings tabs.
+4. **More staff.**
+   - Repeat steps 1 and 2 for each person.
+   - To remove someone's access, run `delete from public.user_roles where user_id = (select id from auth.users where email = '...');`. You can also delete the user under Authentication → Users.
 
-Only accounts in `user_roles` can see or change admin data. This is enforced by the database, not just the page. `admin.html` isn't in the sitemap and tells search engines not to index it.
+Notes:
+- **Forgot password** sends Supabase's reset email. The link brings the person back to `admin-login.html`, where they choose a new password. For this to work, `admin-login.html` must be in **Redirect URLs** (step 3).
+- **Password rules** (minimum length and so on) are set in Supabase under **Authentication → Providers → Email** (and Auth settings). The website doesn't check passwords itself.
+- Until `js/hire-config.js` is filled in, `admin-login.html` shows "Admin sign-in will work once the Supabase project is connected" with the form disabled. Nothing can be signed in to.
+- `admin.html` and `admin-login.html` are marked `noindex`, aren't in the sitemap and are disallowed in `robots.txt`.
 
 ## 6. Deploy the server functions and set secrets
 

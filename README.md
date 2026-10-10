@@ -16,6 +16,7 @@ hire.html         equipment hire catalogue: Cleaning, Gardening, Power tools, Ge
 hire-item.html    one hire item (?id=): photos, rates, terms, availability, booking request (noindex)
 my-bookings.html  customer sign-in (email link) and their hire bookings (noindex)
 admin.html        hire admin: equipment, bookings, maintenance, condition reports, settings (noindex, not in sitemap)
+admin-login.html  staff sign-in (Supabase email + password, reset, email link); admins go to admin.html (noindex, not in sitemap, disallowed in robots.txt)
 post.html         how to post a listing / job (online posting coming soon)
 services.html     scrap metal pickup (we come to you), vehicle services, towing & car removal, home services
 membership.html   tiers and comparison table (introductory pricing, AUD)

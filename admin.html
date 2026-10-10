@@ -180,18 +180,9 @@
     <section class="section admin">
       <div class="container">
         <div class="empty-state empty-state--page" data-unconfigured>
-          <p class="empty-state__title">The hire admin isn't set up yet.</p>
-          <p>It needs the online hire system to be connected first. Follow <strong>docs/hire-system-setup.md</strong> in the website repository.</p>
-        </div>
-
-        <div class="account-card" data-signin-box hidden>
-          <h2>Staff sign-in</h2>
-          <p>We'll email you a secure sign-in link. Only accounts given the admin role in the database can see or change anything here.</p>
-          <form data-signin novalidate>
-            <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
-            <button type="submit" class="btn btn--primary">Email me a sign-in link</button>
-            <p class="form-status" role="status" aria-live="polite"></p>
-          </form>
+          <p class="empty-state__title">Staff only: please sign in.</p>
+          <p>The hire admin needs an admin sign-in. If the online hire system isn't connected yet, see <strong>docs/hire-system-setup.md</strong>.</p>
+          <div class="empty-state__ctas"><a href="admin-login.html" class="btn btn--primary btn--sm">Go to admin sign-in</a></div>
         </div>
 
         <div class="empty-state empty-state--page" data-not-admin hidden>
@@ -399,6 +390,7 @@
       <div class="container footer__bottom-inner">
         <p class="footer__legal"><span>© 2026 Real Time Traders Pty Ltd</span> · <span>ABN 54 642 170 438</span> · <span>ACN 642 170 438</span></p>
         <p class="footer__preview">Preview site: accounts, payments and online booking are coming soon.</p>
+        <p class="footer__admin"><a href="admin-login.html">Admin</a></p>
       </div>
     </div>
   </footer>

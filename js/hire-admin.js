@@ -3,7 +3,7 @@
 (function () {
   "use strict";
   var H = window.RTTHire;
-  if (!H || !H.config()) return;
+  if (!H || !H.config()) { location.replace("admin-login.html"); return; }   // not connected yet: the sign-in page explains what is needed
   var $ = function (s, root) { return (root || document).querySelector(s); };
   var $$ = function (s, root) { return Array.prototype.slice.call((root || document).querySelectorAll(s)); };
   var sb, equipment = [], adminStatus = $("[data-admin-status]");
@@ -369,31 +369,31 @@
     }).catch(function (err) { setStatus(setForm, H.errorText(err), true); });
   });
 
-  /* ---------------- Start ---------------- */
-  var signinBox = $("[data-signin-box]"), notAdmin = $("[data-not-admin]"), adminBox = $("[data-admin]"), started;
+  /* ---------------- Start ----------------
+     UI only: signed-out visitors and non-admins are sent to admin-login.html. Security stays in RLS (public.is_admin()). */
+  var notAdmin = $("[data-not-admin]"), adminBox = $("[data-admin]"), gate = $("[data-unconfigured]"), started;
+  function toLogin(reason) { location.replace("admin-login.html" + (reason ? "?reason=" + reason : "")); }
   function setSession(s) {
     var uid = s ? s.user.id : null;
     if (uid === started) return;
     started = uid;
-    signinBox.hidden = !!s; notAdmin.hidden = true; adminBox.hidden = true;
-    if (!s) return;
+    notAdmin.hidden = true; adminBox.hidden = true;
+    if (!s) { toLogin(); return; }
     $$("[data-email]").forEach(function (el) { el.textContent = s.user.email || ""; });
     sb.rpc("is_admin").then(check).then(function (isAdmin) {
-      if (!isAdmin) { notAdmin.hidden = false; return; }
-      adminBox.hidden = false;
+      if (!isAdmin) { return sb.auth.signOut().then(function () { toLogin("not-admin"); }); }
+      gate.hidden = true; adminBox.hidden = false;
       return Promise.all([loadEquipment(), loadBookings(), loadMaint(), loadReports(), loadSettingsForm()]);
-    }).catch(function (err) { flash(H.errorText(err), true); adminBox.hidden = false; });
+    }).catch(function (err) { flash(H.errorText(err), true); gate.hidden = true; adminBox.hidden = false; });
   }
   H.client().then(function (client) {
     sb = client;
-    H.wireSignIn(signinBox.querySelector("[data-signin]"), sb, function () { return location.origin + location.pathname; });
-    $$("[data-signout]").forEach(function (b) { b.addEventListener("click", function () { sb.auth.signOut().then(function () { setSession(null); }); }); });
+    $$("[data-signout]").forEach(function (b) { b.addEventListener("click", function () { sb.auth.signOut().then(function () { toLogin("signed-out"); }); }); });
     return sb.auth.getSession();
   }).then(function (r) {
     setSession(r.data.session);
     sb.auth.onAuthStateChange(function (_e, s) { setSession(s); });
-  }).catch(function (err) {
-    $("[data-unconfigured]").hidden = false;
-    $("[data-unconfigured] p:not(.empty-state__title)").textContent = H.errorText(err);
+  }).catch(function () {
+    toLogin();   // not configured (or the client failed to load): the sign-in page explains what's needed
   });
 })();

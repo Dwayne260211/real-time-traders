@@ -136,11 +136,6 @@ a.chip:hover { background: var(--brand); color: var(--on-brand); }
 .search__btn .icon { width: 18px; height: 18px; }
 
 .header__actions { margin-left: auto; display: flex; align-items: center; gap: 10px; }
-.hotline { display: none; align-items: center; gap: 12px; }
-.hotline__icon { color: var(--brand-text); }
-.hotline__icon .icon { width: 24px; height: 24px; }
-.hotline small { display: block; font-size: 13px; color: var(--muted); line-height: 1.2; }
-.hotline strong { display: block; font-size: 22px; color: var(--charcoal); line-height: 1.2; }
 .header__login { display: none; font-size: 13px; font-weight: 600; color: var(--brand-text); text-transform: uppercase; text-decoration: underline; text-underline-offset: 5px; }
 .header__listing { display: none; text-transform: uppercase; }
 .btn--call { display: none; padding: 10px 16px; font-size: 14px; }
@@ -479,10 +474,6 @@ a.chip:hover { background: var(--brand); color: var(--on-brand); }
   .panel-media--small img:last-child { margin-top: 40px; height: 300px; }
 }
 
-@media (min-width: 1280px) {
-  .hotline { display: flex; }
-}
-
 /* Headings on dark surfaces stay white */
 .rare-banner__copy h3 { color: #fff; }
 
@@ -662,8 +653,6 @@ body:not(.is-member) .members-only:hover::after, body:not(.is-member) .members-o
 }
 .field.is-invalid select, .field.is-invalid textarea { border-color: #d93025; }
 .compare { table-layout: fixed; } .compare th:first-child { width: 24%; }
-/* v3: keep the hotline number and Login / Join on one line in the busier header */
-.hotline strong { white-space: nowrap; font-size: 19px; }
 .head-actions a, .head-actions button { white-space: nowrap; }
 .header__login { white-space: nowrap; }
 /* v4: real pricing */
@@ -785,7 +774,7 @@ h1, h2, h3 { text-wrap: balance; }
 p { text-wrap: pretty; }
 ::selection { background: #cfe0fb; color: var(--navy); }
 :focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 6px; }
-.page-banner :focus-visible, .callstrip :focus-visible, .rare-banner :focus-visible, .topbar :focus-visible, .trust :focus-visible { outline-color: var(--accent); }
+.page-banner :focus-visible, .rare-banner :focus-visible, .topbar :focus-visible, .trust :focus-visible { outline-color: var(--accent); }
 .skip-link:focus { top: 12px; outline: 3px solid var(--accent); }
 
 /* Shadows tinted with the navy brand colour */
@@ -910,13 +899,6 @@ p { text-wrap: pretty; }
 .why-card .link-arrow { margin-top: 10px; }
 
 /* Call strip + footer */
-.callstrip { background: var(--navy); color: #fff; border-top: 4px solid var(--accent); }
-.callstrip__inner { display: grid; gap: 18px; padding-top: 34px; padding-bottom: 34px; align-items: center; }
-.callstrip__title { color: #fff; font-size: clamp(22px, 3vw, 30px); margin: 0 0 6px; }
-.callstrip__title span { color: var(--accent); }
-.callstrip p { margin: 0; color: #d5def0; }
-.callstrip .btn { justify-self: start; }
-@media (min-width: 768px) { .callstrip__inner { grid-template-columns: 1fr auto; padding-top: 40px; padding-bottom: 40px; } }
 .footer__brand .logo img { height: 56px; width: auto; max-width: 100%; }
 .footer__brand p { color: var(--ink); }
 .footer__meta { display: flex; align-items: center; gap: 8px; margin: 0 0 6px; }
@@ -1461,3 +1443,10 @@ p { text-wrap: pretty; }
   .hire-group--pinned .equip-card__ctas { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 559px) { .hire-group--pinned { padding: 14px; } }
+/* Hire page: one page-level call box */
+.hire-call { margin: 4px 0 14px; padding: 16px; border-radius: var(--radius); background: var(--navy); color: #fff; }
+.hire-call .btn { width: 100%; justify-content: center; }
+.hire-intro__aside .hire-call p { margin: 10px 0 0; color: #d5def0; font-size: 14px; }
+.hire-call :focus-visible { outline-color: var(--accent); }
+.equip-card p.equip-avail { font-size: 13px; }
+.header__post-more { margin-left: .28em; }

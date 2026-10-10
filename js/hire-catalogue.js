@@ -6,7 +6,8 @@
 (function () {
   "use strict";
   var H = window.RTTHire || {};
-  var TEL = "tel:+61422909739";
+  var EMAIL = "itsreallymejohnnyc@gmail.com";
+  function mailto(name) { return "mailto:" + EMAIL + "?subject=" + encodeURIComponent("Hire enquiry: " + name); }
   var results = document.querySelector("[data-hire-results]");
   var status = document.querySelector("[data-hire-status]");
   var filterBar = document.querySelector("[data-hire-filters]");
@@ -56,8 +57,8 @@
         "<h4>" + title + "</h4>" +
         (it.summary ? "<p>" + esc(it.summary) + "</p>" : "") +
         rateHtml(it) +
-        '<p class="equip-avail">' + icon("i-phone") + " Call to check availability</p>" +
-        '<div class="equip-card__ctas"><a class="btn btn--primary btn--sm btn--block" href="' + TEL + '">Enquire / Call us<span class="sr-only"> about ' + esc(it.name) + "</span></a>" + book + "</div>" +
+        '<p class="equip-avail">Call or email to check availability</p>' +
+        '<div class="equip-card__ctas"><a class="btn btn--primary btn--sm btn--block" href="' + esc(mailto(it.name)) + '">' + icon("i-mail") + " Enquire<span class=\"sr-only\"> about " + esc(it.name) + " by email</span></a>" + book + "</div>" +
       "</div></article>";
   }
 
@@ -101,8 +102,8 @@
       if (inF.length) html += group(inF, esc(f.name), "hg-" + f.slug);
     });
     if (!list.length) {
-      html = '<div class="empty-state"><p class="empty-state__title">No matching equipment in our list.</p><p>We may still be able to help: call us and ask, or clear the search and filters.</p>' +
-        '<div class="empty-state__ctas"><a href="' + TEL + '" class="btn btn--primary btn--sm">Call us</a> <button type="button" class="btn btn--outline btn--sm" data-hire-clear>Clear search &amp; filters</button></div></div>';
+      html = '<div class="empty-state"><p class="empty-state__title">No matching equipment in our list.</p><p>We may still be able to help: call or email us and ask, or clear the search and filters.</p>' +
+        '<div class="empty-state__ctas"><a href="mailto:' + EMAIL + '?subject=' + encodeURIComponent("Hire enquiry") + '" class="btn btn--primary btn--sm">Email us</a> <button type="button" class="btn btn--outline btn--sm" data-hire-clear>Clear search &amp; filters</button></div></div>';
     }
     results.innerHTML = html;
     var clr = results.querySelector("[data-hire-clear]");
@@ -184,7 +185,7 @@
     })
     .catch(function (err) {
       console.warn("Hire catalogue:", err);
-      results.innerHTML = '<div class="empty-state"><p class="empty-state__title">We couldn\'t load the hire range just now.</p><p>Please call us and we\'ll tell you what\'s available.</p><div class="empty-state__ctas"><a href="' + TEL + '" class="btn btn--primary btn--sm">Call us</a></div></div>';
+      results.innerHTML = '<div class="empty-state"><p class="empty-state__title">We couldn\'t load the hire range just now.</p><p>Please call us (button above) or email us and we\'ll tell you what\'s available.</p><div class="empty-state__ctas"><a href="mailto:' + EMAIL + '" class="btn btn--primary btn--sm">Email us</a></div></div>';
       if (status) status.textContent = "The hire range didn't load. Call us to ask about hire.";
     });
 })();

@@ -119,9 +119,9 @@
    "filter": "drilling",
    "weight": "light",
    "rates": {
-    "day": 31.5,
-    "weekend": 47.0,
-    "week": 88.0
+    "day": 54.0,
+    "weekend": 81.0,
+    "week": 202.5
    },
    "type": "Cordless 1/2in impact wrench (18V)",
    "pinned": true,

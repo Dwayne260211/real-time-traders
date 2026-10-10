@@ -1737,11 +1737,13 @@ These are in the Kennards (and formerly Bunnings/Coates) ranges but need license
 ## Published rates: smoothed for consistency (owner approved, 10 October 2026)
 
 Before publishing, the rates above were checked by `scripts/build-hire-data.py`:
-- Within each size family (pressure washers by psi, generators by kVA, excavators by tonnage, plate compactors, demolition hammers and jackhammers, impact wrenches, rotary hammers, angle grinders, extension ladders, cement mixers, box trailers, post hole diggers, concrete grinders, floor sanders), a larger or heavier item is never cheaper than a smaller one for the same period.
+- Within each size family (pressure washers by psi, generators by kVA, excavators by tonnage, plate compactors, demolition hammers and jackhammers, rotary hammers, angle grinders, extension ladders, cement mixers, box trailers, post hole diggers, concrete grinders, floor sanders), a larger or heavier item is never cheaper than a smaller one for the same period.
 - Every item keeps day <= weekend <= week.
 - Every rate stays at or below the lowest verified competitor price for that period. Where raising the larger item would have broken that cap, the smaller item was lowered instead.
 
 The published catalogue (`data/hire-items.json`) uses the smoothed figures. Every change is listed below. Items not listed are published exactly as researched.
+
+**Impact wrenches (owner decision, 10 October 2026):** the cordless 1/2in (18V) and the electric 3/4in impact wrench are treated as *different* families and not compared. The cordless 1/2in item (the owner's DeWalt 18V XR kit) keeps its researched rates: $54/day, $81 weekend, $202.50 week (10% below Kennards Hire $60 day / $225 week; weekend derived as 1.5x day). An earlier draft lowered it to $31.50 / $47 / $88 to sit under the 3/4in wrench; that change was reverted.
 
 | Item | Period | Researched RTT | Published | Smoothed for consistency |
 |---|---|---|---|---|
@@ -1752,13 +1754,10 @@ The published catalogue (`data/hire-items.json`) uses the smoothed figures. Ever
 | Generator ~2kVA | week | $410.00 | $279.00 | smoothed for consistency: Generators: lowered so it sits at or under the larger Generator ~3kVA inverter |
 | Mini excavator ~1t | day | $277.00 | $175.50 | smoothed for consistency: Excavators: lowered so it sits at or under the larger Mini excavator ~1.7-1.8t |
 | Mini excavator ~1t | week | $1575.00 | $706.50 | smoothed for consistency: Excavators: lowered so it sits at or under the larger Mini excavator ~1.7-1.8t |
-| Cordless 1/2in impact wrench (18V) | day | $54.00 | $31.50 | smoothed for consistency: Impact wrenches: lowered so it sits at or under the larger Electric impact wrench 3/4in |
-| Cordless 1/2in impact wrench (18V) | week | $202.50 | $88.00 | smoothed for consistency: Impact wrenches: lowered so it sits at or under the larger Electric impact wrench 3/4in |
 | Concrete grinder - hand-held | day | $146.50 | $125.00 | smoothed for consistency: Concrete grinders: lowered so it sits at or under the larger Concrete floor grinder (walk-behind, single head) |
 | Pressure washer - petrol ~2000-2500psi | weekend | $162.00 | $93.00 | smoothed for consistency: derived weekend recalculated as 1.5x the smoothed day rate (capped at the week rate) |
 | Concrete grinder - hand-held | weekend | $220.00 | $187.50 | smoothed for consistency: derived weekend recalculated as 1.5x the smoothed day rate (capped at the week rate) |
 | Mini excavator ~1t | weekend | $415.50 | $263.00 | smoothed for consistency: derived weekend recalculated as 1.5x the smoothed day rate (capped at the week rate) |
-| Cordless 1/2in impact wrench (18V) | weekend | $81.00 | $47.00 | smoothed for consistency: derived weekend recalculated as 1.5x the smoothed day rate (capped at the week rate) |
 | Generator ~2kVA | weekend | $133.50 | $67.50 | smoothed for consistency: derived weekend recalculated as 1.5x the smoothed day rate (capped at the week rate) |
 | Generator ~10kVA | weekend | $193.00 | $207.50 | smoothed for consistency: derived weekend recalculated as 1.5x the smoothed day rate (capped at the week rate) |
 | Generator ~10kVA | weekend | $207.50 | $208.00 | smoothed for consistency: Generators: raised to match the smaller Generator ~6-7kVA |

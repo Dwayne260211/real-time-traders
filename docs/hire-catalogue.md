@@ -36,7 +36,7 @@ What each field does:
 - **photo** is optional; without it the card shows the category icon. Put photos in `images/hire/` as WebP (640x480 works well) and credit them in `docs/image-credits.md`. Only use photos you own or that are licensed for free commercial use (e.g. the Unsplash License). Never copy competitor photos, text or prices.
 - **pinned** set to `true` puts the item first, under "Our own gear". **owner_item** set to `true` adds an "Our own kit" badge. `photos` (an array) holds extra photos for later use. `summary` is an optional short line.
 
-Every card shows the rate (or Price on request), "Call to check availability", an **Enquire / Call us** button (tel) and a disabled-looking **Book online: coming soon** label. This note shows above the list: "Prices in AUD. No GST added. Price, availability and terms confirmed when you call." Hire terms stay "to be confirmed" until the owner sets them.
+Every card shows the rate (or Price on request), "Call or email to check availability", an **Enquire** button (opens an email to itsreallymejohnnyc@gmail.com with the subject "Hire enquiry: <item name>") and a disabled-looking **Book online: coming soon** label. The page has one prominent **Call us** button with the phone hours near the top (plus the top-bar link and the sticky mobile bar). This note shows above the list: "Prices in AUD. No GST added. Price, availability and terms confirmed when you call." Hire terms stay "to be confirmed" until the owner sets them.
 
 ## Live equipment from Supabase
 When `js/hire-config.js` is configured, published equipment from Supabase loads after the static list:

@@ -40,7 +40,7 @@ FAMILIES = [
     ("Excavators", ["Mini excavator ~1t", "Mini excavator ~1.7-1.8t", "Excavator ~2.5t", "Excavator ~3.5t"]),
     ("Plate compactors", ["Plate compactor - small (~40-55kg)", "Plate compactor - medium (~70-90kg)", "Plate compactor - reversible (~150kg)"]),
     ("Demolition hammers / jackhammers", ["Demolition hammer - light (electric)", "Demolition hammer - medium (electric ~16kg)", "Jackhammer / breaker - heavy (electric ~30kg)"]),
-    ("Impact wrenches", ["Cordless 1/2in impact wrench (18V)", "Electric impact wrench 3/4in"]),
+    # Cordless 1/2in (18V) and electric 3/4in impact wrenches are different families (owner decision), so not compared.
     ("Rotary hammer drills", ["Rotary hammer drill - light (SDS-plus)", "Rotary hammer drill - heavy (SDS-max)"]),
     ("Angle grinders", ["Angle grinder 125mm", "Angle grinder 230mm"]),
     ("Extension ladders", ["Extension ladder ~6-6.5m", "Extension ladder ~8-8.5m"]),

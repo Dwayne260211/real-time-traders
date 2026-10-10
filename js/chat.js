@@ -11,6 +11,7 @@
 
   var TEL = "tel:+61422909739";
   var HOURS = "Mon–Fri 5am–9pm, Sat–Sun 7am–4pm (Brisbane time)";
+  var EMAIL = "itsreallymejohnnyc@gmail.com";
 
   function hoursLine() {
     var st = window.RTT_openStatus ? window.RTT_openStatus() : null;
@@ -23,7 +24,7 @@
       a: ["Browse the marketplace free, no account needed. To buy or message sellers you need Basic ($4.99/month). To sell: Basic gives 10 active listings, Bronze 30, Silver 100 and Gold unlimited (fair use).", "Accounts and online posting are coming soon."],
       links: [["Go to the marketplace", "marketplace.html"], ["Compare memberships", "membership.html"]] },
     { id: "hire", chip: "Hire equipment", kw: ["hire", "rent", "rental", "renting", "equipment", "tool hire", "plant hire", "trailer", "portable toilet", "toilet"],
-      a: ["Our hire range covers cleaning, gardening, power tools, general gear, plant & portable toilets and trailers. Prices are on request: call us to check availability.", "Pickup or delivery: to be confirmed. Silver and Gold members get 5% or 10% off hire."],
+      a: ["Our hire range has about 150 items: cleaning, gardening, power tools, concreting, compaction & earthmoving, generators, ladders & access, plumbing, trailers and more. Most show a daily, weekend and weekly rate (AUD, no GST added); price, availability and terms are confirmed when you call.", "Pickup or delivery: to be confirmed. Silver and Gold members get 5% or 10% off hire."],
       links: [["See the hire range", "hire.html"]], call: true },
     { id: "tradie", chip: "Find a tradie", kw: ["tradie", "tradies", "tradesman", "tradesperson", "plumber", "electrician", "carpenter", "painter", "handyman", "builder", "quote for", "find someone"],
       a: ["Post your job free (free account) and local tradies can quote. Tradies come to your place. Free accounts pay a connection fee of $9.95–$59.95 when they accept a quote; members pay nothing."],
@@ -40,9 +41,9 @@
     { id: "fees_membership", chip: "Fees & membership", kw: ["membership", "member", "price", "prices", "pricing", "cost", "costs", "how much", "fee", "fees", "basic", "bronze", "gold plan", "silver plan", "subscription", "annual", "commission", "service fee"],
       a: ["Memberships (AUD per month): Basic $4.99, Bronze $19.99, Silver $39.99, Gold $79.99. Annual billing gives 2 months free.", "Job fees: free accounts pay a connection fee of $9.95–$59.95 per job, waived for members. Workers pay a service fee of 20%, 18.5%, 14.9% or 12.5% on jobs won.", "Accounts and payments are coming soon, so nobody can be charged yet."],
       links: [["Compare memberships", "membership.html"], ["How job fees work", "jobs.html#fees"]] },
-    { id: "contact_hours", chip: "Contact & hours", kw: ["hours", "open", "opening", "close", "closed", "when can i call", "phone", "call", "contact", "number", "email", "talk", "speak", "24/7", "weekend", "saturday", "sunday"],
-      a: function () { return [hoursLine(), "Online enquiries are coming soon, so the quickest way to reach us is to call during phone hours."]; },
-      links: [["Contact page", "contact.html"]], call: true },
+    { id: "contact_hours", chip: "Contact & hours", kw: ["hours", "open", "opening", "close", "closed", "when can i call", "phone", "call", "contact", "number", "email", "e-mail", "mail", "talk", "speak", "24/7", "weekend", "saturday", "sunday"],
+      a: function () { return [hoursLine(), "You can also email us at " + EMAIL + ". The online enquiry form is coming soon."]; },
+      links: [["Email us", "mailto:" + EMAIL], ["Contact page", "contact.html"]], call: true },
     { id: "featured", kw: ["featured", "feature my", "top of", "boost", "promote"],
       a: ["A featured listing shows at the top of its category results with a Featured badge. Silver includes 2 a month and Gold 10 a month plus top placement. It's planned and arrives with accounts."],
       links: [["Featured listings", "membership.html#featured-listings"]] },
@@ -79,18 +80,30 @@
   function words(s) { return String(s).toLowerCase().replace(/[^a-z0-9&\/ ]+/g, " ").split(/\s+/).filter(Boolean); }
   var STOP = { hire: 1, rent: 1, do: 1, you: 1, a: 1, an: 1, the: 1, have: 1, any: 1, can: 1, i: 1, kit: 1, and: 1, "&": 1, or: 1, for: 1, of: 1, with: 1, xr: 1, "18v": 1, tool: 1, tools: 1 };
   function findHire(q) {
-    var qs = words(q).filter(function (w) { return !STOP[w]; }).map(stem);
-    if (!qs.length) return null;
-    var names = (hireItems && hireItems.length ? hireItems.map(function (it) { return { name: it.name || it.item, type: it.type || it.name || it.item, cat: it.category }; }) : [])
-      .concat(FALLBACK_HIRE.map(function (n) { return { name: n, type: n }; }));
-    var best = null, bestScore = 0;
-    names.forEach(function (it) {
-      var ws = words(it.type + " " + it.name).filter(function (w) { return !STOP[w]; }).map(stem);
+    var qs = words(q).filter(function (w) { return !STOP[w]; }).map(stem).filter(function (w) { return w.length > 2; });
+    if (!qs.length) return [];
+    var list = hireItems && hireItems.length ? hireItems : FALLBACK_HIRE.map(function (n) { return { name: n }; });
+    var scored = [];
+    list.forEach(function (it) {
+      var ws = words((it.name || "") + " " + (it.type || "") + " " + (it.category || "")).filter(function (w) { return !STOP[w]; }).map(stem);
       var hits = 0;
-      qs.forEach(function (w) { if (w.length > 2 && ws.indexOf(w) >= 0) hits++; });
-      if (hits > bestScore) { bestScore = hits; best = it; }
+      qs.forEach(function (w) { if (ws.indexOf(w) >= 0) hits++; });
+      if (hits) scored.push([hits, it]);
     });
-    return bestScore ? best : null;
+    if (!scored.length) return [];
+    var best = Math.max.apply(null, scored.map(function (x) { return x[0]; }));
+    return scored.filter(function (x) { return x[0] === best; }).map(function (x) { return x[1]; });
+  }
+  function money(v) { v = Number(v); return "$" + (v % 1 ? v.toFixed(2) : String(v)); }
+  function rateText(it) {
+    if (it.rates && it.rates.day != null) {
+      var extra = [];
+      if (it.rates.weekend != null) extra.push("weekend " + money(it.rates.weekend));
+      if (it.rates.week != null) extra.push("week " + money(it.rates.week));
+      return "from " + money(it.rates.day) + "/day" + (extra.length ? " (" + extra.join(", ") + ")" : "");
+    }
+    if (it.flat != null) return money(it.flat) + " per hire (flat rate)";
+    return "price on request";
   }
 
   /* ---------- matcher ---------- */
@@ -215,9 +228,11 @@
     var hireish = /\b(hire|rent|rental|have)\b/.test(n);
     var entry = match(q);
     var finish = function () {
-      var item = (hireish || !entry) ? findHire(q) : null;
-      if (item) {
-        botSays(["Yes, our hire range includes: " + cap(item.name) + ". Price on request: call us to check availability.", "Pickup or delivery: to be confirmed. " + hoursLine()],
+      var found = (hireish || !entry) ? findHire(q) : [];
+      if (found.length) {
+        var lines = found.slice(0, 3).map(function (it) { return cap(it.name) + ": " + rateText(it) + "."; });
+        var more = found.length > 3 ? " We have " + found.length + " matching items; see the hire range for them all." : "";
+        botSays(["Yes, it's in our hire range."].concat(lines).concat(["Prices in AUD, no GST added. Call us to check availability; price and terms are confirmed when you call." + more, hoursLine()]),
           [["See the hire range", "hire.html"]], true);
         return;
       }

@@ -1,1 +1,1968 @@
-{"note":"Hire catalogue data. Filled in by the starter range; see docs/hire-catalogue.md.","items":[]}
+{
+ "updated": "2026-10-10",
+ "currency": "AUD",
+ "note": "Prices in AUD. No GST added. Price, availability and terms confirmed when you call.",
+ "filters": [
+  {
+   "slug": "cleaning",
+   "name": "Cleaning & floor care",
+   "icon": "i-washer",
+   "categories": [
+    "Cleaning",
+    "Floor care"
+   ]
+  },
+  {
+   "slug": "gardening",
+   "name": "Gardening & landscaping",
+   "icon": "i-leaf",
+   "categories": [
+    "Gardening & landscaping",
+    "Post holes & augers"
+   ]
+  },
+  {
+   "slug": "drilling",
+   "name": "Drilling & fastening",
+   "icon": "i-drill",
+   "categories": [
+    "Drilling & fastening",
+    "Air compressors & air tools",
+    "Welding"
+   ]
+  },
+  {
+   "slug": "cutting",
+   "name": "Cutting & sawing",
+   "icon": "i-tools",
+   "categories": [
+    "Cutting & sawing"
+   ]
+  },
+  {
+   "slug": "sanding",
+   "name": "Sanding & painting",
+   "icon": "i-roller",
+   "categories": [
+    "Sanding",
+    "Painting & decorating"
+   ]
+  },
+  {
+   "slug": "concreting",
+   "name": "Concreting & demolition",
+   "icon": "i-hammer",
+   "categories": [
+    "Concreting",
+    "Demolition & breaking"
+   ]
+  },
+  {
+   "slug": "compaction",
+   "name": "Compaction & earthmoving",
+   "icon": "i-excavator",
+   "categories": [
+    "Compaction",
+    "Earthmoving & trenching"
+   ]
+  },
+  {
+   "slug": "power",
+   "name": "Power, heating & cooling",
+   "icon": "i-generator",
+   "categories": [
+    "Generators & power",
+    "Heating, cooling & ventilation"
+   ]
+  },
+  {
+   "slug": "access",
+   "name": "Ladders, access & site",
+   "icon": "i-ladder",
+   "categories": [
+    "Ladders & access",
+    "Site equipment",
+    "Survey & measuring"
+   ]
+  },
+  {
+   "slug": "handling",
+   "name": "Material handling",
+   "icon": "i-box",
+   "categories": [
+    "Material handling"
+   ]
+  },
+  {
+   "slug": "plumbing",
+   "name": "Plumbing & pumps",
+   "icon": "i-droplet",
+   "categories": [
+    "Plumbing & drainage",
+    "Pumps"
+   ]
+  },
+  {
+   "slug": "trailers",
+   "name": "Trailers",
+   "icon": "i-trailer",
+   "categories": [
+    "Trailers"
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "dewalt-18v-xr-impact-wrench-kit",
+   "name": "DeWalt 18V XR brushless 1/2\" impact wrench kit (5.0Ah battery + charger)",
+   "category": "Drilling & fastening",
+   "filter": "drilling",
+   "weight": "light",
+   "rates": {
+    "day": 31.5,
+    "weekend": 47.0,
+    "week": 88.0
+   },
+   "type": "Cordless 1/2in impact wrench (18V)",
+   "pinned": true,
+   "owner_item": true,
+   "summary": "Our own kit: cordless 1/2\" impact wrench with a 5.0Ah battery and charger.",
+   "photo": {
+    "src": "images/hire/dewalt-impact-wrench-1.webp",
+    "alt": "DeWalt 18V XR brushless impact wrench with 5.0Ah battery"
+   },
+   "photos": [
+    {
+     "src": "images/hire/dewalt-impact-wrench-1.webp",
+     "alt": "DeWalt 18V XR brushless impact wrench with 5.0Ah battery"
+    },
+    {
+     "src": "images/hire/dewalt-impact-wrench-2.webp",
+     "alt": "The DeWalt impact wrench, 5.0Ah battery and charger"
+    },
+    {
+     "src": "images/hire/dewalt-impact-wrench-3.webp",
+     "alt": "The DeWalt impact wrench kit laid out: wrench, battery and charger"
+    }
+   ]
+  },
+  {
+   "id": "pressure-washer-petrol-3000psi",
+   "name": "Pressure washer - petrol ~3000psi",
+   "category": "Cleaning",
+   "filter": "cleaning",
+   "weight": "heavy",
+   "rates": {
+    "day": 62.0,
+    "weekend": 93.0,
+    "week": 289.5
+   },
+   "photo": {
+    "src": "images/hire/pressure-washer.webp",
+    "alt": "A worker cleaning paving with a pressure washer surface cleaner"
+   }
+  },
+  {
+   "id": "pressure-washer-petrol-2000-2500psi",
+   "name": "Pressure washer - petrol ~2000-2500psi",
+   "category": "Cleaning",
+   "filter": "cleaning",
+   "weight": "heavy",
+   "rates": {
+    "day": 62.0,
+    "weekend": 93.0,
+    "week": 289.5
+   }
+  },
+  {
+   "id": "pressure-washer-petrol-4000psi",
+   "name": "Pressure washer - petrol ~4000psi",
+   "category": "Cleaning",
+   "filter": "cleaning",
+   "weight": "heavy",
+   "rates": {
+    "day": 175.5,
+    "weekend": 263.0,
+    "week": 616.5
+   }
+  },
+  {
+   "id": "pressure-washer-electric",
+   "name": "Pressure washer - electric",
+   "category": "Cleaning",
+   "filter": "cleaning",
+   "weight": "light",
+   "rates": {
+    "day": 54.0,
+    "weekend": 81.0,
+    "week": 189.0
+   }
+  },
+  {
+   "id": "pressure-washer-rotary-surface-cleaner-attachment",
+   "name": "Pressure washer rotary surface cleaner (attachment)",
+   "category": "Cleaning",
+   "filter": "cleaning",
+   "weight": "light",
+   "rates": {
+    "day": 39.5,
+    "weekend": 59.0,
+    "week": 157.5
+   },
+   "photo": {
+    "src": "images/hire/pressure-washer.webp",
+    "alt": "A worker cleaning paving with a pressure washer surface cleaner"
+   }
+  },
+  {
+   "id": "carpet-cleaner-hot-water-extraction",
+   "name": "Carpet cleaner (hot-water extraction)",
+   "category": "Cleaning",
+   "filter": "cleaning",
+   "weight": "light",
+   "rates": {
+    "day": 39.0,
+    "weekend": 46.5,
+    "week": 237.5
+   }
+  },
+  {
+   "id": "carpet-dryer-air-mover",
+   "name": "Carpet dryer / air mover",
+   "category": "Cleaning",
+   "filter": "cleaning",
+   "weight": "light",
+   "rates": {
+    "day": 15.0,
+    "weekend": 22.5,
+    "week": 144.0
+   }
+  },
+  {
+   "id": "wet-dry-vacuum-industrial",
+   "name": "Wet & dry vacuum (industrial)",
+   "category": "Cleaning",
+   "filter": "cleaning",
+   "weight": "light",
+   "rates": {
+    "day": 45.0,
+    "weekend": 67.5,
+    "week": 153.0
+   }
+  },
+  {
+   "id": "h-class-concrete-dust-vacuum",
+   "name": "H-class concrete dust vacuum",
+   "category": "Cleaning",
+   "filter": "cleaning",
+   "weight": "light",
+   "rates": {
+    "day": 99.0,
+    "weekend": 148.5,
+    "week": 457.0
+   }
+  },
+  {
+   "id": "steam-cleaner",
+   "name": "Steam cleaner",
+   "category": "Cleaning",
+   "filter": "cleaning",
+   "weight": "light",
+   "rates": null
+  },
+  {
+   "id": "floor-scrubber-walk-behind-compact",
+   "name": "Floor scrubber (walk-behind, compact)",
+   "category": "Cleaning",
+   "filter": "cleaning",
+   "weight": "light",
+   "rates": {
+    "day": 155.5,
+    "weekend": 233.0,
+    "week": 572.0
+   }
+  },
+  {
+   "id": "floor-polisher-rotary-machine-400mm",
+   "name": "Floor polisher / rotary machine (400mm)",
+   "category": "Floor care",
+   "filter": "cleaning",
+   "weight": "light",
+   "rates": {
+    "day": 64.0,
+    "weekend": 96.0,
+    "week": 257.0
+   }
+  },
+  {
+   "id": "dehumidifier",
+   "name": "Dehumidifier",
+   "category": "Cleaning",
+   "filter": "cleaning",
+   "weight": "light",
+   "rates": {
+    "day": 89.0,
+    "weekend": 133.5,
+    "week": 289.5
+   }
+  },
+  {
+   "id": "floor-stripper-tile-carpet-remover-walk-behind",
+   "name": "Floor stripper / tile & carpet remover (walk-behind)",
+   "category": "Floor care",
+   "filter": "cleaning",
+   "weight": "heavy",
+   "rates": {
+    "day": 153.0,
+    "weekend": 229.5,
+    "week": 696.5
+   }
+  },
+  {
+   "id": "floor-sander-drum-belt",
+   "name": "Floor sander (drum/belt)",
+   "category": "Floor care",
+   "filter": "cleaning",
+   "weight": "heavy",
+   "rates": {
+    "day": 72.5,
+    "weekend": 109.0,
+    "week": 248.0
+   }
+  },
+  {
+   "id": "orbital-floor-sander",
+   "name": "Orbital floor sander",
+   "category": "Floor care",
+   "filter": "cleaning",
+   "weight": "heavy",
+   "rates": {
+    "day": 70.0,
+    "weekend": 105.0,
+    "week": 248.0
+   }
+  },
+  {
+   "id": "floor-edger",
+   "name": "Floor edger",
+   "category": "Floor care",
+   "filter": "cleaning",
+   "weight": "light",
+   "rates": {
+    "day": 47.5,
+    "weekend": 71.0,
+    "week": 189.0
+   }
+  },
+  {
+   "id": "tile-saw-electric-wet-bench-table",
+   "name": "Tile saw - electric wet (bench/table)",
+   "category": "Cutting & sawing",
+   "filter": "cutting",
+   "weight": "light",
+   "rates": {
+    "day": 64.0,
+    "weekend": 96.0,
+    "week": 257.0
+   }
+  },
+  {
+   "id": "tile-cutter-manual-600mm",
+   "name": "Tile cutter - manual (~600mm)",
+   "category": "Cutting & sawing",
+   "filter": "cutting",
+   "weight": "light",
+   "rates": {
+    "day": 31.5,
+    "weekend": 47.0,
+    "week": 108.0
+   }
+  },
+  {
+   "id": "wallpaper-steamer-stripper",
+   "name": "Wallpaper steamer / stripper",
+   "category": "Painting & decorating",
+   "filter": "sanding",
+   "weight": "light",
+   "rates": {
+    "day": 30.5,
+    "weekend": 46.0,
+    "week": 152.0
+   }
+  },
+  {
+   "id": "airless-paint-sprayer",
+   "name": "Airless paint sprayer",
+   "category": "Painting & decorating",
+   "filter": "sanding",
+   "weight": "light",
+   "rates": {
+    "day": 162.0,
+    "weekend": 243.0,
+    "week": 540.0
+   }
+  },
+  {
+   "id": "plasterboard-giraffe-sander",
+   "name": "Plasterboard (giraffe) sander",
+   "category": "Sanding",
+   "filter": "sanding",
+   "weight": "light",
+   "rates": {
+    "day": 54.0,
+    "weekend": 81.0,
+    "week": 189.0
+   }
+  },
+  {
+   "id": "orbital-sander-hand-held",
+   "name": "Orbital sander (hand-held)",
+   "category": "Sanding",
+   "filter": "sanding",
+   "weight": "light",
+   "rates": {
+    "day": 13.5,
+    "weekend": 20.0,
+    "week": 45.0
+   }
+  },
+  {
+   "id": "belt-sander-100mm",
+   "name": "Belt sander (100mm)",
+   "category": "Sanding",
+   "filter": "sanding",
+   "weight": "light",
+   "rates": {
+    "day": 60.0,
+    "weekend": 90.0,
+    "week": 208.5
+   }
+  },
+  {
+   "id": "heat-gun-paint-stripper",
+   "name": "Heat gun / paint stripper",
+   "category": "Painting & decorating",
+   "filter": "sanding",
+   "weight": "light",
+   "rates": {
+    "day": 18.0,
+    "weekend": 27.0,
+    "week": 63.0
+   }
+  },
+  {
+   "id": "lawn-mower-push-petrol",
+   "name": "Lawn mower - push petrol",
+   "category": "Gardening & landscaping",
+   "filter": "gardening",
+   "weight": "light",
+   "rates": {
+    "day": 36.0,
+    "weekend": 54.0,
+    "week": 108.0
+   }
+  },
+  {
+   "id": "line-trimmer-whipper-snipper-petrol",
+   "name": "Line trimmer / whipper snipper (petrol)",
+   "category": "Gardening & landscaping",
+   "filter": "gardening",
+   "weight": "light",
+   "rates": {
+    "day": 40.5,
+    "weekend": 61.0,
+    "week": 216.0
+   },
+   "photo": {
+    "src": "images/hire/line-trimmer.webp",
+    "alt": "A man trimming long grass with a line trimmer"
+   }
+  },
+  {
+   "id": "hedge-trimmer",
+   "name": "Hedge trimmer",
+   "category": "Gardening & landscaping",
+   "filter": "gardening",
+   "weight": "light",
+   "rates": {
+    "day": 40.5,
+    "weekend": 61.0,
+    "week": 139.5
+   },
+   "photo": {
+    "src": "images/hire/hedge-trimmer.webp",
+    "alt": "A person trimming a tall hedge"
+   }
+  },
+  {
+   "id": "leaf-blower",
+   "name": "Leaf blower",
+   "category": "Gardening & landscaping",
+   "filter": "gardening",
+   "weight": "light",
+   "rates": {
+    "day": 54.0,
+    "weekend": 81.0,
+    "week": 189.0
+   },
+   "photo": {
+    "src": "images/hire/leaf-blower.webp",
+    "alt": "A man using a leaf blower in a yard"
+   }
+  },
+  {
+   "id": "chainsaw-petrol-18-20in",
+   "name": "Chainsaw - petrol (~18-20in)",
+   "category": "Gardening & landscaping",
+   "filter": "gardening",
+   "weight": "light",
+   "rates": {
+    "day": 85.5,
+    "weekend": 128.0,
+    "week": 342.0
+   }
+  },
+  {
+   "id": "pole-saw-pole-pruner",
+   "name": "Pole saw / pole pruner",
+   "category": "Gardening & landscaping",
+   "filter": "gardening",
+   "weight": "light",
+   "rates": {
+    "day": 79.0,
+    "weekend": 118.5,
+    "week": 288.5
+   }
+  },
+  {
+   "id": "rotary-hoe-tiller",
+   "name": "Rotary hoe / tiller",
+   "category": "Gardening & landscaping",
+   "filter": "gardening",
+   "weight": "heavy",
+   "rates": {
+    "day": 69.0,
+    "weekend": 103.5,
+    "week": 277.0
+   }
+  },
+  {
+   "id": "lawn-corer-aerator",
+   "name": "Lawn corer / aerator",
+   "category": "Gardening & landscaping",
+   "filter": "gardening",
+   "weight": "heavy",
+   "rates": {
+    "day": 117.0,
+    "weekend": 175.5,
+    "week": 468.0
+   }
+  },
+  {
+   "id": "lawn-dethatcher-scarifier",
+   "name": "Lawn dethatcher / scarifier",
+   "category": "Gardening & landscaping",
+   "filter": "gardening",
+   "weight": "heavy",
+   "rates": {
+    "day": 118.5,
+    "weekend": 178.0,
+    "week": 504.0
+   }
+  },
+  {
+   "id": "turf-cutter",
+   "name": "Turf cutter",
+   "category": "Gardening & landscaping",
+   "filter": "gardening",
+   "weight": "heavy",
+   "rates": {
+    "day": 144.0,
+    "weekend": 216.0,
+    "week": 504.0
+   }
+  },
+  {
+   "id": "lawn-roller",
+   "name": "Lawn roller",
+   "category": "Gardening & landscaping",
+   "filter": "gardening",
+   "weight": "light",
+   "rates": {
+    "day": 14.5,
+    "weekend": 22.0,
+    "week": 37.0
+   }
+  },
+  {
+   "id": "wood-chipper-small-towable-petrol",
+   "name": "Wood chipper (small, towable/petrol)",
+   "category": "Gardening & landscaping",
+   "filter": "gardening",
+   "weight": "heavy",
+   "rates": {
+    "day": 130.5,
+    "weekend": 196.0,
+    "week": 522.0
+   }
+  },
+  {
+   "id": "stump-grinder-small-medium",
+   "name": "Stump grinder (small/medium)",
+   "category": "Gardening & landscaping",
+   "filter": "gardening",
+   "weight": "heavy",
+   "rates": {
+    "day": 175.5,
+    "weekend": 263.0,
+    "week": 616.5
+   }
+  },
+  {
+   "id": "log-splitter-hydraulic",
+   "name": "Log splitter (hydraulic)",
+   "category": "Gardening & landscaping",
+   "filter": "gardening",
+   "weight": "heavy",
+   "rates": {
+    "day": 273.5,
+    "weekend": 410.0,
+    "week": 956.5
+   }
+  },
+  {
+   "id": "brush-cutter-scrub-cutter-heavy",
+   "name": "Brush cutter / scrub cutter (heavy)",
+   "category": "Gardening & landscaping",
+   "filter": "gardening",
+   "weight": "light",
+   "rates": {
+    "day": 89.0,
+    "weekend": 133.5,
+    "week": 539.0
+   }
+  },
+  {
+   "id": "knapsack-sprayer",
+   "name": "Knapsack sprayer",
+   "category": "Gardening & landscaping",
+   "filter": "gardening",
+   "weight": "light",
+   "rates": {
+    "day": 57.5,
+    "weekend": 86.0,
+    "week": 174.5
+   }
+  },
+  {
+   "id": "wheelbarrow",
+   "name": "Wheelbarrow",
+   "category": "Gardening & landscaping",
+   "filter": "gardening",
+   "weight": "light",
+   "rates": {
+    "day": 13.5,
+    "weekend": 20.0,
+    "week": 45.0
+   }
+  },
+  {
+   "id": "post-hole-digger-2-person-petrol-auger",
+   "name": "Post hole digger - 2-person petrol auger",
+   "category": "Post holes & augers",
+   "filter": "gardening",
+   "weight": "heavy",
+   "rates": {
+    "day": 81.0,
+    "weekend": 121.5,
+    "week": 295.0
+   }
+  },
+  {
+   "id": "post-hole-digger-1-person-petrol",
+   "name": "Post hole digger - 1-person petrol",
+   "category": "Post holes & augers",
+   "filter": "gardening",
+   "weight": "light",
+   "rates": {
+    "day": 67.5,
+    "weekend": 101.0,
+    "week": 234.0
+   }
+  },
+  {
+   "id": "post-hole-digger-manual",
+   "name": "Post hole digger - manual",
+   "category": "Post holes & augers",
+   "filter": "gardening",
+   "weight": "light",
+   "rates": {
+    "day": 18.0,
+    "weekend": 27.0,
+    "week": 68.0
+   }
+  },
+  {
+   "id": "concrete-cement-mixer-3-cu-ft-electric",
+   "name": "Concrete / cement mixer (~3 cu ft electric)",
+   "category": "Concreting",
+   "filter": "concreting",
+   "weight": "heavy",
+   "rates": {
+    "day": 49.5,
+    "weekend": 74.0,
+    "week": 198.0
+   }
+  },
+  {
+   "id": "cement-mixer-small-2-2-2-cu-ft-electric",
+   "name": "Cement mixer - small (~2-2.2 cu ft electric)",
+   "category": "Concreting",
+   "filter": "concreting",
+   "weight": "heavy",
+   "rates": {
+    "day": 39.5,
+    "weekend": 59.0,
+    "week": 158.0
+   }
+  },
+  {
+   "id": "concrete-vibrator-petrol-drive-shaft",
+   "name": "Concrete vibrator (petrol drive + shaft)",
+   "category": "Concreting",
+   "filter": "concreting",
+   "weight": "light",
+   "rates": {
+    "day": 85.5,
+    "weekend": 128.0,
+    "week": 301.5
+   }
+  },
+  {
+   "id": "power-trowel-walk-behind",
+   "name": "Power trowel (walk-behind)",
+   "category": "Concreting",
+   "filter": "concreting",
+   "weight": "heavy",
+   "rates": {
+    "day": 108.5,
+    "weekend": 163.0,
+    "week": 288.0
+   }
+  },
+  {
+   "id": "bull-float",
+   "name": "Bull float",
+   "category": "Concreting",
+   "filter": "concreting",
+   "weight": "light",
+   "rates": {
+    "day": 17.0,
+    "weekend": 25.5,
+    "week": 52.0
+   }
+  },
+  {
+   "id": "concrete-screed-manual",
+   "name": "Concrete screed (manual)",
+   "category": "Concreting",
+   "filter": "concreting",
+   "weight": "light",
+   "rates": {
+    "day": 13.0,
+    "weekend": 19.5,
+    "week": 26.0
+   }
+  },
+  {
+   "id": "concrete-floor-grinder-walk-behind-single-head",
+   "name": "Concrete floor grinder (walk-behind, single head)",
+   "category": "Concreting",
+   "filter": "concreting",
+   "weight": "heavy",
+   "rates": {
+    "day": 125.0,
+    "weekend": 187.5,
+    "week": 479.5
+   }
+  },
+  {
+   "id": "concrete-grinder-hand-held",
+   "name": "Concrete grinder - hand-held",
+   "category": "Concreting",
+   "filter": "concreting",
+   "weight": "light",
+   "rates": {
+    "day": 125.0,
+    "weekend": 187.5,
+    "week": 362.5
+   }
+  },
+  {
+   "id": "core-drill-to-100-150mm",
+   "name": "Core drill (to ~100-150mm)",
+   "category": "Drilling & fastening",
+   "filter": "drilling",
+   "weight": "light",
+   "rates": {
+    "day": 135.0,
+    "weekend": 202.5,
+    "week": 472.5
+   }
+  },
+  {
+   "id": "wall-chaser-125mm",
+   "name": "Wall chaser (125mm)",
+   "category": "Cutting & sawing",
+   "filter": "cutting",
+   "weight": "light",
+   "rates": {
+    "day": 99.0,
+    "weekend": 148.5,
+    "week": 346.5
+   }
+  },
+  {
+   "id": "concrete-planer-scarifier-200mm",
+   "name": "Concrete planer / scarifier (200mm)",
+   "category": "Concreting",
+   "filter": "concreting",
+   "weight": "heavy",
+   "rates": {
+    "day": 376.0,
+    "weekend": 564.0,
+    "week": 1948.5
+   }
+  },
+  {
+   "id": "plate-compactor-small-40-55kg",
+   "name": "Plate compactor - small (~40-55kg)",
+   "category": "Compaction",
+   "filter": "compaction",
+   "weight": "heavy",
+   "rates": {
+    "day": 57.5,
+    "weekend": 86.0,
+    "week": 234.0
+   },
+   "icon": "i-compactor"
+  },
+  {
+   "id": "plate-compactor-medium-70-90kg",
+   "name": "Plate compactor - medium (~70-90kg)",
+   "category": "Compaction",
+   "filter": "compaction",
+   "weight": "heavy",
+   "rates": {
+    "day": 62.0,
+    "weekend": 93.0,
+    "week": 238.5
+   },
+   "icon": "i-compactor"
+  },
+  {
+   "id": "plate-compactor-reversible-150kg",
+   "name": "Plate compactor - reversible (~150kg)",
+   "category": "Compaction",
+   "filter": "compaction",
+   "weight": "heavy",
+   "rates": {
+    "day": 180.0,
+    "weekend": 270.0,
+    "week": 684.5
+   },
+   "icon": "i-compactor"
+  },
+  {
+   "id": "rammer-jumping-jack",
+   "name": "Rammer / jumping jack",
+   "category": "Compaction",
+   "filter": "compaction",
+   "weight": "heavy",
+   "rates": {
+    "day": 79.0,
+    "weekend": 118.5,
+    "week": 306.0
+   },
+   "icon": "i-compactor"
+  },
+  {
+   "id": "roller-ride-on-double-drum-1-2-1-5t",
+   "name": "Roller - ride-on double drum (~1.2-1.5t)",
+   "category": "Compaction",
+   "filter": "compaction",
+   "weight": "heavy",
+   "rates": {
+    "day": 247.5,
+    "weekend": 371.0,
+    "week": 990.0
+   },
+   "icon": "i-compactor"
+  },
+  {
+   "id": "trench-roller-articulated-padfoot",
+   "name": "Trench roller (articulated padfoot)",
+   "category": "Compaction",
+   "filter": "compaction",
+   "weight": "heavy",
+   "rates": {
+    "day": 287.0,
+    "weekend": 430.5,
+    "week": 1603.5
+   },
+   "icon": "i-compactor"
+  },
+  {
+   "id": "mini-excavator-1-7-1-8t",
+   "name": "Mini excavator ~1.7-1.8t",
+   "category": "Earthmoving & trenching",
+   "filter": "compaction",
+   "weight": "heavy",
+   "rates": {
+    "day": 175.5,
+    "weekend": 263.0,
+    "week": 706.5
+   },
+   "photo": {
+    "src": "images/hire/mini-excavator.webp",
+    "alt": "A small yellow mini excavator on grass"
+   }
+  },
+  {
+   "id": "mini-excavator-1t",
+   "name": "Mini excavator ~1t",
+   "category": "Earthmoving & trenching",
+   "filter": "compaction",
+   "weight": "heavy",
+   "rates": {
+    "day": 175.5,
+    "weekend": 263.0,
+    "week": 706.5
+   }
+  },
+  {
+   "id": "excavator-2-5t",
+   "name": "Excavator ~2.5t",
+   "category": "Earthmoving & trenching",
+   "filter": "compaction",
+   "weight": "heavy",
+   "rates": {
+    "day": 336.5,
+    "weekend": 505.0,
+    "week": 1828.5
+   }
+  },
+  {
+   "id": "excavator-3-5t",
+   "name": "Excavator ~3.5t",
+   "category": "Earthmoving & trenching",
+   "filter": "compaction",
+   "weight": "heavy",
+   "rates": {
+    "day": 336.5,
+    "weekend": 505.0,
+    "week": 2312.0
+   }
+  },
+  {
+   "id": "mini-loader-dingo-kanga-type",
+   "name": "Mini loader (Dingo/Kanga type)",
+   "category": "Earthmoving & trenching",
+   "filter": "compaction",
+   "weight": "heavy",
+   "rates": {
+    "day": 175.5,
+    "weekend": 189.0,
+    "week": 706.5
+   }
+  },
+  {
+   "id": "skid-steer-loader-small-wheeled",
+   "name": "Skid steer loader - small wheeled",
+   "category": "Earthmoving & trenching",
+   "filter": "compaction",
+   "weight": "heavy",
+   "rates": {
+    "day": 277.0,
+    "weekend": 415.5,
+    "week": 1224.0
+   }
+  },
+  {
+   "id": "tracked-dumper-power-barrow-600kg",
+   "name": "Tracked dumper / power barrow (~600kg)",
+   "category": "Earthmoving & trenching",
+   "filter": "compaction",
+   "weight": "heavy",
+   "rates": {
+    "day": 215.0,
+    "weekend": 322.5,
+    "week": 810.5
+   }
+  },
+  {
+   "id": "trencher-walk-behind-self-propelled",
+   "name": "Trencher - walk-behind self-propelled",
+   "category": "Earthmoving & trenching",
+   "filter": "compaction",
+   "weight": "heavy",
+   "rates": {
+    "day": 227.5,
+    "weekend": 341.0,
+    "week": 1254.5
+   }
+  },
+  {
+   "id": "demolition-hammer-light-electric",
+   "name": "Demolition hammer - light (electric)",
+   "category": "Demolition & breaking",
+   "filter": "concreting",
+   "weight": "light",
+   "rates": {
+    "day": 59.0,
+    "weekend": 88.5,
+    "week": 237.5
+   }
+  },
+  {
+   "id": "demolition-hammer-medium-electric-16kg",
+   "name": "Demolition hammer - medium (electric ~16kg)",
+   "category": "Demolition & breaking",
+   "filter": "concreting",
+   "weight": "light",
+   "rates": {
+    "day": 76.5,
+    "weekend": 115.0,
+    "week": 306.0
+   }
+  },
+  {
+   "id": "jackhammer-breaker-heavy-electric-30kg",
+   "name": "Jackhammer / breaker - heavy (electric ~30kg)",
+   "category": "Demolition & breaking",
+   "filter": "concreting",
+   "weight": "heavy",
+   "rates": {
+    "day": 99.0,
+    "weekend": 148.5,
+    "week": 396.0
+   }
+  },
+  {
+   "id": "jackhammer-on-trolley-tile-floor-removal",
+   "name": "Jackhammer on trolley (tile/floor removal)",
+   "category": "Demolition & breaking",
+   "filter": "concreting",
+   "weight": "heavy",
+   "rates": {
+    "day": 121.5,
+    "weekend": 182.0,
+    "week": 487.5
+   }
+  },
+  {
+   "id": "demolition-cut-off-saw-petrol-350mm",
+   "name": "Demolition / cut-off saw - petrol 350mm",
+   "category": "Cutting & sawing",
+   "filter": "cutting",
+   "weight": "light",
+   "rates": {
+    "day": 198.0,
+    "weekend": 297.0,
+    "week": 693.0
+   }
+  },
+  {
+   "id": "concrete-floor-saw-walk-behind-350mm-petrol",
+   "name": "Concrete floor saw - walk-behind 350mm petrol",
+   "category": "Cutting & sawing",
+   "filter": "cutting",
+   "weight": "heavy",
+   "rates": {
+    "day": 126.0,
+    "weekend": 189.0,
+    "week": 504.0
+   }
+  },
+  {
+   "id": "brick-paver-saw-350mm",
+   "name": "Brick / paver saw (350mm)",
+   "category": "Cutting & sawing",
+   "filter": "cutting",
+   "weight": "heavy",
+   "rates": {
+    "day": 99.0,
+    "weekend": 148.5,
+    "week": 396.0
+   }
+  },
+  {
+   "id": "rotary-hammer-drill-light-sds-plus",
+   "name": "Rotary hammer drill - light (SDS-plus)",
+   "category": "Drilling & fastening",
+   "filter": "drilling",
+   "weight": "light",
+   "rates": {
+    "day": 22.5,
+    "weekend": 34.0,
+    "week": 81.0
+   }
+  },
+  {
+   "id": "rotary-hammer-drill-heavy-sds-max",
+   "name": "Rotary hammer drill - heavy (SDS-max)",
+   "category": "Drilling & fastening",
+   "filter": "drilling",
+   "weight": "light",
+   "rates": {
+    "day": 45.0,
+    "weekend": 67.5,
+    "week": 157.5
+   }
+  },
+  {
+   "id": "hammer-percussion-drill-13mm",
+   "name": "Hammer / percussion drill (13mm)",
+   "category": "Drilling & fastening",
+   "filter": "drilling",
+   "weight": "light",
+   "rates": {
+    "day": 36.0,
+    "weekend": 54.0,
+    "week": 126.0
+   }
+  },
+  {
+   "id": "cordless-drill",
+   "name": "Cordless drill",
+   "category": "Drilling & fastening",
+   "filter": "drilling",
+   "weight": "light",
+   "rates": {
+    "day": 49.5,
+    "weekend": 74.0,
+    "week": 135.0
+   },
+   "photo": {
+    "src": "images/hire/drill.webp",
+    "alt": "A red cordless drill"
+   }
+  },
+  {
+   "id": "electric-impact-wrench-3-4in",
+   "name": "Electric impact wrench 3/4in",
+   "category": "Drilling & fastening",
+   "filter": "drilling",
+   "weight": "light",
+   "rates": {
+    "day": 31.5,
+    "weekend": 47.0,
+    "week": 88.0
+   }
+  },
+  {
+   "id": "mixing-drill-paddle-mixer",
+   "name": "Mixing drill / paddle mixer",
+   "category": "Drilling & fastening",
+   "filter": "drilling",
+   "weight": "light",
+   "rates": {
+    "day": 71.0,
+    "weekend": 106.5,
+    "week": 203.0
+   }
+  },
+  {
+   "id": "magnetic-base-drill",
+   "name": "Magnetic base drill",
+   "category": "Drilling & fastening",
+   "filter": "drilling",
+   "weight": "light",
+   "rates": {
+    "day": 128.5,
+    "weekend": 193.0,
+    "week": 504.0
+   }
+  },
+  {
+   "id": "angle-grinder-125mm",
+   "name": "Angle grinder 125mm",
+   "category": "Cutting & sawing",
+   "filter": "cutting",
+   "weight": "light",
+   "rates": {
+    "day": 45.0,
+    "weekend": 67.5,
+    "week": 153.0
+   },
+   "photo": {
+    "src": "images/hire/angle-grinder.webp",
+    "alt": "An angle grinder cutting metal with sparks"
+   }
+  },
+  {
+   "id": "angle-grinder-230mm",
+   "name": "Angle grinder 230mm",
+   "category": "Cutting & sawing",
+   "filter": "cutting",
+   "weight": "light",
+   "rates": {
+    "day": 51.0,
+    "weekend": 76.5,
+    "week": 189.0
+   }
+  },
+  {
+   "id": "circular-saw-235mm",
+   "name": "Circular saw (~235mm)",
+   "category": "Cutting & sawing",
+   "filter": "cutting",
+   "weight": "light",
+   "rates": {
+    "day": 27.5,
+    "weekend": 41.0,
+    "week": 61.0
+   },
+   "photo": {
+    "src": "images/hire/circular-saw.webp",
+    "alt": "A circular saw cutting timber"
+   }
+  },
+  {
+   "id": "jigsaw",
+   "name": "Jigsaw",
+   "category": "Cutting & sawing",
+   "filter": "cutting",
+   "weight": "light",
+   "rates": {
+    "day": 18.0,
+    "weekend": 27.0,
+    "week": 63.0
+   }
+  },
+  {
+   "id": "reciprocating-sabre-saw",
+   "name": "Reciprocating / sabre saw",
+   "category": "Cutting & sawing",
+   "filter": "cutting",
+   "weight": "light",
+   "rates": {
+    "day": 27.0,
+    "weekend": 40.5,
+    "week": 61.0
+   }
+  },
+  {
+   "id": "mitre-drop-saw",
+   "name": "Mitre / drop saw",
+   "category": "Cutting & sawing",
+   "filter": "cutting",
+   "weight": "light",
+   "rates": {
+    "day": 114.0,
+    "weekend": 171.0,
+    "week": 340.0
+   }
+  },
+  {
+   "id": "metal-cut-off-saw-355mm",
+   "name": "Metal cut-off saw 355mm",
+   "category": "Cutting & sawing",
+   "filter": "cutting",
+   "weight": "light",
+   "rates": {
+    "day": 54.0,
+    "weekend": 81.0,
+    "week": 189.0
+   }
+  },
+  {
+   "id": "electric-planer-hand",
+   "name": "Electric planer (hand)",
+   "category": "Cutting & sawing",
+   "filter": "cutting",
+   "weight": "light",
+   "rates": {
+    "day": 18.0,
+    "weekend": 27.0,
+    "week": 63.0
+   }
+  },
+  {
+   "id": "framing-nailer",
+   "name": "Framing nailer",
+   "category": "Drilling & fastening",
+   "filter": "drilling",
+   "weight": "light",
+   "rates": {
+    "day": 27.0,
+    "weekend": 40.5,
+    "week": 94.5
+   }
+  },
+  {
+   "id": "coil-fencing-nailer",
+   "name": "Coil / fencing nailer",
+   "category": "Drilling & fastening",
+   "filter": "drilling",
+   "weight": "light",
+   "rates": {
+    "day": 45.5,
+    "weekend": 68.0,
+    "week": 182.5
+   }
+  },
+  {
+   "id": "finish-brad-nailer",
+   "name": "Finish / brad nailer",
+   "category": "Drilling & fastening",
+   "filter": "drilling",
+   "weight": "light",
+   "rates": {
+    "day": 41.0,
+    "weekend": 61.5,
+    "week": 172.5
+   }
+  },
+  {
+   "id": "secret-floor-nailer-stapler",
+   "name": "Secret floor nailer / stapler",
+   "category": "Drilling & fastening",
+   "filter": "drilling",
+   "weight": "light",
+   "rates": {
+    "day": 31.5,
+    "weekend": 47.0,
+    "week": 108.0
+   }
+  },
+  {
+   "id": "air-compressor-small-electric-6-12cfm",
+   "name": "Air compressor - small electric (~6-12cfm)",
+   "category": "Air compressors & air tools",
+   "filter": "drilling",
+   "weight": "light",
+   "rates": {
+    "day": 45.5,
+    "weekend": 68.0,
+    "week": 147.0
+   },
+   "icon": "i-compressor"
+  },
+  {
+   "id": "welder-inverter-arc-180a",
+   "name": "Welder - inverter arc (~180A)",
+   "category": "Welding",
+   "filter": "drilling",
+   "weight": "light",
+   "rates": {
+    "day": 124.0,
+    "weekend": 186.0,
+    "week": 435.5
+   }
+  },
+  {
+   "id": "torque-wrench-1-2in-manual",
+   "name": "Torque wrench 1/2in (manual)",
+   "category": "Drilling & fastening",
+   "filter": "drilling",
+   "weight": "light",
+   "rates": {
+    "day": 54.0,
+    "weekend": 81.0,
+    "week": 117.0
+   }
+  },
+  {
+   "id": "generator-2kva",
+   "name": "Generator ~2kVA",
+   "category": "Generators & power",
+   "filter": "power",
+   "weight": "light",
+   "rates": {
+    "day": 45.0,
+    "weekend": 67.5,
+    "week": 279.0
+   }
+  },
+  {
+   "id": "generator-3kva-inverter",
+   "name": "Generator ~3kVA inverter",
+   "category": "Generators & power",
+   "filter": "power",
+   "weight": "light",
+   "rates": {
+    "day": 45.0,
+    "weekend": 67.5,
+    "week": 279.0
+   }
+  },
+  {
+   "id": "generator-5kva",
+   "name": "Generator ~5kVA",
+   "category": "Generators & power",
+   "filter": "power",
+   "weight": "heavy",
+   "rates": {
+    "day": 89.0,
+    "weekend": 133.5,
+    "week": 609.0
+   }
+  },
+  {
+   "id": "generator-6-7kva",
+   "name": "Generator ~6-7kVA",
+   "category": "Generators & power",
+   "filter": "power",
+   "weight": "heavy",
+   "rates": {
+    "day": 138.5,
+    "weekend": 208.0,
+    "week": 636.0
+   }
+  },
+  {
+   "id": "generator-10kva",
+   "name": "Generator ~10kVA",
+   "category": "Generators & power",
+   "filter": "power",
+   "weight": "heavy",
+   "rates": {
+    "day": 138.5,
+    "weekend": 208.0,
+    "week": 793.5
+   }
+  },
+  {
+   "id": "extension-lead-15a-20-30m",
+   "name": "Extension lead 15A (20-30m)",
+   "category": "Generators & power",
+   "filter": "power",
+   "weight": "light",
+   "rates": {
+    "day": 9.0,
+    "weekend": 13.5,
+    "week": 27.0
+   }
+  },
+  {
+   "id": "extension-ladder-6-6-5m",
+   "name": "Extension ladder ~6-6.5m",
+   "category": "Ladders & access",
+   "filter": "access",
+   "weight": "light",
+   "rates": {
+    "day": 31.5,
+    "weekend": 47.0,
+    "week": 126.0
+   },
+   "photo": {
+    "src": "images/hire/ladder.webp",
+    "alt": "A ladder leaning against a concrete wall"
+   }
+  },
+  {
+   "id": "extension-ladder-8-8-5m",
+   "name": "Extension ladder ~8-8.5m",
+   "category": "Ladders & access",
+   "filter": "access",
+   "weight": "light",
+   "rates": {
+    "day": 36.0,
+    "weekend": 54.0,
+    "week": 162.0
+   }
+  },
+  {
+   "id": "step-ladder-1-8m",
+   "name": "Step ladder 1.8m",
+   "category": "Ladders & access",
+   "filter": "access",
+   "weight": "light",
+   "rates": {
+    "day": 22.5,
+    "weekend": 34.0,
+    "week": 69.0
+   }
+  },
+  {
+   "id": "platform-ladder-2-4m",
+   "name": "Platform ladder ~2.4m",
+   "category": "Ladders & access",
+   "filter": "access",
+   "weight": "light",
+   "rates": {
+    "day": 39.5,
+    "weekend": 59.0,
+    "week": 137.5
+   }
+  },
+  {
+   "id": "trestle-aluminium-adjustable-2-4m",
+   "name": "Trestle - aluminium adjustable 2.4m",
+   "category": "Ladders & access",
+   "filter": "access",
+   "weight": "light",
+   "rates": {
+    "day": 13.5,
+    "weekend": 20.0,
+    "week": 27.0
+   }
+  },
+  {
+   "id": "plank-aluminium-4m",
+   "name": "Plank - aluminium 4m",
+   "category": "Ladders & access",
+   "filter": "access",
+   "weight": "light",
+   "rates": {
+    "day": 10.5,
+    "weekend": 16.0,
+    "week": 16.0
+   }
+  },
+  {
+   "id": "mobile-aluminium-scaffold-single-width-4-4-5m",
+   "name": "Mobile aluminium scaffold - single width ~4-4.5m",
+   "category": "Ladders & access",
+   "filter": "access",
+   "weight": "heavy",
+   "rates": {
+    "day": 90.5,
+    "weekend": 136.0,
+    "week": 259.0
+   }
+  },
+  {
+   "id": "panel-sheet-lifter",
+   "name": "Panel / sheet lifter",
+   "category": "Material handling",
+   "filter": "handling",
+   "weight": "heavy",
+   "rates": {
+    "day": 36.0,
+    "weekend": 54.0,
+    "week": 99.0
+   }
+  },
+  {
+   "id": "duct-material-lifter-3-6-5m",
+   "name": "Duct / material lifter (~3.6-5m)",
+   "category": "Material handling",
+   "filter": "handling",
+   "weight": "heavy",
+   "rates": {
+    "day": 81.0,
+    "weekend": 121.5,
+    "week": 342.0
+   }
+  },
+  {
+   "id": "acrow-prop-steel-no-2-3",
+   "name": "Acrow prop (steel, no.2-3)",
+   "category": "Ladders & access",
+   "filter": "access",
+   "weight": "light",
+   "rates": {
+    "day": 14.5,
+    "weekend": 18.0,
+    "week": 18.0
+   }
+  },
+  {
+   "id": "drain-cleaner-electric-eel",
+   "name": "Drain cleaner - electric eel",
+   "category": "Plumbing & drainage",
+   "filter": "plumbing",
+   "weight": "light",
+   "rates": {
+    "day": 81.0,
+    "weekend": 121.5,
+    "week": 324.0
+   }
+  },
+  {
+   "id": "drain-jetter-electric-1800psi",
+   "name": "Drain jetter - electric (1800psi)",
+   "category": "Plumbing & drainage",
+   "filter": "plumbing",
+   "weight": "light",
+   "rates": {
+    "day": 150.0,
+    "weekend": 225.0,
+    "week": 534.5
+   }
+  },
+  {
+   "id": "drain-snake-cordless",
+   "name": "Drain snake - cordless",
+   "category": "Plumbing & drainage",
+   "filter": "plumbing",
+   "weight": "light",
+   "rates": {
+    "day": 56.5,
+    "weekend": 85.0,
+    "week": 158.0
+   }
+  },
+  {
+   "id": "pipe-threader-electric-25-50mm",
+   "name": "Pipe threader - electric (25-50mm)",
+   "category": "Plumbing & drainage",
+   "filter": "plumbing",
+   "weight": "light",
+   "rates": {
+    "day": 200.5,
+    "weekend": 301.0,
+    "week": 765.0
+   }
+  },
+  {
+   "id": "pipe-freezer-kit-electric",
+   "name": "Pipe freezer kit - electric",
+   "category": "Plumbing & drainage",
+   "filter": "plumbing",
+   "weight": "light",
+   "rates": {
+    "day": 96.0,
+    "weekend": 144.0,
+    "week": 253.5
+   }
+  },
+  {
+   "id": "pipe-press-crimper-15-50mm",
+   "name": "Pipe press / crimper (15-50mm)",
+   "category": "Plumbing & drainage",
+   "filter": "plumbing",
+   "weight": "light",
+   "rates": {
+    "day": 114.0,
+    "weekend": 171.0,
+    "week": 382.5
+   }
+  },
+  {
+   "id": "submersible-pump-50mm-dirty-water",
+   "name": "Submersible pump 50mm (dirty water)",
+   "category": "Pumps",
+   "filter": "plumbing",
+   "weight": "light",
+   "rates": {
+    "day": 79.0,
+    "weekend": 118.5,
+    "week": 306.0
+   },
+   "icon": "i-droplet"
+  },
+  {
+   "id": "petrol-transfer-trash-pump-50mm",
+   "name": "Petrol transfer / trash pump 50mm",
+   "category": "Pumps",
+   "filter": "plumbing",
+   "weight": "heavy",
+   "rates": {
+    "day": 79.0,
+    "weekend": 118.5,
+    "week": 316.5
+   },
+   "icon": "i-droplet"
+  },
+  {
+   "id": "flexdrive-pump-kit-petrol",
+   "name": "Flexdrive pump kit (petrol)",
+   "category": "Pumps",
+   "filter": "plumbing",
+   "weight": "light",
+   "rates": {
+    "day": 128.5,
+    "weekend": 193.0,
+    "week": 573.0
+   },
+   "icon": "i-droplet"
+  },
+  {
+   "id": "hand-trolley-sack-truck",
+   "name": "Hand trolley / sack truck",
+   "category": "Material handling",
+   "filter": "handling",
+   "weight": "light",
+   "rates": {
+    "day": 43.0,
+    "weekend": 64.5,
+    "week": 110.5
+   },
+   "photo": {
+    "src": "images/hire/hand-truck.webp",
+    "alt": "A man moving a drum with a hand trolley"
+   }
+  },
+  {
+   "id": "stair-climbing-fridge-trolley",
+   "name": "Stair-climbing / fridge trolley",
+   "category": "Material handling",
+   "filter": "handling",
+   "weight": "light",
+   "rates": {
+    "day": 17.0,
+    "weekend": 25.5,
+    "week": 94.5
+   }
+  },
+  {
+   "id": "pallet-jack-2-5t",
+   "name": "Pallet jack ~2.5t",
+   "category": "Material handling",
+   "filter": "handling",
+   "weight": "light",
+   "rates": {
+    "day": 27.0,
+    "weekend": 40.5,
+    "week": 94.5
+   }
+  },
+  {
+   "id": "furniture-piano-dolly",
+   "name": "Furniture / piano dolly",
+   "category": "Material handling",
+   "filter": "handling",
+   "weight": "light",
+   "rates": {
+    "day": 13.5,
+    "weekend": 20.0,
+    "week": 45.0
+   }
+  },
+  {
+   "id": "engine-hoist-crane-2t",
+   "name": "Engine hoist / crane (2t)",
+   "category": "Material handling",
+   "filter": "handling",
+   "weight": "heavy",
+   "rates": {
+    "day": 72.0,
+    "weekend": 108.0,
+    "week": 252.0
+   }
+  },
+  {
+   "id": "chain-block-hoist-2t",
+   "name": "Chain block / hoist (~2t)",
+   "category": "Material handling",
+   "filter": "handling",
+   "weight": "light",
+   "rates": {
+    "day": 27.0,
+    "weekend": 40.5,
+    "week": 108.0
+   }
+  },
+  {
+   "id": "box-trailer-6x4",
+   "name": "Box trailer 6x4",
+   "category": "Trailers",
+   "filter": "trailers",
+   "weight": "heavy",
+   "rates": {
+    "day": 40.5,
+    "weekend": 61.0,
+    "week": 144.0
+   }
+  },
+  {
+   "id": "box-trailer-8x5",
+   "name": "Box trailer 8x5",
+   "category": "Trailers",
+   "filter": "trailers",
+   "weight": "heavy",
+   "rates": {
+    "day": 82.5,
+    "weekend": 124.0,
+    "week": 263.5
+   }
+  },
+  {
+   "id": "enclosed-trailer-8x5",
+   "name": "Enclosed trailer (~8x5)",
+   "category": "Trailers",
+   "filter": "trailers",
+   "weight": "heavy",
+   "rates": {
+    "day": 128.5,
+    "weekend": 193.0,
+    "week": 442.5
+   }
+  },
+  {
+   "id": "tipping-trailer-8x5",
+   "name": "Tipping trailer 8x5",
+   "category": "Trailers",
+   "filter": "trailers",
+   "weight": "heavy",
+   "rates": {
+    "day": 114.0,
+    "weekend": 171.0,
+    "week": 382.5
+   }
+  },
+  {
+   "id": "plant-machinery-trailer-2t",
+   "name": "Plant / machinery trailer (~2t)",
+   "category": "Trailers",
+   "filter": "trailers",
+   "weight": "heavy",
+   "rates": {
+    "day": 59.0,
+    "weekend": 88.5,
+    "week": 172.5
+   }
+  },
+  {
+   "id": "car-trailer",
+   "name": "Car trailer",
+   "category": "Trailers",
+   "filter": "trailers",
+   "weight": "heavy",
+   "rates": {
+    "day": 168.0,
+    "weekend": 252.0,
+    "week": 705.5
+   }
+  },
+  {
+   "id": "pedestal-fan-industrial-600-750mm",
+   "name": "Pedestal fan (industrial ~600-750mm)",
+   "category": "Heating, cooling & ventilation",
+   "filter": "power",
+   "weight": "light",
+   "rates": {
+    "day": 36.0,
+    "weekend": 54.0,
+    "week": 126.0
+   },
+   "icon": "i-fan"
+  },
+  {
+   "id": "portable-air-conditioner",
+   "name": "Portable air conditioner",
+   "category": "Heating, cooling & ventilation",
+   "filter": "power",
+   "weight": "light",
+   "rates": {
+    "day": 44.0,
+    "weekend": 66.0,
+    "week": 153.0
+   },
+   "icon": "i-fan"
+  },
+  {
+   "id": "evaporative-air-cooler",
+   "name": "Evaporative air cooler",
+   "category": "Heating, cooling & ventilation",
+   "filter": "power",
+   "weight": "light",
+   "rates": {
+    "day": 99.5,
+    "weekend": 149.0,
+    "week": 362.5
+   },
+   "icon": "i-fan"
+  },
+  {
+   "id": "exhaust-extraction-fan-300mm",
+   "name": "Exhaust / extraction fan 300mm",
+   "category": "Heating, cooling & ventilation",
+   "filter": "power",
+   "weight": "light",
+   "rates": {
+    "day": 58.5,
+    "weekend": 88.0,
+    "week": 220.5
+   },
+   "icon": "i-fan"
+  },
+  {
+   "id": "patio-heater-lpg",
+   "name": "Patio heater - LPG",
+   "category": "Heating, cooling & ventilation",
+   "filter": "power",
+   "weight": "light",
+   "rates": {
+    "day": 39.5,
+    "weekend": 59.0,
+    "week": 144.0
+   },
+   "icon": "i-fan"
+  },
+  {
+   "id": "laser-level-rotary",
+   "name": "Laser level (rotary)",
+   "category": "Survey & measuring",
+   "filter": "access",
+   "weight": "light",
+   "rates": {
+    "day": 70.5,
+    "weekend": 106.0,
+    "week": 283.0
+   }
+  },
+  {
+   "id": "automatic-dumpy-level",
+   "name": "Automatic (dumpy) level",
+   "category": "Survey & measuring",
+   "filter": "access",
+   "weight": "light",
+   "rates": {
+    "day": 91.5,
+    "weekend": 137.0,
+    "week": 312.0
+   }
+  },
+  {
+   "id": "moisture-meter",
+   "name": "Moisture meter",
+   "category": "Survey & measuring",
+   "filter": "access",
+   "weight": "light",
+   "rates": {
+    "day": 70.0,
+    "weekend": 105.0,
+    "week": 207.0
+   }
+  },
+  {
+   "id": "laser-distance-measure",
+   "name": "Laser distance measure",
+   "category": "Survey & measuring",
+   "filter": "access",
+   "weight": "light",
+   "rates": {
+    "day": 58.5,
+    "weekend": 88.0,
+    "week": 165.5
+   }
+  },
+  {
+   "id": "temporary-fence-panel-mesh-2-4x1-8m",
+   "name": "Temporary fence panel (mesh 2.4x1.8m)",
+   "category": "Site equipment",
+   "filter": "access",
+   "weight": "light",
+   "rates": null,
+   "flat": 11.5,
+   "icon": "i-fence"
+  },
+  {
+   "id": "portable-toilet-construction-event",
+   "name": "Portable toilet (construction / event)",
+   "category": "Site equipment",
+   "filter": "access",
+   "weight": "heavy",
+   "rates": null,
+   "photo": {
+    "src": "images/hire/portable-toilet.webp",
+    "alt": "Two green portable toilets"
+   },
+   "icon": "i-fence"
+  }
+ ]
+}

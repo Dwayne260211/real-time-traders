@@ -172,7 +172,7 @@
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Hire</li></ol></nav>
         <h1>Tool &amp; equipment hire</h1>
-        <p>Cleaning, gardening, power tools and general equipment for home and trade jobs in Brisbane, plus portable toilets and trailers by enquiry.</p>
+        <p>Tools and equipment for home and trade jobs in Brisbane: cleaning, gardening, power tools, concreting, compaction, access, plumbing, trailers and more.</p>
       </div>
     </section>
 
@@ -180,9 +180,9 @@
       <div class="container">
         <div class="hire-intro">
           <ol class="hire-steps">
-            <li><span class="hire-steps__n" aria-hidden="true">1</span><div><strong>Choose your equipment</strong><span>Photos, descriptions and daily, weekend and weekly rates on every item.</span></div></li>
-            <li><span class="hire-steps__n" aria-hidden="true">2</span><div><strong>Pick your dates</strong><span>Choose hire and return dates and check availability straight away.</span></div></li>
-            <li><span class="hire-steps__n" aria-hidden="true">3</span><div><strong>Send a booking request</strong><span>We confirm it with you. Manage or cancel it in My hire bookings.</span></div></li>
+            <li><span class="hire-steps__n" aria-hidden="true">1</span><div><strong>Find your equipment</strong><span>Search or filter the range. Daily, weekend and weekly rates are shown where we have them.</span></div></li>
+            <li><span class="hire-steps__n" aria-hidden="true">2</span><div><strong>Call us to check availability</strong><span>We confirm the price, dates and hire terms with you on the phone.</span></div></li>
+            <li><span class="hire-steps__n" aria-hidden="true">3</span><div><strong>Book online: coming soon</strong><span>Online booking requests and My hire bookings open with accounts.</span></div></li>
           </ol>
           <div class="hire-intro__aside">
             <p>Silver and Gold members get hire booking priority and 5% or 10% off hire.</p>
@@ -191,103 +191,26 @@
           </div>
         </div>
 
-        <span class="tab-anchor" id="tool"></span>
-        <div class="filter-bar" role="group" aria-label="Filter equipment by category">
-          <button type="button" class="filter-chip" aria-pressed="true" data-filter="all">All equipment<span class="filter-chip__count" data-count="all"></span></button><button type="button" class="filter-chip" aria-pressed="false" data-filter="cleaning"><svg class="icon" aria-hidden="true"><use href="#i-washer"/></svg> Cleaning<span class="filter-chip__count" data-count="cleaning"></span></button><button type="button" class="filter-chip" aria-pressed="false" data-filter="gardening"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg> Gardening<span class="filter-chip__count" data-count="gardening"></span></button><button type="button" class="filter-chip" aria-pressed="false" data-filter="power-tools"><svg class="icon" aria-hidden="true"><use href="#i-drill"/></svg> Power tools<span class="filter-chip__count" data-count="power-tools"></span></button><button type="button" class="filter-chip" aria-pressed="false" data-filter="general"><svg class="icon" aria-hidden="true"><use href="#i-ladder"/></svg> General<span class="filter-chip__count" data-count="general"></span></button><button type="button" class="filter-chip" aria-pressed="false" data-filter="plant"><svg class="icon" aria-hidden="true"><use href="#i-toilet"/></svg> Plant &amp; portable toilets<span class="filter-chip__count" data-count="plant"></span></button><button type="button" class="filter-chip" aria-pressed="false" data-filter="trailers"><svg class="icon" aria-hidden="true"><use href="#i-trailer"/></svg> Trailers<span class="filter-chip__count" data-count="trailers"></span></button>
+        <span class="tab-anchor" id="tool"></span><span class="tab-anchor" id="cleaning"></span><span class="tab-anchor" id="gardening"></span><span class="tab-anchor" id="power-tools"></span><span class="tab-anchor" id="general"></span><span class="tab-anchor" id="plant"></span><span class="tab-anchor" id="trailer"></span>
+        <div class="hire-tools" data-hire-tools>
+          <div class="hire-tools__row">
+            <div class="hire-search">
+              <label for="hire-q">Search the hire range</label>
+              <div class="hire-search__box"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><input id="hire-q" type="search" placeholder="e.g. pressure washer, generator, ladder" autocomplete="off" data-hire-search></div>
+            </div>
+            <div class="weight-toggle" role="group" aria-label="Show light or heavy equipment">
+              <button type="button" class="weight-toggle__btn" aria-pressed="true" data-weight="all">All</button><button type="button" class="weight-toggle__btn" aria-pressed="false" data-weight="light">Light tools</button><button type="button" class="weight-toggle__btn" aria-pressed="false" data-weight="heavy">Heavy tools</button>
+            </div>
+          </div>
+          <div class="filter-bar" role="group" aria-label="Filter equipment by category" data-hire-filters>
+            <button type="button" class="filter-chip" aria-pressed="true" data-filter="all">All equipment<span class="filter-chip__count" data-count="all"></span></button>
+          </div>
+          <p class="hire-note"><svg class="icon" aria-hidden="true"><use href="#i-coins"/></svg> <span>Prices in AUD. No GST added. Price, availability and terms confirmed when you call.</span></p>
         </div>
         <p class="hire-status" role="status" aria-live="polite" data-hire-status></p>
 
-        <div class="hire-cats">
-          <section class="hire-cat" id="cleaning" data-cat="cleaning" aria-labelledby="cat-cleaning-title">
-            <div class="hire-cat__head">
-              <span class="hire-cat__icon"><svg class="icon" aria-hidden="true"><use href="#i-washer"/></svg></span>
-              <div>
-                <h2 id="cat-cleaning-title">Cleaning</h2>
-                <p>For driveways, carpets and floors: pressure washers, carpet cleaners, wet &amp; dry vacuums, steam cleaners and floor scrubbers.</p>
-              </div>
-            </div>
-            <div class="equip-grid" data-grid="cleaning"></div>
-            <div class="empty-state" data-empty="cleaning">
-              <p class="empty-state__title">Equipment coming soon. Call us to ask about hire.</p>
-              <p>No cleaning equipment is listed for online booking yet.</p>
-              <div class="empty-state__ctas"><a href="contact.html?service=Equipment%20Hire%20%E2%80%93%20Cleaning#quote" class="btn btn--light btn--sm">Enquire<span class="sr-only"> about Cleaning hire</span></a></div>
-            </div>
-          </section>
-          <section class="hire-cat" id="gardening" data-cat="gardening" aria-labelledby="cat-gardening-title">
-            <div class="hire-cat__head">
-              <span class="hire-cat__icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
-              <div>
-                <h2 id="cat-gardening-title">Gardening</h2>
-                <p>For lawns, hedges and yard clean-ups: lawnmowers, whipper snippers, hedge trimmers, leaf blowers and chainsaws.</p>
-              </div>
-            </div>
-            <div class="equip-grid" data-grid="gardening"></div>
-            <div class="empty-state" data-empty="gardening">
-              <p class="empty-state__title">Equipment coming soon. Call us to ask about hire.</p>
-              <p>No gardening equipment is listed for online booking yet.</p>
-              <div class="empty-state__ctas"><a href="contact.html?service=Equipment%20Hire%20%E2%80%93%20Gardening#quote" class="btn btn--light btn--sm">Enquire<span class="sr-only"> about Gardening hire</span></a></div>
-            </div>
-          </section>
-          <section class="hire-cat" id="power-tools" data-cat="power-tools" aria-labelledby="cat-power-tools-title">
-            <div class="hire-cat__head">
-              <span class="hire-cat__icon"><svg class="icon" aria-hidden="true"><use href="#i-drill"/></svg></span>
-              <div>
-                <h2 id="cat-power-tools-title">Power tools</h2>
-                <p>For renovations and trade jobs: drills, impact drivers, grinders, sanders and demolition hammers.</p>
-              </div>
-            </div>
-            <div class="equip-grid" data-grid="power-tools"></div>
-            <div class="empty-state" data-empty="power-tools">
-              <p class="empty-state__title">Equipment coming soon. Call us to ask about hire.</p>
-              <p>No power tools are listed for online booking yet.</p>
-              <div class="empty-state__ctas"><a href="contact.html?service=Equipment%20Hire%20%E2%80%93%20Power%20Tools#quote" class="btn btn--light btn--sm">Enquire<span class="sr-only"> about Power tools hire</span></a></div>
-            </div>
-          </section>
-          <section class="hire-cat" id="general" data-cat="general" aria-labelledby="cat-general-title">
-            <div class="hire-cat__head">
-              <span class="hire-cat__icon"><svg class="icon" aria-hidden="true"><use href="#i-ladder"/></svg></span>
-              <div>
-                <h2 id="cat-general-title">General</h2>
-                <p>Everyday gear for home and trade jobs: ladders, generators, extension leads and more.</p>
-              </div>
-            </div>
-            <div class="equip-grid" data-grid="general"></div>
-            <div class="empty-state" data-empty="general">
-              <p class="empty-state__title">Equipment coming soon. Call us to ask about hire.</p>
-              <p>No general equipment is listed for online booking yet.</p>
-              <div class="empty-state__ctas"><a href="contact.html?service=Equipment%20Hire%20%E2%80%93%20General#quote" class="btn btn--light btn--sm">Enquire<span class="sr-only"> about General hire</span></a></div>
-            </div>
-          </section>
-          <section class="hire-cat" id="plant" data-cat="plant" aria-labelledby="cat-plant-title">
-            <div class="hire-cat__head">
-              <span class="hire-cat__icon"><svg class="icon" aria-hidden="true"><use href="#i-toilet"/></svg></span>
-              <div>
-                <h2 id="cat-plant-title">Plant &amp; portable toilets</h2>
-                <p>Portable toilets for building sites, events and renovations, plus plant hire. By enquiry for now.</p>
-              </div>
-            </div>
-            <div class="equip-grid" data-grid="plant"></div>
-            <div class="empty-state" data-empty="plant">
-              <p class="empty-state__title">Equipment coming soon. Call us to ask about hire.</p>
-              <p>No plant or portable toilets are listed for online booking yet.</p>
-              <div class="empty-state__ctas"><a href="contact.html?service=Plant%20Hire%20%E2%80%93%20Portable%20Toilets#quote" class="btn btn--light btn--sm">Enquire<span class="sr-only"> about Plant &amp; portable toilets hire</span></a></div>
-            </div>
-          </section>
-          <section class="hire-cat" id="trailer" data-cat="trailers" aria-labelledby="cat-trailers-title">
-            <div class="hire-cat__head">
-              <span class="hire-cat__icon"><svg class="icon" aria-hidden="true"><use href="#i-trailer"/></svg></span>
-              <div>
-                <h2 id="cat-trailers-title">Trailers</h2>
-                <p>Box, cage and car trailers for rubbish runs, moves and hauling. By enquiry for now.</p>
-              </div>
-            </div>
-            <div class="equip-grid" data-grid="trailers"></div>
-            <div class="empty-state" data-empty="trailers">
-              <p class="empty-state__title">Equipment coming soon. Call us to ask about hire.</p>
-              <p>No trailers are listed for online booking yet.</p>
-              <div class="empty-state__ctas"><a href="contact.html?service=Trailer%20Hire#quote" class="btn btn--light btn--sm">Enquire<span class="sr-only"> about Trailers hire</span></a></div>
-            </div>
-          </section>
+        <div class="hire-results" data-hire-results>
+          <noscript><div class="empty-state"><p class="empty-state__title">Turn on JavaScript to see the full hire range.</p><p>Or call us and we'll tell you what's available.</p></div></noscript>
         </div>
 
         <section class="hire-terms" aria-labelledby="hire-terms-title">
@@ -311,7 +234,7 @@
         <a href="index.html" class="logo" aria-label="Real Time Traders home"><picture><source srcset="images/logo-lockup-560.webp" type="image/webp"><img src="images/logo-lockup-560.png" alt="Real Time Traders" width="560" height="136" loading="lazy"></picture></a>
         <p>One Brisbane platform to buy, sell, hire and get work done, plus scrap metal pickup: we come to you to collect it.</p>
         <p class="footer__meta"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD</p>
-        <div class="footer__hours"><h2 class="footer__title">Phone hours</h2><p>Mon–Fri 5am–9pm<br>Sat–Sun 7am–4pm<br><small>Brisbane time</small></p><p class="footer__status" data-open-status data-open-long hidden></p></div>
+        <div class="footer__hours"><h2 class="footer__title">Phone hours &amp; email</h2><p>Mon–Fri 5am–9pm<br>Sat–Sun 7am–4pm<br><small>Brisbane time</small></p><p class="footer__status" data-open-status data-open-long hidden></p><p class="footer__email"><a href="mailto:itsreallymejohnnyc@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> Email us</a><br><small class="email-addr">itsreallymejohnnyc@gmail.com</small></p></div>
         <p class="footer__director">Director: John Carter</p>
       </div>
       <div class="footer__col">
@@ -357,7 +280,7 @@
     <div class="footer__bottom">
       <div class="container footer__bottom-inner">
         <p class="footer__legal"><span>© 2026 Real Time Traders Pty Ltd</span> · <span>ABN 54 642 170 438</span> · <span>ACN 642 170 438</span></p>
-        <p class="footer__preview">Preview site: accounts, payments and online enquiries are coming soon.</p>
+        <p class="footer__preview">Preview site: accounts, payments and online booking are coming soon.</p>
       </div>
     </div>
   </footer>

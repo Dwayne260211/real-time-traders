@@ -88,3 +88,8 @@ GitHub Pages builds from `main` (root). `.nojekyll` is present so files are serv
 
 ## Chat assistant
 `js/chat.js` is a client-side, rules-based assistant (no external services). See `docs/chat-assistant.md`.
+
+## Hire range
+`hire.html` renders `data/hire-items.json` (148 generic items with rates, plus the owner's DeWalt kit pinned first) with search, category filters and a Light / Heavy toggle. See `docs/hire-catalogue.md` (how to edit) and `docs/hire-rates-research.md` (rate sources and smoothing).
+
+Contact email: itsreallymejohnnyc@gmail.com (mailto links on the contact page, in the footer, the homepage "Talk to us" block and the chat assistant).

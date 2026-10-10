@@ -143,6 +143,8 @@
     if (svc) {
       enquiryService.textContent = svc.slice(0, 80);
       enquiryService.closest(".enquiry-card__service").hidden = false;
+      var mail = document.querySelector("[data-mailto-service]");
+      if (mail) mail.href = mail.href.split("?")[0] + "?subject=" + encodeURIComponent("Enquiry: " + svc.slice(0, 80));
     }
   }
 

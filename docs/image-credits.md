@@ -21,3 +21,25 @@ All are from **Unsplash** under the **Unsplash License** (https://unsplash.com/l
 - `photo-scrap-pile.*` (pile of crushed cars) and `photo-scrap-car.*` (crane grab lifting wrecked cars) were removed because they made the site look like a wrecking business.
 
 Images that were already on the site before this update are not covered by this file.
+
+
+## Hire range photos (added 10 October 2026, AEST)
+
+All are from **Unsplash** under the **Unsplash License** (free for commercial use, no attribution required). Each photo page was checked and showed "Free to use under the Unsplash License". They were resized to 640x480 WebP. Hire items without a photo show their category icon instead. No competitor images are used.
+
+| Used as | File | Photo | Photographer (Unsplash handle) | Source URL |
+|---|---|---|---|---|
+| Pressure washer (petrol ~3000psi) and rotary surface cleaner cards | `images/hire/pressure-washer.webp` | A man in a yellow vest is cleaning a street | @thegraphicspace | https://unsplash.com/photos/a-man-in-a-yellow-vest-is-cleaning-a-street-gal5jKCgDVo |
+| Hedge trimmer card | `images/hire/hedge-trimmer.webp` | Person trimming hedge on ladder | @mustaphaturhan | https://unsplash.com/photos/person-trimming-hedge-on-ladder-QnodCAbcqvc |
+| Leaf blower card | `images/hire/leaf-blower.webp` | A man with a leaf blower in a yard | @rex_filmer | https://unsplash.com/photos/a-man-with-a-leaf-blower-in-a-yard-20Xibv0RrDo |
+| Line trimmer card | `images/hire/line-trimmer.webp` | Man trims overgrown grass with a string trimmer | @kenny_kalix | https://unsplash.com/photos/man-trims-overgrown-grass-with-a-string-trimmer-dvipT9WMNis |
+| Cordless drill card | `images/hire/drill.webp` | Red cordless powerdrill | @heyquilia | https://unsplash.com/photos/red-cordless-powerdrill-CuDoRFyTkAQ |
+| Angle grinder 125mm card | `images/hire/angle-grinder.webp` | A man working with a grinder on a piece of metal | @heberdavisphotography | https://unsplash.com/photos/a-man-working-with-a-grinder-on-a-piece-of-metal-fZEC4pR4Kpo |
+| Circular saw card | `images/hire/circular-saw.webp` | A person using a circular saw to cut a piece of wood | @c3k | https://unsplash.com/photos/a-person-using-a-circular-saw-to-cut-a-piece-of-wood-SdGWs9shP0o |
+| Extension ladder card | `images/hire/ladder.webp` | A ladder leaning up against a concrete wall | @nickpage | https://unsplash.com/photos/a-ladder-leaning-up-against-a-concrete-wall-dDZ1JjQXmlY |
+| Hand trolley / sack truck card | `images/hire/hand-truck.webp` | Man pushing hand truck with plastic drum | @norevisions | https://unsplash.com/photos/man-pushing-hand-truck-with-plastic-drum-KufOjYrd3mg |
+| Mini excavator ~1.7-1.8t card | `images/hire/mini-excavator.webp` | Mini excavator with coiled pipes on grassy ground | @skstrannik | https://unsplash.com/photos/mini-excavator-with-coiled-pipes-on-grassy-ground-L3eEgJT2R-c |
+| Portable toilet card | `images/hire/portable-toilet.webp` | A couple of green portable toilets sitting next to each other | @deankfick | https://unsplash.com/photos/a-couple-of-green-portable-toilets-sitting-next-to-each-other-hQZx1b_SJZ4 |
+
+### Owner's own photos
+- `images/hire/dewalt-impact-wrench-{1,2,3}.webp`: the owner's DeWalt 18V XR brushless 1/2" impact wrench kit. Photos supplied by the owner (Dwayne), cropped tight on the tool and exported as WebP.

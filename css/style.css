@@ -1388,3 +1388,76 @@ p { text-wrap: pretty; }
 .header__post { gap: 0; }
 .header__post .icon { margin-right: 8px; }
 @media (max-width: 419px) { .header__post .icon { margin-right: 4px; } }
+
+/* ---------- v5 (C): hire range (js/hire-catalogue.js + data/hire-items.json) ---------- */
+.hire-tools { display: grid; gap: 14px; margin-bottom: 8px; }
+.hire-tools__row { display: grid; gap: 12px; align-items: end; }
+@media (min-width: 900px) { .hire-tools__row { grid-template-columns: minmax(280px, 520px) auto; justify-content: space-between; } }
+.hire-search label { display: block; font-weight: 600; font-size: 14px; color: var(--navy); margin-bottom: 6px; }
+.hire-search__box { position: relative; }
+.hire-search__box .icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--muted); }
+.hire-search__box input { width: 100%; min-height: 48px; padding: 0 14px 0 42px; border: 1.5px solid #8a93a3; border-radius: 12px; font: inherit; font-size: 16px; background: #fff; }
+.hire-search__box input:focus { outline: 3px solid var(--blue); outline-offset: 1px; border-color: var(--blue); }
+.weight-toggle { display: inline-flex; flex-wrap: wrap; border: 1.5px solid var(--navy); border-radius: 12px; overflow: hidden; width: fit-content; max-width: 100%; }
+.weight-toggle__btn { min-height: 46px; padding: 0 16px; border: 0; background: #fff; color: var(--navy); font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; }
+.weight-toggle__btn + .weight-toggle__btn { border-left: 1.5px solid var(--navy); }
+.weight-toggle__btn[aria-pressed="true"] { background: var(--navy); color: #fff; }
+.weight-toggle__btn:focus-visible { outline: 3px solid var(--blue); outline-offset: -3px; }
+@media (min-width: 768px) { .hire-tools .filter-bar { flex-wrap: wrap; overflow: visible; } }
+@media (max-width: 767px) { .hire-tools .filter-chip { font-size: 14px; padding: 8px 12px; } }
+.hire-note { display: flex; gap: 8px; align-items: flex-start; margin: 0; font-size: 14px; color: var(--navy); background: #fff8d6; border: 1px solid var(--accent); border-radius: 10px; padding: 10px 14px; }
+.hire-note .icon { width: 16px; height: 16px; flex: none; margin-top: 2px; }
+.hire-results { display: grid; gap: 36px; margin-top: 10px; }
+.hire-group { scroll-margin-top: 140px; }
+.hire-group__title { display: flex; align-items: center; gap: 10px; font-size: clamp(22px, 2.4vw, 28px); margin: 0 0 6px; }
+.hire-group__title .icon { width: 22px; height: 22px; color: var(--red); }
+.hire-group__count { font-size: 13px; font-weight: 700; padding: 2px 10px; border-radius: 99px; background: var(--brand-50); color: var(--brand-700); }
+.hire-group--pinned { padding: 20px; border: 2px solid var(--accent); border-radius: var(--radius-lg); background: #fffdf0; }
+.hire-sub { font-size: 15px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 18px 0 12px; }
+.hire-results .equip-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+@media (max-width: 559px) { .hire-results .equip-grid { grid-template-columns: 1fr 1fr; gap: 10px; } }
+@media (max-width: 379px) { .hire-results .equip-grid { grid-template-columns: 1fr; } }
+.equip-card h4 { font-size: 16px; line-height: 1.3; margin: 0; color: var(--navy); }
+.equip-card__tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag-weight, .tag-owner { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 99px; }
+.tag-weight--light { background: var(--brand-50); color: var(--brand-700); }
+.tag-weight--heavy { background: var(--navy); color: #fff; }
+.tag-owner { background: var(--accent); color: var(--navy); }
+.tag-owner .icon { width: 12px; height: 12px; }
+.equip-price { margin: 0; font-size: 14px; color: var(--ink); flex: 0 !important; }
+.equip-card p.equip-price { color: var(--ink); flex: none; }
+.equip-price strong { font-size: 20px; color: var(--navy); font-variant-numeric: tabular-nums; }
+.equip-price span { color: var(--muted); }
+.equip-price--por strong { font-size: 17px; }
+.equip-card p.equip-avail { display: flex; align-items: center; gap: 6px; margin: 0; font-size: 13px; color: var(--muted); flex: none; }
+.equip-avail .icon { width: 14px; height: 14px; color: var(--blue); }
+.equip-card__ctas { display: grid; gap: 8px; margin-top: auto; }
+.equip-card__ctas .btn { margin-top: 0; min-height: 44px; padding: 10px 12px; font-size: 14px; }
+.btn--soon { background: #eef0f4; color: #4a5263; border: 1.5px dashed #9aa3b2; cursor: not-allowed; }
+.equip-card--icon .equip-card__media { aspect-ratio: 16 / 9; }
+.equip-card--icon .equip-card__media .icon { width: 48px; height: 48px; }
+.equip-card--pinned { border-color: var(--accent); }
+@media (max-width: 559px) { .equip-card__body { padding: 12px; gap: 8px; } .equip-card h4 { font-size: 15px; } .equip-price strong { font-size: 18px; } .rate-list li { font-size: 12px; padding: 4px 8px; } }
+/* v5: contact email */
+.email-addr { display: block; overflow-wrap: anywhere; color: var(--muted); font-size: 14px; }
+.email-link { overflow-wrap: anywhere; color: var(--brand-700); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.contact__email { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; color: var(--brand-700); text-decoration: underline; text-underline-offset: 3px; }
+.footer__email a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-weight: 600; color: var(--brand-700); }
+.footer__email .icon { width: 16px; height: 16px; }
+.footer__email small { overflow-wrap: anywhere; }
+.enquiry-card__email { margin-top: 10px; }
+.enquiry-card__mailnote { margin: 8px 0 0; font-size: 13px; color: var(--muted); }
+.enquiry-card__mailnote .email-addr { display: inline; font-size: 13px; }
+.post-help__box .email-link { color: #fff; }
+.post-help__box .email-addr { display: inline; color: #d5def0; }
+.contact-home__copy .email-link { display: inline-flex; align-items: center; min-height: 44px; }
+.equip-card__ctas .btn { white-space: normal; text-align: center; line-height: 1.25; }
+.hire-group--pinned .equip-grid { grid-template-columns: 1fr !important; }
+@media (min-width: 768px) {
+  .hire-group--pinned .equip-card { flex-direction: row; max-width: 820px; }
+  .hire-group--pinned .equip-card__media { flex: 0 0 46%; aspect-ratio: auto; }
+  .hire-group--pinned .equip-card__body { padding: 22px; }
+  .hire-group--pinned .equip-card h4 { font-size: 20px; }
+  .hire-group--pinned .equip-card__ctas { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 559px) { .hire-group--pinned { padding: 14px; } }

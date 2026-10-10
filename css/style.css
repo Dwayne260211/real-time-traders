@@ -1551,3 +1551,21 @@ p { text-wrap: pretty; }
 }
 .modal__pages { margin: 12px 0 0; text-align: center; }
 .modal__pages a { color: var(--brand-text); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+/* Member accounts (js/member-auth.js): live sign-in, Google button, portal loading state */
+.member-auth .notice[data-member-msg] { margin: 0 0 18px; }
+.member-auth__oauth { display: grid; gap: 10px; margin: 0 0 14px; }
+.member-auth__oauth[hidden] { display: none; }
+.member-auth__google { gap: 10px; }
+.member-auth__g { width: 18px; height: 18px; flex: none; }
+.member-auth__or { display: flex; align-items: center; gap: 12px; margin: 4px 0 0; font-size: 13px; color: var(--muted); }
+.member-auth__or::before, .member-auth__or::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.is-member-live [data-member-preview] { display: none; }
+.member-portal__loading { display: none; margin: 0 0 18px; color: var(--muted); font-weight: 600; }
+.is-member-live:not(.is-member-ready) .member-portal__loading { display: block; }
+.is-member-live:not(.is-member-ready) [data-member-gate] { display: none; }
+.member-panel__form .field input[readonly] { background: var(--soft); }
+.member-list { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 8px; }
+.member-list li { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--radius); }
+.member-list li div { display: grid; gap: 2px; min-width: 0; }
+.member-list strong { color: var(--navy); }
+.member-list li div span { font-size: 13.5px; color: var(--muted); }

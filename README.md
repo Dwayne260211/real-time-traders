@@ -15,9 +15,9 @@ jobs.html         Jobs & Tenders: example jobs, post a job (preview), Find a Tra
 hire.html         equipment hire catalogue: Cleaning, Gardening, Power tools, General, Plant & portable toilets, Trailers
 hire-item.html    one hire item (?id=): photos, rates, terms, availability, booking request (noindex)
 my-bookings.html  customer sign-in (email link) and their hire bookings (noindex)
-login.html        member sign-in (design preview: no accounts yet; noindex)
-join.html         create an account with tier picker (design preview; noindex)
-portal.html       members portal dashboard shell: listings, bookings, messages, billing, settings (design preview; noindex)
+login.html        member sign-in: email + password, email link, reset, Google (Supabase Auth; noindex)
+join.html         create a member account with tier picker (Supabase signUp; noindex)
+portal.html       members portal (needs sign-in): profile, tier, own hire bookings, settings (noindex)
 admin.html        hire admin: equipment, bookings, maintenance, condition reports, settings (noindex, not in sitemap)
 admin-login.html  staff sign-in (Supabase email + password, reset, email link); admins go to admin.html (noindex, not in sitemap, disallowed in robots.txt)
 post.html         how to post a listing / job (online posting coming soon)
@@ -29,7 +29,8 @@ css/style.css     all styles, mobile-first; colour tokens in :root
 js/main.js        menu, tabs, carousel, header search routing, preview gating and the Join/Login preview modal
 js/hire-*.js      hire system front end; js/hire-config.js holds the PUBLIC Supabase URL + anon key (empty = switched off)
 js/my-bookings.js customer bookings page
-js/member-portal.js preview-only form handling for login/join/portal (no backend)
+js/member-portal.js form checks for login/join/portal (preview messages if Supabase isn't configured)
+js/member-auth.js member sign-in/sign-up/portal with Supabase Auth; setup steps in docs/member-auth-setup.md
 js/vendor/        supabase-js (MIT), loaded only when the hire system is configured
 supabase/         hire system database migration, Edge Functions (Stripe checkout/webhook, email, cancellation) and tests
 images/           logo v2 (logo-lockup-560.png/.webp used on the site), photos with .webp versions, og-image.jpg

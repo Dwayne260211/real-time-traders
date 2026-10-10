@@ -172,24 +172,27 @@
     <section class="page-banner">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Members portal</li></ol></nav>
-        <h1>G'day, member</h1>
+        <h1>G'day, <span data-member-name>member</span></h1>
         <p>Your listings, hire bookings, messages and membership in one place.</p>
       </div>
     </section>
 
     <section class="section member-portal">
       <div class="container">
-        <div class="notice notice--warn member-portal__preview" role="note">
+        <div class="notice notice--warn member-portal__preview" role="note" data-member-preview>
           <p><strong>Preview: the members portal is coming soon.</strong> This page shows how it will look. Nothing here is real account data, and nothing you do here is saved. <a href="join.html">Create an account</a> or <a href="login.html">sign in</a> when accounts launch.</p>
         </div>
 
-        <div class="account-bar">
-          <p>Signed in as <strong>you@example.com</strong> <span class="chip chip--soft">Free account (preview)</span></p>
+        <p class="member-portal__loading" data-member-loading>Checking your sign-in…</p>
+        <noscript><p class="notice">The members portal needs JavaScript. Please turn it on, or call us.</p></noscript>
+
+        <div class="account-bar" data-member-gate>
+          <p>Signed in as <strong data-member-email>you@example.com</strong> <span class="chip chip--soft" data-member-tier>Free account (preview)</span></p>
           <div class="account-bar__ctas"><a href="post.html" class="btn btn--primary btn--sm"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Post a listing</a> <button type="button" class="btn btn--outline btn--sm" data-member-signout>Sign out</button></div>
         </div>
         <p class="notice" role="status" aria-live="polite" data-member-portal-status hidden></p>
 
-        <div class="member-portal__layout">
+        <div class="member-portal__layout" data-member-gate>
           <nav class="member-portal__nav" aria-label="Members portal">
             <ul>
               <li><a href="#listings" aria-current="true"><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg> My listings</a></li>
@@ -204,7 +207,7 @@
             <ul class="member-portal__stats" aria-label="At a glance">
               <li><strong>0</strong><span>Active listings</span></li>
               <li><strong>0</strong><span>Open jobs</span></li>
-              <li><strong>0</strong><span>Hire bookings</span></li>
+              <li><strong data-member-count="bookings">0</strong><span>Hire bookings</span></li>
               <li><strong>0</strong><span>Unread messages</span></li>
             </ul>
 
@@ -219,10 +222,12 @@
 
             <section class="member-panel" id="bookings" aria-labelledby="bookings-title">
               <div class="member-panel__head"><h2 id="bookings-title"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg> Bookings &amp; hire</h2><a href="hire.html" class="btn btn--light btn--sm">Browse hire</a></div>
+              <div data-member-bookings>
               <div class="empty-state">
                 <p class="empty-state__title">No bookings yet.</p>
                 <p>Equipment hire bookings and jobs you've accepted will show here with dates, pickup details and status.</p>
                 <div class="empty-state__ctas"><a href="my-bookings.html" class="btn btn--light btn--sm">My hire bookings</a> <a href="jobs.html" class="btn btn--light btn--sm">Browse jobs</a></div>
+              </div>
               </div>
             </section>
 
@@ -237,15 +242,16 @@
             <section class="member-panel" id="billing" aria-labelledby="billing-title">
               <div class="member-panel__head"><h2 id="billing-title"><svg class="icon" aria-hidden="true"><use href="#i-coins"/></svg> Membership &amp; billing</h2><a href="membership.html" class="btn btn--light btn--sm">Compare memberships</a></div>
               <dl class="member-panel__list">
-                <div><dt>Current plan</dt><dd>Free account <span class="chip chip--soft">Preview</span></dd></div>
+                <div><dt>Current plan</dt><dd data-member-tier>Free account</dd></div>
                 <div><dt>Monthly fee</dt><dd>$0 (connection fee $9.95–$59.95 when you accept a quote)</dd></div>
                 <div><dt>Next payment</dt><dd>None</dd></div>
                 <div><dt>Payment method</dt><dd>None saved</dd></div>
               </dl>
+              <p class="notice" data-member-requested hidden></p>
               <div class="empty-state">
                 <p class="empty-state__title">No invoices yet.</p>
                 <p>Upgrade to Basic ($4.99/month) to skip connection fees and buy or sell, or pay yearly and get 2 months free.</p>
-                <div class="empty-state__ctas"><a href="join.html" class="btn btn--light btn--sm">Change membership</a></div>
+                <div class="empty-state__ctas"><a href="membership.html" class="btn btn--light btn--sm">See what each tier includes</a></div>
               </div>
             </section>
 
@@ -254,13 +260,13 @@
               <form class="member-panel__form" data-member-form="settings" novalidate>
                 <div class="form-grid">
                   <label class="field"><span>Name</span><input type="text" name="name" autocomplete="name" placeholder="Your name" required></label>
-                  <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" placeholder="you@example.com" required></label>
+                  <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" placeholder="you@example.com" readonly aria-describedby="email-hint"><small class="member-auth__hint" id="email-hint">To change your sign-in email, call us.</small></label>
                   <label class="field"><span>Suburb</span><input type="text" name="suburb" autocomplete="address-level2" placeholder="e.g. Chermside"></label>
                   <label class="field"><span>Email me about</span><select name="alerts"><option>Messages and bookings only</option><option>Messages, bookings and saved search alerts</option><option>Nothing (not recommended)</option></select></label>
                 </div>
                 <div class="member-panel__actions">
                   <button type="submit" class="btn btn--primary btn--sm">Save changes</button>
-                  <a href="login.html" class="btn btn--light btn--sm">Change password</a>
+                  <button type="button" class="btn btn--light btn--sm" data-member-password>Email me a password reset link</button>
                 </div>
                 <p class="form-status" role="status" aria-live="polite"></p>
               </form>
@@ -389,6 +395,9 @@
 
   <script src="js/main.js" defer></script>
   <script src="js/chat.js" defer></script>
+  <script src="js/hire-config.js" defer></script>
+  <script src="js/hire-common.js" defer></script>
   <script src="js/member-portal.js" defer></script>
+  <script src="js/member-auth.js" defer></script>
 </body>
 </html>

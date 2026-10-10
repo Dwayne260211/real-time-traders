@@ -180,7 +180,14 @@
     <section class="section admin-login member-auth">
       <div class="container">
         <div class="admin-login__card">
-          <p class="preview-flag"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> Preview: member accounts are coming soon</p>
+          <p class="preview-flag" data-member-preview><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> Preview: member accounts are coming soon</p>
+          <div class="notice" role="status" aria-live="polite" data-member-msg hidden></div>
+
+          <div class="member-auth__oauth" data-member-oauth data-member-view="login">
+            <button type="button" class="btn btn--light btn--block member-auth__google" data-member-google><svg class="member-auth__g" viewBox="0 0 18 18" aria-hidden="true"><path fill="#4285F4" d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84a4.14 4.14 0 0 1-1.8 2.72v2.26h2.92c1.7-1.57 2.68-3.88 2.68-6.62z"/><path fill="#34A853" d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.92-2.26c-.8.54-1.84.86-3.04.86-2.34 0-4.32-1.58-5.03-3.7H.96v2.33A9 9 0 0 0 9 18z"/><path fill="#FBBC05" d="M3.97 10.72A5.4 5.4 0 0 1 3.68 9c0-.6.1-1.18.29-1.72V4.95H.96A9 9 0 0 0 0 9c0 1.45.35 2.83.96 4.05l3.01-2.33z"/><path fill="#EA4335" d="M9 3.58c1.32 0 2.5.45 3.44 1.35l2.58-2.58A9 9 0 0 0 .96 4.95l3.01 2.33C4.68 5.16 6.66 3.58 9 3.58z"/></svg> Continue with Google</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+            <p class="member-auth__or"><span>or use your email</span></p>
+          </div>
 
           <form class="admin-login__form" data-member-form="login" data-member-view="login" novalidate>
             <fieldset>
@@ -221,10 +228,22 @@
             </fieldset>
           </form>
 
+          <form class="admin-login__form" data-member-form="newpw" data-member-view="newpw" novalidate hidden>
+            <fieldset>
+              <legend class="sr-only">Choose a new password</legend>
+              <h2>Choose a new password</h2>
+              <p>Choose a new password for your account (at least 8 characters).</p>
+              <label class="field"><span>New password</span><input type="password" name="password" autocomplete="new-password" minlength="8" required></label>
+              <label class="field"><span>Confirm new password</span><input type="password" name="confirm" autocomplete="new-password" required></label>
+              <button type="submit" class="btn btn--primary btn--block">Save password</button>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </fieldset>
+          </form>
+
           <div class="member-auth__switch">
             <p>New to Real Time Traders? <a href="join.html">Create an account</a></p>
             <p>Booked equipment hire? <a href="my-bookings.html">View my hire bookings</a></p>
-            <p>Curious what's inside? <a href="portal.html">Preview the members portal</a></p>
+            <p>Already signed in? <a href="portal.html">Open the members portal</a></p>
           </div>
           <p class="admin-login__note"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg> <span>This is the member sign-in. Real Time Traders staff use the <a href="admin-login.html">admin sign-in</a>.</span></p>
         </div>
@@ -350,6 +369,9 @@
 
   <script src="js/main.js" defer></script>
   <script src="js/chat.js" defer></script>
+  <script src="js/hire-config.js" defer></script>
+  <script src="js/hire-common.js" defer></script>
   <script src="js/member-portal.js" defer></script>
+  <script src="js/member-auth.js" defer></script>
 </body>
 </html>

@@ -1,5 +1,7 @@
 /* Member sign-in, join and portal pages (login.html, join.html, portal.html).
-   Design preview only: no accounts, no backend, nothing is sent or saved. */
+   Client-side checks and view switching. When js/member-auth.js is connected to Supabase
+   (window.RTTMemberAuth.live), valid forms are handed to it; otherwise the preview
+   messages below are shown and nothing is sent or saved. */
 (function () {
   "use strict";
   var PREVIEW = "Preview: member accounts are coming soon, so nothing was sent or saved. Questions? Call us.";
@@ -32,6 +34,8 @@
       form.querySelectorAll("input[required]").forEach(function (input) {
         if (!check(input) && !first) first = input;
       });
+      var auth = window.RTTMemberAuth;
+      if (!first && auth && auth.live && auth.submit(kind, form)) return;
       if (status) {
         status.classList.toggle("is-error", !!first);
         status.textContent = first
@@ -83,7 +87,7 @@
   var pStatus = document.querySelector("[data-member-portal-status]");
   document.querySelectorAll("[data-member-signout]").forEach(function (b) {
     b.addEventListener("click", function () {
-      if (!pStatus) return;
+      if (!pStatus || (window.RTTMemberAuth && window.RTTMemberAuth.live)) return;
       pStatus.hidden = false;
       pStatus.textContent = "Preview: sign-in is coming soon, so there's nothing to sign out of yet.";
     });

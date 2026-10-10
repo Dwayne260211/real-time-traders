@@ -7,6 +7,9 @@
      which knows how to finish them. Hash and query are kept intact. */
   (function () {
     if (/admin-login\.html$/.test(location.pathname)) return;
+    /* Member pages finish their own links (js/member-auth.js): Google sign-in, email confirmation,
+       member sign-in links and member password resets are sent back to these pages. */
+    if (/(^|\/)(login|join|portal)\.html$/.test(location.pathname)) return;
     var h = location.hash, q = location.search;
     if (/access_token|type=invite|type=recovery|error_description=/.test(h) || /[?&](code|token_hash)=/.test(q)) {
       var base = location.pathname.replace(/[^/]*$/, "");

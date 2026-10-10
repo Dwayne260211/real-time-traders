@@ -2,6 +2,22 @@
 
 Accessed 9 October 2026 (AEST). All figures are in AUD. Where a source gives prices excluding GST, the GST-inclusive figure is worked out at 10%. Nothing here is estimated unless it is labelled as an estimate.
 
+## Re-verification for the "How we compare" table (10 October 2026)
+Each figure in the comparison table on `jobs.html#compare` was re-checked on **10 October 2026 (AEST)** against the platform's own official page, fetched directly. Only figures confirmed on an official page are used on the site. Third-party or user-reported figures in the table below (kingtradie, OzBargain, Shopfront) are **not** used on the site.
+
+| Platform | Figure used on the site | Official source checked | Result |
+|---|---|---|---|
+| Airtasker | Connection fee $9.95–$59.95 per assigned task, inc. GST (7 bands unchanged) | https://support.airtasker.com/hc/en-au/articles/360031769372-What-is-the-Connection-Fee (page shows "Updated 14 July 2026") | Verified |
+| Airtasker | $89/year customer membership waives connection fees | https://www.airtasker.com/au/lp/airtasker-membership/ | Verified |
+| Airtasker | Tasker service fee 12.5%–20% of task price, plus GST | https://support.airtasker.com/hc/en-au/articles/200294499-What-is-the-service-fee (page shows "Updated 28 June 2026") | Verified |
+| Airtasker | Tiers: Bronze 20%, Silver 18.5%, Gold 14.9%, Platinum 12.5% (ex GST); $880 / $2,650 / $5,300 earnings thresholds | https://support.airtasker.com/hc/en-au/articles/900003895046-What-are-Tasker-tiers (page shows "Updated 28 June 2026") and the tier table image https://support.airtasker.com/hc/article_attachments/34455335967257 | Verified (table image re-read). The 17 Jul 2026 user comment claiming Bronze is 22% is still there; the official table still says 20% |
+| hipages | Starter $139, Advanced $249, Premium $449, Platinum $649 per month + GST; 155 / 310 / 595 / 850 credits a month; 6-month intro term then 12 months; 5% off paying yearly; "no commission on jobs"; credits per lead not published ("varies by job category, location, size of job, and supply and demand") | https://hipages.com.au/membership-costs | Verified |
+| ServiceSeeking | Custom pricing by trade, area and expected leads; monthly plans "as low as $129 inc GST per month for most members"; 20% off quarterly, 40% off annually | https://www.serviceseeking.com.au/pricing/serviceseeking-membership-price-update (article dated 17 Jun 2025, still the live pricing page) | Verified |
+| Gumtree AU | Free in most categories; listing fees for Cars, Vans & Utes (free Basic tier for eligible private sellers in NSW, TAS, NT, SA and ACT), Caravans & Campervans and Pets; one free ad at a time in Services for Hire, Boats & Jetskis, Real Estate and most Jobs categories; package prices only shown when posting | https://help.gumtree.com.au/AU/articles/en_US/KB_Article/Which-categories-have-a-listing-fee-AU/ | Verified. Note: the free Basic car tier in some states is new since the 9 Oct notes. No prices are published, so none are shown on the site |
+| Facebook Marketplace | Official listing steps include no listing fee; items can be listed as free ($0) | https://www.facebook.com/help/561376580709359/ | Verified (the page lists the steps and has no fee; it doesn't say "free" in so many words, so the site words it that way) |
+
+Left out of the site table because they can't be verified on an official page: hipages cost per lead, Gumtree car package prices, carsales ad prices, Oneflare (closed). eBay, carsales and Kennards are not in the site table because they aren't comparable to jobs/hire fees in a short table.
+
 ## What comparable Australian platforms charge
 
 | Platform | What they charge | Source | Accessed |

@@ -1,5 +1,6 @@
 /* admin-login.html: staff sign-in with Supabase Auth.
    - Email + password (signInWithPassword), "Forgot password" (resetPasswordForEmail), optional email link (signInWithOtp).
+   - Invite / recovery links (implicit #access_token, PKCE ?code=, or ?token_hash=) open a "Set your password" form (updateUser).
    - After sign-in, public.is_admin() (user_roles + RLS) decides: admins go to admin.html; anyone else is signed out.
    - No passwords are checked or stored in this file. This page is only the door: the database enforces access. */
 (function () {
@@ -11,7 +12,24 @@
   var msg = $("[data-login-msg]");
   var here = location.origin + location.pathname;
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  var sb = null, recovering = /type=recovery/.test(location.hash);
+  /* Read the auth link details BEFORE the Supabase client starts (it clears the hash).
+     Invite / recovery links arrive as #access_token=…&type=invite|recovery (implicit flow),
+     ?code=… (PKCE), or ?token_hash=…&type=… (custom email templates). */
+  var hashP = new URLSearchParams(location.hash.replace(/^#/, ""));
+  var queryP = new URLSearchParams(location.search);
+  var linkType = hashP.get("type") || queryP.get("type") || "";
+  var linkCode = queryP.get("code");
+  var linkTokenHash = queryP.get("token_hash");
+  var linkError = hashP.get("error_description") || queryP.get("error_description") || hashP.get("error") || queryP.get("error");
+  var SETPW_TYPES = { invite: 1, recovery: 1 };
+  var sb = null, recovering = !!SETPW_TYPES[linkType];
+  function cleanUrl() {
+    if (!history.replaceState) return;
+    var keep = new URLSearchParams(location.search);
+    ["code", "token_hash", "type", "error", "error_code", "error_description", "redirect_to"].forEach(function (k) { keep.delete(k); });
+    var q = keep.toString();
+    history.replaceState(null, "", location.pathname + (q ? "?" + q : ""));
+  }
 
   function show(name, focus) {
     Object.keys(forms).forEach(function (k) { forms[k].hidden = k !== name; });
@@ -43,6 +61,16 @@
       note(""); show(target);
     });
   });
+
+  function askPassword() {
+    var invite = linkType === "invite";
+    $("[data-newpw-title]").textContent = invite ? "Set your password" : "Choose a new password";
+    $("[data-newpw-intro]").textContent = invite
+      ? "Welcome! Choose a password for your admin account (at least 8 characters)."
+      : "Choose a new password for your admin account (at least 8 characters).";
+    note("");
+    show("newpw");
+  }
 
   /* ---------- not configured: honest notice, forms stay disabled ---------- */
   if (!H || !H.config()) {
@@ -116,25 +144,52 @@
     forms.newpw.addEventListener("submit", function (e) {
       e.preventDefault();
       var f = forms.newpw, pw = f.elements.password.value;
-      if (!pw || pw !== f.elements.confirm.value) { status(f, "The two passwords don't match.", true); return; }
+      if (!pw || pw.length < 8) { status(f, "Use at least 8 characters.", true); return; }
+      if (pw !== f.elements.confirm.value) { status(f, "The two passwords don't match.", true); return; }
       busy(f, true); status(f, "Saving…");
       sb.auth.updateUser({ password: pw }).then(function (r) {
         if (r.error) throw r.error;
         f.reset(); recovering = false;
         status(f, "");
-        note("Password updated.");
+        note("Password saved.");
         return sb.auth.getSession().then(function (s) { checkAdmin(s.data.session); });
       }).catch(function (err) { status(f, friendly(err), true); })
         .then(function () { busy(f, false); });
     });
 
     sb.auth.onAuthStateChange(function (evt, session) {
-      if (evt === "PASSWORD_RECOVERY") { recovering = true; note("Choose a new password for your admin account."); show("newpw"); return; }
+      if (evt === "PASSWORD_RECOVERY") { recovering = true; if (!linkType) linkType = "recovery"; return; }
       if (evt === "SIGNED_IN" && !recovering) checkAdmin(session);
     });
+    var linkFailed = "This link is invalid or has expired. Ask for a new invite, or use “Forgot password?” to get a fresh link.";
     return sb.auth.getSession().then(function (r) {
-      if (recovering) { note("Choose a new password for your admin account."); show("newpw"); return; }
-      if (r.data.session) checkAdmin(r.data.session);
+      var session = r.data && r.data.session;
+      /* token_hash links (custom templates): verify the one-time token */
+      if (linkTokenHash && !session) {
+        return sb.auth.verifyOtp({ token_hash: linkTokenHash, type: linkType || "email" }).then(function (v) {
+          if (v.error) throw v.error;
+          return v.data.session;
+        });
+      }
+      /* PKCE links: supabase-js exchanges the code itself when this browser holds the verifier */
+      if (linkCode && !session) {
+        return sb.auth.exchangeCodeForSession(linkCode).then(function (v) {
+          if (v.error) throw v.error;
+          return v.data.session;
+        });
+      }
+      return session;
+    }).then(function (session) {
+      var hadLink = !!(linkType || linkCode || linkTokenHash || linkError);
+      if (hadLink) cleanUrl();
+      if (linkError && !session) { recovering = false; note(linkFailed, true); show("login", false); return; }
+      if (recovering && session) { askPassword(); return; }
+      if (recovering && !session) { recovering = false; note(linkFailed, true); show("login", false); return; }
+      if (session) checkAdmin(session);
+    }).catch(function (err) {
+      recovering = false; cleanUrl();
+      note(/expired|invalid|not found|code verifier|both auth code/i.test(String(err && err.message)) ? linkFailed : friendly(err), true);
+      show("login", false);
     });
   }).catch(function (err) {
     note(friendly(err), true);

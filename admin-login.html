@@ -225,11 +225,12 @@
 
           <form class="admin-login__form" data-newpw-form novalidate hidden>
             <fieldset data-login-fields disabled>
-              <legend class="sr-only">Set a new password</legend>
-              <h2>Set a new password</h2>
-              <label class="field"><span>New password</span><input type="password" name="password" autocomplete="new-password" required></label>
+              <legend class="sr-only">Set your password</legend>
+              <h2 data-newpw-title>Set your password</h2>
+              <p data-newpw-intro>Choose a password for your admin account (at least 8 characters).</p>
+              <label class="field"><span>New password</span><input type="password" name="password" autocomplete="new-password" minlength="8" required></label>
               <label class="field"><span>Confirm new password</span><input type="password" name="confirm" autocomplete="new-password" required></label>
-              <button type="submit" class="btn btn--primary btn--block">Save new password</button>
+              <button type="submit" class="btn btn--primary btn--block">Save password</button>
               <p class="form-status" role="status" aria-live="polite"></p>
             </fieldset>
           </form>

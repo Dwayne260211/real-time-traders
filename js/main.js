@@ -2,6 +2,18 @@
 (function () {
   "use strict";
 
+  /* ---------- Supabase auth links (invite / recovery / magic link) ----------
+     Links that fall back to the Site URL land here; hand them to the admin sign-in page,
+     which knows how to finish them. Hash and query are kept intact. */
+  (function () {
+    if (/admin-login\.html$/.test(location.pathname)) return;
+    var h = location.hash, q = location.search;
+    if (/access_token|type=invite|type=recovery|error_description=/.test(h) || /[?&](code|token_hash)=/.test(q)) {
+      var base = location.pathname.replace(/[^/]*$/, "");
+      location.replace(base + "admin-login.html" + q + h);
+    }
+  })();
+
   /* ---------- Mobile menu ---------- */
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.getElementById("site-nav");

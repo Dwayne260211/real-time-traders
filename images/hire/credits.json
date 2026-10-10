@@ -1,0 +1,802 @@
+{
+ "pressure-washer-electric": {
+  "title": "Karcher-p1020712.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Karcher-p1020712.jpg",
+  "author": "Rama",
+  "license": "CC BY-SA 2.0 fr",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en",
+  "site": "Wikimedia Commons"
+ },
+ "carpet-cleaner": {
+  "title": "Floor cleaner inside Sullivan Hall.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Floor_cleaner_inside_Sullivan_Hall.jpg",
+  "author": "Ktr101",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "site": "Wikimedia Commons"
+ },
+ "carpet-dryer": {
+  "title": "XPower air mover sits in the corner.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:XPower_air_mover_sits_in_the_corner.jpg",
+  "author": "Ser Amantio di Nicolao",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "site": "Wikimedia Commons"
+ },
+ "wet-dry-vacuum": {
+  "title": "Advance VL500 wetdry vacuum Yonge.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Advance_VL500_wetdry_vacuum_Yonge.jpg",
+  "author": "PvOberstein",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "site": "Wikimedia Commons"
+ },
+ "steam-cleaner": {
+  "title": "Polti steam mop or portable.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Polti_steam_mop_or_portable.jpg",
+  "author": "Cjp24",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "floor-scrubber": {
+  "title": "Floor cleaning machine - Nobles.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Floor_cleaning_machine_-_Nobles.jpg",
+  "author": "Cantons-de-l'Est",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "site": "Wikimedia Commons"
+ },
+ "floor-polisher": {
+  "title": "บริการทำความสะอาด.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%97%E0%B8%B3%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%AA%E0%B8%B0%E0%B8%AD%E0%B8%B2%E0%B8%94.jpg",
+  "author": "Arayabee",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "dehumidifier": {
+  "title": "Déshumidificateur d'air professionnel.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:D%C3%A9shumidificateur_d%27air_professionnel.jpg",
+  "author": "Matelo2005",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "floor-sander": {
+  "title": "Artisan-poncage-parquet-paris-francois-gaillard 07.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Artisan-poncage-parquet-paris-francois-gaillard_07.jpg",
+  "author": "Francois gaillard",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "tile-saw": {
+  "title": "Tile saw.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Tile_saw.jpg",
+  "author": "Hustvedt",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "site": "Wikimedia Commons"
+ },
+ "tile-cutter": {
+  "title": "Montolit MASTERPIUMA 93 P3.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Montolit_MASTERPIUMA_93_P3.jpg",
+  "author": "Wielkijacek",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "airless-sprayer": {
+  "title": "Pompa-Airless-TECNOVER-Testarossa-Superquattromila.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Pompa-Airless-TECNOVER-Testarossa-Superquattromila.jpg",
+  "author": "Steve Purpy",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "orbital-sander": {
+  "title": "Makita BO5041 Random Orbit Sander (6169161017).jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Makita_BO5041_Random_Orbit_Sander_(6169161017).jpg",
+  "author": "Mark Hunter",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "site": "Wikimedia Commons"
+ },
+ "belt-sander": {
+  "title": "Belt sander bosch.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Belt_sander_bosch.jpg",
+  "author": "Luigi Zanasi",
+  "license": "CC BY-SA 2.0 ca",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/ca/deed.en",
+  "site": "Wikimedia Commons"
+ },
+ "heat-gun": {
+  "title": "Hot air gun (1).jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Hot_air_gun_(1).jpg",
+  "author": "Suyash Dwivedi",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "lawn-mower": {
+  "title": "2015-05-27 12 41 21 A lawn mower on Tranquility Court in the Franklin Farm section of Oak Hill, Fairfax County, Virginia.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:2015-05-27_12_41_21_A_lawn_mower_on_Tranquility_Court_in_the_Franklin_Farm_section_of_Oak_Hill,_Fairfax_County,_Virginia.jpg",
+  "author": "Famartin",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "chainsaw": {
+  "title": "Blocco catena motosega per wiki5.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Blocco_catena_motosega_per_wiki5.jpg",
+  "author": "Verdealberi",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "pole-saw": {
+  "title": "Astsäge&Schere&Seilzug.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Asts%C3%A4ge%26Schere%26Seilzug.jpg",
+  "author": "StromBer",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "site": "Wikimedia Commons"
+ },
+ "rotary-hoe": {
+  "title": "Glebogryzarka.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Glebogryzarka.jpg",
+  "author": "Przemysław Jahr",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "site": "Wikimedia Commons"
+ },
+ "lawn-aerator": {
+  "title": "AIREADORA 03.JPG",
+  "source": "https://commons.wikimedia.org/wiki/File:AIREADORA_03.JPG",
+  "author": "Guipozjim",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0",
+  "site": "Wikimedia Commons"
+ },
+ "lawn-roller": {
+  "title": "Kondara J09 02.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Kondara_J09_02.jpg",
+  "author": "Corpse Reviver",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "site": "Wikimedia Commons"
+ },
+ "wood-chipper": {
+  "title": "Wood chipper display - geograph.org.uk - 4275105.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Wood_chipper_display_-_geograph.org.uk_-_4275105.jpg",
+  "author": "Michael Trolove",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+  "site": "Wikimedia Commons"
+ },
+ "stump-grinder": {
+  "title": "2023-05-12 08 37 56 A stump grinder being used to grind up a Red Maple stump along Aquetong Lane in the Mountainview section of Ewing Township, Mercer County, New Jersey.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:2023-05-12_08_37_56_A_stump_grinder_being_used_to_grind_up_a_Red_Maple_stump_along_Aquetong_Lane_in_the_Mountainview_section_of_Ewing_Township,_Mercer_County,_New_Jersey.jpg",
+  "author": "Famartin",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "log-splitter": {
+  "title": "Automatic axe dsc00844.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Automatic_axe_dsc00844.jpg",
+  "author": "David Monniaux",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "site": "Wikimedia Commons"
+ },
+ "brush-cutter": {
+  "title": "Handy mower.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Handy_mower.jpg",
+  "author": "Green",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "site": "Wikimedia Commons"
+ },
+ "knapsack-sprayer": {
+  "title": "Knapsack sprayer.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Knapsack_sprayer.jpg",
+  "author": "Safapalanadan94",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "wheelbarrow": {
+  "title": "Carretilla Herragro campo.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Carretilla_Herragro_campo.jpg",
+  "author": "Jaimehloaiza",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "post-hole-auger": {
+  "title": "Starr-030429-0041-Chenopodium oahuense-digging holes with power auger with Derek-Lua Makika-Kahoolawe (24003396884).jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Starr-030429-0041-Chenopodium_oahuense-digging_holes_with_power_auger_with_Derek-Lua_Makika-Kahoolawe_(24003396884).jpg",
+  "author": "Forest and Kim Starr",
+  "license": "CC BY 3.0 us",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/us/deed.en",
+  "site": "Wikimedia Commons"
+ },
+ "post-hole-digger-manual": {
+  "title": "Erdbohrerp.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Erdbohrerp.jpg",
+  "author": "Vermip",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "site": "Wikimedia Commons"
+ },
+ "cement-mixer": {
+  "title": "Mini concrete mixer.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Mini_concrete_mixer.jpg",
+  "author": "Al Riaz Uddin",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "power-trowel": {
+  "title": "Hand-push electric concrete trowel.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Hand-push_electric_concrete_trowel.jpg",
+  "author": "Fumikas Sagisavas",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "bull-float": {
+  "title": "Blue Grass Chemical Agent-Destruction Pilot Plant Munitions Demilitarization Building Finishing Concrete (4604675852).jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Blue_Grass_Chemical_Agent-Destruction_Pilot_Plant_Munitions_Demilitarization_Building_Finishing_Concrete_(4604675852).jpg",
+  "author": "PEO ACWA",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "site": "Wikimedia Commons"
+ },
+ "floor-grinder": {
+  "title": "DURATIQ concrete grinding machine.png",
+  "source": "https://commons.wikimedia.org/wiki/File:DURATIQ_concrete_grinding_machine.png",
+  "author": "Davitzo",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "concrete-hand-grinder": {
+  "title": "Neuverlegung „Spur der Erinnerung“ am Waidmarkt, Köln-5813.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Neuverlegung_%E2%80%9ESpur_der_Erinnerung%E2%80%9C_am_Waidmarkt,_K%C3%B6ln-5813.jpg",
+  "author": "Raimond Spekking",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "core-drill": {
+  "title": "Makita 8406 Diamon Core Drill (4887726030).jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Makita_8406_Diamon_Core_Drill_(4887726030).jpg",
+  "author": "Mark Hunter",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "site": "Wikimedia Commons"
+ },
+ "wall-chaser": {
+  "title": "Einhell TC-MA 1300.JPG",
+  "source": "https://commons.wikimedia.org/wiki/File:Einhell_TC-MA_1300.JPG",
+  "author": "Dmitry G",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "site": "Wikimedia Commons"
+ },
+ "plate-compactor": {
+  "title": "Building Fairs Brno 2011 (160).jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Building_Fairs_Brno_2011_(160).jpg",
+  "author": "Pavel Ševela",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "site": "Wikimedia Commons"
+ },
+ "plate-compactor-reversible": {
+  "title": "Building Fairs Brno 2011 (162).jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Building_Fairs_Brno_2011_(162).jpg",
+  "author": "Pavel Ševela",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "site": "Wikimedia Commons"
+ },
+ "rammer": {
+  "title": "Trilstamper.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Trilstamper.jpg",
+  "author": "Rasbak",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "site": "Wikimedia Commons"
+ },
+ "roller-drum": {
+  "title": "Bomag Tandem Roller 02.JPG",
+  "source": "https://commons.wikimedia.org/wiki/File:Bomag_Tandem_Roller_02.JPG",
+  "author": "Cherubino",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "trench-roller": {
+  "title": "2008-08-28 Wacker RT trench roller.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:2008-08-28_Wacker_RT_trench_roller.jpg",
+  "author": "Ildar Sagdejev (Specious)",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "excavator-mini": {
+  "title": "Unknown mini excavator - Arlington, MA.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Unknown_mini_excavator_-_Arlington,_MA.jpg",
+  "author": "Daderot",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "site": "Wikimedia Commons"
+ },
+ "excavator": {
+  "title": "Case mini excavator - Arlington, MA.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Case_mini_excavator_-_Arlington,_MA.jpg",
+  "author": "Daderot",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "site": "Wikimedia Commons"
+ },
+ "mini-loader": {
+  "title": "Agritechnica 2023, Hanover (P1160270-RR).jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Agritechnica_2023,_Hanover_(P1160270-RR).jpg",
+  "author": "MB-one",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "skid-steer": {
+  "title": "Araraquara (2020 October) 337.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Araraquara_(2020_October)_337.jpg",
+  "author": "Sturm",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "tracked-dumper": {
+  "title": "Yanmar C12R tracked dumper 01.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Yanmar_C12R_tracked_dumper_01.jpg",
+  "author": "Basotxerri",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "trencher": {
+  "title": "Ditch Witch C30X, 2024 Mohács.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Ditch_Witch_C30X,_2024_Moh%C3%A1cs.jpg",
+  "author": "Globetrotter19",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "demolition-hammer": {
+  "title": "Pneumatic drill.jpeg",
+  "source": "https://commons.wikimedia.org/wiki/File:Pneumatic_drill.jpeg",
+  "author": "Anthony Appleyard (English Wikipedia)",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "site": "Wikimedia Commons"
+ },
+ "cut-off-saw-petrol": {
+  "title": "Engine cutter 55616 2027.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Engine_cutter_55616_2027.jpg",
+  "author": "Niihama City (新居浜市)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "rotary-hammer": {
+  "title": "Bohrhammer Kress Elektrowerkzeuge.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Bohrhammer_Kress_Elektrowerkzeuge.jpg",
+  "author": "Zimin.V.G.",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "site": "Wikimedia Commons"
+ },
+ "hammer-drill": {
+  "title": "Hammer drill-1.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Hammer_drill-1.jpg",
+  "author": "Shakespeare (English Wikipedia)",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "site": "Wikimedia Commons"
+ },
+ "impact-wrench": {
+  "title": "Cordless Impact Wrenches & Driver.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Cordless_Impact_Wrenches_%26_Driver.jpg",
+  "author": "Hychika",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "mag-drill": {
+  "title": "Compact magnetic drilling machine.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Compact_magnetic_drilling_machine.jpg",
+  "author": "Rohan von Indien",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "jigsaw": {
+  "title": "Jigsaw AccuMaster.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Jigsaw_AccuMaster.jpg",
+  "author": "Артём В.",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "recip-saw": {
+  "title": "Makita JR3070CT Reciprocating Saw (4887119615).jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Makita_JR3070CT_Reciprocating_Saw_(4887119615).jpg",
+  "author": "Mark Hunter",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "site": "Wikimedia Commons"
+ },
+ "mitre-saw": {
+  "title": "MiterSaw.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:MiterSaw.jpg",
+  "author": "Lance Fisher",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+  "site": "Wikimedia Commons"
+ },
+ "metal-cut-off-saw": {
+  "title": "Let the Sparks Fly - The Makita 2414NB Abrasive Cut Off Saw (4070957523).jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Let_the_Sparks_Fly_-_The_Makita_2414NB_Abrasive_Cut_Off_Saw_(4070957523).jpg",
+  "author": "Mark Hunter",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "site": "Wikimedia Commons"
+ },
+ "planer": {
+  "title": "Makita KP0800 Planer (2).jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Makita_KP0800_Planer_(2).jpg",
+  "author": "Mark Hunter",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "site": "Wikimedia Commons"
+ },
+ "framing-nailer": {
+  "title": "Makita GN900SE Gas Nailer (3991070032).png",
+  "source": "https://commons.wikimedia.org/wiki/File:Makita_GN900SE_Gas_Nailer_(3991070032).png",
+  "author": "Mark Hunter",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "site": "Wikimedia Commons"
+ },
+ "brad-nailer": {
+  "title": "Nail gun 008.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Nail_gun_008.jpg",
+  "author": "Boatbuilder",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "site": "Wikimedia Commons"
+ },
+ "welder": {
+  "title": "Soldadora inverter Lüsqtoff Iron-140 (1).jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Soldadora_inverter_L%C3%BCsqtoff_Iron-140_(1).jpg",
+  "author": "Just a Man",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "torque-wrench": {
+  "title": "1-4\" 5-25Nm.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:1-4%22_5-25Nm.jpg",
+  "author": "Sunnyhappy123",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "generator": {
+  "title": "Portable electrical generator angle.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Portable_electrical_generator_angle.jpg",
+  "author": "Gbleem (English Wikipedia)",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "site": "Wikimedia Commons"
+ },
+ "generator-inverter": {
+  "title": "Gasoline Generator 2026-08-12 ROYU Electrical Inverter Type 03.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Gasoline_Generator_2026-08-12_ROYU_Electrical_Inverter_Type_03.jpg",
+  "author": "P1898",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "extension-lead": {
+  "title": "Extension cord 02.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Extension_cord_02.jpg",
+  "author": "Sally V",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "step-ladder": {
+  "title": "Ladder 2.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Ladder_2.jpg",
+  "author": "rrafson",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "site": "Wikimedia Commons"
+ },
+ "scaffold": {
+  "title": "Rollgerüst Alu und Mist.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Rollger%C3%BCst_Alu_und_Mist.jpg",
+  "author": "Leo Miregalitheo",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "acrow-prop": {
+  "title": "Bauma13 (37).jpeg",
+  "source": "https://commons.wikimedia.org/wiki/File:Bauma13_(37).jpeg",
+  "author": "JoKalliauer",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "site": "Wikimedia Commons"
+ },
+ "drain-eel": {
+  "title": "Electric-Drain-Cleaner.png",
+  "source": "https://commons.wikimedia.org/wiki/File:Electric-Drain-Cleaner.png",
+  "author": "Pgdp123",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "site": "Wikimedia Commons"
+ },
+ "drain-snake": {
+  "title": "Handheld-Drain-Auger.png",
+  "source": "https://commons.wikimedia.org/wiki/File:Handheld-Drain-Auger.png",
+  "author": "Pgdp123",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0",
+  "site": "Wikimedia Commons"
+ },
+ "drain-jetter": {
+  "title": "Pressure-Washer-Sewer-Jetter-Attachment.png",
+  "source": "https://commons.wikimedia.org/wiki/File:Pressure-Washer-Sewer-Jetter-Attachment.png",
+  "author": "Pgdp123",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0",
+  "site": "Wikimedia Commons"
+ },
+ "pipe-threader": {
+  "title": "Pipe cutting and threading machine.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Pipe_cutting_and_threading_machine.jpg",
+  "author": "Fumikas Sagisavas",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "site": "Wikimedia Commons"
+ },
+ "pipe-press": {
+  "title": "Radial-press-for-press-fitting-systems.JPG",
+  "source": "https://commons.wikimedia.org/wiki/File:Radial-press-for-press-fitting-systems.JPG",
+  "author": "Cschirp",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "site": "Wikimedia Commons"
+ },
+ "submersible-pump": {
+  "title": "Submersible pump in action.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Submersible_pump_in_action.jpg",
+  "author": "Kemikungen",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0",
+  "site": "Wikimedia Commons"
+ },
+ "trash-pump": {
+  "title": "Water pumping machine.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Water_pumping_machine.jpg",
+  "author": "Anniwinner",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "pallet-jack": {
+  "title": "Hubwagen.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Hubwagen.jpg",
+  "author": "Markus Hagenlocher",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "site": "Wikimedia Commons"
+ },
+ "engine-hoist": {
+  "title": "ZZ4 on the hoist - 4189433670.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:ZZ4_on_the_hoist_-_4189433670.jpg",
+  "author": "simonov",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+  "site": "Wikimedia Commons"
+ },
+ "chain-block": {
+  "title": "Chain-block-takel.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Chain-block-takel.jpg",
+  "author": "Aldifahri16",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "pedestal-fan": {
+  "title": "Industrial pedestal fan.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Industrial_pedestal_fan.jpg",
+  "author": "Mk2010",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "site": "Wikimedia Commons"
+ },
+ "portable-ac": {
+  "title": "Monoblock air conditioner.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Monoblock_air_conditioner.jpg",
+  "author": "Морфиус",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "site": "Wikimedia Commons"
+ },
+ "evap-cooler": {
+  "title": "Iwata air cooler (2023-06-19).jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Iwata_air_cooler_(2023-06-19).jpg",
+  "author": "PaulGorduiz106",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "extraction-fan": {
+  "title": "Fan-exhaust-Tamil Nadu.JPG",
+  "source": "https://commons.wikimedia.org/wiki/File:Fan-exhaust-Tamil_Nadu.JPG",
+  "author": "Tha-uzhavan",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "site": "Wikimedia Commons"
+ },
+ "patio-heater": {
+  "title": "Estufa exterior de butano.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Estufa_exterior_de_butano.jpg",
+  "author": "Luis Miguel Bugallo Sánchez (Lmbuga)",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "site": "Wikimedia Commons"
+ },
+ "rotary-laser": {
+  "title": "Niwelator laserowy NL540.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Niwelator_laserowy_NL540.jpg",
+  "author": "Pokarwr",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "moisture-meter": {
+  "title": "Feuchtemesser.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Feuchtemesser.jpg",
+  "author": "Ralf Pfeifer",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "laser-distance": {
+  "title": "2023 Dalmierz laserowy Bosh GLM 30.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:2023_Dalmierz_laserowy_Bosh_GLM_30.jpg",
+  "author": "Jacek Halicki",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "temp-fence": {
+  "title": "C Block, City Campus, Ara Institute of Canterbury, Christchurch, New Zealand 06.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:C_Block,_City_Campus,_Ara_Institute_of_Canterbury,_Christchurch,_New_Zealand_06.jpg",
+  "author": "Michal Klajban",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "box-trailer": {
+  "title": "12' Box Trailer $500 - SOLD",
+  "source": "https://www.flickr.com/photos/23299229@N06/4665994311",
+  "author": "Northwest Rafting Company",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "site": "Flickr"
+ },
+ "dumpy-level": {
+  "title": "Niwelator PZO Ni30-20.JPG",
+  "source": "https://commons.wikimedia.org/wiki/File:Niwelator_PZO_Ni30-20.JPG",
+  "author": "Flyz1",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "site": "Wikimedia Commons"
+ },
+ "pressure-washer": {
+  "title": "A man in a yellow vest is cleaning a street",
+  "source": "https://unsplash.com/photos/a-man-in-a-yellow-vest-is-cleaning-a-street-gal5jKCgDVo",
+  "author": "@thegraphicspace",
+  "license": "Unsplash License",
+  "license_url": "https://unsplash.com/license",
+  "site": "Unsplash"
+ },
+ "hedge-trimmer": {
+  "title": "Person trimming hedge on ladder",
+  "source": "https://unsplash.com/photos/person-trimming-hedge-on-ladder-QnodCAbcqvc",
+  "author": "@mustaphaturhan",
+  "license": "Unsplash License",
+  "license_url": "https://unsplash.com/license",
+  "site": "Unsplash"
+ },
+ "leaf-blower": {
+  "title": "A man with a leaf blower in a yard",
+  "source": "https://unsplash.com/photos/a-man-with-a-leaf-blower-in-a-yard-20Xibv0RrDo",
+  "author": "@rex_filmer",
+  "license": "Unsplash License",
+  "license_url": "https://unsplash.com/license",
+  "site": "Unsplash"
+ },
+ "line-trimmer": {
+  "title": "Man trims overgrown grass with a string trimmer",
+  "source": "https://unsplash.com/photos/man-trims-overgrown-grass-with-a-string-trimmer-dvipT9WMNis",
+  "author": "@kenny_kalix",
+  "license": "Unsplash License",
+  "license_url": "https://unsplash.com/license",
+  "site": "Unsplash"
+ },
+ "drill": {
+  "title": "Red cordless powerdrill",
+  "source": "https://unsplash.com/photos/red-cordless-powerdrill-CuDoRFyTkAQ",
+  "author": "@heyquilia",
+  "license": "Unsplash License",
+  "license_url": "https://unsplash.com/license",
+  "site": "Unsplash"
+ },
+ "angle-grinder": {
+  "title": "A man working with a grinder on a piece of metal",
+  "source": "https://unsplash.com/photos/a-man-working-with-a-grinder-on-a-piece-of-metal-fZEC4pR4Kpo",
+  "author": "@heberdavisphotography",
+  "license": "Unsplash License",
+  "license_url": "https://unsplash.com/license",
+  "site": "Unsplash"
+ },
+ "circular-saw": {
+  "title": "A person using a circular saw to cut a piece of wood",
+  "source": "https://unsplash.com/photos/a-person-using-a-circular-saw-to-cut-a-piece-of-wood-SdGWs9shP0o",
+  "author": "@c3k",
+  "license": "Unsplash License",
+  "license_url": "https://unsplash.com/license",
+  "site": "Unsplash"
+ },
+ "ladder": {
+  "title": "A ladder leaning up against a concrete wall",
+  "source": "https://unsplash.com/photos/a-ladder-leaning-up-against-a-concrete-wall-dDZ1JjQXmlY",
+  "author": "@nickpage",
+  "license": "Unsplash License",
+  "license_url": "https://unsplash.com/license",
+  "site": "Unsplash"
+ },
+ "hand-truck": {
+  "title": "Man pushing hand truck with plastic drum",
+  "source": "https://unsplash.com/photos/man-pushing-hand-truck-with-plastic-drum-KufOjYrd3mg",
+  "author": "@norevisions",
+  "license": "Unsplash License",
+  "license_url": "https://unsplash.com/license",
+  "site": "Unsplash"
+ },
+ "mini-excavator": {
+  "title": "Mini excavator with coiled pipes on grassy ground",
+  "source": "https://unsplash.com/photos/mini-excavator-with-coiled-pipes-on-grassy-ground-L3eEgJT2R-c",
+  "author": "@skstrannik",
+  "license": "Unsplash License",
+  "license_url": "https://unsplash.com/license",
+  "site": "Unsplash"
+ },
+ "portable-toilet": {
+  "title": "A couple of green portable toilets sitting next to each other",
+  "source": "https://unsplash.com/photos/a-couple-of-green-portable-toilets-sitting-next-to-each-other-hQZx1b_SJZ4",
+  "author": "@deankfick",
+  "license": "Unsplash License",
+  "license_url": "https://unsplash.com/license",
+  "site": "Unsplash"
+ }
+}

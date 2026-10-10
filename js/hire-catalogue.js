@@ -39,17 +39,24 @@
     return '<p class="equip-price equip-price--por"><strong>Price on request</strong></p>';
   }
 
+  /* Photos: 4:3 WebP with a 400w and an 800w variant. Only the first few cards (above the fold) load eagerly. */
+  var SIZES = "(max-width: 379px) 92vw, (max-width: 559px) 46vw, 320px";
+  var eagerLeft = 0;
+  function photoImg(p, name) {
+    var eager = eagerLeft > 0; eagerLeft--;
+    return '<img src="' + esc(p.src) + '"' + (p.srcset ? ' srcset="' + esc(p.srcset) + '" sizes="' + SIZES + '"' : "") +
+      ' alt="' + esc(p.alt || name) + '" width="' + (p.width || 640) + '" height="' + (p.height || 480) + '"' +
+      (eager ? ' fetchpriority="high"' : ' loading="lazy"') + ' decoding="async">';
+  }
+
   function card(it) {
     var f = filterOf(it.filter) || { icon: "i-tools" };
-    var media = it.photo
-      ? '<img src="' + esc(it.photo.src) + '" alt="' + esc(it.photo.alt || it.name) + '" loading="lazy" width="640" height="480">'
-      : icon(it.icon || f.icon);
-    var title = it.href ? '<a href="' + esc(it.href) + '">' + esc(it.name) + "</a>" : esc(it.name);
+    var media = it.photo ? photoImg(it.photo, it.name) : icon(it.icon || f.icon);
+    var href = it.href || "hire-item.html?item=" + encodeURIComponent(it.id);
+    var title = '<a href="' + esc(href) + '">' + esc(it.name) + "</a>";
     var tags = '<span class="tag-weight tag-weight--' + esc(it.weight) + '">' + (it.weight === "heavy" ? "Heavy" : "Light") + "</span>" +
       (it.owner_item ? '<span class="tag-owner">' + icon("i-star") + " Our own kit</span>" : "");
-    var book = it.href
-      ? '<a class="btn btn--outline btn--sm btn--block" href="' + esc(it.href) + '">View details<span class="sr-only"> for ' + esc(it.name) + "</span></a>"
-      : '<span class="btn btn--sm btn--block btn--soon" aria-disabled="true">Book online: coming soon</span>';
+    var book = '<a class="btn btn--outline btn--sm btn--block" href="' + esc(href) + '">View details<span class="sr-only"> for ' + esc(it.name) + "</span></a>";
     return '<article class="equip-card' + (it.pinned ? " equip-card--pinned" : "") + (it.photo ? "" : " equip-card--icon") + '">' +
       '<div class="equip-card__media">' + media + "</div>" +
       '<div class="equip-card__body">' +
@@ -89,6 +96,7 @@
 
   function render(announce) {
     var list = ITEMS.filter(matches);
+    eagerLeft = 3;
     var html = "";
     var pinned = list.filter(function (i) { return i.pinned; });
     var rest = list;

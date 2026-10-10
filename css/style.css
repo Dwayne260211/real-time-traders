@@ -1468,3 +1468,16 @@ p { text-wrap: pretty; }
 @media (min-width: 768px) { .admin-login__card { padding: 34px 36px; } }
 .footer__admin { margin: 0; font-size: 12px; }
 .footer__admin a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 6px; color: #4a5263; text-decoration: underline; text-underline-offset: 3px; }
+/* Hire photo credits */
+.hire-credits { margin: 20px 0 0; font-size: 13px; color: var(--muted); }
+.hire-credits a, .photo-credit a { color: var(--blue); text-decoration: underline; text-underline-offset: 2px; }
+.photo-credit { margin: -8px 0 14px; font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+.credits-page > p { max-width: 75ch; }
+.credits-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.credits-table th, .credits-table td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line, #e3e7ee); }
+.credits-table td { overflow-wrap: anywhere; }
+.credits-table thead th { background: var(--soft); font-weight: 700; }
+.credits-table small { color: var(--muted); }
+/* Static (catalogue) items on hire-item.html */
+.static-enquiry p { margin: 0 0 12px; }
+.static-enquiry .btn + .btn { margin-top: 10px; }

@@ -23,7 +23,9 @@ You can edit `data/hire-items.json` directly; it must stay valid JSON. Each item
   "filter": "gardening",
   "weight": "light",
   "rates": { "day": 40.5, "weekend": 61, "week": 139.5 },
-  "photo": { "src": "images/hire/hedge-trimmer.webp", "alt": "A person trimming a tall hedge" }
+  "photo": { "src": "images/hire/rammer-800.webp", "srcset": "images/hire/rammer-400.webp 400w, images/hire/rammer-800.webp 800w",
+             "width": 800, "height": 600, "alt": "Jumping jack rammer",
+             "credit": { "author": "Rasbak", "license": "CC BY-SA 3.0", "license_url": "https://creativecommons.org/licenses/by-sa/3.0/", "source": "https://commons.wikimedia.org/wiki/File:Trilstamper.jpg" } }
 }
 ```
 
@@ -33,7 +35,7 @@ What each field does:
 - **rates** are AUD with no GST, and any of day, weekend or week can be left out.
   - Set `"rates": null` to show **Price on request**.
   - For a flat per-hire price, use `"rates": null, "flat": 11.5`. It shows as "$11.50 per hire (flat rate)".
-- **photo** is optional; without it the card shows the category icon. Put photos in `images/hire/` as WebP (640x480 works well) and credit them in `docs/image-credits.md`. Only use photos you own or that are licensed for free commercial use (e.g. the Unsplash License). Never copy competitor photos, text or prices.
+- **photo** is optional; without it the card shows the category icon. Photos are set in `PHOTOS` in `scripts/build-hire-data.py` (item id -> photo name + alt text). Put a 4:3 photo in `images/hire/` as `<name>-400.webp` and `<name>-800.webp`, add its sizes to `images/hire/sizes.json` and its source/author/licence to `images/hire/credits.json`, then run `python3 scripts/build-hire-data.py && python3 scripts/build-photo-credits.py` and credit it in `docs/image-credits.md`. Every item links to `hire-item.html?item=<id>`, which shows the photo, rates, hire terms and Enquire / Call us. Only use photos you own or that are licensed for free commercial use (the Unsplash, Pexels or Pixabay licences, or Wikimedia Commons CC0 / CC BY / CC BY-SA with credit). Never copy competitor photos, text or prices.
 - **pinned** set to `true` puts the item first, under "Our own gear". **owner_item** set to `true` adds an "Our own kit" badge. `photos` (an array) holds extra photos for later use. `summary` is an optional short line.
 
 Every card shows the rate (or Price on request), "Call or email to check availability", an **Enquire** button (opens an email to itsreallymejohnnyc@gmail.com with the subject "Hire enquiry: <item name>") and a disabled-looking **Book online: coming soon** label. The page has one prominent **Call us** button with the phone hours near the top (plus the top-bar link and the sticky mobile bar). This note shows above the list: "Prices in AUD. No GST added. Price, availability and terms confirmed when you call." Hire terms stay "to be confirmed" until the owner sets them.

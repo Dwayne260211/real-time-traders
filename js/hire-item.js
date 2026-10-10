@@ -11,8 +11,94 @@
   var notice = $("[data-item-notice]"), noticeText = $("[data-item-notice-text]");
   var layout = $("[data-item]");
 
+  /* ---------- catalogue items (hire-item.html?item=<id> from data/hire-items.json) ----------
+     Shown with photo, rates and terms; booked by email or phone (online booking isn't open for these). */
+  var EMAIL = "itsreallymejohnnyc@gmail.com", TEL = "tel:+61422909739";
+  var staticId = params.get("item");
+  if (staticId || (id && !/^[0-9a-f-]{36}$/i.test(id))) { showStatic(staticId || id); return; }
+  if (!id) { noticeText.textContent = "No item was selected. Browse the hire catalogue to choose one."; return; }
   if (!H.config()) return;                                  // static "coming soon" notice stays
   if (!/^[0-9a-f-]{36}$/i.test(id)) { noticeText.textContent = "No item was selected. Browse the hire catalogue to choose one."; return; }
+
+  function dollars(v) { v = Number(v); return "$" + (v % 1 ? v.toFixed(2) : String(v)); }
+  function staticGallery(it, f) {
+    var g = $("[data-gallery]");
+    var photos = it.photos && it.photos.length ? it.photos : (it.photo ? [it.photo] : []);
+    if (!photos.length) { g.innerHTML = '<div class="gallery__main">' + H.icon(it.icon || f.icon || "i-tools") + "</div>"; return; }
+    function main(i) {
+      var p = photos[i];
+      return '<img src="' + H.esc(p.src) + '"' + (p.srcset ? ' srcset="' + H.esc(p.srcset) + '" sizes="(min-width: 1024px) 640px, 100vw"' : "") +
+        ' alt="' + H.esc(p.alt || it.name) + '" width="' + (p.width || 800) + '" height="' + (p.height || 600) + '" fetchpriority="high">';
+    }
+    g.innerHTML = '<div class="gallery__main" data-main>' + main(0) + "</div>" + (photos.length > 1
+      ? '<div class="gallery__thumbs">' + photos.map(function (p, i) {
+          return '<button type="button" data-i="' + i + '" aria-label="Show photo ' + (i + 1) + " of " + photos.length + '"' + (i === 0 ? ' aria-current="true"' : "") +
+            '><img src="' + H.esc(p.src) + '" alt="" loading="lazy" width="76" height="60"></button>';
+        }).join("") + "</div>" : "");
+    g.addEventListener("click", function (e) {
+      var b = e.target.closest("button[data-i]");
+      if (!b) return;
+      g.querySelector("[data-main]").innerHTML = main(Number(b.getAttribute("data-i")));
+      g.querySelectorAll("button[data-i]").forEach(function (x) { x.setAttribute("aria-current", String(x === b)); });
+    });
+    var c = photos[0].credit;
+    if (c) {
+      var p = document.createElement("p");
+      p.className = "photo-credit";
+      p.innerHTML = 'Photo: <a href="' + H.esc(c.source) + '">' + H.esc(c.author) + '</a>, <a href="' + H.esc(c.license_url) + '" rel="license">' + H.esc(c.license) +
+        '</a> (cropped). Shows the type of equipment; the hire item may differ. <a href="photo-credits.html">All photo credits</a>';
+      g.insertAdjacentElement("afterend", p);
+    }
+  }
+  function staticRates(it, note) {
+    var r = it.rates, rows;
+    if (r && r.day != null) rows = [["Daily", r.day, "per day"], ["Weekend", r.weekend, "Saturday to Sunday"], ["Weekly", r.week, "per 7 days"]];
+    else if (it.flat != null) rows = [["Per hire", it.flat, "flat rate"]];
+    else rows = [["Price", null, ""]];
+    $("[data-rates]").innerHTML = '<caption class="sr-only">Hire rates</caption><thead><tr><th scope="col">Rate</th><th scope="col">Price</th><th scope="col">Covers</th></tr></thead><tbody>' +
+      rows.map(function (row) {
+        return '<tr><th scope="row">' + row[0] + "</th>" + (row[1] != null ? "<td>" + dollars(row[1]) + "</td><td>" + row[2] + "</td>" : '<td class="is-na" colspan="2">Price on request. Call or email us</td>') + "</tr>";
+      }).join("") + "</tbody>";
+    $("[data-pricing-note]").textContent = note || "Prices in AUD. No GST added. Price, availability and terms confirmed when you call.";
+  }
+  function showStatic(sid) {
+    fetch("data/hire-items.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(function (d) {
+        var it = (d.items || []).filter(function (x) { return x.id === sid; })[0];
+        if (!it) { noticeText.textContent = "We couldn't find that item. Browse the hire catalogue, or call or email us to ask."; return; }
+        var f = (d.filters || []).filter(function (x) { return x.slug === it.filter; })[0] || {};
+        notice.hidden = true; layout.hidden = false;
+        document.title = it.name + " hire | Real Time Traders";
+        $("[data-item-title]").textContent = it.name;
+        $("[data-crumb]").textContent = it.name;
+        var sub = document.querySelector(".page-banner p"); if (sub) sub.textContent = "Photo, rates and hire terms. Call or email us to check availability.";
+        $("[data-cat]").textContent = it.category || f.name || "";
+        $("[data-desc]").textContent = (it.summary ? it.summary + " " : "") +
+          "Call or email us to check availability, the exact model and the price for your dates.";
+        staticGallery(it, f);
+        staticRates(it, d.note);
+        /* booking panel: enquiry only (no online booking or payment for catalogue items) */
+        $("#book-title").textContent = "How to hire";
+        var jump = $("[data-item-jump]"); jump.lastChild.textContent = " How to hire";
+        [$("[data-dates]"), $("[data-unavailable]"), $("[data-book-signin]"), $("[data-book-form]")].forEach(function (el) { if (el) el.hidden = true; });
+        var box = $("[data-enquiry-only]");
+        box.classList.add("static-enquiry");
+        box.innerHTML = "<p><strong>Book by phone or email.</strong> Online booking isn't open for this item yet. Tell us your dates and we'll confirm availability, the price and the hire terms. No payment is taken online.</p>" +
+          '<a href="mailto:' + EMAIL + "?subject=" + encodeURIComponent("Hire enquiry: " + it.name) + '" class="btn btn--primary btn--block">' + H.icon("i-mail") + " Enquire by email</a>" +
+          '<a href="' + TEL + '" class="btn btn--outline btn--block">' + H.icon("i-phone") + " Call us</a>";
+        box.hidden = false;
+        /* hire terms from the live settings when available; otherwise "to be confirmed" stays */
+        if (H.config && H.config()) {
+          H.client().then(function (sb) { return H.loadSettings(sb); })
+            .then(function (st) { H.renderTerms($("[data-terms]"), st); })
+            .catch(function (err) { console.warn("Hire terms:", err); });
+        }
+      })
+      .catch(function (err) {
+        console.warn("Hire item:", err);
+        noticeText.textContent = "We couldn't load this item just now. Please call or email us to ask about hire.";
+      });
+  }
 
   var sb, item, settings, session, lastQuote = null;
   var datesForm = $("[data-dates]"), avail = $("[data-avail]");

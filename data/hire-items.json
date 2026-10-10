@@ -159,7 +159,16 @@
    },
    "photo": {
     "src": "images/hire/pressure-washer.webp",
-    "alt": "A worker cleaning paving with a pressure washer surface cleaner"
+    "srcset": "images/hire/pressure-washer-400.webp 400w, images/hire/pressure-washer.webp 640w",
+    "width": 640,
+    "height": 480,
+    "alt": "A worker cleaning paving with a pressure washer surface cleaner",
+    "credit": {
+     "author": "@thegraphicspace",
+     "license": "Unsplash License",
+     "license_url": "https://unsplash.com/license",
+     "source": "https://unsplash.com/photos/a-man-in-a-yellow-vest-is-cleaning-a-street-gal5jKCgDVo"
+    }
    }
   },
   {
@@ -172,6 +181,19 @@
     "day": 62.0,
     "weekend": 93.0,
     "week": 289.5
+   },
+   "photo": {
+    "src": "images/hire/pressure-washer.webp",
+    "srcset": "images/hire/pressure-washer-400.webp 400w, images/hire/pressure-washer.webp 640w",
+    "width": 640,
+    "height": 480,
+    "alt": "A worker cleaning paving with a petrol pressure washer",
+    "credit": {
+     "author": "@thegraphicspace",
+     "license": "Unsplash License",
+     "license_url": "https://unsplash.com/license",
+     "source": "https://unsplash.com/photos/a-man-in-a-yellow-vest-is-cleaning-a-street-gal5jKCgDVo"
+    }
    }
   },
   {
@@ -184,6 +206,19 @@
     "day": 175.5,
     "weekend": 263.0,
     "week": 616.5
+   },
+   "photo": {
+    "src": "images/hire/pressure-washer.webp",
+    "srcset": "images/hire/pressure-washer-400.webp 400w, images/hire/pressure-washer.webp 640w",
+    "width": 640,
+    "height": 480,
+    "alt": "A worker cleaning paving with a petrol pressure washer",
+    "credit": {
+     "author": "@thegraphicspace",
+     "license": "Unsplash License",
+     "license_url": "https://unsplash.com/license",
+     "source": "https://unsplash.com/photos/a-man-in-a-yellow-vest-is-cleaning-a-street-gal5jKCgDVo"
+    }
    }
   },
   {
@@ -196,6 +231,19 @@
     "day": 54.0,
     "weekend": 81.0,
     "week": 189.0
+   },
+   "photo": {
+    "src": "images/hire/pressure-washer-electric-800.webp",
+    "srcset": "images/hire/pressure-washer-electric-400.webp 400w, images/hire/pressure-washer-electric-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Electric pressure washer",
+    "credit": {
+     "author": "Rama",
+     "license": "CC BY-SA 2.0 fr",
+     "license_url": "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Karcher-p1020712.jpg"
+    }
    }
   },
   {
@@ -211,7 +259,16 @@
    },
    "photo": {
     "src": "images/hire/pressure-washer.webp",
-    "alt": "A worker cleaning paving with a pressure washer surface cleaner"
+    "srcset": "images/hire/pressure-washer-400.webp 400w, images/hire/pressure-washer.webp 640w",
+    "width": 640,
+    "height": 480,
+    "alt": "A worker cleaning paving with a pressure washer surface cleaner",
+    "credit": {
+     "author": "@thegraphicspace",
+     "license": "Unsplash License",
+     "license_url": "https://unsplash.com/license",
+     "source": "https://unsplash.com/photos/a-man-in-a-yellow-vest-is-cleaning-a-street-gal5jKCgDVo"
+    }
    }
   },
   {
@@ -224,6 +281,19 @@
     "day": 39.0,
     "weekend": 46.5,
     "week": 237.5
+   },
+   "photo": {
+    "src": "images/hire/carpet-cleaner-800.webp",
+    "srcset": "images/hire/carpet-cleaner-400.webp 400w, images/hire/carpet-cleaner-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Carpet cleaning extraction machine",
+    "credit": {
+     "author": "Ktr101",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Floor_cleaner_inside_Sullivan_Hall.jpg"
+    }
    }
   },
   {
@@ -236,6 +306,19 @@
     "day": 15.0,
     "weekend": 22.5,
     "week": 144.0
+   },
+   "photo": {
+    "src": "images/hire/carpet-dryer-800.webp",
+    "srcset": "images/hire/carpet-dryer-400.webp 400w, images/hire/carpet-dryer-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Carpet dryer air mover",
+    "credit": {
+     "author": "Ser Amantio di Nicolao",
+     "license": "CC0",
+     "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:XPower_air_mover_sits_in_the_corner.jpg"
+    }
    }
   },
   {
@@ -248,6 +331,19 @@
     "day": 45.0,
     "weekend": 67.5,
     "week": 153.0
+   },
+   "photo": {
+    "src": "images/hire/wet-dry-vacuum-800.webp",
+    "srcset": "images/hire/wet-dry-vacuum-400.webp 400w, images/hire/wet-dry-vacuum-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Industrial wet and dry vacuum cleaner",
+    "credit": {
+     "author": "PvOberstein",
+     "license": "CC0",
+     "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Advance_VL500_wetdry_vacuum_Yonge.jpg"
+    }
    }
   },
   {
@@ -260,6 +356,19 @@
     "day": 99.0,
     "weekend": 148.5,
     "week": 457.0
+   },
+   "photo": {
+    "src": "images/hire/wet-dry-vacuum-800.webp",
+    "srcset": "images/hire/wet-dry-vacuum-400.webp 400w, images/hire/wet-dry-vacuum-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Industrial wet and dry vacuum cleaner",
+    "credit": {
+     "author": "PvOberstein",
+     "license": "CC0",
+     "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Advance_VL500_wetdry_vacuum_Yonge.jpg"
+    }
    }
   },
   {
@@ -268,7 +377,20 @@
    "category": "Cleaning",
    "filter": "cleaning",
    "weight": "light",
-   "rates": null
+   "rates": null,
+   "photo": {
+    "src": "images/hire/steam-cleaner-800.webp",
+    "srcset": "images/hire/steam-cleaner-400.webp 400w, images/hire/steam-cleaner-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Steam cleaner",
+    "credit": {
+     "author": "Cjp24",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Polti_steam_mop_or_portable.jpg"
+    }
+   }
   },
   {
    "id": "floor-scrubber-walk-behind-compact",
@@ -280,6 +402,19 @@
     "day": 155.5,
     "weekend": 233.0,
     "week": 572.0
+   },
+   "photo": {
+    "src": "images/hire/floor-scrubber-800.webp",
+    "srcset": "images/hire/floor-scrubber-400.webp 400w, images/hire/floor-scrubber-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Walk-behind floor scrubber",
+    "credit": {
+     "author": "Cantons-de-l'Est",
+     "license": "CC0",
+     "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Floor_cleaning_machine_-_Nobles.jpg"
+    }
    }
   },
   {
@@ -292,6 +427,19 @@
     "day": 64.0,
     "weekend": 96.0,
     "week": 257.0
+   },
+   "photo": {
+    "src": "images/hire/floor-polisher-800.webp",
+    "srcset": "images/hire/floor-polisher-400.webp 400w, images/hire/floor-polisher-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Rotary floor polisher",
+    "credit": {
+     "author": "Arayabee",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%97%E0%B8%B3%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%AA%E0%B8%B0%E0%B8%AD%E0%B8%B2%E0%B8%94.jpg"
+    }
    }
   },
   {
@@ -304,6 +452,19 @@
     "day": 89.0,
     "weekend": 133.5,
     "week": 289.5
+   },
+   "photo": {
+    "src": "images/hire/dehumidifier-800.webp",
+    "srcset": "images/hire/dehumidifier-400.webp 400w, images/hire/dehumidifier-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Portable dehumidifier",
+    "credit": {
+     "author": "Matelo2005",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:D%C3%A9shumidificateur_d%27air_professionnel.jpg"
+    }
    }
   },
   {
@@ -328,6 +489,19 @@
     "day": 72.5,
     "weekend": 109.0,
     "week": 248.0
+   },
+   "photo": {
+    "src": "images/hire/floor-sander-800.webp",
+    "srcset": "images/hire/floor-sander-400.webp 400w, images/hire/floor-sander-800.webp 600w",
+    "width": 600,
+    "height": 450,
+    "alt": "Drum floor sander",
+    "credit": {
+     "author": "Francois gaillard",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Artisan-poncage-parquet-paris-francois-gaillard_07.jpg"
+    }
    }
   },
   {
@@ -364,6 +538,19 @@
     "day": 64.0,
     "weekend": 96.0,
     "week": 257.0
+   },
+   "photo": {
+    "src": "images/hire/tile-saw-800.webp",
+    "srcset": "images/hire/tile-saw-400.webp 400w, images/hire/tile-saw-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Electric wet tile saw",
+    "credit": {
+     "author": "Hustvedt",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Tile_saw.jpg"
+    }
    }
   },
   {
@@ -376,6 +563,19 @@
     "day": 31.5,
     "weekend": 47.0,
     "week": 108.0
+   },
+   "photo": {
+    "src": "images/hire/tile-cutter-800.webp",
+    "srcset": "images/hire/tile-cutter-400.webp 400w, images/hire/tile-cutter-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Manual tile cutter",
+    "credit": {
+     "author": "Wielkijacek",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Montolit_MASTERPIUMA_93_P3.jpg"
+    }
    }
   },
   {
@@ -400,6 +600,19 @@
     "day": 162.0,
     "weekend": 243.0,
     "week": 540.0
+   },
+   "photo": {
+    "src": "images/hire/airless-sprayer-800.webp",
+    "srcset": "images/hire/airless-sprayer-400.webp 400w, images/hire/airless-sprayer-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Airless paint sprayer",
+    "credit": {
+     "author": "Steve Purpy",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Pompa-Airless-TECNOVER-Testarossa-Superquattromila.jpg"
+    }
    }
   },
   {
@@ -424,6 +637,19 @@
     "day": 13.5,
     "weekend": 20.0,
     "week": 45.0
+   },
+   "photo": {
+    "src": "images/hire/orbital-sander-800.webp",
+    "srcset": "images/hire/orbital-sander-400.webp 400w, images/hire/orbital-sander-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Hand-held orbital sander",
+    "credit": {
+     "author": "Mark Hunter",
+     "license": "CC BY 2.0",
+     "license_url": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Makita_BO5041_Random_Orbit_Sander_(6169161017).jpg"
+    }
    }
   },
   {
@@ -436,6 +662,19 @@
     "day": 60.0,
     "weekend": 90.0,
     "week": 208.5
+   },
+   "photo": {
+    "src": "images/hire/belt-sander-800.webp",
+    "srcset": "images/hire/belt-sander-400.webp 400w, images/hire/belt-sander-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Belt sander",
+    "credit": {
+     "author": "Luigi Zanasi",
+     "license": "CC BY-SA 2.0 ca",
+     "license_url": "https://creativecommons.org/licenses/by-sa/2.0/ca/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Belt_sander_bosch.jpg"
+    }
    }
   },
   {
@@ -448,6 +687,19 @@
     "day": 18.0,
     "weekend": 27.0,
     "week": 63.0
+   },
+   "photo": {
+    "src": "images/hire/heat-gun-800.webp",
+    "srcset": "images/hire/heat-gun-400.webp 400w, images/hire/heat-gun-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Heat gun",
+    "credit": {
+     "author": "Suyash Dwivedi",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Hot_air_gun_(1).jpg"
+    }
    }
   },
   {
@@ -460,6 +712,19 @@
     "day": 36.0,
     "weekend": 54.0,
     "week": 108.0
+   },
+   "photo": {
+    "src": "images/hire/lawn-mower-800.webp",
+    "srcset": "images/hire/lawn-mower-400.webp 400w, images/hire/lawn-mower-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Petrol push lawn mower",
+    "credit": {
+     "author": "Famartin",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:2015-05-27_12_41_21_A_lawn_mower_on_Tranquility_Court_in_the_Franklin_Farm_section_of_Oak_Hill,_Fairfax_County,_Virginia.jpg"
+    }
    }
   },
   {
@@ -475,7 +740,16 @@
    },
    "photo": {
     "src": "images/hire/line-trimmer.webp",
-    "alt": "A man trimming long grass with a line trimmer"
+    "srcset": "images/hire/line-trimmer-400.webp 400w, images/hire/line-trimmer.webp 640w",
+    "width": 640,
+    "height": 480,
+    "alt": "A man trimming long grass with a line trimmer",
+    "credit": {
+     "author": "@kenny_kalix",
+     "license": "Unsplash License",
+     "license_url": "https://unsplash.com/license",
+     "source": "https://unsplash.com/photos/man-trims-overgrown-grass-with-a-string-trimmer-dvipT9WMNis"
+    }
    }
   },
   {
@@ -491,7 +765,16 @@
    },
    "photo": {
     "src": "images/hire/hedge-trimmer.webp",
-    "alt": "A person trimming a tall hedge"
+    "srcset": "images/hire/hedge-trimmer-400.webp 400w, images/hire/hedge-trimmer.webp 640w",
+    "width": 640,
+    "height": 480,
+    "alt": "A person trimming a tall hedge",
+    "credit": {
+     "author": "@mustaphaturhan",
+     "license": "Unsplash License",
+     "license_url": "https://unsplash.com/license",
+     "source": "https://unsplash.com/photos/person-trimming-hedge-on-ladder-QnodCAbcqvc"
+    }
    }
   },
   {
@@ -507,7 +790,16 @@
    },
    "photo": {
     "src": "images/hire/leaf-blower.webp",
-    "alt": "A man using a leaf blower in a yard"
+    "srcset": "images/hire/leaf-blower-400.webp 400w, images/hire/leaf-blower.webp 640w",
+    "width": 640,
+    "height": 480,
+    "alt": "A man using a leaf blower in a yard",
+    "credit": {
+     "author": "@rex_filmer",
+     "license": "Unsplash License",
+     "license_url": "https://unsplash.com/license",
+     "source": "https://unsplash.com/photos/a-man-with-a-leaf-blower-in-a-yard-20Xibv0RrDo"
+    }
    }
   },
   {
@@ -520,6 +812,19 @@
     "day": 85.5,
     "weekend": 128.0,
     "week": 342.0
+   },
+   "photo": {
+    "src": "images/hire/chainsaw-800.webp",
+    "srcset": "images/hire/chainsaw-400.webp 400w, images/hire/chainsaw-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Petrol chainsaw",
+    "credit": {
+     "author": "Verdealberi",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Blocco_catena_motosega_per_wiki5.jpg"
+    }
    }
   },
   {
@@ -532,6 +837,19 @@
     "day": 79.0,
     "weekend": 118.5,
     "week": 288.5
+   },
+   "photo": {
+    "src": "images/hire/pole-saw-800.webp",
+    "srcset": "images/hire/pole-saw-400.webp 400w, images/hire/pole-saw-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Pole saw pruner",
+    "credit": {
+     "author": "StromBer",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Asts%C3%A4ge%26Schere%26Seilzug.jpg"
+    }
    }
   },
   {
@@ -544,6 +862,19 @@
     "day": 69.0,
     "weekend": 103.5,
     "week": 277.0
+   },
+   "photo": {
+    "src": "images/hire/rotary-hoe-800.webp",
+    "srcset": "images/hire/rotary-hoe-400.webp 400w, images/hire/rotary-hoe-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Rotary hoe tiller",
+    "credit": {
+     "author": "Przemysław Jahr",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Glebogryzarka.jpg"
+    }
    }
   },
   {
@@ -556,6 +887,19 @@
     "day": 117.0,
     "weekend": 175.5,
     "week": 468.0
+   },
+   "photo": {
+    "src": "images/hire/lawn-aerator-800.webp",
+    "srcset": "images/hire/lawn-aerator-400.webp 400w, images/hire/lawn-aerator-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Lawn corer aerator",
+    "credit": {
+     "author": "Guipozjim",
+     "license": "CC BY 3.0",
+     "license_url": "https://creativecommons.org/licenses/by/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:AIREADORA_03.JPG"
+    }
    }
   },
   {
@@ -592,6 +936,19 @@
     "day": 14.5,
     "weekend": 22.0,
     "week": 37.0
+   },
+   "photo": {
+    "src": "images/hire/lawn-roller-800.webp",
+    "srcset": "images/hire/lawn-roller-400.webp 400w, images/hire/lawn-roller-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Lawn roller",
+    "credit": {
+     "author": "Corpse Reviver",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Kondara_J09_02.jpg"
+    }
    }
   },
   {
@@ -604,6 +961,19 @@
     "day": 130.5,
     "weekend": 196.0,
     "week": 522.0
+   },
+   "photo": {
+    "src": "images/hire/wood-chipper-800.webp",
+    "srcset": "images/hire/wood-chipper-400.webp 400w, images/hire/wood-chipper-800.webp 602w",
+    "width": 602,
+    "height": 452,
+    "alt": "Towable petrol wood chipper",
+    "credit": {
+     "author": "Michael Trolove",
+     "license": "CC BY-SA 2.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Wood_chipper_display_-_geograph.org.uk_-_4275105.jpg"
+    }
    }
   },
   {
@@ -616,6 +986,19 @@
     "day": 175.5,
     "weekend": 263.0,
     "week": 616.5
+   },
+   "photo": {
+    "src": "images/hire/stump-grinder-800.webp",
+    "srcset": "images/hire/stump-grinder-400.webp 400w, images/hire/stump-grinder-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Stump grinder",
+    "credit": {
+     "author": "Famartin",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:2023-05-12_08_37_56_A_stump_grinder_being_used_to_grind_up_a_Red_Maple_stump_along_Aquetong_Lane_in_the_Mountainview_section_of_Ewing_Township,_Mercer_County,_New_Jersey.jpg"
+    }
    }
   },
   {
@@ -628,6 +1011,19 @@
     "day": 273.5,
     "weekend": 410.0,
     "week": 956.5
+   },
+   "photo": {
+    "src": "images/hire/log-splitter-800.webp",
+    "srcset": "images/hire/log-splitter-400.webp 400w, images/hire/log-splitter-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Hydraulic log splitter",
+    "credit": {
+     "author": "David Monniaux",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Automatic_axe_dsc00844.jpg"
+    }
    }
   },
   {
@@ -640,6 +1036,19 @@
     "day": 89.0,
     "weekend": 133.5,
     "week": 539.0
+   },
+   "photo": {
+    "src": "images/hire/brush-cutter-800.webp",
+    "srcset": "images/hire/brush-cutter-400.webp 400w, images/hire/brush-cutter-800.webp 480w",
+    "width": 480,
+    "height": 360,
+    "alt": "Brush cutter",
+    "credit": {
+     "author": "Green",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Handy_mower.jpg"
+    }
    }
   },
   {
@@ -652,6 +1061,19 @@
     "day": 57.5,
     "weekend": 86.0,
     "week": 174.5
+   },
+   "photo": {
+    "src": "images/hire/knapsack-sprayer-800.webp",
+    "srcset": "images/hire/knapsack-sprayer-400.webp 400w, images/hire/knapsack-sprayer-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Knapsack sprayer",
+    "credit": {
+     "author": "Safapalanadan94",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Knapsack_sprayer.jpg"
+    }
    }
   },
   {
@@ -664,6 +1086,19 @@
     "day": 13.5,
     "weekend": 20.0,
     "week": 45.0
+   },
+   "photo": {
+    "src": "images/hire/wheelbarrow-800.webp",
+    "srcset": "images/hire/wheelbarrow-400.webp 400w, images/hire/wheelbarrow-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Wheelbarrow",
+    "credit": {
+     "author": "Jaimehloaiza",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Carretilla_Herragro_campo.jpg"
+    }
    }
   },
   {
@@ -676,6 +1111,19 @@
     "day": 81.0,
     "weekend": 121.5,
     "week": 295.0
+   },
+   "photo": {
+    "src": "images/hire/post-hole-auger-800.webp",
+    "srcset": "images/hire/post-hole-auger-400.webp 400w, images/hire/post-hole-auger-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Petrol post hole auger",
+    "credit": {
+     "author": "Forest and Kim Starr",
+     "license": "CC BY 3.0 us",
+     "license_url": "https://creativecommons.org/licenses/by/3.0/us/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Starr-030429-0041-Chenopodium_oahuense-digging_holes_with_power_auger_with_Derek-Lua_Makika-Kahoolawe_(24003396884).jpg"
+    }
    }
   },
   {
@@ -688,6 +1136,19 @@
     "day": 67.5,
     "weekend": 101.0,
     "week": 234.0
+   },
+   "photo": {
+    "src": "images/hire/post-hole-auger-800.webp",
+    "srcset": "images/hire/post-hole-auger-400.webp 400w, images/hire/post-hole-auger-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Petrol post hole auger",
+    "credit": {
+     "author": "Forest and Kim Starr",
+     "license": "CC BY 3.0 us",
+     "license_url": "https://creativecommons.org/licenses/by/3.0/us/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Starr-030429-0041-Chenopodium_oahuense-digging_holes_with_power_auger_with_Derek-Lua_Makika-Kahoolawe_(24003396884).jpg"
+    }
    }
   },
   {
@@ -700,6 +1161,19 @@
     "day": 18.0,
     "weekend": 27.0,
     "week": 68.0
+   },
+   "photo": {
+    "src": "images/hire/post-hole-digger-manual-800.webp",
+    "srcset": "images/hire/post-hole-digger-manual-400.webp 400w, images/hire/post-hole-digger-manual-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Manual post hole digger",
+    "credit": {
+     "author": "Vermip",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Erdbohrerp.jpg"
+    }
    }
   },
   {
@@ -712,6 +1186,19 @@
     "day": 49.5,
     "weekend": 74.0,
     "week": 198.0
+   },
+   "photo": {
+    "src": "images/hire/cement-mixer-800.webp",
+    "srcset": "images/hire/cement-mixer-400.webp 400w, images/hire/cement-mixer-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Electric cement mixer",
+    "credit": {
+     "author": "Al Riaz Uddin",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Mini_concrete_mixer.jpg"
+    }
    }
   },
   {
@@ -724,6 +1211,19 @@
     "day": 39.5,
     "weekend": 59.0,
     "week": 158.0
+   },
+   "photo": {
+    "src": "images/hire/cement-mixer-800.webp",
+    "srcset": "images/hire/cement-mixer-400.webp 400w, images/hire/cement-mixer-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Electric cement mixer",
+    "credit": {
+     "author": "Al Riaz Uddin",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Mini_concrete_mixer.jpg"
+    }
    }
   },
   {
@@ -748,6 +1248,19 @@
     "day": 108.5,
     "weekend": 163.0,
     "week": 288.0
+   },
+   "photo": {
+    "src": "images/hire/power-trowel-800.webp",
+    "srcset": "images/hire/power-trowel-400.webp 400w, images/hire/power-trowel-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Walk-behind power trowel",
+    "credit": {
+     "author": "Fumikas Sagisavas",
+     "license": "CC BY 4.0",
+     "license_url": "https://creativecommons.org/licenses/by/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Hand-push_electric_concrete_trowel.jpg"
+    }
    }
   },
   {
@@ -760,6 +1273,19 @@
     "day": 17.0,
     "weekend": 25.5,
     "week": 52.0
+   },
+   "photo": {
+    "src": "images/hire/bull-float-800.webp",
+    "srcset": "images/hire/bull-float-400.webp 400w, images/hire/bull-float-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Concrete bull float",
+    "credit": {
+     "author": "PEO ACWA",
+     "license": "CC BY 2.0",
+     "license_url": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Blue_Grass_Chemical_Agent-Destruction_Pilot_Plant_Munitions_Demilitarization_Building_Finishing_Concrete_(4604675852).jpg"
+    }
    }
   },
   {
@@ -784,6 +1310,19 @@
     "day": 125.0,
     "weekend": 187.5,
     "week": 479.5
+   },
+   "photo": {
+    "src": "images/hire/floor-grinder-800.webp",
+    "srcset": "images/hire/floor-grinder-400.webp 400w, images/hire/floor-grinder-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Walk-behind concrete floor grinder",
+    "credit": {
+     "author": "Davitzo",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:DURATIQ_concrete_grinding_machine.png"
+    }
    }
   },
   {
@@ -796,6 +1335,19 @@
     "day": 125.0,
     "weekend": 187.5,
     "week": 362.5
+   },
+   "photo": {
+    "src": "images/hire/concrete-hand-grinder-800.webp",
+    "srcset": "images/hire/concrete-hand-grinder-400.webp 400w, images/hire/concrete-hand-grinder-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Hand-held concrete grinder",
+    "credit": {
+     "author": "Raimond Spekking",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Neuverlegung_%E2%80%9ESpur_der_Erinnerung%E2%80%9C_am_Waidmarkt,_K%C3%B6ln-5813.jpg"
+    }
    }
   },
   {
@@ -808,6 +1360,19 @@
     "day": 135.0,
     "weekend": 202.5,
     "week": 472.5
+   },
+   "photo": {
+    "src": "images/hire/core-drill-800.webp",
+    "srcset": "images/hire/core-drill-400.webp 400w, images/hire/core-drill-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Concrete core drill",
+    "credit": {
+     "author": "Mark Hunter",
+     "license": "CC BY 2.0",
+     "license_url": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Makita_8406_Diamon_Core_Drill_(4887726030).jpg"
+    }
    }
   },
   {
@@ -820,6 +1385,19 @@
     "day": 99.0,
     "weekend": 148.5,
     "week": 346.5
+   },
+   "photo": {
+    "src": "images/hire/wall-chaser-800.webp",
+    "srcset": "images/hire/wall-chaser-400.webp 400w, images/hire/wall-chaser-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Wall chaser",
+    "credit": {
+     "author": "Dmitry G",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Einhell_TC-MA_1300.JPG"
+    }
    }
   },
   {
@@ -845,6 +1423,19 @@
     "weekend": 86.0,
     "week": 234.0
    },
+   "photo": {
+    "src": "images/hire/plate-compactor-800.webp",
+    "srcset": "images/hire/plate-compactor-400.webp 400w, images/hire/plate-compactor-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Plate compactor",
+    "credit": {
+     "author": "Pavel Ševela",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Building_Fairs_Brno_2011_(160).jpg"
+    }
+   },
    "icon": "i-compactor"
   },
   {
@@ -857,6 +1448,19 @@
     "day": 62.0,
     "weekend": 93.0,
     "week": 238.5
+   },
+   "photo": {
+    "src": "images/hire/plate-compactor-800.webp",
+    "srcset": "images/hire/plate-compactor-400.webp 400w, images/hire/plate-compactor-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Plate compactor",
+    "credit": {
+     "author": "Pavel Ševela",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Building_Fairs_Brno_2011_(160).jpg"
+    }
    },
    "icon": "i-compactor"
   },
@@ -871,6 +1475,19 @@
     "weekend": 270.0,
     "week": 684.5
    },
+   "photo": {
+    "src": "images/hire/plate-compactor-reversible-800.webp",
+    "srcset": "images/hire/plate-compactor-reversible-400.webp 400w, images/hire/plate-compactor-reversible-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Reversible plate compactor",
+    "credit": {
+     "author": "Pavel Ševela",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Building_Fairs_Brno_2011_(162).jpg"
+    }
+   },
    "icon": "i-compactor"
   },
   {
@@ -883,6 +1500,19 @@
     "day": 79.0,
     "weekend": 118.5,
     "week": 306.0
+   },
+   "photo": {
+    "src": "images/hire/rammer-800.webp",
+    "srcset": "images/hire/rammer-400.webp 400w, images/hire/rammer-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Jumping jack rammer",
+    "credit": {
+     "author": "Rasbak",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Trilstamper.jpg"
+    }
    },
    "icon": "i-compactor"
   },
@@ -897,6 +1527,19 @@
     "weekend": 371.0,
     "week": 990.0
    },
+   "photo": {
+    "src": "images/hire/roller-drum-800.webp",
+    "srcset": "images/hire/roller-drum-400.webp 400w, images/hire/roller-drum-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Ride-on double drum roller",
+    "credit": {
+     "author": "Cherubino",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Bomag_Tandem_Roller_02.JPG"
+    }
+   },
    "icon": "i-compactor"
   },
   {
@@ -909,6 +1552,19 @@
     "day": 287.0,
     "weekend": 430.5,
     "week": 1603.5
+   },
+   "photo": {
+    "src": "images/hire/trench-roller-800.webp",
+    "srcset": "images/hire/trench-roller-400.webp 400w, images/hire/trench-roller-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Padfoot trench roller",
+    "credit": {
+     "author": "Ildar Sagdejev (Specious)",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:2008-08-28_Wacker_RT_trench_roller.jpg"
+    }
    },
    "icon": "i-compactor"
   },
@@ -925,7 +1581,16 @@
    },
    "photo": {
     "src": "images/hire/mini-excavator.webp",
-    "alt": "A small yellow mini excavator on grass"
+    "srcset": "images/hire/mini-excavator-400.webp 400w, images/hire/mini-excavator.webp 640w",
+    "width": 640,
+    "height": 480,
+    "alt": "A small yellow mini excavator on grass",
+    "credit": {
+     "author": "@skstrannik",
+     "license": "Unsplash License",
+     "license_url": "https://unsplash.com/license",
+     "source": "https://unsplash.com/photos/mini-excavator-with-coiled-pipes-on-grassy-ground-L3eEgJT2R-c"
+    }
    }
   },
   {
@@ -938,6 +1603,19 @@
     "day": 175.5,
     "weekend": 263.0,
     "week": 706.5
+   },
+   "photo": {
+    "src": "images/hire/excavator-mini-800.webp",
+    "srcset": "images/hire/excavator-mini-400.webp 400w, images/hire/excavator-mini-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Mini excavator",
+    "credit": {
+     "author": "Daderot",
+     "license": "CC0",
+     "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Unknown_mini_excavator_-_Arlington,_MA.jpg"
+    }
    }
   },
   {
@@ -950,6 +1628,19 @@
     "day": 336.5,
     "weekend": 505.0,
     "week": 1828.5
+   },
+   "photo": {
+    "src": "images/hire/excavator-800.webp",
+    "srcset": "images/hire/excavator-400.webp 400w, images/hire/excavator-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Compact excavator",
+    "credit": {
+     "author": "Daderot",
+     "license": "CC0",
+     "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Case_mini_excavator_-_Arlington,_MA.jpg"
+    }
    }
   },
   {
@@ -962,6 +1653,19 @@
     "day": 336.5,
     "weekend": 505.0,
     "week": 2312.0
+   },
+   "photo": {
+    "src": "images/hire/excavator-800.webp",
+    "srcset": "images/hire/excavator-400.webp 400w, images/hire/excavator-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Compact excavator",
+    "credit": {
+     "author": "Daderot",
+     "license": "CC0",
+     "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Case_mini_excavator_-_Arlington,_MA.jpg"
+    }
    }
   },
   {
@@ -974,6 +1678,19 @@
     "day": 175.5,
     "weekend": 189.0,
     "week": 706.5
+   },
+   "photo": {
+    "src": "images/hire/mini-loader-800.webp",
+    "srcset": "images/hire/mini-loader-400.webp 400w, images/hire/mini-loader-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Compact mini loader",
+    "credit": {
+     "author": "MB-one",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Agritechnica_2023,_Hanover_(P1160270-RR).jpg"
+    }
    }
   },
   {
@@ -986,6 +1703,19 @@
     "day": 277.0,
     "weekend": 415.5,
     "week": 1224.0
+   },
+   "photo": {
+    "src": "images/hire/skid-steer-800.webp",
+    "srcset": "images/hire/skid-steer-400.webp 400w, images/hire/skid-steer-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Skid steer loader",
+    "credit": {
+     "author": "Sturm",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Araraquara_(2020_October)_337.jpg"
+    }
    }
   },
   {
@@ -998,6 +1728,19 @@
     "day": 215.0,
     "weekend": 322.5,
     "week": 810.5
+   },
+   "photo": {
+    "src": "images/hire/tracked-dumper-800.webp",
+    "srcset": "images/hire/tracked-dumper-400.webp 400w, images/hire/tracked-dumper-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Tracked dumper",
+    "credit": {
+     "author": "Basotxerri",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Yanmar_C12R_tracked_dumper_01.jpg"
+    }
    }
   },
   {
@@ -1010,6 +1753,19 @@
     "day": 227.5,
     "weekend": 341.0,
     "week": 1254.5
+   },
+   "photo": {
+    "src": "images/hire/trencher-800.webp",
+    "srcset": "images/hire/trencher-400.webp 400w, images/hire/trencher-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Walk-behind trencher",
+    "credit": {
+     "author": "Globetrotter19",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Ditch_Witch_C30X,_2024_Moh%C3%A1cs.jpg"
+    }
    }
   },
   {
@@ -1022,6 +1778,19 @@
     "day": 59.0,
     "weekend": 88.5,
     "week": 237.5
+   },
+   "photo": {
+    "src": "images/hire/demolition-hammer-800.webp",
+    "srcset": "images/hire/demolition-hammer-400.webp 400w, images/hire/demolition-hammer-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Electric demolition hammer",
+    "credit": {
+     "author": "Anthony Appleyard (English Wikipedia)",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Pneumatic_drill.jpeg"
+    }
    }
   },
   {
@@ -1034,6 +1803,19 @@
     "day": 76.5,
     "weekend": 115.0,
     "week": 306.0
+   },
+   "photo": {
+    "src": "images/hire/demolition-hammer-800.webp",
+    "srcset": "images/hire/demolition-hammer-400.webp 400w, images/hire/demolition-hammer-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Electric demolition hammer",
+    "credit": {
+     "author": "Anthony Appleyard (English Wikipedia)",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Pneumatic_drill.jpeg"
+    }
    }
   },
   {
@@ -1046,6 +1828,19 @@
     "day": 99.0,
     "weekend": 148.5,
     "week": 396.0
+   },
+   "photo": {
+    "src": "images/hire/demolition-hammer-800.webp",
+    "srcset": "images/hire/demolition-hammer-400.webp 400w, images/hire/demolition-hammer-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Electric demolition hammer",
+    "credit": {
+     "author": "Anthony Appleyard (English Wikipedia)",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Pneumatic_drill.jpeg"
+    }
    }
   },
   {
@@ -1058,6 +1853,19 @@
     "day": 121.5,
     "weekend": 182.0,
     "week": 487.5
+   },
+   "photo": {
+    "src": "images/hire/demolition-hammer-800.webp",
+    "srcset": "images/hire/demolition-hammer-400.webp 400w, images/hire/demolition-hammer-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Electric demolition hammer",
+    "credit": {
+     "author": "Anthony Appleyard (English Wikipedia)",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Pneumatic_drill.jpeg"
+    }
    }
   },
   {
@@ -1070,6 +1878,19 @@
     "day": 198.0,
     "weekend": 297.0,
     "week": 693.0
+   },
+   "photo": {
+    "src": "images/hire/cut-off-saw-petrol-800.webp",
+    "srcset": "images/hire/cut-off-saw-petrol-400.webp 400w, images/hire/cut-off-saw-petrol-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Petrol demolition cut-off saw",
+    "credit": {
+     "author": "Niihama City (新居浜市)",
+     "license": "CC BY 4.0",
+     "license_url": "https://creativecommons.org/licenses/by/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Engine_cutter_55616_2027.jpg"
+    }
    }
   },
   {
@@ -1106,6 +1927,19 @@
     "day": 22.5,
     "weekend": 34.0,
     "week": 81.0
+   },
+   "photo": {
+    "src": "images/hire/rotary-hammer-800.webp",
+    "srcset": "images/hire/rotary-hammer-400.webp 400w, images/hire/rotary-hammer-800.webp 756w",
+    "width": 756,
+    "height": 567,
+    "alt": "Rotary hammer drill",
+    "credit": {
+     "author": "Zimin.V.G.",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Bohrhammer_Kress_Elektrowerkzeuge.jpg"
+    }
    }
   },
   {
@@ -1118,6 +1952,19 @@
     "day": 45.0,
     "weekend": 67.5,
     "week": 157.5
+   },
+   "photo": {
+    "src": "images/hire/rotary-hammer-800.webp",
+    "srcset": "images/hire/rotary-hammer-400.webp 400w, images/hire/rotary-hammer-800.webp 756w",
+    "width": 756,
+    "height": 567,
+    "alt": "Rotary hammer drill",
+    "credit": {
+     "author": "Zimin.V.G.",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Bohrhammer_Kress_Elektrowerkzeuge.jpg"
+    }
    }
   },
   {
@@ -1130,6 +1977,19 @@
     "day": 36.0,
     "weekend": 54.0,
     "week": 126.0
+   },
+   "photo": {
+    "src": "images/hire/hammer-drill-800.webp",
+    "srcset": "images/hire/hammer-drill-400.webp 400w, images/hire/hammer-drill-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Hammer drill",
+    "credit": {
+     "author": "Shakespeare (English Wikipedia)",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Hammer_drill-1.jpg"
+    }
    }
   },
   {
@@ -1145,7 +2005,16 @@
    },
    "photo": {
     "src": "images/hire/drill.webp",
-    "alt": "A red cordless drill"
+    "srcset": "images/hire/drill-400.webp 400w, images/hire/drill.webp 640w",
+    "width": 640,
+    "height": 480,
+    "alt": "A red cordless drill",
+    "credit": {
+     "author": "@heyquilia",
+     "license": "Unsplash License",
+     "license_url": "https://unsplash.com/license",
+     "source": "https://unsplash.com/photos/red-cordless-powerdrill-CuDoRFyTkAQ"
+    }
    }
   },
   {
@@ -1158,6 +2027,19 @@
     "day": 31.5,
     "weekend": 47.0,
     "week": 88.0
+   },
+   "photo": {
+    "src": "images/hire/impact-wrench-800.webp",
+    "srcset": "images/hire/impact-wrench-400.webp 400w, images/hire/impact-wrench-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Electric impact wrench",
+    "credit": {
+     "author": "Hychika",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Cordless_Impact_Wrenches_%26_Driver.jpg"
+    }
    }
   },
   {
@@ -1182,6 +2064,19 @@
     "day": 128.5,
     "weekend": 193.0,
     "week": 504.0
+   },
+   "photo": {
+    "src": "images/hire/mag-drill-800.webp",
+    "srcset": "images/hire/mag-drill-400.webp 400w, images/hire/mag-drill-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Magnetic base drill",
+    "credit": {
+     "author": "Rohan von Indien",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Compact_magnetic_drilling_machine.jpg"
+    }
    }
   },
   {
@@ -1197,7 +2092,16 @@
    },
    "photo": {
     "src": "images/hire/angle-grinder.webp",
-    "alt": "An angle grinder cutting metal with sparks"
+    "srcset": "images/hire/angle-grinder-400.webp 400w, images/hire/angle-grinder.webp 640w",
+    "width": 640,
+    "height": 480,
+    "alt": "An angle grinder cutting metal with sparks",
+    "credit": {
+     "author": "@heberdavisphotography",
+     "license": "Unsplash License",
+     "license_url": "https://unsplash.com/license",
+     "source": "https://unsplash.com/photos/a-man-working-with-a-grinder-on-a-piece-of-metal-fZEC4pR4Kpo"
+    }
    }
   },
   {
@@ -1210,6 +2114,19 @@
     "day": 51.0,
     "weekend": 76.5,
     "week": 189.0
+   },
+   "photo": {
+    "src": "images/hire/angle-grinder.webp",
+    "srcset": "images/hire/angle-grinder-400.webp 400w, images/hire/angle-grinder.webp 640w",
+    "width": 640,
+    "height": 480,
+    "alt": "An angle grinder cutting metal with sparks",
+    "credit": {
+     "author": "@heberdavisphotography",
+     "license": "Unsplash License",
+     "license_url": "https://unsplash.com/license",
+     "source": "https://unsplash.com/photos/a-man-working-with-a-grinder-on-a-piece-of-metal-fZEC4pR4Kpo"
+    }
    }
   },
   {
@@ -1225,7 +2142,16 @@
    },
    "photo": {
     "src": "images/hire/circular-saw.webp",
-    "alt": "A circular saw cutting timber"
+    "srcset": "images/hire/circular-saw-400.webp 400w, images/hire/circular-saw.webp 640w",
+    "width": 640,
+    "height": 480,
+    "alt": "A circular saw cutting timber",
+    "credit": {
+     "author": "@c3k",
+     "license": "Unsplash License",
+     "license_url": "https://unsplash.com/license",
+     "source": "https://unsplash.com/photos/a-person-using-a-circular-saw-to-cut-a-piece-of-wood-SdGWs9shP0o"
+    }
    }
   },
   {
@@ -1238,6 +2164,19 @@
     "day": 18.0,
     "weekend": 27.0,
     "week": 63.0
+   },
+   "photo": {
+    "src": "images/hire/jigsaw-800.webp",
+    "srcset": "images/hire/jigsaw-400.webp 400w, images/hire/jigsaw-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Jigsaw",
+    "credit": {
+     "author": "Артём В.",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Jigsaw_AccuMaster.jpg"
+    }
    }
   },
   {
@@ -1250,6 +2189,19 @@
     "day": 27.0,
     "weekend": 40.5,
     "week": 61.0
+   },
+   "photo": {
+    "src": "images/hire/recip-saw-800.webp",
+    "srcset": "images/hire/recip-saw-400.webp 400w, images/hire/recip-saw-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Reciprocating sabre saw",
+    "credit": {
+     "author": "Mark Hunter",
+     "license": "CC BY 2.0",
+     "license_url": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Makita_JR3070CT_Reciprocating_Saw_(4887119615).jpg"
+    }
    }
   },
   {
@@ -1262,6 +2214,19 @@
     "day": 114.0,
     "weekend": 171.0,
     "week": 340.0
+   },
+   "photo": {
+    "src": "images/hire/mitre-saw-800.webp",
+    "srcset": "images/hire/mitre-saw-400.webp 400w, images/hire/mitre-saw-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Mitre drop saw",
+    "credit": {
+     "author": "Lance Fisher",
+     "license": "CC BY-SA 2.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:MiterSaw.jpg"
+    }
    }
   },
   {
@@ -1274,6 +2239,19 @@
     "day": 54.0,
     "weekend": 81.0,
     "week": 189.0
+   },
+   "photo": {
+    "src": "images/hire/metal-cut-off-saw-800.webp",
+    "srcset": "images/hire/metal-cut-off-saw-400.webp 400w, images/hire/metal-cut-off-saw-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Metal cut-off saw cutting steel",
+    "credit": {
+     "author": "Mark Hunter",
+     "license": "CC BY 2.0",
+     "license_url": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Let_the_Sparks_Fly_-_The_Makita_2414NB_Abrasive_Cut_Off_Saw_(4070957523).jpg"
+    }
    }
   },
   {
@@ -1286,6 +2264,19 @@
     "day": 18.0,
     "weekend": 27.0,
     "week": 63.0
+   },
+   "photo": {
+    "src": "images/hire/planer-800.webp",
+    "srcset": "images/hire/planer-400.webp 400w, images/hire/planer-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Electric hand planer",
+    "credit": {
+     "author": "Mark Hunter",
+     "license": "CC BY 2.0",
+     "license_url": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Makita_KP0800_Planer_(2).jpg"
+    }
    }
   },
   {
@@ -1298,6 +2289,19 @@
     "day": 27.0,
     "weekend": 40.5,
     "week": 94.5
+   },
+   "photo": {
+    "src": "images/hire/framing-nailer-800.webp",
+    "srcset": "images/hire/framing-nailer-400.webp 400w, images/hire/framing-nailer-800.webp 727w",
+    "width": 727,
+    "height": 545,
+    "alt": "Framing nailer",
+    "credit": {
+     "author": "Mark Hunter",
+     "license": "CC BY 2.0",
+     "license_url": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Makita_GN900SE_Gas_Nailer_(3991070032).png"
+    }
    }
   },
   {
@@ -1322,6 +2326,19 @@
     "day": 41.0,
     "weekend": 61.5,
     "week": 172.5
+   },
+   "photo": {
+    "src": "images/hire/brad-nailer-800.webp",
+    "srcset": "images/hire/brad-nailer-400.webp 400w, images/hire/brad-nailer-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Finish brad nailer",
+    "credit": {
+     "author": "Boatbuilder",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Nail_gun_008.jpg"
+    }
    }
   },
   {
@@ -1359,6 +2376,19 @@
     "day": 124.0,
     "weekend": 186.0,
     "week": 435.5
+   },
+   "photo": {
+    "src": "images/hire/welder-800.webp",
+    "srcset": "images/hire/welder-400.webp 400w, images/hire/welder-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Inverter arc welder",
+    "credit": {
+     "author": "Just a Man",
+     "license": "CC BY 4.0",
+     "license_url": "https://creativecommons.org/licenses/by/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Soldadora_inverter_L%C3%BCsqtoff_Iron-140_(1).jpg"
+    }
    }
   },
   {
@@ -1371,6 +2401,19 @@
     "day": 54.0,
     "weekend": 81.0,
     "week": 117.0
+   },
+   "photo": {
+    "src": "images/hire/torque-wrench-800.webp",
+    "srcset": "images/hire/torque-wrench-400.webp 400w, images/hire/torque-wrench-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Torque wrench",
+    "credit": {
+     "author": "Sunnyhappy123",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:1-4%22_5-25Nm.jpg"
+    }
    }
   },
   {
@@ -1383,6 +2426,19 @@
     "day": 45.0,
     "weekend": 67.5,
     "week": 279.0
+   },
+   "photo": {
+    "src": "images/hire/generator-800.webp",
+    "srcset": "images/hire/generator-400.webp 400w, images/hire/generator-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Portable petrol generator",
+    "credit": {
+     "author": "Gbleem (English Wikipedia)",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Portable_electrical_generator_angle.jpg"
+    }
    }
   },
   {
@@ -1395,6 +2451,19 @@
     "day": 45.0,
     "weekend": 67.5,
     "week": 279.0
+   },
+   "photo": {
+    "src": "images/hire/generator-inverter-800.webp",
+    "srcset": "images/hire/generator-inverter-400.webp 400w, images/hire/generator-inverter-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Inverter generator",
+    "credit": {
+     "author": "P1898",
+     "license": "CC BY 4.0",
+     "license_url": "https://creativecommons.org/licenses/by/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Gasoline_Generator_2026-08-12_ROYU_Electrical_Inverter_Type_03.jpg"
+    }
    }
   },
   {
@@ -1407,6 +2476,19 @@
     "day": 89.0,
     "weekend": 133.5,
     "week": 609.0
+   },
+   "photo": {
+    "src": "images/hire/generator-800.webp",
+    "srcset": "images/hire/generator-400.webp 400w, images/hire/generator-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Portable petrol generator",
+    "credit": {
+     "author": "Gbleem (English Wikipedia)",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Portable_electrical_generator_angle.jpg"
+    }
    }
   },
   {
@@ -1419,6 +2501,19 @@
     "day": 138.5,
     "weekend": 208.0,
     "week": 636.0
+   },
+   "photo": {
+    "src": "images/hire/generator-800.webp",
+    "srcset": "images/hire/generator-400.webp 400w, images/hire/generator-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Portable petrol generator",
+    "credit": {
+     "author": "Gbleem (English Wikipedia)",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Portable_electrical_generator_angle.jpg"
+    }
    }
   },
   {
@@ -1431,6 +2526,19 @@
     "day": 138.5,
     "weekend": 208.0,
     "week": 793.5
+   },
+   "photo": {
+    "src": "images/hire/generator-800.webp",
+    "srcset": "images/hire/generator-400.webp 400w, images/hire/generator-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Portable petrol generator",
+    "credit": {
+     "author": "Gbleem (English Wikipedia)",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Portable_electrical_generator_angle.jpg"
+    }
    }
   },
   {
@@ -1443,6 +2551,19 @@
     "day": 9.0,
     "weekend": 13.5,
     "week": 27.0
+   },
+   "photo": {
+    "src": "images/hire/extension-lead-800.webp",
+    "srcset": "images/hire/extension-lead-400.webp 400w, images/hire/extension-lead-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Extension lead on a cable reel",
+    "credit": {
+     "author": "Sally V",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Extension_cord_02.jpg"
+    }
    }
   },
   {
@@ -1458,7 +2579,16 @@
    },
    "photo": {
     "src": "images/hire/ladder.webp",
-    "alt": "A ladder leaning against a concrete wall"
+    "srcset": "images/hire/ladder-400.webp 400w, images/hire/ladder.webp 640w",
+    "width": 640,
+    "height": 480,
+    "alt": "A ladder leaning against a concrete wall",
+    "credit": {
+     "author": "@nickpage",
+     "license": "Unsplash License",
+     "license_url": "https://unsplash.com/license",
+     "source": "https://unsplash.com/photos/a-ladder-leaning-up-against-a-concrete-wall-dDZ1JjQXmlY"
+    }
    }
   },
   {
@@ -1471,6 +2601,19 @@
     "day": 36.0,
     "weekend": 54.0,
     "week": 162.0
+   },
+   "photo": {
+    "src": "images/hire/ladder.webp",
+    "srcset": "images/hire/ladder-400.webp 400w, images/hire/ladder.webp 640w",
+    "width": 640,
+    "height": 480,
+    "alt": "A ladder leaning against a concrete wall",
+    "credit": {
+     "author": "@nickpage",
+     "license": "Unsplash License",
+     "license_url": "https://unsplash.com/license",
+     "source": "https://unsplash.com/photos/a-ladder-leaning-up-against-a-concrete-wall-dDZ1JjQXmlY"
+    }
    }
   },
   {
@@ -1483,6 +2626,19 @@
     "day": 22.5,
     "weekend": 34.0,
     "week": 69.0
+   },
+   "photo": {
+    "src": "images/hire/step-ladder-800.webp",
+    "srcset": "images/hire/step-ladder-400.webp 400w, images/hire/step-ladder-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Aluminium step ladder",
+    "credit": {
+     "author": "rrafson",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Ladder_2.jpg"
+    }
    }
   },
   {
@@ -1531,6 +2687,19 @@
     "day": 90.5,
     "weekend": 136.0,
     "week": 259.0
+   },
+   "photo": {
+    "src": "images/hire/scaffold-800.webp",
+    "srcset": "images/hire/scaffold-400.webp 400w, images/hire/scaffold-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Mobile aluminium scaffold tower",
+    "credit": {
+     "author": "Leo Miregalitheo",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Rollger%C3%BCst_Alu_und_Mist.jpg"
+    }
    }
   },
   {
@@ -1567,6 +2736,19 @@
     "day": 14.5,
     "weekend": 18.0,
     "week": 18.0
+   },
+   "photo": {
+    "src": "images/hire/acrow-prop-800.webp",
+    "srcset": "images/hire/acrow-prop-400.webp 400w, images/hire/acrow-prop-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Steel acrow props",
+    "credit": {
+     "author": "JoKalliauer",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Bauma13_(37).jpeg"
+    }
    }
   },
   {
@@ -1579,6 +2761,19 @@
     "day": 81.0,
     "weekend": 121.5,
     "week": 324.0
+   },
+   "photo": {
+    "src": "images/hire/drain-eel-800.webp",
+    "srcset": "images/hire/drain-eel-400.webp 400w, images/hire/drain-eel-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Electric drain cleaning machine",
+    "credit": {
+     "author": "Pgdp123",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Electric-Drain-Cleaner.png"
+    }
    }
   },
   {
@@ -1591,6 +2786,19 @@
     "day": 150.0,
     "weekend": 225.0,
     "week": 534.5
+   },
+   "photo": {
+    "src": "images/hire/drain-jetter-800.webp",
+    "srcset": "images/hire/drain-jetter-400.webp 400w, images/hire/drain-jetter-800.webp 640w",
+    "width": 640,
+    "height": 480,
+    "alt": "Drain jetter nozzle spraying water",
+    "credit": {
+     "author": "Pgdp123",
+     "license": "CC BY 3.0",
+     "license_url": "https://creativecommons.org/licenses/by/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Pressure-Washer-Sewer-Jetter-Attachment.png"
+    }
    }
   },
   {
@@ -1603,6 +2811,19 @@
     "day": 56.5,
     "weekend": 85.0,
     "week": 158.0
+   },
+   "photo": {
+    "src": "images/hire/drain-snake-800.webp",
+    "srcset": "images/hire/drain-snake-400.webp 400w, images/hire/drain-snake-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Hand-held drum drain snake",
+    "credit": {
+     "author": "Pgdp123",
+     "license": "CC BY 3.0",
+     "license_url": "https://creativecommons.org/licenses/by/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Handheld-Drain-Auger.png"
+    }
    }
   },
   {
@@ -1615,6 +2836,19 @@
     "day": 200.5,
     "weekend": 301.0,
     "week": 765.0
+   },
+   "photo": {
+    "src": "images/hire/pipe-threader-800.webp",
+    "srcset": "images/hire/pipe-threader-400.webp 400w, images/hire/pipe-threader-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Electric pipe threading machine",
+    "credit": {
+     "author": "Fumikas Sagisavas",
+     "license": "CC0",
+     "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Pipe_cutting_and_threading_machine.jpg"
+    }
    }
   },
   {
@@ -1639,6 +2873,19 @@
     "day": 114.0,
     "weekend": 171.0,
     "week": 382.5
+   },
+   "photo": {
+    "src": "images/hire/pipe-press-800.webp",
+    "srcset": "images/hire/pipe-press-400.webp 400w, images/hire/pipe-press-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Pipe press tool",
+    "credit": {
+     "author": "Cschirp",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Radial-press-for-press-fitting-systems.JPG"
+    }
    }
   },
   {
@@ -1652,6 +2899,19 @@
     "weekend": 118.5,
     "week": 306.0
    },
+   "photo": {
+    "src": "images/hire/submersible-pump-800.webp",
+    "srcset": "images/hire/submersible-pump-400.webp 400w, images/hire/submersible-pump-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Submersible pump",
+    "credit": {
+     "author": "Kemikungen",
+     "license": "CC BY 3.0",
+     "license_url": "https://creativecommons.org/licenses/by/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Submersible_pump_in_action.jpg"
+    }
+   },
    "icon": "i-droplet"
   },
   {
@@ -1664,6 +2924,19 @@
     "day": 79.0,
     "weekend": 118.5,
     "week": 316.5
+   },
+   "photo": {
+    "src": "images/hire/trash-pump-800.webp",
+    "srcset": "images/hire/trash-pump-400.webp 400w, images/hire/trash-pump-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Petrol water transfer pump",
+    "credit": {
+     "author": "Anniwinner",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Water_pumping_machine.jpg"
+    }
    },
    "icon": "i-droplet"
   },
@@ -1693,7 +2966,16 @@
    },
    "photo": {
     "src": "images/hire/hand-truck.webp",
-    "alt": "A man moving a drum with a hand trolley"
+    "srcset": "images/hire/hand-truck-400.webp 400w, images/hire/hand-truck.webp 640w",
+    "width": 640,
+    "height": 480,
+    "alt": "A man moving a drum with a hand trolley",
+    "credit": {
+     "author": "@norevisions",
+     "license": "Unsplash License",
+     "license_url": "https://unsplash.com/license",
+     "source": "https://unsplash.com/photos/man-pushing-hand-truck-with-plastic-drum-KufOjYrd3mg"
+    }
    }
   },
   {
@@ -1718,6 +3000,19 @@
     "day": 27.0,
     "weekend": 40.5,
     "week": 94.5
+   },
+   "photo": {
+    "src": "images/hire/pallet-jack-800.webp",
+    "srcset": "images/hire/pallet-jack-400.webp 400w, images/hire/pallet-jack-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Pallet jack",
+    "credit": {
+     "author": "Markus Hagenlocher",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Hubwagen.jpg"
+    }
    }
   },
   {
@@ -1742,6 +3037,19 @@
     "day": 72.0,
     "weekend": 108.0,
     "week": 252.0
+   },
+   "photo": {
+    "src": "images/hire/engine-hoist-800.webp",
+    "srcset": "images/hire/engine-hoist-400.webp 400w, images/hire/engine-hoist-800.webp 640w",
+    "width": 640,
+    "height": 480,
+    "alt": "Engine hoist crane",
+    "credit": {
+     "author": "simonov",
+     "license": "CC BY-SA 2.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:ZZ4_on_the_hoist_-_4189433670.jpg"
+    }
    }
   },
   {
@@ -1754,6 +3062,19 @@
     "day": 27.0,
     "weekend": 40.5,
     "week": 108.0
+   },
+   "photo": {
+    "src": "images/hire/chain-block-800.webp",
+    "srcset": "images/hire/chain-block-400.webp 400w, images/hire/chain-block-800.webp 472w",
+    "width": 472,
+    "height": 354,
+    "alt": "Chain block hoist",
+    "credit": {
+     "author": "Aldifahri16",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Chain-block-takel.jpg"
+    }
    }
   },
   {
@@ -1766,6 +3087,19 @@
     "day": 40.5,
     "weekend": 61.0,
     "week": 144.0
+   },
+   "photo": {
+    "src": "images/hire/box-trailer-800.webp",
+    "srcset": "images/hire/box-trailer-400.webp 400w, images/hire/box-trailer-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Box trailer",
+    "credit": {
+     "author": "Northwest Rafting Company",
+     "license": "CC BY 2.0",
+     "license_url": "https://creativecommons.org/licenses/by/2.0/",
+     "source": "https://www.flickr.com/photos/23299229@N06/4665994311"
+    }
    }
   },
   {
@@ -1778,6 +3112,19 @@
     "day": 82.5,
     "weekend": 124.0,
     "week": 263.5
+   },
+   "photo": {
+    "src": "images/hire/box-trailer-800.webp",
+    "srcset": "images/hire/box-trailer-400.webp 400w, images/hire/box-trailer-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Box trailer",
+    "credit": {
+     "author": "Northwest Rafting Company",
+     "license": "CC BY 2.0",
+     "license_url": "https://creativecommons.org/licenses/by/2.0/",
+     "source": "https://www.flickr.com/photos/23299229@N06/4665994311"
+    }
    }
   },
   {
@@ -1839,6 +3186,19 @@
     "weekend": 54.0,
     "week": 126.0
    },
+   "photo": {
+    "src": "images/hire/pedestal-fan-800.webp",
+    "srcset": "images/hire/pedestal-fan-400.webp 400w, images/hire/pedestal-fan-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Industrial pedestal fan",
+    "credit": {
+     "author": "Mk2010",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Industrial_pedestal_fan.jpg"
+    }
+   },
    "icon": "i-fan"
   },
   {
@@ -1851,6 +3211,19 @@
     "day": 44.0,
     "weekend": 66.0,
     "week": 153.0
+   },
+   "photo": {
+    "src": "images/hire/portable-ac-800.webp",
+    "srcset": "images/hire/portable-ac-400.webp 400w, images/hire/portable-ac-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Portable air conditioners",
+    "credit": {
+     "author": "Морфиус",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Monoblock_air_conditioner.jpg"
+    }
    },
    "icon": "i-fan"
   },
@@ -1865,6 +3238,19 @@
     "weekend": 149.0,
     "week": 362.5
    },
+   "photo": {
+    "src": "images/hire/evap-cooler-800.webp",
+    "srcset": "images/hire/evap-cooler-400.webp 400w, images/hire/evap-cooler-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Evaporative air cooler",
+    "credit": {
+     "author": "PaulGorduiz106",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Iwata_air_cooler_(2023-06-19).jpg"
+    }
+   },
    "icon": "i-fan"
   },
   {
@@ -1877,6 +3263,19 @@
     "day": 58.5,
     "weekend": 88.0,
     "week": 220.5
+   },
+   "photo": {
+    "src": "images/hire/extraction-fan-800.webp",
+    "srcset": "images/hire/extraction-fan-400.webp 400w, images/hire/extraction-fan-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Portable extraction fan",
+    "credit": {
+     "author": "Tha-uzhavan",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Fan-exhaust-Tamil_Nadu.JPG"
+    }
    },
    "icon": "i-fan"
   },
@@ -1891,6 +3290,19 @@
     "weekend": 59.0,
     "week": 144.0
    },
+   "photo": {
+    "src": "images/hire/patio-heater-800.webp",
+    "srcset": "images/hire/patio-heater-400.webp 400w, images/hire/patio-heater-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Gas patio heater",
+    "credit": {
+     "author": "Luis Miguel Bugallo Sánchez (Lmbuga)",
+     "license": "CC BY-SA 3.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Estufa_exterior_de_butano.jpg"
+    }
+   },
    "icon": "i-fan"
   },
   {
@@ -1903,6 +3315,19 @@
     "day": 70.5,
     "weekend": 106.0,
     "week": 283.0
+   },
+   "photo": {
+    "src": "images/hire/rotary-laser-800.webp",
+    "srcset": "images/hire/rotary-laser-400.webp 400w, images/hire/rotary-laser-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Rotary laser level on a tripod",
+    "credit": {
+     "author": "Pokarwr",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Niwelator_laserowy_NL540.jpg"
+    }
    }
   },
   {
@@ -1915,6 +3340,19 @@
     "day": 91.5,
     "weekend": 137.0,
     "week": 312.0
+   },
+   "photo": {
+    "src": "images/hire/dumpy-level-800.webp",
+    "srcset": "images/hire/dumpy-level-400.webp 400w, images/hire/dumpy-level-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Automatic dumpy level",
+    "credit": {
+     "author": "Flyz1",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Niwelator_PZO_Ni30-20.JPG"
+    }
    }
   },
   {
@@ -1927,6 +3365,19 @@
     "day": 70.0,
     "weekend": 105.0,
     "week": 207.0
+   },
+   "photo": {
+    "src": "images/hire/moisture-meter-800.webp",
+    "srcset": "images/hire/moisture-meter-400.webp 400w, images/hire/moisture-meter-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Moisture meters",
+    "credit": {
+     "author": "Ralf Pfeifer",
+     "license": "CC BY 4.0",
+     "license_url": "https://creativecommons.org/licenses/by/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Feuchtemesser.jpg"
+    }
    }
   },
   {
@@ -1939,6 +3390,19 @@
     "day": 58.5,
     "weekend": 88.0,
     "week": 165.5
+   },
+   "photo": {
+    "src": "images/hire/laser-distance-800.webp",
+    "srcset": "images/hire/laser-distance-400.webp 400w, images/hire/laser-distance-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Laser distance measure",
+    "credit": {
+     "author": "Jacek Halicki",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:2023_Dalmierz_laserowy_Bosh_GLM_30.jpg"
+    }
    }
   },
   {
@@ -1949,6 +3413,19 @@
    "weight": "light",
    "rates": null,
    "flat": 11.5,
+   "photo": {
+    "src": "images/hire/temp-fence-800.webp",
+    "srcset": "images/hire/temp-fence-400.webp 400w, images/hire/temp-fence-800.webp 800w",
+    "width": 800,
+    "height": 600,
+    "alt": "Temporary mesh fence panels",
+    "credit": {
+     "author": "Michal Klajban",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:C_Block,_City_Campus,_Ara_Institute_of_Canterbury,_Christchurch,_New_Zealand_06.jpg"
+    }
+   },
    "icon": "i-fence"
   },
   {
@@ -1960,7 +3437,16 @@
    "rates": null,
    "photo": {
     "src": "images/hire/portable-toilet.webp",
-    "alt": "Two green portable toilets"
+    "srcset": "images/hire/portable-toilet-400.webp 400w, images/hire/portable-toilet.webp 640w",
+    "width": 640,
+    "height": 480,
+    "alt": "Two green portable toilets",
+    "credit": {
+     "author": "@deankfick",
+     "license": "Unsplash License",
+     "license_url": "https://unsplash.com/license",
+     "source": "https://unsplash.com/photos/a-couple-of-green-portable-toilets-sitting-next-to-each-other-hQZx1b_SJZ4"
+    }
    },
    "icon": "i-fence"
   }

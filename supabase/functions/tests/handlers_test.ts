@@ -31,7 +31,7 @@ function mock(opts: {
   const calls: Call[] = [];
   const env: Record<string, string> = {
     SUPABASE_URL: SUPA, SUPABASE_SERVICE_ROLE_KEY: "service-test", SUPABASE_ANON_KEY: "anon-test",
-    SITE_URL: "https://dwayne260211.github.io/real-time-traders", ...opts.env,
+    SITE_URL: "https://realtimetradersbrisbane.au", ...opts.env,
   };
   const ctx: Ctx = {
     env: (k) => env[k],
@@ -69,7 +69,7 @@ function mock(opts: {
 function post(body: unknown, token = "tok-a") {
   return new Request("https://fn.test/x", {
     method: "POST", headers: { authorization: `Bearer ${token}`, "content-type": "application/json",
-                               origin: "https://dwayne260211.github.io" },
+                               origin: "https://realtimetradersbrisbane.au" },
     body: JSON.stringify(body),
   });
 }
@@ -134,7 +134,7 @@ Deno.test("checkout: test mode creates a session priced by the SERVER, AUD, with
   assertEquals(s.get("metadata[booking_id]"), BOOKING);
   assertEquals(s.get("payment_intent_data[receipt_email]"), "a@test.invalid");
   assertEquals(s.get("expires_at"), "1900000000");
-  assertMatch(s.get("success_url")!, /^https:\/\/dwayne260211\.github\.io\/real-time-traders\/my-bookings\.html/);
+  assertMatch(s.get("success_url")!, /^https:\/\/realtimetradersbrisbane\.au\/my-bookings\.html/);
   idem = calls.find((c) => c.url.includes("checkout/sessions"))!.headers.get("idempotency-key") ?? "";
   assertEquals(idem, `checkout-${BOOKING}-1900000000`);
   assert(calls.some((c) => c.url.endsWith("/rpc/attach_checkout_session")));

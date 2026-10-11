@@ -34,6 +34,6 @@ Only put in facts that are already on the site: prices, fees, limits and hours. 
 If the owner wants real AI answers later:
 1. Create a serverless function, for example a Supabase Edge Function, Cloudflare Worker, Netlify or Vercel function. It holds the AI provider key as a **server-side secret**. Never put the key in the site's JS. GitHub Pages is public.
 2. Give the function a fixed system prompt built from the site facts (the `ENTRIES` text, the hire list and the hours). Tell the model to answer only from those facts, to say "I don't know, please call us" otherwise, and never to claim bookings or messages.
-3. Add rate limiting, an origin allow-list (`dwayne260211.github.io`) and a max input length. Log nothing personal unless the privacy policy covers it.
+3. Add rate limiting, an origin allow-list (`realtimetradersbrisbane.au`, plus `dwayne260211.github.io` during the switch) and a max input length. Log nothing personal unless the privacy policy covers it.
 4. In `js/chat.js`, keep the keyword matcher as the first step and offline fallback. Only call `fetch(FUNCTION_URL, { method: "POST", body: JSON.stringify({ q }) })` when there's no confident match, and show the reply as plain text with `textContent`.
 5. Update the panel note ("Automated answers…") to say AI is used, and add that to the privacy information.

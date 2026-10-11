@@ -20,7 +20,7 @@ export class HttpError extends Error {
 }
 
 export function siteUrl(ctx: Ctx): string {
-  return (ctx.env("SITE_URL") ?? "https://dwayne260211.github.io/real-time-traders").replace(/\/+$/, "");
+  return (ctx.env("SITE_URL") ?? "https://realtimetradersbrisbane.au").replace(/\/+$/, "");
 }
 
 export function corsHeaders(ctx: Ctx, req: Request): Record<string, string> {

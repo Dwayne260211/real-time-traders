@@ -190,8 +190,8 @@ Checkout holds expire 5 minutes after the Stripe session's `expires_at`. Expired
 STRIPE_SECRET_KEY=        # sk_test_... while testing; sk_live_... only when going live
 STRIPE_WEBHOOK_SECRET=    # whsec_...
 PAYMENTS_LIVE=            # "true" only when going live
-SITE_URL=                 # https://dwayne260211.github.io/real-time-traders
-ALLOWED_ORIGINS=          # https://dwayne260211.github.io
+SITE_URL=                 # https://realtimetradersbrisbane.au
+ALLOWED_ORIGINS=          # https://realtimetradersbrisbane.au,https://www.realtimetradersbrisbane.au,https://dwayne260211.github.io
 EMAIL_PROVIDER= EMAIL_API_KEY= EMAIL_FROM= EMAIL_REPLY_TO= ADMIN_NOTIFY_EMAIL=
 # SUPABASE_URL / SUPABASE_ANON_KEY / SUPABASE_SERVICE_ROLE_KEY are injected by Supabase.
 ```

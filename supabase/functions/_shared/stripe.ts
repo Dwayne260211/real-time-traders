@@ -74,3 +74,12 @@ export async function verifyStripeSignature(
   const expected = await hmacSha256Hex(secret, `${t}.${payload}`);
   return sigs.some((s) => safeEqual(s, expected));
 }
+
+export async function stripeGet<T = Record<string, unknown>>(ctx: Ctx, path: string): Promise<T> {
+  const { key } = stripeKey(ctx);
+  const apiBase = (ctx.env("STRIPE_API_BASE") ?? "https://api.stripe.com").replace(/\/+$/, "");
+  const res = await ctx.fetch(`${apiBase}/v1/${path}`, { headers: { Authorization: `Bearer ${key}`, "Stripe-Version": "2024-06-20" } });
+  const body = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(`Stripe GET ${path} failed: ${res.status} ${body?.error?.message ?? ""}`);
+  return body as T;
+}

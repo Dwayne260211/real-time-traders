@@ -5,6 +5,7 @@ import { corsHeaders, Ctx, defaultCtx } from "../_shared/context.ts";
 import { rpc } from "../_shared/db.ts";
 import { sendBookingEmail } from "../_shared/notify.ts";
 import { verifyStripeSignature } from "../_shared/stripe.ts";
+import { fetchPaymentMethod, savePaymentMethod, userIdForCustomer } from "../_shared/members.ts";
 
 interface StripeEvent { id: string; type: string; data: { object: Record<string, any> } }
 
@@ -45,6 +46,23 @@ export async function handler(req: Request, ctx: Ctx = defaultCtx()): Promise<Re
       case "checkout.session.async_payment_failed":
         if (bookingId) { await rpc(ctx, "release_checkout", { p_booking_id: bookingId }); result = "released"; }
         break;
+      // Member saved a card (account.html, SetupIntent + Payment Element): store the summary only.
+      case "setup_intent.succeeded": {
+        const userId: string | undefined = s.metadata?.supabase_user_id;
+        const pmId = typeof s.payment_method === "string" ? s.payment_method : s.payment_method?.id;
+        if (!userId || !pmId) break;
+        await savePaymentMethod(ctx, await fetchPaymentMethod(ctx, pmId), userId);
+        result = "card_saved";
+        break;
+      }
+      case "payment_method.attached": {
+        const customer = typeof s.customer === "string" ? s.customer : s.customer?.id;
+        const userId = customer ? await userIdForCustomer(ctx, customer) : null;
+        if (!userId) break;
+        await savePaymentMethod(ctx, s, userId);
+        result = "card_saved";
+        break;
+      }
     }
     await rpc(ctx, "record_stripe_event", { p_id: event.id, p_type: event.type }).catch(() => undefined);
     return reply(200, { received: true, result });

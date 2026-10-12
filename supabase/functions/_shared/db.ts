@@ -98,3 +98,14 @@ export async function getSettings(ctx: Ctx): Promise<HireSettings> {
   if (!rows[0]) throw new Error("hire_settings row missing");
   return rows[0];
 }
+
+/** Insert or update rows (service role). onConflict names the unique column(s). */
+export async function upsert(ctx: Ctx, table: string, rows: Record<string, unknown> | Record<string, unknown>[], onConflict: string): Promise<void> {
+  const { url, key } = base(ctx);
+  const res = await ctx.fetch(`${url}/rest/v1/${table}?on_conflict=${encodeURIComponent(onConflict)}`, {
+    method: "POST",
+    headers: { apikey: key, Authorization: `Bearer ${key}`, "Content-Type": "application/json", Prefer: "resolution=merge-duplicates,return=minimal" },
+    body: JSON.stringify(rows),
+  });
+  if (!res.ok) throw new Error(`upsert ${table} failed: ${res.status} ${await res.text()}`);
+}

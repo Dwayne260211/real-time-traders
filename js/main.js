@@ -234,24 +234,77 @@
   document.querySelectorAll("[data-auth]").forEach(function (el) {
     el.addEventListener("click", function (e) {
       e.preventDefault();
+      if (body.classList.contains("is-signed-in")) { location.href = "account.html"; return; }
       openAuth(el.getAttribute("data-auth"), { tier: el.getAttribute("data-join-tier") });
     });
   });
 
   if (modal) {
-    modal.querySelectorAll("[data-forgot]").forEach(function (b) {
-      b.addEventListener("click", function () {
-        b.closest("form").querySelector(".form-status").textContent = "Password reset will be available when accounts launch.";
-      });
-    });
     modal.addEventListener("click", function (e) {
       if (e.target === modal) closeAuth();            // backdrop click
       if (e.target.closest("[data-close]")) closeAuth();
     });
-    modal.querySelectorAll("[data-demo-form]").forEach(function (f) {
-      f.addEventListener("submit", function (e) {
-        e.preventDefault();
-        f.querySelector(".form-status").textContent = "Preview only: accounts and payments are coming soon, so no account was created and nothing was sent.";
+    /* Real accounts (Supabase Auth, email + password). Membership tiers are not charged here:
+       every new account starts as a free account. */
+    var ACCOUNT_URL = location.origin + location.pathname.replace(/[^\/]*$/, "") + "account.html";
+    function authStatus(f, msg, isError) {
+      var st = f.querySelector(".form-status");
+      st.classList.toggle("is-error", !!isError);
+      st.textContent = msg;
+    }
+    function authError(err) {
+      var m = (err && (err.message || err.error_description)) || "";
+      if (/already registered|already exists/i.test(m)) return "That email already has an account. Use Log in instead.";
+      if (/invalid login credentials/i.test(m)) return "Wrong email or password.";
+      if (/email not confirmed/i.test(m)) return "Please confirm your email first: check your inbox for the link we sent.";
+      if (/password/i.test(m) && /least|short|characters/i.test(m)) return "Please use a password of at least 8 characters.";
+      if (/rate limit|too many/i.test(m)) return "Too many attempts. Please wait a few minutes and try again.";
+      if (m === "not_configured" || m === "load_failed" || /fetch/i.test(m)) return "We couldn't reach the sign-in service. Check your connection or call us.";
+      return m && m.length < 160 ? m : "Something went wrong. Please try again or call us.";
+    }
+    var joinForm = modal.querySelector("#panel-join form"), loginForm = modal.querySelector("#panel-login form");
+    if (joinForm) joinForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var name = joinForm.elements.name.value.trim(), email = joinForm.elements.email.value.trim(), pw = joinForm.elements.password.value;
+      if (!name || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return authStatus(joinForm, "Please add your name and a valid email.", true);
+      if (pw.length < 8) return authStatus(joinForm, "Please use a password of at least 8 characters.", true);
+      var btn = joinForm.querySelector("[type=submit]"); btn.disabled = true;
+      authStatus(joinForm, "Creating your account…");
+      hire().then(function (H) { return H.client(); }).then(function (sb) {
+        return sb.auth.signUp({ email: email, password: pw, options: { data: { full_name: name }, emailRedirectTo: ACCOUNT_URL } });
+      }).then(function (r) {
+        if (r.error) throw r.error;
+        if (r.data && r.data.session) { location.href = "account.html?welcome=1"; return; }
+        // Supabase returns a user with no identities when the email is already registered.
+        if (r.data && r.data.user && r.data.user.identities && r.data.user.identities.length === 0) throw new Error("already registered");
+        joinForm.reset();
+        authStatus(joinForm, "Almost done: we've emailed a confirmation link to " + email + ". Open it to finish creating your account; you'll be signed in automatically.");
+      }).catch(function (err) { authStatus(joinForm, authError(err), true); })
+        .then(function () { btn.disabled = false; });
+    });
+    if (loginForm) loginForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var email = loginForm.elements.email.value.trim(), pw = loginForm.elements.password.value;
+      if (!email || !pw) return authStatus(loginForm, "Please enter your email and password.", true);
+      var btn = loginForm.querySelector("[type=submit]"); btn.disabled = true;
+      authStatus(loginForm, "Signing in…");
+      hire().then(function (H) { return H.client(); }).then(function (sb) {
+        return sb.auth.signInWithPassword({ email: email, password: pw });
+      }).then(function (r) {
+        if (r.error) throw r.error;
+        location.href = "account.html";
+      }).catch(function (err) { authStatus(loginForm, authError(err), true); btn.disabled = false; });
+    });
+    modal.querySelectorAll("[data-forgot]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var f = b.closest("form"), email = f.elements.email.value.trim();
+        if (!email) return authStatus(f, "Enter your email above, then press Forgot password.", true);
+        hire().then(function (H) { return H.client(); }).then(function (sb) {
+          return sb.auth.resetPasswordForEmail(email, { redirectTo: ACCOUNT_URL + "?reset=1" });
+        }).then(function (r) {
+          if (r.error) throw r.error;
+          authStatus(f, "If that email has an account, we've sent a link to reset your password.");
+        }).catch(function (err) { authStatus(f, authError(err), true); });
       });
     });
   }
@@ -307,8 +360,8 @@
   }
   function showSignedIn(user) {
     var email = (user && user.email) || "your account";
-    body.classList.add("has-account");
-    document.querySelectorAll(".header__login").forEach(function (a) { a.textContent = "Signed in"; a.title = "Signed in as " + email; });
+    body.classList.add("has-account", "is-signed-in");
+    document.querySelectorAll(".header__login").forEach(function (a) { a.textContent = "My account"; a.title = "Signed in as " + email; });
     if (!modal) return;
     modal.querySelectorAll("[data-gsi-account]").forEach(function (el) { el.remove(); });
     modal.querySelectorAll(".tab-panel").forEach(function (panel) {
@@ -344,12 +397,13 @@
       var err = returning && H.oauthReturnError();
       return H.client().then(function (sb) { return sb.auth.getSession(); }).then(function (r) {
         var session = r.data && r.data.session;
-        if (session) { showSignedIn(session.user); if (returning) toast("Signed in as " + (session.user.email || "your Google account") + "."); }
+        if (session) { showSignedIn(session.user); if (returning) toast("Signed in as " + (session.user.email || "your account") + "."); }
         else if (err) { openAuth("login"); var st = modal.querySelector("#panel-login .form-status"); if (st) { st.classList.add("is-error"); st.textContent = err; } }
       });
     }).catch(function () {});
   }
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initGoogle); else initGoogle();
+  // Wait for DOMContentLoaded so deferred hire-config.js / hire-common.js later on the page have run.
+  if (document.readyState !== "complete") document.addEventListener("DOMContentLoaded", initGoogle); else initGoogle();
 
   /* ---------- Header search: no search backend yet, so it opens the matching section ---------- */
   document.querySelectorAll("[data-site-search]").forEach(function (f) {

@@ -1495,3 +1495,11 @@ p { text-wrap: pretty; }
 .gsi-or { display: flex; align-items: center; gap: 10px; margin: 0; color: #5f6368; font-size: 13px; }
 .gsi-or::before, .gsi-or::after { content: ""; flex: 1; height: 1px; background: #dadce0; }
 .gsi-account { margin: 0 0 12px; font-size: 14px; }
+
+/* account.html */
+.page-member-account [data-account] .account-card + .account-card { margin-top: 18px; }
+.page-member-account [data-account] .account-card { max-width: 640px; }
+.page-member-account input[readonly] { background: var(--soft); color: inherit; }
+.saved-card { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; border: 1px solid var(--line); border-radius: var(--radius); margin-bottom: 8px; }
+.saved-card p { margin: 0; }
+.payment-element { width: 100%; margin: 8px 0 12px; min-height: 40px; }

@@ -14,3 +14,9 @@ verify_jwt = true
 # Stripe calls this one, so there is no Supabase JWT; the Stripe signature is checked instead.
 [functions.stripe-webhook]
 verify_jwt = false
+
+[functions.create-setup-intent]
+verify_jwt = true
+
+[functions.remove-payment-method]
+verify_jwt = true

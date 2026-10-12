@@ -7,4 +7,8 @@
 window.RTT_HIRE_CONFIG = {
   supabaseUrl: "https://qcfszkrwctwsllcivxwo.supabase.co",
   supabaseAnonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFjZnN6a3J3Y3R3c2xsY2l2eHdvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2MDg4NjksImV4cCI6MjEwNzE4NDg2OX0.SdYOF3j8Hn-wF3ryRLGhU0Yq4lZDQmJiKf9yjYkpe78"  // anon public key (RLS protects the data)
+  ,
+  /* STRIPE_PUBLISHABLE_KEY: PLACEHOLDER. Paste the pk_test_... or pk_live_... key from the REAL TIME TRADERS PTY LTD
+     Stripe account here. While empty, account.html shows "Card payments coming soon". Never a sk_ key. */
+  stripePublishableKey: ""
 };

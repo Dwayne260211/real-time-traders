@@ -290,6 +290,67 @@
     if (saved === "member" || saved === "free") setMode(saved);
   } catch (err) {}
 
+  /* ---------- Join / Log in modal: Continue with Google (real Supabase Auth) ----------
+     Loads js/hire-config.js + js/hire-common.js on demand (pages that already include them reuse them).
+     Google accounts are normal accounts: no admin or paid-membership rights come from signing in. */
+  function loadScriptOnce(src) {
+    return new Promise(function (res, rej) {
+      if (document.querySelector('script[src="' + src + '"]')) return res();
+      var sc = document.createElement("script"); sc.src = src; sc.onload = function () { res(); }; sc.onerror = function () { rej(new Error("load_failed")); };
+      document.head.appendChild(sc);
+    });
+  }
+  function hire() {
+    if (window.RTTHire) return Promise.resolve(window.RTTHire);
+    return loadScriptOnce("js/hire-config.js").then(function () { return loadScriptOnce("js/hire-common.js"); })
+      .then(function () { if (!window.RTTHire || !window.RTTHire.config()) throw new Error("not_configured"); return window.RTTHire; });
+  }
+  function showSignedIn(user) {
+    var email = (user && user.email) || "your account";
+    body.classList.add("has-account");
+    document.querySelectorAll(".header__login").forEach(function (a) { a.textContent = "Signed in"; a.title = "Signed in as " + email; });
+    if (!modal) return;
+    modal.querySelectorAll("[data-gsi-account]").forEach(function (el) { el.remove(); });
+    modal.querySelectorAll(".tab-panel").forEach(function (panel) {
+      var p = document.createElement("p");
+      p.className = "gsi-account"; p.setAttribute("data-gsi-account", "");
+      p.innerHTML = 'Signed in as <strong></strong>. <button type="button" class="link-btn">Sign out</button>';
+      p.querySelector("strong").textContent = email;
+      p.querySelector("button").addEventListener("click", function () {
+        hire().then(function (H) { return H.client(); }).then(function (sb) { return sb.auth.signOut(); }).then(function () { location.reload(); });
+      });
+      panel.insertBefore(p, panel.firstChild);
+    });
+  }
+  function initGoogle() {
+    if (!modal) return;
+    modal.querySelectorAll(".tab-panel").forEach(function (panel) {
+      var form = panel.querySelector("form");
+      if (!form || panel.querySelector("[data-google-signin]")) return;
+      var st = form.querySelector(".form-status");
+      var wrap = document.createElement("div");
+      wrap.className = "gsi-wrap";
+      panel.insertBefore(wrap, form);
+      hire().then(function (H) {
+        var real = H.googleButton(function () { return H.client(); }, st);
+        wrap.replaceWith(real);
+      }).catch(function () { wrap.remove(); });
+    });
+    var returning = /(^#|&)(access_token|error)=/.test(location.hash) || /[?&]code=/.test(location.search);
+    var stored = false;
+    try { for (var i = 0; i < localStorage.length; i++) if (/^sb-.*-auth-token$/.test(localStorage.key(i))) stored = true; } catch (e) {}
+    if (!returning && !stored) return;
+    hire().then(function (H) {
+      var err = returning && H.oauthReturnError();
+      return H.client().then(function (sb) { return sb.auth.getSession(); }).then(function (r) {
+        var session = r.data && r.data.session;
+        if (session) { showSignedIn(session.user); if (returning) toast("Signed in as " + (session.user.email || "your Google account") + "."); }
+        else if (err) { openAuth("login"); var st = modal.querySelector("#panel-login .form-status"); if (st) { st.classList.add("is-error"); st.textContent = err; } }
+      });
+    }).catch(function () {});
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initGoogle); else initGoogle();
+
   /* ---------- Header search: no search backend yet, so it opens the matching section ---------- */
   document.querySelectorAll("[data-site-search]").forEach(function (f) {
     f.addEventListener("submit", function (e) {

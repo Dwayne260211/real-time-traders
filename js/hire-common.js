@@ -184,8 +184,73 @@
     return sb.auth.signInWithOtp({ email: email, options: { emailRedirectTo: redirectTo, shouldCreateUser: true } })
       .then(function (r) { if (r.error) throw r.error; });
   }
+
+  /* ---------- auth (Continue with Google) ----------
+     Google-branded button (white, official "G" mark). Supabase redirects back to the
+     current page (no hash); detectSessionInUrl in client() picks up the session.
+     Google users are ordinary members: admin access still comes only from public.user_roles. */
+  var GOOGLE_UNAVAILABLE = "Google sign-in isn't available yet. Please use email for now.";
+  var G_LOGO = '<svg class="gsi-btn__logo" width="18" height="18" viewBox="0 0 48 48" aria-hidden="true" focusable="false">' +
+    '<path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>' +
+    '<path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>' +
+    '<path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>' +
+    '<path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>';
+  function hereNoHash() { return location.origin + location.pathname + location.search; }
+  function googleEnabled() {
+    var cfg = config();
+    if (!cfg) return Promise.resolve(false);
+    return fetch(cfg.url + "/auth/v1/settings", { headers: { apikey: cfg.key } })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) { return d && d.external ? !!d.external.google : true; })   // unknown: let Supabase decide
+      .catch(function () { return true; });
+  }
+  function googleSignIn(sb, redirectTo) {
+    return googleEnabled().then(function (on) {
+      if (!on) throw new Error("google_unavailable");
+      return sb.auth.signInWithOAuth({ provider: "google", options: { redirectTo: redirectTo || hereNoHash() } });
+    }).then(function (r) {
+      if (r && r.error) throw r.error;
+      return r;
+    });
+  }
+  function googleErrorText(err) {
+    var m = String((err && (err.message || err.error_description || err.msg)) || err || "");
+    if (/google_unavailable|provider is not enabled|unsupported provider|validation_failed/i.test(m)) return GOOGLE_UNAVAILABLE;
+    return errorText(err);
+  }
+  /* Builds the button + optional "or" divider. getClient() returns a Promise of the Supabase client.
+     statusEl receives friendly errors. Returns the wrapper element (not yet in the DOM). */
+  function googleButton(getClient, statusEl, opts) {
+    opts = opts || {};
+    var wrap = document.createElement("div");
+    wrap.className = "gsi-wrap";
+    wrap.innerHTML = '<button type="button" class="gsi-btn" data-google-signin>' + G_LOGO +
+      '<span class="gsi-btn__text">Continue with Google</span></button>' +
+      (opts.divider === false ? "" : '<p class="gsi-or" aria-hidden="true"><span>or</span></p>');
+    var btn = wrap.querySelector("button");
+    btn.addEventListener("click", function () {
+      btn.disabled = true; btn.setAttribute("aria-busy", "true");
+      if (statusEl) { statusEl.classList.remove("is-error"); statusEl.textContent = "Opening Google…"; }
+      Promise.resolve().then(getClient).then(function (sb) { return googleSignIn(sb, opts.redirectTo ? opts.redirectTo() : null); })
+        .catch(function (err) {
+          if (statusEl) { statusEl.classList.add("is-error"); statusEl.textContent = googleErrorText(err); }
+          btn.disabled = false; btn.removeAttribute("aria-busy");
+        });
+    });
+    return wrap;
+  }
+  /* Supabase sends OAuth failures back as #error=…&error_description=… */
+  function oauthReturnError() {
+    var p = new URLSearchParams(location.hash.replace(/^#/, "") || location.search);
+    var e = p.get("error_description") || p.get("error");
+    return e ? googleErrorText(new Error(e)) : null;
+  }
   /* Wires a <form data-signin> with an email input and a .form-status */
   function wireSignIn(form, sb, redirectTo) {
+    if (!form.parentNode.querySelector("[data-google-signin]")) {
+      form.parentNode.insertBefore(googleButton(function () { return sb; }, form.querySelector(".form-status"),
+        { redirectTo: function () { return typeof redirectTo === "function" ? redirectTo() : (redirectTo || hereNoHash()); } }), form);
+    }
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var status = form.querySelector(".form-status");
@@ -221,6 +286,8 @@
     config: config, client: client, money: money, fmtDate: fmtDate, todayBrisbane: todayBrisbane,
     addDays: addDays, daysBetween: daysBetween, esc: esc, icon: icon, category: category, photoUrl: photoUrl,
     errorText: errorText, callFunction: callFunction, termsRows: termsRows, renderTerms: renderTerms,
-    loadSettings: loadSettings, wireSignIn: wireSignIn, statusBadge: statusBadge, showConfigNotice: showConfigNotice
+    loadSettings: loadSettings, wireSignIn: wireSignIn, statusBadge: statusBadge, showConfigNotice: showConfigNotice,
+    googleButton: googleButton, googleSignIn: googleSignIn, googleErrorText: googleErrorText, oauthReturnError: oauthReturnError,
+    GOOGLE_UNAVAILABLE: GOOGLE_UNAVAILABLE
   };
 })();

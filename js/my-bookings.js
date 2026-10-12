@@ -22,6 +22,9 @@
   if (qs.get("checkout") === "success") notice("Thanks. Stripe is confirming your payment (reference " + (qs.get("ref") || "") + "). Your booking shows as Confirmed once the payment is confirmed; refresh in a minute if it hasn't changed.");
   if (qs.get("checkout") === "cancelled") notice("Payment was not completed (reference " + (qs.get("ref") || "") + "). Your request is still saved and has not been charged.");
 
+  var oauthErr = H.oauthReturnError && H.oauthReturnError();
+  if (oauthErr) notice(oauthErr, true);
+
   function canCancel(b) { return (b.status === "pending" || b.status === "confirmed") && !b.cancel_requested_at; }
   function canPay(b) {
     return settings.payments_live && settings.pricing_rule && b.status === "pending" && b.hire_total_cents &&

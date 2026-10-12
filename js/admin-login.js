@@ -96,6 +96,11 @@
     }).then(function () { checking = false; });
   }
 
+  /* Continue with Google: same is_admin() check afterwards, so only accounts in user_roles get in. */
+  var loginStatus = forms.login.querySelector(".form-status");
+  var gWrap = H.googleButton(function () { return H.client(); }, loginStatus, { redirectTo: function () { return here; } });
+  forms.login.querySelector("h2").insertAdjacentElement("afterend", gWrap);
+
   H.client().then(function (client) {
     sb = client;
     $$("[data-login-fields]").forEach(function (f) { f.disabled = false; });
@@ -182,7 +187,7 @@
     }).then(function (session) {
       var hadLink = !!(linkType || linkCode || linkTokenHash || linkError);
       if (hadLink) cleanUrl();
-      if (linkError && !session) { recovering = false; note(linkFailed, true); show("login", false); return; }
+      if (linkError && !session) { recovering = false; note(linkType ? linkFailed : H.googleErrorText(new Error(linkError)), true); show("login", false); return; }
       if (recovering && session) { askPassword(); return; }
       if (recovering && !session) { recovering = false; note(linkFailed, true); show("login", false); return; }
       if (session) checkAdmin(session);

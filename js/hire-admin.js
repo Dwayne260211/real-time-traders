@@ -383,6 +383,13 @@
     sb.rpc("is_admin").then(check).then(function (isAdmin) {
       if (!isAdmin) { return sb.auth.signOut().then(function () { toLogin("not-admin"); }); }
       gate.hidden = true; adminBox.hidden = false;
+      if (window.RTTGate) window.RTTGate.unlock();
+      sb.rpc("visit_count").then(function (v) {   // coming-soon visit counter (fails silently until the site_visits migration is applied)
+        if (v.error || v.data === null || v.data === undefined) return;
+        var el = $("[data-visit-count]"); if (!el) return;
+        el.textContent = "Coming-soon page visits: " + Number(v.data).toLocaleString("en-AU");
+        el.hidden = false;
+      }, function () {});
       return Promise.all([loadEquipment(), loadBookings(), loadMaint(), loadReports(), loadSettingsForm()]);
     }).catch(function (err) { flash(H.errorText(err), true); gate.hidden = true; adminBox.hidden = false; });
   }

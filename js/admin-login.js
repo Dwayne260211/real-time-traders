@@ -86,7 +86,7 @@
     note("Checking admin access…");
     sb.rpc("is_admin").then(function (r) {
       if (r.error) throw r.error;
-      if (r.data === true) { note("Signed in. Opening the admin page…"); location.replace("admin.html"); return; }
+      if (r.data === true) { if (window.RTTGate) window.RTTGate.unlock(); else { try { localStorage.setItem("rtt_site_gate", "0719008ba43e17b27edf02d5c8884b86e605342b8b7c96dca58a15a0a9a6979f"); } catch (e) {} } note("Signed in. Opening the admin page…"); location.replace("admin.html"); return; }
       return sb.auth.signOut().then(function () {
         note("This account doesn't have admin access. You've been signed out.", true);
         show("login", false);

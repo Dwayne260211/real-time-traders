@@ -13,7 +13,7 @@
 
   /* ---------- catalogue items (hire-item.html?item=<id> from data/hire-items.json) ----------
      Shown with photo, rates and terms; booked by email or phone (online booking isn't open for these). */
-  var EMAIL = "itsreallymejohnnyc@gmail.com", TEL = "tel:+61422909739";
+  var EMAIL = "realtimetraders101@gmail.com", TEL = "tel:+61422909739";
   var staticId = params.get("item");
   if (staticId || (id && !/^[0-9a-f-]{36}$/i.test(id))) { showStatic(staticId || id); return; }
   if (!id) { noticeText.textContent = "No item was selected. Browse the hire catalogue to choose one."; return; }

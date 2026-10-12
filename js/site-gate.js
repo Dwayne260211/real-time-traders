@@ -19,7 +19,7 @@
   var KEY = 'rtt_site_gate';
   var VISIT_KEY = 'rtt_visit_counted';
   var PHONE = '+61422909739';
-  var EMAIL = 'itsreallymejohnnyc@gmail.com';
+  var EMAIL = 'realtimetraders101@gmail.com';
 
   var script = document.currentScript;
   var base = script && script.src ? script.src.replace(/js\/site-gate\.js(\?.*)?$/, '') : '';

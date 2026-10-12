@@ -6,7 +6,7 @@
 (function () {
   "use strict";
   var H = window.RTTHire || {};
-  var EMAIL = "itsreallymejohnnyc@gmail.com";
+  var EMAIL = "realtimetraders101@gmail.com";
   function mailto(name) { return "mailto:" + EMAIL + "?subject=" + encodeURIComponent("Hire enquiry: " + name); }
   var results = document.querySelector("[data-hire-results]");
   var status = document.querySelector("[data-hire-status]");

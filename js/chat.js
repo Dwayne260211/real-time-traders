@@ -11,7 +11,7 @@
 
   var TEL = "tel:+61422909739";
   var HOURS = "Mon–Fri 5am–9pm, Sat–Sun 7am–4pm (Brisbane time)";
-  var EMAIL = "itsreallymejohnnyc@gmail.com";
+  var EMAIL = "realtimetraders101@gmail.com";
 
   function hoursLine() {
     var st = window.RTT_openStatus ? window.RTT_openStatus() : null;

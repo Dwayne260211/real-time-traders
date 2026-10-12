@@ -8,7 +8,7 @@
  */
 (function () {
   var GATE_HASH = '0719008ba43e17b27edf02d5c8884b86e605342b8b7c96dca58a15a0a9a6979f';
-  var GATED_HOSTS = ['realtimetradersbrisbane.au', 'www.realtimetradersbrisbane.au'];
+  var GATED_HOSTS = []; // unlocked 12 Oct 2026; to re-lock: ['realtimetradersbrisbane.au', 'www.realtimetradersbrisbane.au']
   var KEY = 'rtt_site_gate';
   var preview = /[?&]gate=preview\b/.test(location.search);
   if (GATED_HOSTS.indexOf(location.hostname.toLowerCase()) === -1 && !preview) return;

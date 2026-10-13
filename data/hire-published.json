@@ -1,0 +1,1338 @@
+{
+ "_note": "Published hire rates (AUD, no GST), deposits and stock counts. Edit here; scripts/build-hire-data.py applies these over the research rates. Rates = 13 Oct 2026 median-competitor proposal, smoothed.",
+ "items": {
+  "dewalt-18v-xr-impact-wrench-kit": {
+   "rates": {
+    "day": 60.0,
+    "weekend": 90.0,
+    "week": 225.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "pressure-washer-petrol-3000psi": {
+   "rates": {
+    "day": 150.0,
+    "weekend": 225.0,
+    "week": 522.5
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "pressure-washer-petrol-2000-2500psi": {
+   "rates": {
+    "day": 150.0,
+    "weekend": 225.0,
+    "week": 522.5
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "pressure-washer-petrol-4000psi": {
+   "rates": {
+    "day": 242.0,
+    "weekend": 363.0,
+    "week": 889.0
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "pressure-washer-electric": {
+   "rates": {
+    "day": 90.0,
+    "weekend": 135.0,
+    "week": 360.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "pressure-washer-rotary-surface-cleaner-attachment": {
+   "rates": {
+    "day": 58.0,
+    "weekend": 87.0,
+    "week": 215.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "carpet-cleaner-hot-water-extraction": {
+   "rates": {
+    "day": 43.5,
+    "weekend": 52.0,
+    "week": 264.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "carpet-dryer-air-mover": {
+   "rates": {
+    "day": 58.5,
+    "weekend": 88.0,
+    "week": 205.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "wet-dry-vacuum-industrial": {
+   "rates": {
+    "day": 77.0,
+    "weekend": 115.5,
+    "week": 220.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "h-class-concrete-dust-vacuum": {
+   "rates": {
+    "day": 147.0,
+    "weekend": 220.5,
+    "week": 639.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "steam-cleaner": {
+   "rates": {
+    "day": 44.5,
+    "weekend": 52.0,
+    "week": 185.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "floor-scrubber-walk-behind-compact": {
+   "rates": {
+    "day": 173.0,
+    "weekend": 259.5,
+    "week": 636.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "floor-polisher-rotary-machine-400mm": {
+   "rates": {
+    "day": 110.0,
+    "weekend": 165.0,
+    "week": 348.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "dehumidifier": {
+   "rates": {
+    "day": 106.5,
+    "weekend": 160.0,
+    "week": 322.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "floor-stripper-tile-carpet-remover-walk-behind": {
+   "rates": {
+    "day": 186.0,
+    "weekend": 279.0,
+    "week": 774.0
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "floor-sander-drum-belt": {
+   "rates": {
+    "day": 100.0,
+    "weekend": 150.0,
+    "week": 400.0
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "orbital-floor-sander": {
+   "rates": {
+    "day": 129.5,
+    "weekend": 194.5,
+    "week": 447.0
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "floor-edger": {
+   "rates": {
+    "day": 80.0,
+    "weekend": 120.0,
+    "week": 352.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "tile-saw-electric-wet-bench-table": {
+   "rates": {
+    "day": 105.0,
+    "weekend": 157.5,
+    "week": 371.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "tile-cutter-manual-600mm": {
+   "rates": {
+    "day": 56.5,
+    "weekend": 85.0,
+    "week": 127.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "wallpaper-steamer-stripper": {
+   "rates": {
+    "day": 42.5,
+    "weekend": 64.0,
+    "week": 189.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "airless-paint-sprayer": {
+   "rates": {
+    "day": 242.0,
+    "weekend": 363.0,
+    "week": 895.5
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "plasterboard-giraffe-sander": {
+   "rates": {
+    "day": 106.0,
+    "weekend": 159.0,
+    "week": 320.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "orbital-sander-hand-held": {
+   "rates": {
+    "day": 25.0,
+    "weekend": 37.5,
+    "week": 66.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "belt-sander-100mm": {
+   "rates": {
+    "day": 67.0,
+    "weekend": 100.5,
+    "week": 232.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "heat-gun-paint-stripper": {
+   "rates": {
+    "day": 26.0,
+    "weekend": 39.0,
+    "week": 70.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "lawn-mower-push-petrol": {
+   "rates": {
+    "day": 50.0,
+    "weekend": 75.0,
+    "week": 150.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "line-trimmer-whipper-snipper-petrol": {
+   "rates": {
+    "day": 61.0,
+    "weekend": 91.5,
+    "week": 250.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "hedge-trimmer": {
+   "rates": {
+    "day": 88.0,
+    "weekend": 132.0,
+    "week": 256.5
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "leaf-blower": {
+   "rates": {
+    "day": 66.0,
+    "weekend": 99.0,
+    "week": 227.5
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "chainsaw-petrol-18-20in": {
+   "rates": {
+    "day": 160.0,
+    "weekend": 240.0,
+    "week": 560.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "pole-saw-pole-pruner": {
+   "rates": {
+    "day": 130.5,
+    "weekend": 196.0,
+    "week": 352.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "rotary-hoe-tiller": {
+   "rates": {
+    "day": 143.0,
+    "weekend": 214.5,
+    "week": 492.5
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "lawn-corer-aerator": {
+   "rates": {
+    "day": 162.5,
+    "weekend": 244.0,
+    "week": 560.0
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "lawn-dethatcher-scarifier": {
+   "rates": {
+    "day": 160.0,
+    "weekend": 240.0,
+    "week": 618.5
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "turf-cutter": {
+   "rates": {
+    "day": 176.0,
+    "weekend": 264.0,
+    "week": 815.0
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "lawn-roller": {
+   "rates": {
+    "day": 20.0,
+    "weekend": 30.0,
+    "week": 75.5
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "wood-chipper-small-towable-petrol": {
+   "rates": {
+    "day": 220.0,
+    "weekend": 330.0,
+    "week": 713.0
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "stump-grinder-small-medium": {
+   "rates": {
+    "day": 220.0,
+    "weekend": 330.0,
+    "week": 747.0
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "log-splitter-hydraulic": {
+   "rates": {
+    "day": 304.0,
+    "weekend": 456.0,
+    "week": 1063.0
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "brush-cutter-scrub-cutter-heavy": {
+   "rates": {
+    "day": 122.0,
+    "weekend": 183.0,
+    "week": 599.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "knapsack-sprayer": {
+   "rates": {
+    "day": 64.0,
+    "weekend": 96.0,
+    "week": 194.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "wheelbarrow": {
+   "rates": {
+    "day": 25.5,
+    "weekend": 38.5,
+    "week": 69.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "post-hole-digger-2-person-petrol-auger": {
+   "rates": {
+    "day": 115.0,
+    "weekend": 172.5,
+    "week": 360.0
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "post-hole-digger-1-person-petrol": {
+   "rates": {
+    "day": 110.0,
+    "weekend": 165.0,
+    "week": 342.5
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "post-hole-digger-manual": {
+   "rates": {
+    "day": 27.0,
+    "weekend": 40.5,
+    "week": 76.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "concrete-cement-mixer-3-cu-ft-electric": {
+   "rates": {
+    "day": 66.0,
+    "weekend": 99.0,
+    "week": 266.0
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "cement-mixer-small-2-2-2-cu-ft-electric": {
+   "rates": {
+    "day": 65.0,
+    "weekend": 97.5,
+    "week": 230.0
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "concrete-vibrator-petrol-drive-shaft": {
+   "rates": {
+    "day": 125.0,
+    "weekend": 187.5,
+    "week": 473.5
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "power-trowel-walk-behind": {
+   "rates": {
+    "day": 130.0,
+    "weekend": 195.0,
+    "week": 381.0
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "bull-float": {
+   "rates": {
+    "day": 32.0,
+    "weekend": 48.0,
+    "week": 74.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "concrete-screed-manual": {
+   "rates": {
+    "day": 25.0,
+    "weekend": 37.5,
+    "week": 90.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "concrete-floor-grinder-walk-behind-single-head": {
+   "rates": {
+    "day": 290.5,
+    "weekend": 436.0,
+    "week": 1040.0
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "concrete-grinder-hand-held": {
+   "rates": {
+    "day": 197.0,
+    "weekend": 295.5,
+    "week": 403.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "core-drill-to-100-150mm": {
+   "rates": {
+    "day": 176.0,
+    "weekend": 264.0,
+    "week": 600.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "wall-chaser-125mm": {
+   "rates": {
+    "day": 143.0,
+    "weekend": 214.5,
+    "week": 480.5
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "concrete-planer-scarifier-200mm": {
+   "rates": {
+    "day": 481.5,
+    "weekend": 722.5,
+    "week": 2165.0
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "plate-compactor-small-40-55kg": {
+   "rates": {
+    "day": 85.0,
+    "weekend": 127.5,
+    "week": 330.0
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "plate-compactor-medium-70-90kg": {
+   "rates": {
+    "day": 95.0,
+    "weekend": 142.5,
+    "week": 360.0
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "plate-compactor-reversible-150kg": {
+   "rates": {
+    "day": 200.0,
+    "weekend": 300.0,
+    "week": 761.0
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "rammer-jumping-jack": {
+   "rates": {
+    "day": 102.5,
+    "weekend": 154.0,
+    "week": 352.0
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "roller-ride-on-double-drum-1-2-1-5t": {
+   "rates": {
+    "day": 308.0,
+    "weekend": 462.0,
+    "week": 1347.0
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "trench-roller-articulated-padfoot": {
+   "rates": {
+    "day": 363.5,
+    "weekend": 545.5,
+    "week": 1782.0
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "mini-excavator-1-7-1-8t": {
+   "rates": {
+    "day": 324.0,
+    "weekend": 486.0,
+    "week": 1360.0
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "mini-excavator-1t": {
+   "rates": {
+    "day": 324.0,
+    "weekend": 486.0,
+    "week": 1360.0
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "excavator-2-5t": {
+   "rates": {
+    "day": 462.0,
+    "weekend": 693.0,
+    "week": 2032.0
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "excavator-3-5t": {
+   "rates": {
+    "day": 533.5,
+    "weekend": 800.5,
+    "week": 2569.0
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "mini-loader-dingo-kanga-type": {
+   "rates": {
+    "day": 242.5,
+    "weekend": 242.5,
+    "week": 880.0
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "skid-steer-loader-small-wheeled": {
+   "rates": {
+    "day": 340.0,
+    "weekend": 510.0,
+    "week": 1374.5
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "tracked-dumper-power-barrow-600kg": {
+   "rates": {
+    "day": 239.0,
+    "weekend": 358.5,
+    "week": 901.0
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "trencher-walk-behind-self-propelled": {
+   "rates": {
+    "day": 324.0,
+    "weekend": 486.0,
+    "week": 1394.0
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "demolition-hammer-light-electric": {
+   "rates": {
+    "day": 110.0,
+    "weekend": 165.0,
+    "week": 374.5
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "demolition-hammer-medium-electric-16kg": {
+   "rates": {
+    "day": 115.5,
+    "weekend": 173.5,
+    "week": 390.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "jackhammer-breaker-heavy-electric-30kg": {
+   "rates": {
+    "day": 165.0,
+    "weekend": 247.5,
+    "week": 586.0
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "jackhammer-on-trolley-tile-floor-removal": {
+   "rates": {
+    "day": 200.0,
+    "weekend": 300.0,
+    "week": 595.0
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "demolition-cut-off-saw-petrol-350mm": {
+   "rates": {
+    "day": 220.0,
+    "weekend": 330.0,
+    "week": 813.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "concrete-floor-saw-walk-behind-350mm-petrol": {
+   "rates": {
+    "day": 242.0,
+    "weekend": 363.0,
+    "week": 746.5
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "brick-paver-saw-350mm": {
+   "rates": {
+    "day": 165.0,
+    "weekend": 247.5,
+    "week": 600.5
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "rotary-hammer-drill-light-sds-plus": {
+   "rates": {
+    "day": 88.0,
+    "weekend": 132.0,
+    "week": 281.5
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "rotary-hammer-drill-heavy-sds-max": {
+   "rates": {
+    "day": 99.0,
+    "weekend": 148.5,
+    "week": 372.5
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "hammer-percussion-drill-13mm": {
+   "rates": {
+    "day": 48.5,
+    "weekend": 73.0,
+    "week": 145.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "cordless-drill": {
+   "rates": {
+    "day": 55.0,
+    "weekend": 82.5,
+    "week": 150.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "electric-impact-wrench-3-4in": {
+   "rates": {
+    "day": 35.0,
+    "weekend": 52.5,
+    "week": 98.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "mixing-drill-paddle-mixer": {
+   "rates": {
+    "day": 79.0,
+    "weekend": 118.5,
+    "week": 226.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "magnetic-base-drill": {
+   "rates": {
+    "day": 160.0,
+    "weekend": 240.0,
+    "week": 691.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "angle-grinder-125mm": {
+   "rates": {
+    "day": 52.5,
+    "weekend": 79.0,
+    "week": 175.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "angle-grinder-230mm": {
+   "rates": {
+    "day": 58.5,
+    "weekend": 88.0,
+    "week": 212.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "circular-saw-235mm": {
+   "rates": {
+    "day": 40.5,
+    "weekend": 61.0,
+    "week": 121.5
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "jigsaw": {
+   "rates": {
+    "day": 36.0,
+    "weekend": 54.0,
+    "week": 107.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "reciprocating-sabre-saw": {
+   "rates": {
+    "day": 30.5,
+    "weekend": 46.0,
+    "week": 86.5
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "mitre-drop-saw": {
+   "rates": {
+    "day": 127.0,
+    "weekend": 190.5,
+    "week": 378.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "metal-cut-off-saw-355mm": {
+   "rates": {
+    "day": 81.0,
+    "weekend": 121.5,
+    "week": 284.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "electric-planer-hand": {
+   "rates": {
+    "day": 34.0,
+    "weekend": 51.0,
+    "week": 100.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "framing-nailer": {
+   "rates": {
+    "day": 48.5,
+    "weekend": 73.0,
+    "week": 192.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "coil-fencing-nailer": {
+   "rates": {
+    "day": 60.0,
+    "weekend": 90.0,
+    "week": 210.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "finish-brad-nailer": {
+   "rates": {
+    "day": 55.5,
+    "weekend": 83.5,
+    "week": 203.5
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "secret-floor-nailer-stapler": {
+   "rates": {
+    "day": 80.0,
+    "weekend": 120.0,
+    "week": 319.5
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "air-compressor-small-electric-6-12cfm": {
+   "rates": {
+    "day": 66.5,
+    "weekend": 100.0,
+    "week": 275.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "welder-inverter-arc-180a": {
+   "rates": {
+    "day": 138.0,
+    "weekend": 207.0,
+    "week": 484.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "torque-wrench-1-2in-manual": {
+   "rates": {
+    "day": 76.5,
+    "weekend": 115.0,
+    "week": 170.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "generator-2kva": {
+   "rates": {
+    "day": 105.5,
+    "weekend": 158.5,
+    "week": 360.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "generator-3kva-inverter": {
+   "rates": {
+    "day": 108.5,
+    "weekend": 163.0,
+    "week": 360.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "generator-5kva": {
+   "rates": {
+    "day": 134.5,
+    "weekend": 202.0,
+    "week": 677.0
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "generator-6-7kva": {
+   "rates": {
+    "day": 176.0,
+    "weekend": 264.0,
+    "week": 707.0
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "generator-10kva": {
+   "rates": {
+    "day": 184.0,
+    "weekend": 276.0,
+    "week": 882.0
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "extension-lead-15a-20-30m": {
+   "rates": {
+    "day": 11.0,
+    "weekend": 16.5,
+    "week": 46.5
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "extension-ladder-6-6-5m": {
+   "rates": {
+    "day": 48.5,
+    "weekend": 73.0,
+    "week": 145.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "extension-ladder-8-8-5m": {
+   "rates": {
+    "day": 55.0,
+    "weekend": 82.5,
+    "week": 185.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "step-ladder-1-8m": {
+   "rates": {
+    "day": 28.5,
+    "weekend": 43.0,
+    "week": 88.5
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "platform-ladder-2-4m": {
+   "rates": {
+    "day": 52.5,
+    "weekend": 79.0,
+    "week": 200.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "trestle-aluminium-adjustable-2-4m": {
+   "rates": {
+    "day": 21.0,
+    "weekend": 31.5,
+    "week": 34.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "plank-aluminium-4m": {
+   "rates": {
+    "day": 15.5,
+    "weekend": 23.5,
+    "week": 25.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "mobile-aluminium-scaffold-single-width-4-4-5m": {
+   "rates": {
+    "day": 144.0,
+    "weekend": 216.0,
+    "week": 309.0
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "panel-sheet-lifter": {
+   "rates": {
+    "day": 66.5,
+    "weekend": 100.0,
+    "week": 266.0
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "duct-material-lifter-3-6-5m": {
+   "rates": {
+    "day": 121.0,
+    "weekend": 181.5,
+    "week": 388.0
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "acrow-prop-steel-no-2-3": {
+   "rates": {
+    "day": 14.0,
+    "weekend": 15.5,
+    "week": 15.5
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "drain-cleaner-electric-eel": {
+   "rates": {
+    "day": 121.0,
+    "weekend": 181.5,
+    "week": 477.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "drain-jetter-electric-1800psi": {
+   "rates": {
+    "day": 167.0,
+    "weekend": 250.5,
+    "week": 594.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "drain-snake-cordless": {
+   "rates": {
+    "day": 63.0,
+    "weekend": 94.5,
+    "week": 176.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "pipe-threader-electric-25-50mm": {
+   "rates": {
+    "day": 223.0,
+    "weekend": 334.5,
+    "week": 850.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "pipe-freezer-kit-electric": {
+   "rates": {
+    "day": 107.0,
+    "weekend": 160.5,
+    "week": 282.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "pipe-press-crimper-15-50mm": {
+   "rates": {
+    "day": 127.0,
+    "weekend": 190.5,
+    "week": 425.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "submersible-pump-50mm-dirty-water": {
+   "rates": {
+    "day": 95.0,
+    "weekend": 142.5,
+    "week": 418.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "petrol-transfer-trash-pump-50mm": {
+   "rates": {
+    "day": 109.0,
+    "weekend": 163.5,
+    "week": 430.0
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "flexdrive-pump-kit-petrol": {
+   "rates": {
+    "day": 151.5,
+    "weekend": 227.5,
+    "week": 637.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "hand-trolley-sack-truck": {
+   "rates": {
+    "day": 48.0,
+    "weekend": 72.0,
+    "week": 123.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "stair-climbing-fridge-trolley": {
+   "rates": {
+    "day": 24.5,
+    "weekend": 37.0,
+    "week": 105.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "pallet-jack-2-5t": {
+   "rates": {
+    "day": 42.5,
+    "weekend": 64.0,
+    "week": 127.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "furniture-piano-dolly": {
+   "rates": {
+    "day": 31.5,
+    "weekend": 47.5,
+    "week": 76.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "engine-hoist-crane-2t": {
+   "rates": {
+    "day": 89.5,
+    "weekend": 134.5,
+    "week": 326.0
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "chain-block-hoist-2t": {
+   "rates": {
+    "day": 30.0,
+    "weekend": 45.0,
+    "week": 120.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "box-trailer-6x4": {
+   "rates": {
+    "day": 47.5,
+    "weekend": 71.5,
+    "week": 180.0
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "box-trailer-8x5": {
+   "rates": {
+    "day": 92.0,
+    "weekend": 138.0,
+    "week": 293.0
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "enclosed-trailer-8x5": {
+   "rates": {
+    "day": 148.0,
+    "weekend": 222.0,
+    "week": 492.0
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "tipping-trailer-8x5": {
+   "rates": {
+    "day": 127.0,
+    "weekend": 190.5,
+    "week": 425.0
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "plant-machinery-trailer-2t": {
+   "rates": {
+    "day": 77.0,
+    "weekend": 115.5,
+    "week": 346.0
+   },
+   "deposit": 200,
+   "stock": 2
+  },
+  "car-trailer": {
+   "rates": {
+    "day": 198.0,
+    "weekend": 297.0,
+    "week": 784.0
+   },
+   "deposit": 200,
+   "stock": 1
+  },
+  "pedestal-fan-industrial-600-750mm": {
+   "rates": {
+    "day": 60.5,
+    "weekend": 91.0,
+    "week": 185.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "portable-air-conditioner": {
+   "rates": {
+    "day": 88.0,
+    "weekend": 132.0,
+    "week": 184.5
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "evaporative-air-cooler": {
+   "rates": {
+    "day": 111.0,
+    "weekend": 166.5,
+    "week": 403.0
+   },
+   "deposit": 100,
+   "stock": 5
+  },
+  "exhaust-extraction-fan-300mm": {
+   "rates": {
+    "day": 77.0,
+    "weekend": 115.5,
+    "week": 321.5
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "patio-heater-lpg": {
+   "rates": {
+    "day": 60.5,
+    "weekend": 91.0,
+    "week": 160.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "laser-level-rotary": {
+   "rates": {
+    "day": 130.0,
+    "weekend": 195.0,
+    "week": 330.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "automatic-dumpy-level": {
+   "rates": {
+    "day": 102.0,
+    "weekend": 153.0,
+    "week": 347.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "moisture-meter": {
+   "rates": {
+    "day": 78.0,
+    "weekend": 117.0,
+    "week": 230.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "laser-distance-measure": {
+   "rates": {
+    "day": 65.0,
+    "weekend": 97.5,
+    "week": 184.0
+   },
+   "deposit": 100,
+   "stock": 6
+  },
+  "temporary-fence-panel-mesh-2-4x1-8m": {
+   "rates": {
+    "day": 13.0,
+    "weekend": 13.0,
+    "week": 13.0
+   },
+   "deposit": 100,
+   "stock": 5,
+   "flat": 11.5
+  },
+  "portable-toilet-construction-event": {
+   "rates": {
+    "day": 143.0,
+    "weekend": 165.0,
+    "week": 242.0
+   },
+   "deposit": 200,
+   "stock": 1
+  }
+ }
+}

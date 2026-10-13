@@ -55,7 +55,8 @@
     var href = it.href || "hire-item.html?item=" + encodeURIComponent(it.id);
     var title = '<a href="' + esc(href) + '">' + esc(it.name) + "</a>";
     var tags = '<span class="tag-weight tag-weight--' + esc(it.weight) + '">' + (it.weight === "heavy" ? "Heavy" : "Light") + "</span>" +
-      (it.owner_item ? '<span class="tag-owner">' + icon("i-star") + " Our own kit</span>" : "");
+      (it.owner_item ? '<span class="tag-owner">' + icon("i-star") + " Our stock</span>" : "") +
+      (it.stock != null ? '<span class="tag-stock">In stock: ' + esc(String(it.stock)) + "</span>" : "");
     var book = '<a class="btn btn--outline btn--sm btn--block" href="' + esc(href) + '">View details<span class="sr-only"> for ' + esc(it.name) + "</span></a>";
     return '<article class="equip-card' + (it.pinned ? " equip-card--pinned" : "") + (it.photo ? "" : " equip-card--icon") + '">' +
       '<div class="equip-card__media">' + media + "</div>" +
@@ -101,7 +102,7 @@
     var pinned = list.filter(function (i) { return i.pinned; });
     var rest = list;
     if (state.filter === "all" && pinned.length) {
-      html += '<section class="hire-group hire-group--pinned" aria-labelledby="hg-pinned"><h2 id="hg-pinned" class="hire-group__title">' + icon("i-star") + ' Our own gear</h2><h3 class="hire-sub">Light tools</h3><div class="equip-grid">' + pinned.map(card).join("") + "</div></section>";
+      html += '<section class="hire-group hire-group--pinned" aria-labelledby="hg-pinned"><h2 id="hg-pinned" class="hire-group__title">' + icon("i-star") + ' Our stock</h2><h3 class="hire-sub">Light tools</h3><div class="equip-grid">' + pinned.map(card).join("") + "</div></section>";
       rest = list.filter(function (i) { return !i.pinned; });
     }
     FILTERS.forEach(function (f) {

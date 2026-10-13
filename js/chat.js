@@ -230,7 +230,7 @@
     var finish = function () {
       var found = (hireish || !entry) ? findHire(q) : [];
       if (found.length) {
-        var lines = found.slice(0, 3).map(function (it) { return cap(it.name) + ": " + rateText(it) + "."; });
+        var lines = found.slice(0, 3).map(function (it) { return cap(it.name) + ": " + rateText(it) + (it.stock != null ? " In stock: " + it.stock + "." : "."); });
         var more = found.length > 3 ? " We have " + found.length + " matching items; see the hire range for them all." : "";
         botSays(["Yes, it's in our hire range."].concat(lines).concat(["Prices in AUD, no GST added. Call us, or use Enquire on the hire page to email us, to check availability; price and terms are confirmed when you call." + more, hoursLine()]),
           [["See the hire range", "hire.html"]], true);

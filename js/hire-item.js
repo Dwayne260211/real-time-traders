@@ -73,6 +73,7 @@
         $("[data-crumb]").textContent = it.name;
         var sub = document.querySelector(".page-banner p"); if (sub) sub.textContent = "Photo, rates and hire terms. Call or email us to check availability.";
         $("[data-cat]").textContent = it.category || f.name || "";
+        if (it.stock != null) { var sb = document.createElement("span"); sb.className = "tag-stock"; sb.textContent = "In stock: " + it.stock; $("[data-cat]").insertAdjacentElement("afterend", sb); }
         $("[data-desc]").textContent = (it.summary ? it.summary + " " : "") +
           "Call or email us to check availability, the exact model and the price for your dates.";
         staticGallery(it, f);

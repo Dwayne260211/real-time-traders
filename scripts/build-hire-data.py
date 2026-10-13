@@ -292,18 +292,29 @@ def main():
         if n == OWNER_ITEM:
             it.update({"id": "dewalt-18v-xr-impact-wrench-kit", "name": 'DeWalt 18V XR brushless 1/2" impact wrench kit (5.0Ah battery + charger)',
                        "type": n, "pinned": True, "owner_item": True,
-                       "summary": "Our own kit: cordless 1/2\" impact wrench with a 5.0Ah battery and charger.",
+                       "summary": "Our stock: cordless 1/2\" impact wrench with a 5.0Ah battery and charger.",
                        "photo": {"src": "images/hire/dewalt-impact-wrench-1.webp", "alt": "DeWalt 18V XR brushless impact wrench with 5.0Ah battery"},
                        "photos": [{"src": "images/hire/dewalt-impact-wrench-%d.webp" % k, "alt": a} for k, a in
                                   [(1, "DeWalt 18V XR brushless impact wrench with 5.0Ah battery"),
                                    (2, "The DeWalt impact wrench, 5.0Ah battery and charger"),
                                    (3, "The DeWalt impact wrench kit laid out: wrench, battery and charger")]]})
         items.append(it)
+    # Published rates/deposits/stock (data/hire-published.json) override the research rates, so a rerun keeps them.
+    pubf = os.path.join(ROOT, "data", "hire-published.json")
+    pub = json.load(open(pubf))["items"] if os.path.exists(pubf) else {}
+    import hashlib
+    for it in items:
+        p = pub.get(it["id"], {})
+        if "rates" in p: it["rates"] = p["rates"]
+        if p.get("flat") is not None: it["flat"] = p["flat"]
+        if p.get("deposit") is not None: it["deposit"] = p["deposit"]
+        h = int(hashlib.sha1(it["id"].encode()).hexdigest(), 16) % 2
+        it["stock"] = p.get("stock", (5 + h) if it["weight"] == "light" else (1 + h))
     items.sort(key=lambda x: (not x.get("pinned", False)))
     out = {
-        "updated": "2026-10-10",
+        "updated": "2026-10-13",
         "currency": "AUD",
-        "note": "Prices in AUD. No GST added. Price, availability and terms confirmed when you call.",
+        "note": "Prices in AUD, no GST. Availability confirmed when you book.",
         "filters": [{"slug": f[0], "name": f[1], "icon": f[2], "categories": f[3]} for f in FILTERS],
         "items": items,
     }

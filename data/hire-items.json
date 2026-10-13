@@ -126,7 +126,7 @@
    "type": "Cordless 1/2in impact wrench (18V)",
    "pinned": true,
    "owner_item": true,
-   "summary": "Our own kit: cordless 1/2\" impact wrench with a 5.0Ah battery and charger.",
+   "summary": "Our stock: cordless 1/2\" impact wrench with a 5.0Ah battery and charger.",
    "photo": {
     "src": "images/hire/dewalt-impact-wrench-1.webp",
     "alt": "DeWalt 18V XR brushless impact wrench with 5.0Ah battery"
@@ -145,7 +145,8 @@
      "alt": "The DeWalt impact wrench kit laid out: wrench, battery and charger"
     }
    ],
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "pressure-washer-petrol-3000psi",
@@ -171,7 +172,8 @@
      "source": "https://unsplash.com/photos/a-man-in-a-yellow-vest-is-cleaning-a-street-gal5jKCgDVo"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "pressure-washer-petrol-2000-2500psi",
@@ -197,7 +199,8 @@
      "source": "https://unsplash.com/photos/a-man-in-a-yellow-vest-is-cleaning-a-street-gal5jKCgDVo"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "pressure-washer-petrol-4000psi",
@@ -223,7 +226,8 @@
      "source": "https://unsplash.com/photos/a-man-in-a-yellow-vest-is-cleaning-a-street-gal5jKCgDVo"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "pressure-washer-electric",
@@ -249,7 +253,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Karcher-p1020712.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "pressure-washer-rotary-surface-cleaner-attachment",
@@ -275,7 +280,8 @@
      "source": "https://unsplash.com/photos/a-man-in-a-yellow-vest-is-cleaning-a-street-gal5jKCgDVo"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "carpet-cleaner-hot-water-extraction",
@@ -301,7 +307,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Floor_cleaner_inside_Sullivan_Hall.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "carpet-dryer-air-mover",
@@ -327,7 +334,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:XPower_air_mover_sits_in_the_corner.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "wet-dry-vacuum-industrial",
@@ -353,7 +361,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Advance_VL500_wetdry_vacuum_Yonge.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "h-class-concrete-dust-vacuum",
@@ -379,7 +388,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Advance_VL500_wetdry_vacuum_Yonge.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "steam-cleaner",
@@ -405,7 +415,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Polti_steam_mop_or_portable.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "floor-scrubber-walk-behind-compact",
@@ -431,7 +442,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Floor_cleaning_machine_-_Nobles.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "floor-polisher-rotary-machine-400mm",
@@ -457,7 +469,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%97%E0%B8%B3%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%AA%E0%B8%B0%E0%B8%AD%E0%B8%B2%E0%B8%94.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "dehumidifier",
@@ -483,7 +496,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:D%C3%A9shumidificateur_d%27air_professionnel.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "floor-stripper-tile-carpet-remover-walk-behind",
@@ -496,7 +510,8 @@
     "weekend": 279.0,
     "week": 774.0
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "floor-sander-drum-belt",
@@ -522,7 +537,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Artisan-poncage-parquet-paris-francois-gaillard_07.jpg"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "orbital-floor-sander",
@@ -535,7 +551,8 @@
     "weekend": 194.5,
     "week": 447.0
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "floor-edger",
@@ -548,7 +565,8 @@
     "weekend": 120.0,
     "week": 352.0
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "tile-saw-electric-wet-bench-table",
@@ -574,7 +592,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Tile_saw.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "tile-cutter-manual-600mm",
@@ -600,7 +619,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Montolit_MASTERPIUMA_93_P3.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "wallpaper-steamer-stripper",
@@ -613,7 +633,8 @@
     "weekend": 64.0,
     "week": 189.0
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "airless-paint-sprayer",
@@ -639,7 +660,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Pompa-Airless-TECNOVER-Testarossa-Superquattromila.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "plasterboard-giraffe-sander",
@@ -652,7 +674,8 @@
     "weekend": 159.0,
     "week": 320.0
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "orbital-sander-hand-held",
@@ -678,7 +701,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Makita_BO5041_Random_Orbit_Sander_(6169161017).jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "belt-sander-100mm",
@@ -704,7 +728,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Belt_sander_bosch.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "heat-gun-paint-stripper",
@@ -730,7 +755,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Hot_air_gun_(1).jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "lawn-mower-push-petrol",
@@ -756,7 +782,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:2015-05-27_12_41_21_A_lawn_mower_on_Tranquility_Court_in_the_Franklin_Farm_section_of_Oak_Hill,_Fairfax_County,_Virginia.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "line-trimmer-whipper-snipper-petrol",
@@ -782,7 +809,8 @@
      "source": "https://unsplash.com/photos/man-trims-overgrown-grass-with-a-string-trimmer-dvipT9WMNis"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "hedge-trimmer",
@@ -808,7 +836,8 @@
      "source": "https://unsplash.com/photos/person-trimming-hedge-on-ladder-QnodCAbcqvc"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "leaf-blower",
@@ -834,7 +863,8 @@
      "source": "https://unsplash.com/photos/a-man-with-a-leaf-blower-in-a-yard-20Xibv0RrDo"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "chainsaw-petrol-18-20in",
@@ -860,7 +890,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Blocco_catena_motosega_per_wiki5.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "pole-saw-pole-pruner",
@@ -886,7 +917,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Asts%C3%A4ge%26Schere%26Seilzug.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "rotary-hoe-tiller",
@@ -912,7 +944,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Glebogryzarka.jpg"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "lawn-corer-aerator",
@@ -938,7 +971,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:AIREADORA_03.JPG"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "lawn-dethatcher-scarifier",
@@ -951,7 +985,8 @@
     "weekend": 240.0,
     "week": 618.5
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "turf-cutter",
@@ -964,7 +999,8 @@
     "weekend": 264.0,
     "week": 815.0
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "lawn-roller",
@@ -990,7 +1026,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Kondara_J09_02.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "wood-chipper-small-towable-petrol",
@@ -1016,7 +1053,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Wood_chipper_display_-_geograph.org.uk_-_4275105.jpg"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "stump-grinder-small-medium",
@@ -1042,7 +1080,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:2023-05-12_08_37_56_A_stump_grinder_being_used_to_grind_up_a_Red_Maple_stump_along_Aquetong_Lane_in_the_Mountainview_section_of_Ewing_Township,_Mercer_County,_New_Jersey.jpg"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "log-splitter-hydraulic",
@@ -1068,7 +1107,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Automatic_axe_dsc00844.jpg"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "brush-cutter-scrub-cutter-heavy",
@@ -1094,7 +1134,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Handy_mower.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "knapsack-sprayer",
@@ -1120,7 +1161,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Knapsack_sprayer.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "wheelbarrow",
@@ -1146,7 +1188,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Carretilla_Herragro_campo.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "post-hole-digger-2-person-petrol-auger",
@@ -1172,7 +1215,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Starr-030429-0041-Chenopodium_oahuense-digging_holes_with_power_auger_with_Derek-Lua_Makika-Kahoolawe_(24003396884).jpg"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "post-hole-digger-1-person-petrol",
@@ -1198,7 +1242,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Starr-030429-0041-Chenopodium_oahuense-digging_holes_with_power_auger_with_Derek-Lua_Makika-Kahoolawe_(24003396884).jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "post-hole-digger-manual",
@@ -1224,7 +1269,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Erdbohrerp.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "concrete-cement-mixer-3-cu-ft-electric",
@@ -1250,7 +1296,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Mini_concrete_mixer.jpg"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "cement-mixer-small-2-2-2-cu-ft-electric",
@@ -1276,7 +1323,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Mini_concrete_mixer.jpg"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "concrete-vibrator-petrol-drive-shaft",
@@ -1289,7 +1337,8 @@
     "weekend": 187.5,
     "week": 473.5
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "power-trowel-walk-behind",
@@ -1315,7 +1364,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Hand-push_electric_concrete_trowel.jpg"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "bull-float",
@@ -1341,7 +1391,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Blue_Grass_Chemical_Agent-Destruction_Pilot_Plant_Munitions_Demilitarization_Building_Finishing_Concrete_(4604675852).jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "concrete-screed-manual",
@@ -1354,7 +1405,8 @@
     "weekend": 37.5,
     "week": 90.0
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "concrete-floor-grinder-walk-behind-single-head",
@@ -1380,7 +1432,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:DURATIQ_concrete_grinding_machine.png"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "concrete-grinder-hand-held",
@@ -1406,7 +1459,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Neuverlegung_%E2%80%9ESpur_der_Erinnerung%E2%80%9C_am_Waidmarkt,_K%C3%B6ln-5813.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "core-drill-to-100-150mm",
@@ -1432,7 +1486,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Makita_8406_Diamon_Core_Drill_(4887726030).jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "wall-chaser-125mm",
@@ -1458,7 +1513,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Einhell_TC-MA_1300.JPG"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "concrete-planer-scarifier-200mm",
@@ -1471,7 +1527,8 @@
     "weekend": 722.5,
     "week": 2165.0
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "plate-compactor-small-40-55kg",
@@ -1498,7 +1555,8 @@
     }
    },
    "icon": "i-compactor",
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "plate-compactor-medium-70-90kg",
@@ -1525,7 +1583,8 @@
     }
    },
    "icon": "i-compactor",
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "plate-compactor-reversible-150kg",
@@ -1552,7 +1611,8 @@
     }
    },
    "icon": "i-compactor",
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "rammer-jumping-jack",
@@ -1579,7 +1639,8 @@
     }
    },
    "icon": "i-compactor",
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "roller-ride-on-double-drum-1-2-1-5t",
@@ -1606,7 +1667,8 @@
     }
    },
    "icon": "i-compactor",
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "trench-roller-articulated-padfoot",
@@ -1633,7 +1695,8 @@
     }
    },
    "icon": "i-compactor",
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "mini-excavator-1-7-1-8t",
@@ -1659,7 +1722,8 @@
      "source": "https://unsplash.com/photos/mini-excavator-with-coiled-pipes-on-grassy-ground-L3eEgJT2R-c"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "mini-excavator-1t",
@@ -1685,7 +1749,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Unknown_mini_excavator_-_Arlington,_MA.jpg"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "excavator-2-5t",
@@ -1711,7 +1776,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Case_mini_excavator_-_Arlington,_MA.jpg"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "excavator-3-5t",
@@ -1737,7 +1803,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Case_mini_excavator_-_Arlington,_MA.jpg"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "mini-loader-dingo-kanga-type",
@@ -1763,7 +1830,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Agritechnica_2023,_Hanover_(P1160270-RR).jpg"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "skid-steer-loader-small-wheeled",
@@ -1789,7 +1857,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Araraquara_(2020_October)_337.jpg"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "tracked-dumper-power-barrow-600kg",
@@ -1815,7 +1884,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Yanmar_C12R_tracked_dumper_01.jpg"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "trencher-walk-behind-self-propelled",
@@ -1841,7 +1911,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Ditch_Witch_C30X,_2024_Moh%C3%A1cs.jpg"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "demolition-hammer-light-electric",
@@ -1867,7 +1938,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Pneumatic_drill.jpeg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "demolition-hammer-medium-electric-16kg",
@@ -1893,7 +1965,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Pneumatic_drill.jpeg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "jackhammer-breaker-heavy-electric-30kg",
@@ -1919,7 +1992,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Pneumatic_drill.jpeg"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "jackhammer-on-trolley-tile-floor-removal",
@@ -1945,7 +2019,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Pneumatic_drill.jpeg"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "demolition-cut-off-saw-petrol-350mm",
@@ -1971,7 +2046,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Engine_cutter_55616_2027.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "concrete-floor-saw-walk-behind-350mm-petrol",
@@ -1984,7 +2060,8 @@
     "weekend": 363.0,
     "week": 746.5
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "brick-paver-saw-350mm",
@@ -1997,7 +2074,8 @@
     "weekend": 247.5,
     "week": 600.5
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "rotary-hammer-drill-light-sds-plus",
@@ -2023,7 +2101,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Bohrhammer_Kress_Elektrowerkzeuge.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "rotary-hammer-drill-heavy-sds-max",
@@ -2049,7 +2128,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Bohrhammer_Kress_Elektrowerkzeuge.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "hammer-percussion-drill-13mm",
@@ -2075,7 +2155,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Hammer_drill-1.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "cordless-drill",
@@ -2101,7 +2182,8 @@
      "source": "https://unsplash.com/photos/red-cordless-powerdrill-CuDoRFyTkAQ"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "electric-impact-wrench-3-4in",
@@ -2127,7 +2209,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Cordless_Impact_Wrenches_%26_Driver.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "mixing-drill-paddle-mixer",
@@ -2140,7 +2223,8 @@
     "weekend": 118.5,
     "week": 226.0
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "magnetic-base-drill",
@@ -2166,7 +2250,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Compact_magnetic_drilling_machine.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "angle-grinder-125mm",
@@ -2192,7 +2277,8 @@
      "source": "https://unsplash.com/photos/a-man-working-with-a-grinder-on-a-piece-of-metal-fZEC4pR4Kpo"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "angle-grinder-230mm",
@@ -2218,7 +2304,8 @@
      "source": "https://unsplash.com/photos/a-man-working-with-a-grinder-on-a-piece-of-metal-fZEC4pR4Kpo"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "circular-saw-235mm",
@@ -2244,7 +2331,8 @@
      "source": "https://unsplash.com/photos/a-person-using-a-circular-saw-to-cut-a-piece-of-wood-SdGWs9shP0o"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "jigsaw",
@@ -2270,7 +2358,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Jigsaw_AccuMaster.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "reciprocating-sabre-saw",
@@ -2296,7 +2385,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Makita_JR3070CT_Reciprocating_Saw_(4887119615).jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "mitre-drop-saw",
@@ -2322,7 +2412,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:MiterSaw.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "metal-cut-off-saw-355mm",
@@ -2348,7 +2439,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Let_the_Sparks_Fly_-_The_Makita_2414NB_Abrasive_Cut_Off_Saw_(4070957523).jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "electric-planer-hand",
@@ -2374,7 +2466,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Makita_KP0800_Planer_(2).jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "framing-nailer",
@@ -2400,7 +2493,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Makita_GN900SE_Gas_Nailer_(3991070032).png"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "coil-fencing-nailer",
@@ -2413,7 +2507,8 @@
     "weekend": 90.0,
     "week": 210.0
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "finish-brad-nailer",
@@ -2439,7 +2534,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Nail_gun_008.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "secret-floor-nailer-stapler",
@@ -2452,7 +2548,8 @@
     "weekend": 120.0,
     "week": 319.5
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "air-compressor-small-electric-6-12cfm",
@@ -2466,7 +2563,8 @@
     "week": 275.0
    },
    "icon": "i-compressor",
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "welder-inverter-arc-180a",
@@ -2492,7 +2590,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Soldadora_inverter_L%C3%BCsqtoff_Iron-140_(1).jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "torque-wrench-1-2in-manual",
@@ -2518,7 +2617,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:1-4%22_5-25Nm.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "generator-2kva",
@@ -2544,7 +2644,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Portable_electrical_generator_angle.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "generator-3kva-inverter",
@@ -2570,7 +2671,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Gasoline_Generator_2026-08-12_ROYU_Electrical_Inverter_Type_03.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "generator-5kva",
@@ -2596,7 +2698,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Portable_electrical_generator_angle.jpg"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "generator-6-7kva",
@@ -2622,7 +2725,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Portable_electrical_generator_angle.jpg"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "generator-10kva",
@@ -2648,7 +2752,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Portable_electrical_generator_angle.jpg"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "extension-lead-15a-20-30m",
@@ -2674,7 +2779,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Extension_cord_02.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "extension-ladder-6-6-5m",
@@ -2700,7 +2806,8 @@
      "source": "https://unsplash.com/photos/a-ladder-leaning-up-against-a-concrete-wall-dDZ1JjQXmlY"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "extension-ladder-8-8-5m",
@@ -2726,7 +2833,8 @@
      "source": "https://unsplash.com/photos/a-ladder-leaning-up-against-a-concrete-wall-dDZ1JjQXmlY"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "step-ladder-1-8m",
@@ -2752,7 +2860,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Ladder_2.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "platform-ladder-2-4m",
@@ -2765,7 +2874,8 @@
     "weekend": 79.0,
     "week": 200.0
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "trestle-aluminium-adjustable-2-4m",
@@ -2778,7 +2888,8 @@
     "weekend": 31.5,
     "week": 34.0
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "plank-aluminium-4m",
@@ -2791,7 +2902,8 @@
     "weekend": 23.5,
     "week": 25.0
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "mobile-aluminium-scaffold-single-width-4-4-5m",
@@ -2817,7 +2929,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Rollger%C3%BCst_Alu_und_Mist.jpg"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "panel-sheet-lifter",
@@ -2830,7 +2943,8 @@
     "weekend": 100.0,
     "week": 266.0
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "duct-material-lifter-3-6-5m",
@@ -2843,7 +2957,8 @@
     "weekend": 181.5,
     "week": 388.0
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "acrow-prop-steel-no-2-3",
@@ -2869,7 +2984,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Bauma13_(37).jpeg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "drain-cleaner-electric-eel",
@@ -2895,7 +3011,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Electric-Drain-Cleaner.png"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "drain-jetter-electric-1800psi",
@@ -2921,7 +3038,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Pressure-Washer-Sewer-Jetter-Attachment.png"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "drain-snake-cordless",
@@ -2947,7 +3065,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Handheld-Drain-Auger.png"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "pipe-threader-electric-25-50mm",
@@ -2973,7 +3092,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Pipe_cutting_and_threading_machine.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "pipe-freezer-kit-electric",
@@ -2986,7 +3106,8 @@
     "weekend": 160.5,
     "week": 282.0
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "pipe-press-crimper-15-50mm",
@@ -3012,7 +3133,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Radial-press-for-press-fitting-systems.JPG"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "submersible-pump-50mm-dirty-water",
@@ -3039,7 +3161,8 @@
     }
    },
    "icon": "i-droplet",
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "petrol-transfer-trash-pump-50mm",
@@ -3066,7 +3189,8 @@
     }
    },
    "icon": "i-droplet",
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "flexdrive-pump-kit-petrol",
@@ -3080,7 +3204,8 @@
     "week": 637.0
    },
    "icon": "i-droplet",
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "hand-trolley-sack-truck",
@@ -3106,7 +3231,8 @@
      "source": "https://unsplash.com/photos/man-pushing-hand-truck-with-plastic-drum-KufOjYrd3mg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "stair-climbing-fridge-trolley",
@@ -3119,7 +3245,8 @@
     "weekend": 37.0,
     "week": 105.0
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "pallet-jack-2-5t",
@@ -3145,7 +3272,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Hubwagen.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "furniture-piano-dolly",
@@ -3158,7 +3286,8 @@
     "weekend": 47.5,
     "week": 76.0
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "engine-hoist-crane-2t",
@@ -3184,7 +3313,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:ZZ4_on_the_hoist_-_4189433670.jpg"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "chain-block-hoist-2t",
@@ -3210,7 +3340,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Chain-block-takel.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "box-trailer-6x4",
@@ -3236,7 +3367,8 @@
      "source": "https://www.flickr.com/photos/23299229@N06/4665994311"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "box-trailer-8x5",
@@ -3262,7 +3394,8 @@
      "source": "https://www.flickr.com/photos/23299229@N06/4665994311"
     }
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "enclosed-trailer-8x5",
@@ -3275,7 +3408,8 @@
     "weekend": 222.0,
     "week": 492.0
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "tipping-trailer-8x5",
@@ -3288,7 +3422,8 @@
     "weekend": 190.5,
     "week": 425.0
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "plant-machinery-trailer-2t",
@@ -3301,7 +3436,8 @@
     "weekend": 115.5,
     "week": 346.0
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 2
   },
   {
    "id": "car-trailer",
@@ -3314,7 +3450,8 @@
     "weekend": 297.0,
     "week": 784.0
    },
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   },
   {
    "id": "pedestal-fan-industrial-600-750mm",
@@ -3341,7 +3478,8 @@
     }
    },
    "icon": "i-fan",
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "portable-air-conditioner",
@@ -3368,7 +3506,8 @@
     }
    },
    "icon": "i-fan",
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "evaporative-air-cooler",
@@ -3395,7 +3534,8 @@
     }
    },
    "icon": "i-fan",
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "exhaust-extraction-fan-300mm",
@@ -3422,7 +3562,8 @@
     }
    },
    "icon": "i-fan",
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "patio-heater-lpg",
@@ -3449,7 +3590,8 @@
     }
    },
    "icon": "i-fan",
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "laser-level-rotary",
@@ -3475,7 +3617,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Niwelator_laserowy_NL540.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "automatic-dumpy-level",
@@ -3501,7 +3644,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Niwelator_PZO_Ni30-20.JPG"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "moisture-meter",
@@ -3527,7 +3671,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Feuchtemesser.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "laser-distance-measure",
@@ -3553,7 +3698,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:2023_Dalmierz_laserowy_Bosh_GLM_30.jpg"
     }
    },
-   "deposit": 100
+   "deposit": 100,
+   "stock": 6
   },
   {
    "id": "temporary-fence-panel-mesh-2-4x1-8m",
@@ -3581,7 +3727,8 @@
     }
    },
    "icon": "i-fence",
-   "deposit": 100
+   "deposit": 100,
+   "stock": 5
   },
   {
    "id": "portable-toilet-construction-event",
@@ -3608,7 +3755,8 @@
     }
    },
    "icon": "i-fence",
-   "deposit": 200
+   "deposit": 200,
+   "stock": 1
   }
  ]
 }

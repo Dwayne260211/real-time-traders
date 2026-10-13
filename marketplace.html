@@ -181,10 +181,10 @@
         <div class="section-head section-head--split">
           <div>
             <h2 class="subhead">Popular categories</h2>
-            <p class="section-head__sub">Browsing is free. Buying and selling need Basic membership or higher.</p>
+            <p class="section-head__sub">Browsing is free. Listing an item is free with a free account (up to 10 active listings).</p>
           </div>
           <div class="head-actions">
-            <button type="button" class="btn btn--primary members-only" data-tier="Basic" data-tip="Basic membership or higher"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Sell an item<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button>
+            <a href="post.html#listing-form" class="btn btn--primary"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Sell or give away an item</a>
           </div>
         </div>
 
@@ -201,6 +201,7 @@
 
         <div class="notice notice--info"><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg> <p><strong>Sample listings.</strong> The items below are examples that show how the marketplace will look. Real listings will appear when member accounts launch.</p></div>
 
+        <section class="listing-detail-wrap" data-listing-detail hidden aria-live="polite"></section>
         <h2 class="subhead">Browse listings</h2>
         <span class="tab-anchor" id="featured"></span><span class="tab-anchor" id="rare"></span><span class="tab-anchor" id="donate"></span>
         <div class="tabs tabs--compact" data-tabs>
@@ -211,6 +212,7 @@
           </div>
 
           <div class="tab-panel is-active" role="tabpanel" id="panel-featured" aria-labelledby="tab-featured">
+            <div class="product-grid member-grid" data-member-listings="buy-sell" hidden></div>
             <div class="product-grid">
               <article class="product-card">
                 <div class="product-card__media"><span class="sample-tag">Sample listing</span><picture><source srcset="images/product-1.webp" type="image/webp"><img src="images/product-1.jpg" alt="Smart home hub on a table" loading="lazy" width="315" height="309"></picture></div>
@@ -301,9 +303,10 @@
               <div class="rare-banner__copy">
                 <h3>Discover rare finds</h3>
                 <p>Antiques, collectables and one-off pieces from local sellers. Have something special to sell? List it with Basic membership or higher.</p>
-                <button type="button" class="btn btn--white members-only" data-tier="Basic" data-tip="Basic membership or higher">Sell a rare find<span class="lock" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="sr-only guest-only"> (members only: Basic membership or higher)</span></button>
+                <a href="post.html#listing-form" class="btn btn--white">Sell a rare find</a>
               </div>
             </div>
+            <div class="product-grid member-grid" data-member-listings="rare" hidden></div>
             <div class="product-grid">
               <article class="product-card">
                 <div class="product-card__media"><span class="sample-tag">Sample listing</span><picture><source srcset="images/antique-1.webp" type="image/webp"><img src="images/antique-1.jpg" alt="Antique gold-coloured mantel clock" loading="lazy" width="315" height="307"></picture></div>
@@ -349,6 +352,7 @@
           </div>
 
           <div class="tab-panel" role="tabpanel" id="panel-donate" aria-labelledby="tab-donate" hidden>
+            <div class="product-grid member-grid" data-member-listings="donated" hidden></div>
             <div class="carousel" data-carousel>
               <div class="carousel__head">
                 <p>Items offered free to people in the community who need them.</p>
@@ -481,7 +485,7 @@
     <div class="footer__bottom">
       <div class="container footer__bottom-inner">
         <p class="footer__legal"><span>© 2026 Real Time Traders Pty Ltd</span> · <span>ABN 54 642 170 438</span> · <span>ACN 642 170 438</span></p>
-        <p class="footer__preview">Preview site: accounts, payments and online booking are coming soon.</p>
+        <p class="footer__preview">Free accounts and free marketplace listings are open. Payments, job posting and online hire booking are coming soon.</p>
         <p class="footer__links"><a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a> · <a href="refunds.html">Refunds &amp; cancellations</a></p>
         <p class="footer__admin"><a href="admin-login.html">Admin</a></p>
       </div>
@@ -543,5 +547,8 @@
 
   <script src="js/main.js" defer></script>
   <script src="js/chat.js" defer></script>
+  <script src="js/hire-config.js" defer></script>
+  <script src="js/hire-common.js" defer></script>
+  <script src="js/listings.js" defer></script>
 </body>
 </html>

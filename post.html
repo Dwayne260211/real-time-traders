@@ -5,13 +5,13 @@
   <script src="js/site-gate.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Post a listing: sell, hire out, advertise or post a job | Real Time Traders</title>
-  <meta name="description" content="How to post on Real Time Traders: who can post jobs, items for sale, hire equipment and trade services. Online posting is coming soon; call us and we'll set it up with you.">
+  <meta name="description" content="How to post on Real Time Traders: who can post jobs, items for sale, hire equipment and trade services. Members can post marketplace listings free online; call us for jobs and hire.">
   <link rel="canonical" href="https://realtimetradersbrisbane.au/post.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Real Time Traders">
   <meta property="og:locale" content="en_AU">
   <meta property="og:title" content="Post a listing: sell, hire out, advertise or post a job | Real Time Traders">
-  <meta property="og:description" content="How to post on Real Time Traders: who can post jobs, items for sale, hire equipment and trade services. Online posting is coming soon; call us and we'll set it up with you.">
+  <meta property="og:description" content="How to post on Real Time Traders: who can post jobs, items for sale, hire equipment and trade services. Members can post marketplace listings free online; call us for jobs and hire.">
   <meta property="og:url" content="https://realtimetradersbrisbane.au/post.html">
   <meta property="og:image" content="https://realtimetradersbrisbane.au/images/og-image.jpg">
   <meta property="og:image:width" content="1200">
@@ -19,7 +19,7 @@
   <meta property="og:image:alt" content="Real Time Traders logo: Marketplace, Jobs &amp; Tenders and Hire in Brisbane">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Post a listing: sell, hire out, advertise or post a job | Real Time Traders">
-  <meta name="twitter:description" content="How to post on Real Time Traders: who can post jobs, items for sale, hire equipment and trade services. Online posting is coming soon; call us and we'll set it up with you.">
+  <meta name="twitter:description" content="How to post on Real Time Traders: who can post jobs, items for sale, hire equipment and trade services. Members can post marketplace listings free online; call us for jobs and hire.">
   <meta name="twitter:image" content="https://realtimetradersbrisbane.au/images/og-image.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -175,14 +175,47 @@
       </div>
     </section>
 
-    <!-- ============ COMING SOON + HELP ============ -->
+    <!-- ============ POST A LISTING (members) ============ -->
+    <section class="section post-help" id="listing-form" aria-labelledby="listing-form-title" data-listing-post>
+      <div class="container">
+        <div class="post-help__box listing-post">
+          <div>
+            <h2 id="listing-form-title" data-listing-form-title>Sell or give away an item</h2>
+            <p>Free for members: up to 10 active listings. No fees, and no payments go through the site. Jobs and equipment hire: call us for now.</p>
+            <div data-listing-signin hidden>
+              <p><strong>Sign in or create a free account to post a listing.</strong></p>
+              <p><button type="button" class="btn btn--primary" data-auth="join" data-join-tier="Free">Create free account</button> <button type="button" class="btn btn--outline" data-auth="login">Log in</button></p>
+            </div>
+            <form class="admin-form listing-form" data-listing-form hidden novalidate>
+              <label class="field"><span>Title</span><input name="title" maxlength="80" required></label>
+              <label class="field"><span>Category</span><select name="category"><option value="buy-sell">Buy &amp; sell</option><option value="rare">Antiques &amp; rare finds</option><option value="donated">Donated / free item</option></select></label>
+              <label class="field"><span>Price (AUD, 0 = free, blank = contact me)</span><input name="price" type="number" min="0" step="0.01" inputmode="decimal"></label>
+              <label class="field"><span>Condition</span><select name="condition"><option value="">Not stated</option><option value="new">New</option><option value="like-new">Like new</option><option value="good">Good</option><option value="fair">Fair</option><option value="for-parts">For parts / repair</option></select></label>
+              <label class="field"><span>Suburb (no street address)</span><input name="suburb" maxlength="60" required placeholder="e.g. Springwood"></label>
+              <label class="field"><span>Description</span><textarea name="description" rows="5" maxlength="2000"></textarea></label>
+              <label class="field"><span>Photos (up to 6, images only, resized automatically)</span><input name="photos" type="file" accept="image/*" multiple></label>
+              <p class="note" data-existing-photos></p>
+              <label class="field"><span>How buyers contact you (shown only to signed-in members)</span><select name="contact_pref"><option value="email">Email</option><option value="phone">Phone</option><option value="both">Phone and email</option></select></label>
+              <label class="field"><span>Phone (optional)</span><input name="phone" type="tel" autocomplete="tel" maxlength="20"></label>
+              <label class="field"><span>Email</span><input name="email" type="email" autocomplete="email" maxlength="120"></label>
+              <div class="note listing-rules"><strong>Not allowed:</strong> weapons, drugs, alcohol or tobacco, stolen, counterfeit, recalled or unsafe goods, animals, adult content, prescription medicines, and anything illegal. Don’t include bank, card, tax file or password details, or web links. See our <a href="terms.html#member-listings">Terms of use</a>.</div>
+              <label class="check"><input type="checkbox" name="agree"> <span>The item is mine to sell or give away and is allowed under the rules above.</span></label>
+              <button type="submit" class="btn btn--primary">Publish listing</button>
+              <p class="form-status" role="status" aria-live="polite" data-listing-status></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HELP ============ -->
     <section class="section post-help" aria-labelledby="post-help-title">
       <div class="container">
         <div class="post-help__box">
           <div>
-            <p class="preview-flag"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> Online posting and accounts are coming soon</p>
-            <h2 id="post-help-title">Call us and we'll set it up with you</h2>
-            <p>You can't post online just yet. Until accounts go live, call us and we'll talk you through it and set up your listing or job with you.</p>
+            <p class="preview-flag"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> Online job posts and owner hire listings are coming soon</p>
+            <h2 id="post-help-title">Jobs or hire? Call us and we'll set it up with you</h2>
+            <p>Marketplace items can be posted online above. For jobs and equipment hire, call us and we'll set it up with you.</p>
             <p class="post-help__line">Need help posting? Call us and we'll guide you.</p>
             <p>Prefer email? <a href="mailto:realtimetraders101@gmail.com?subject=Help%20posting%20a%20listing" class="email-link">Email us</a> at <span class="email-addr">realtimetraders101@gmail.com</span>.</p>
             <p class="post-help__hours">Phone hours (Brisbane time): Mon–Fri 5am–9pm, Sat–Sun 7am–4pm. <span data-open-status data-open-long></span></p>
@@ -212,9 +245,9 @@
           <article class="post-card">
             <span class="post-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg></span>
             <h3>Sell an item</h3>
-            <p class="post-card__who">Basic ($4.99/month) or higher</p>
-            <p>List items for sale in the marketplace. Active listings: Basic 10, Bronze 30, Silver 100, Gold unlimited (fair use).</p>
-            <a href="marketplace.html" class="link-arrow">See the marketplace <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+            <p class="post-card__who">Free account (free while we launch)</p>
+            <p>List items for sale or give them away in the marketplace: up to 10 active listings.</p>
+            <a href="#listing-form" class="link-arrow">Post a listing <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
           </article>
           <article class="post-card">
             <span class="post-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-drill"/></svg></span>
@@ -243,11 +276,11 @@
         </div>
         <ol class="post-steps">
           <li class="post-steps__item"><span class="post-steps__num" aria-hidden="true">1</span><div><h3>Pick what to post</h3><p>A job, an item for sale, hire equipment or your trade or service.</p></div></li>
-          <li class="post-steps__item"><span class="post-steps__num" aria-hidden="true">2</span><div><h3>Check your membership</h3><p>Jobs need a free account. Selling needs Basic or higher, and quoting needs Bronze or higher.</p></div></li>
+          <li class="post-steps__item"><span class="post-steps__num" aria-hidden="true">2</span><div><h3>Check your membership</h3><p>Jobs and marketplace listings need a free account. Quoting needs Bronze or higher.</p></div></li>
           <li class="post-steps__item"><span class="post-steps__num" aria-hidden="true">3</span><div><h3>Add the details</h3><p>Title, description, photos, location and price or budget.</p></div></li>
           <li class="post-steps__item"><span class="post-steps__num" aria-hidden="true">4</span><div><h3>Publish and reply</h3><p>Your listing goes live and you reply to buyers, hirers or tradies.</p></div></li>
         </ol>
-        <p class="note note--center">Online posting is coming soon. For now, call us and we'll set it up with you.</p>
+        <p class="note note--center">Marketplace listings can be posted online now. For jobs and hire, call us and we'll set it up with you.</p>
       </div>
     </section>
 
@@ -317,7 +350,7 @@
     <div class="footer__bottom">
       <div class="container footer__bottom-inner">
         <p class="footer__legal"><span>© 2026 Real Time Traders Pty Ltd</span> · <span>ABN 54 642 170 438</span> · <span>ACN 642 170 438</span></p>
-        <p class="footer__preview">Preview site: accounts, payments and online booking are coming soon.</p>
+        <p class="footer__preview">Free accounts and free marketplace listings are open. Payments, job posting and online hire booking are coming soon.</p>
         <p class="footer__links"><a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a> · <a href="refunds.html">Refunds &amp; cancellations</a></p>
         <p class="footer__admin"><a href="admin-login.html">Admin</a></p>
       </div>
@@ -379,5 +412,8 @@
 
   <script src="js/main.js" defer></script>
   <script src="js/chat.js" defer></script>
+  <script src="js/hire-config.js" defer></script>
+  <script src="js/hire-common.js" defer></script>
+  <script src="js/listings.js" defer></script>
 </body>
 </html>

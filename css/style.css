@@ -1510,3 +1510,28 @@ p { text-wrap: pretty; }
 .legal-page > ul { max-width: 75ch; padding-left: 1.25rem; }
 .legal-page > ul li { margin-bottom: .4rem; }
 .footer__links a { color: inherit; }
+
+/* member listings */
+.member-grid { margin-bottom: 20px; }
+.member-tag { background: var(--accent) !important; color: var(--navy) !important; }
+.sold-tag { background: #374151; color: #fff; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 99px; }
+.member-listing .product-card__media { position: relative; }
+.member-listing .product-card__title a { color: inherit; text-decoration: none; }
+.listing-noimg { display: grid; place-items: center; height: 100%; background: #eef2f7; }
+.listing-noimg .icon { width: 48px; height: 48px; color: #94a3b8; }
+.listing-detail-wrap { margin: 0 0 28px; padding: 20px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: #fff; }
+.listing-detail { display: grid; gap: 18px; }
+@media (min-width: 900px) { .listing-detail { grid-template-columns: 1fr 1fr; } .listing-detail .breadcrumb-mini { grid-column: 1 / -1; } }
+.listing-photos { display: grid; gap: 8px; }
+.listing-photos img { width: 100%; border-radius: 10px; object-fit: cover; max-height: 480px; }
+.listing-meta { color: var(--ink-2); font-size: 14px; }
+.listing-desc { white-space: normal; line-height: 1.55; }
+.listing-contact__btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.listing-form { display: grid; gap: 14px; max-width: 640px; }
+.listing-rules { background: #fff7e6; padding: 10px 12px; border-radius: 10px; }
+.my-listings { list-style: none; padding: 0; margin: 0 0 12px; display: grid; gap: 10px; }
+.my-listings li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.my-listings__btns { display: flex; gap: 6px; flex-wrap: wrap; }
+.status-pill { font-size: 12px; font-weight: 700; padding: 1px 8px; border-radius: 99px; background: #e5e7eb; text-transform: capitalize; }
+.status-pill--active { background: #dcfce7; color: #166534; }
+.status-pill--removed { background: #fee2e2; color: #991b1b; }

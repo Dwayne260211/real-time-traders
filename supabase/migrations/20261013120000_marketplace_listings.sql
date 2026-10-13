@@ -54,6 +54,8 @@ create policy mlc_write on public.marketplace_listing_contacts for all to authen
   using (exists (select 1 from public.marketplace_listings l where l.id = listing_id and l.owner = auth.uid()))
   with check (exists (select 1 from public.marketplace_listings l where l.id = listing_id and l.owner = auth.uid()));
 
+revoke all on public.marketplace_listings from anon;
+revoke all on public.marketplace_listing_contacts from anon;
 grant select on public.marketplace_listings to anon, authenticated;
 grant insert, update, delete on public.marketplace_listings to authenticated;
 grant select, insert, update, delete on public.marketplace_listing_contacts to authenticated;
@@ -63,6 +65,9 @@ create or replace function public.ml_before_write()
 returns trigger language plpgsql security definer set search_path = '' as $$
 declare n int;
 begin
+  if tg_op = 'INSERT' and (auth.uid() is null or new.owner <> auth.uid()) and not public.is_admin() then
+    raise exception 'not_allowed';
+  end if;
   new.updated_at := now();
   if tg_op = 'UPDATE' then
     new.owner := old.owner; new.created_at := old.created_at;

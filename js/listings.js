@@ -120,14 +120,29 @@
         '<div class="listing-contact" data-contact></div>' +
         '<p class="note">Private sale between members. Real Time Traders isn\u2019t a party to the sale. Meet in a public place and never send money or bank details before you see the item. <a href="' + esc(report) + '">Report listing</a></p></div></div>';
       var c = $("[data-contact]", box);
+      sb.from("public_profiles").select("display_name,avatar_path").eq("id", l.owner).maybeSingle().then(function (r) {
+        var p = r.data || {}, av = window.RTTAvatar ? window.RTTAvatar(p.display_name, p.avatar_path, 40) : "";
+        c.insertAdjacentHTML("beforebegin", '<p class="seller-line">' + av + " <span>Listed by <strong>" + esc(p.display_name || "Member") + "</strong></span></p>");
+      });
       if (l.status !== "active") { c.innerHTML = "<p><strong>This item has been sold.</strong></p>"; return; }
+      if (user && user.id === l.owner) { c.innerHTML = '<p>This is your listing. Messages from buyers appear in <a href="account.html#messages">your account</a>.</p>'; return; }
       if (!user) { c.innerHTML = '<p><strong>Sign in to see the seller\u2019s contact details.</strong></p><p><button type="button" class="btn btn--primary btn--sm" data-open-login>Log in / Join free</button></p>';
         $("[data-open-login]", c).addEventListener("click", function () { var b = document.querySelector('[data-auth="login"]'); if (b) b.click(); }); return; }
+      var msgBtn = '<button type="button" class="btn btn--primary btn--sm" data-message-seller>' + H.icon("i-message") + " Message seller</button>";
+      c.addEventListener("click", function (ev) {
+        var mb = ev.target.closest("[data-message-seller]"); if (!mb) return;
+        mb.disabled = true;
+        sb.from("conversations").select("id").eq("listing_id", l.id).eq("buyer", user.id).maybeSingle().then(check).then(function (cv) {
+          return cv || sb.from("conversations").insert({ listing_id: l.id, buyer: user.id, seller: l.owner }).select("id").single().then(check);
+        }).then(function (cv) { location.href = "account.html?c=" + encodeURIComponent(cv.id) + "#messages"; })
+          .catch(function (e) { mb.disabled = false; alert(errText(e)); });
+      });
+      if (l.contact_pref === "messages") { c.innerHTML = "<p><strong>Contact the seller</strong></p><p class=\"listing-contact__btns\">" + msgBtn + "</p>"; return; }
       sb.from("marketplace_listing_contacts").select("phone,email").eq("listing_id", l.id).maybeSingle().then(check).then(function (k) {
-        var out = [];
+        var out = [msgBtn];
         if (k && k.phone && l.contact_pref !== "email") out.push('<a class="btn btn--primary btn--sm" href="tel:' + esc(k.phone.replace(/[^\d+]/g, "")) + '">' + H.icon("i-phone") + " " + esc(k.phone) + "</a>");
         if (k && k.email && l.contact_pref !== "phone") out.push('<a class="btn btn--outline btn--sm" href="mailto:' + esc(k.email) + "?subject=" + encodeURIComponent("Your listing: " + l.title) + '">' + H.icon("i-mail") + " " + esc(k.email) + "</a>");
-        c.innerHTML = "<p><strong>Contact the seller</strong></p><p class=\"listing-contact__btns\">" + (out.join(" ") || "No contact details given.") + "</p>";
+        c.innerHTML = "<p><strong>Contact the seller</strong></p><p class=\"listing-contact__btns\">" + out.join(" ") + "</p>";
       }).catch(function (e) { c.textContent = errText(e); });
     }).catch(function (e) { box.textContent = errText(e); });
   }
@@ -162,8 +177,8 @@
       if (!bad && files.length > MAX_PHOTOS) bad = "Up to " + MAX_PHOTOS + " photos.";
       if (!bad && !e.agree.checked) bad = "Please confirm the item is yours to sell and allowed.";
       var pref = e.contact_pref.value, phone = e.phone.value.trim(), email = e.email.value.trim();
-      if (!bad && pref !== "email" && !/^[\d +()-]{8,20}$/.test(phone)) bad = "Please add a valid phone number, or choose email contact.";
-      if (!bad && pref !== "phone" && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) bad = "Please add a valid email address.";
+      if (!bad && (pref === "phone" || pref === "both") && !/^[\d +()-]{8,20}$/.test(phone)) bad = "Please add a valid phone number, or choose email contact.";
+      if (!bad && (pref === "email" || pref === "both") && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) bad = "Please add a valid email address.";
       var pr = e.price.value.trim();
       if (!bad && pr !== "" && !(Number(pr) >= 0)) bad = "Price must be 0 (free) or more.";
       if (bad) { st.className = "form-status is-error"; st.textContent = bad; return; }
@@ -177,7 +192,7 @@
         return q.then(check).then(function (l) {
           var old = editId && files.length ? existing : [];
           if (old.length) sb.storage.from(BUCKET).remove(old);
-          return sb.from("marketplace_listing_contacts").upsert({ listing_id: l.id, phone: pref === "email" ? null : phone, email: pref === "phone" ? null : email }).then(check).then(function () { return l; });
+          return sb.from("marketplace_listing_contacts").upsert({ listing_id: l.id, phone: (pref === "phone" || pref === "both") ? phone : null, email: (pref === "email" || pref === "both") ? email : null }).then(check).then(function () { return l; });
         });
       }).then(function (l) {
         st.className = "form-status is-success";
@@ -246,5 +261,23 @@
     }
     box.addEventListener("click", act); queue.addEventListener("click", act);
     load();
+    var avs = $("[data-admin-avatars]");
+    function loadAv() {
+      sb.from("public_profiles").select("id,display_name,avatar_path").not("avatar_path", "is", null).order("updated_at", { ascending: false }).limit(200).then(check).then(function (rows) {
+        avs.innerHTML = rows.length ? '<ul class="my-listings">' + rows.map(function (p) {
+          return '<li data-id="' + esc(p.id) + '" data-path="' + esc(p.avatar_path) + '"><div>' + (window.RTTAvatar ? window.RTTAvatar(p.display_name, p.avatar_path, 48) : "") + " <strong>" + esc(p.display_name) + "</strong></div>" +
+            '<div class="my-listings__btns"><button type="button" class="btn btn--light btn--sm" data-rm-avatar>Remove photo</button></div></li>';
+        }).join("") + "</ul>" : "<p>No profile photos yet.</p>";
+      }).catch(function (e) { avs.textContent = errText(e); });
+    }
+    if (avs) {
+      avs.addEventListener("click", function (ev) {
+        var b = ev.target.closest("[data-rm-avatar]"); if (!b) return;
+        var li = b.closest("li"), id = li.getAttribute("data-id"), path = li.getAttribute("data-path");
+        sb.from("public_profiles").update({ avatar_path: null }).eq("id", id).then(check).then(function () { return sb.storage.from("avatars").remove([path]); }).then(loadAv)
+          .catch(function (e) { alert(errText(e)); });
+      });
+      loadAv();
+    }
   }
 })();

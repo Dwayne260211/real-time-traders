@@ -213,6 +213,24 @@
             </form>
           </div>
 
+          <div class="account-card" data-public-profile hidden>
+            <h2>Public profile</h2>
+            <p class="note">Shown on your listings and messages. Your email and phone are never shown here.</p>
+            <form novalidate>
+              <div class="avatar-row"><span data-avatar-preview></span><button type="button" class="btn btn--light btn--sm" data-avatar-remove hidden>Remove photo</button></div>
+              <label class="field"><span>Display name</span><input type="text" name="display_name" maxlength="40" required></label>
+              <label class="field"><span>Profile photo (optional, cropped square)</span><input type="file" name="avatar" accept="image/*"></label>
+              <button type="submit" class="btn btn--primary">Save public profile</button>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <div class="account-card" id="messages" data-messages-card hidden>
+            <h2>Messages <span class="unread-pill" data-unread-badge hidden></span></h2>
+            <div data-inbox><p class="note">Loading…</p></div>
+            <div class="thread" data-thread hidden></div>
+          </div>
+
           <div class="account-card" data-password-card hidden>
             <h2>Set a new password</h2>
             <form data-password novalidate>
@@ -365,5 +383,6 @@
   <script src="js/hire-common.js" defer></script>
   <script src="js/account.js" defer></script>
   <script src="js/listings.js" defer></script>
+  <script src="js/messages.js" defer></script>
 </body>
 </html>

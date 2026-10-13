@@ -12,12 +12,48 @@ const esc = (s: unknown) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "
 
 function price(c: number | null) { return c == null ? "Contact seller" : c === 0 ? "Free" : "$" + (c / 100).toFixed(c % 100 ? 2 : 0); }
 
+function transport() {
+  return nodemailer.createTransport({
+    host: "smtp-relay.brevo.com", port: 465, secure: true,
+    auth: { user: Deno.env.get("SMTP_USER") || "bdebd7001@smtp-brevo.com", pass: Deno.env.get("BREVO_SMTP_KEY") || "" },
+  });
+}
+
+// New-message email to the recipient (throttled in the DB to one per conversation per 15 min). Short preview only.
+async function notifyMessage(b: any) {
+  const url = Deno.env.get("SUPABASE_URL") || "", key = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "";
+  if (!/^[0-9a-f-]{36}$/i.test(String(b.recipient || ""))) return new Response("bad recipient", { status: 400 });
+  const r = await fetch(`${url}/auth/v1/admin/users/${b.recipient}`, { headers: { apikey: key, Authorization: `Bearer ${key}` } });
+  if (!r.ok) return Response.json({ ok: false, error: "recipient lookup " + r.status }, { status: 502 });
+  const email = (await r.json()).email;
+  if (!email) return Response.json({ ok: false, error: "no email" }, { status: 502 });
+  const who = String(b.sender_name || "A member").slice(0, 40), title = String(b.listing_title || "your listing").slice(0, 80);
+  const preview = String(b.preview || "").slice(0, 60) + (String(b.preview || "").length >= 60 ? "…" : "");
+  const link = "https://realtimetradersbrisbane.au/account.html#messages";
+  const html = `<div style="font-family:Arial,sans-serif;color:#1b2333;max-width:520px">
+<h2 style="margin:0 0 12px">New message about “${esc(title)}”</h2>
+<p><strong>${esc(who)}</strong> sent you a message on Real Time Traders:</p>
+<p style="background:#f4f6fa;padding:10px 12px;border-radius:8px">${esc(preview)}</p>
+<p><a href="${link}" style="background:#f5a623;color:#0b1f3a;padding:10px 18px;border-radius:6px;text-decoration:none;font-weight:bold;display:inline-block">Read and reply</a></p>
+<p style="font-size:12px;color:#5a6476">You get at most one email per conversation every 15 minutes. Never send money or bank details before you see the item.</p></div>`;
+  try {
+    const info = await transport().sendMail({ from: FROM, to: email, subject: `New message about ${title}`, html,
+      text: `${who} sent you a message about "${title}": ${preview}\n\nRead and reply: ${link}` });
+    console.log("message notify sent", info.messageId);
+    return Response.json({ ok: true, messageId: info.messageId, response: info.response });
+  } catch (e) {
+    console.error("message notify failed", String((e as Error).message || e));
+    return Response.json({ ok: false, error: String((e as Error).message || e) }, { status: 502 });
+  }
+}
+
 Deno.serve(async (req) => {
   if (req.method !== "POST") return new Response("method", { status: 405 });
   const secret = Deno.env.get("NOTIFY_SECRET") || "";
   if (!secret || req.headers.get("x-notify-secret") !== secret) return new Response("forbidden", { status: 403 });
-  let l: any;
-  try { const b = await req.json(); l = b.record ?? b; } catch { return new Response("bad json", { status: 400 }); }
+  let l: any, body: any;
+  try { body = await req.json(); l = body.record ?? body; } catch { return new Response("bad json", { status: 400 }); }
+  if (body && body.type === "message") return await notifyMessage(body);
   if (!l || !l.id || !l.title) return new Response("bad payload", { status: 400 });
 
   const base = Deno.env.get("SUPABASE_URL") || "";
@@ -34,10 +70,7 @@ ${thumb ? `<p><img src="${esc(thumb)}" alt="" width="240" style="max-width:240px
 <p style="font-size:12px;color:#5a6476">Admin &gt; Member listings &gt; Awaiting approval.</p></div>`;
   const text = rows.map(([k, v]) => `${k}: ${v}`).join("\n") + "\n\nReview: https://realtimetradersbrisbane.au/admin.html";
 
-  const tx = nodemailer.createTransport({
-    host: "smtp-relay.brevo.com", port: 465, secure: true,
-    auth: { user: Deno.env.get("SMTP_USER") || "bdebd7001@smtp-brevo.com", pass: Deno.env.get("BREVO_SMTP_KEY") || "" },
-  });
+  const tx = transport();
   try {
     const info = await tx.sendMail({ from: FROM, to: TO, subject, html, text });
     console.log("notify sent", l.id, info.messageId, info.response);

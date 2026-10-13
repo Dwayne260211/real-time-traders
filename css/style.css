@@ -1539,3 +1539,26 @@ p { text-wrap: pretty; }
 .adm-desc { font-size: 13px; color: var(--ink-2); margin: 4px 0 0; clear: both; }
 .status-pill--pending { background: #fef3c7; color: #92400e; }
 .listings-empty { grid-column: 1 / -1; text-align: center; padding: 24px; }
+
+/* profiles + messages */
+.avatar { border-radius: 50%; object-fit: cover; flex: none; display: inline-block; vertical-align: middle; }
+.avatar--initial { display: inline-grid; place-items: center; background: #0b1f3a; color: #fff; font-weight: 700; }
+.avatar-row { display: flex; align-items: center; gap: 12px; }
+.seller-line { display: flex; align-items: center; gap: 10px; }
+.inbox { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 6px; }
+.inbox__row { width: 100%; display: flex; align-items: center; gap: 10px; text-align: left; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 10px; cursor: pointer; font: inherit; color: inherit; }
+.inbox__row.is-open { border-color: var(--brand-text); background: #f3f7ff; }
+.inbox__main { flex: 1; min-width: 0; overflow: hidden; }
+.inbox__main small { color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+.inbox__thumb { width: 44px; height: 44px; object-fit: cover; border-radius: 8px; }
+.unread-dot, .unread-pill { background: #d93025; color: #fff; font-size: 12px; font-weight: 700; border-radius: 99px; padding: 2px 8px; }
+.thread { border: 1px solid var(--line); border-radius: 12px; padding: 12px; margin-top: 8px; }
+.thread__head { display: flex; gap: 10px; align-items: center; border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 8px; }
+.thread__msgs { max-height: 380px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; padding: 4px; }
+.msg { max-width: 80%; padding: 8px 12px; border-radius: 14px; }
+.msg p { margin: 0; }
+.msg small { font-size: 11px; color: var(--ink-2); }
+.msg--mine { align-self: flex-end; background: #dbeafe; }
+.msg--theirs { align-self: flex-start; background: #f1f5f9; }
+.thread__form { display: flex; gap: 8px; margin-top: 8px; align-items: flex-end; }
+.thread__form textarea { flex: 1; padding: 10px; border: 1.5px solid var(--line); border-radius: 12px; font: inherit; resize: vertical; }

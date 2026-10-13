@@ -69,10 +69,19 @@
   }
 
   H.client().then(function (sb) {
-    return sb.auth.getSession().then(function (r) {
-      var user = r.data && r.data.session ? r.data.session.user : null;
-      initMarket(sb, user); initDetail(sb, user); initPost(sb, user); initMine(sb, user); initAdmin(sb, user);
-    });
+    initMarket(sb);
+    /* user-dependent parts wait for the auth state (getSession can race the client's start-up) */
+    var done = false, signedOutShown = false;
+    function go(session) {
+      if (done) return;
+      if (!session) { if (!signedOutShown) { signedOutShown = true; initDetail(sb, null); initPost(sb, null); } return; }
+      done = true;
+      if (!signedOutShown) initDetail(sb, session.user);
+      else { var c = $("[data-contact]"); if (c) initDetail(sb, session.user); var si = $("[data-listing-signin]"); if (si) si.hidden = true; }
+      initPost(sb, session.user); initMine(sb, session.user); initAdmin(sb, session.user);
+    }
+    sb.auth.onAuthStateChange(function (evt, session) { setTimeout(function () { go(session); }, 0); });
+    sb.auth.getSession().then(function (r) { if (r.data && r.data.session) go(r.data.session); else setTimeout(function () { if (!done) go(null); }, 1500); });
   }).catch(function () {});
 
   /* ---------- marketplace grids ---------- */

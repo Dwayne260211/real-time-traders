@@ -125,3 +125,16 @@ Deno.test("webhook: other apps' subscriptions on the shared Stripe account are i
   const r2 = await webhook(await hook("checkout.session.completed", { id: "cs_x", mode: "payment", client_reference_id: USER }), m.ctx);
   assertEquals((await r2.json()).result, "ignored");
 });
+
+Deno.test("webhook: only allowlisted RTT lookup keys count, even if metadata claims app=rtt", async () => {
+  const m = mock({ sub: SUB({ items: { data: [{ current_period_end: 1900000000, price: { id: "price_hw", lookup_key: "hopewick_plus_monthly", metadata: { tier: "gold" } } }] } }) });
+  const r = await webhook(await hook("customer.subscription.updated", { id: "sub_1" }), m.ctx);
+  assertEquals((await r.json()).result, "ignored_other_app");
+  assertEquals(m.applied.length, 0);
+});
+
+Deno.test("checkout: hire payments carry app=rtt and the REALTIMETRADERS descriptor suffix", async () => {
+  const src = await Deno.readTextFile(new URL("../create-checkout-session/handler.ts", import.meta.url));
+  assertMatch(src, /statement_descriptor_suffix: "REALTIMETRADERS"/);
+  assertMatch(src, /metadata: \{ app: "rtt", booking_id/);
+});

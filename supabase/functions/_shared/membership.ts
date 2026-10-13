@@ -67,16 +67,16 @@ export async function membershipPortal(ctx: Ctx, user: { id: string; email?: str
 // deno-lint-ignore no-explicit-any
 type Sub = Record<string, any>;
 
+export const RTT_LOOKUP_KEYS: Record<string, Tier> = Object.fromEntries(TIERS.map((t) => [lookupKey(t), t]));
+
+/** Tier from the subscription's price lookup key. Allowlist only: anything else (e.g. Hopewick prices
+ *  on the shared Stripe account) is not an RTT subscription, whatever its metadata says. */
 function tierOfSub(sub: Sub): Tier | null {
-  const item = sub.items?.data?.[0];
-  const price = item?.price ?? {};
-  const fromKey = String(price.lookup_key ?? "").match(/^rtt_(basic|bronze|silver|gold)_monthly$/)?.[1];
-  const t = (fromKey ?? price.metadata?.tier ?? sub.metadata?.tier ?? "") as Tier;
-  return TIERS.includes(t) ? t : null;
+  return RTT_LOOKUP_KEYS[String(sub.items?.data?.[0]?.price?.lookup_key ?? "")] ?? null;
 }
 
 export function isRttSubscription(sub: Sub): boolean {
-  return sub.metadata?.app === "rtt" || tierOfSub(sub) !== null && /^rtt_/.test(String(sub.items?.data?.[0]?.price?.lookup_key ?? ""));
+  return tierOfSub(sub) !== null;
 }
 
 /** Syncs one subscription object into profiles/public_profiles. Ignores non-RTT subscriptions (shared Stripe account). */
@@ -95,6 +95,17 @@ export async function syncSubscription(ctx: Ctx, sub: Sub): Promise<string> {
     p_period_end: end ? new Date(end * 1000).toISOString() : null,
     p_cancel_at_period_end: cancelAtEnd, p_subscription_id: sub.id, p_price_id: item.price?.id ?? null,
   });
+}
+
+/** Checkout can't attach an account tax ID, so add BRIDGE&BITE.CO's ABN to the RTT subscription
+ *  itself; renewal invoices then show it. Best effort (never blocks the tier sync). */
+export async function ensureSubscriptionTaxId(ctx: Ctx, sub: Sub): Promise<void> {
+  const taxId = ctx.env("STRIPE_ACCOUNT_TAX_ID");
+  if (!taxId || !isRttSubscription(sub)) return;
+  const have: unknown[] = sub.invoice_settings?.account_tax_ids ?? [];
+  if (have.some((t) => (typeof t === "string" ? t : (t as { id?: string })?.id) === taxId)) return;
+  await stripeRequest(ctx, `subscriptions/${encodeURIComponent(sub.id)}`,
+    { invoice_settings: { account_tax_ids: [taxId] } }).catch((e) => console.error("tax id", e));
 }
 
 export async function fetchSubscription(ctx: Ctx, id: string): Promise<Sub> {

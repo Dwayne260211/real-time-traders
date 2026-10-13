@@ -6,7 +6,7 @@ import { rpc } from "../_shared/db.ts";
 import { sendBookingEmail } from "../_shared/notify.ts";
 import { verifyStripeSignature } from "../_shared/stripe.ts";
 import { fetchPaymentMethod, savePaymentMethod, userIdForCustomer } from "../_shared/members.ts";
-import { fetchSubscription, syncSubscription } from "../_shared/membership.ts";
+import { ensureSubscriptionTaxId, fetchSubscription, syncSubscription } from "../_shared/membership.ts";
 
 interface StripeEvent { id: string; type: string; data: { object: Record<string, any> } }
 
@@ -57,6 +57,7 @@ export async function handler(req: Request, ctx: Ctx = defaultCtx()): Promise<Re
         // Re-read the subscription so out-of-order events can't apply a stale state.
         const fresh = await fetchSubscription(ctx, s.id).catch(() => s);
         result = await syncSubscription(ctx, fresh);
+        if (event.type === "customer.subscription.created") await ensureSubscriptionTaxId(ctx, fresh);
         break;
       }
       case "invoice.payment_failed": {

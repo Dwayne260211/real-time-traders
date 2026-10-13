@@ -24,7 +24,7 @@
       a: ["Browse the marketplace free, no account needed. With a free account you can see sellers' contact details and post up to 10 listings free for now (sell or give away) on the Post a listing page. We approve listings before they go live, usually within a day. Paid memberships allow more listings: Basic 10, Bronze 30, Silver 100, Gold unlimited (fair use).", "Real Time Traders isn't a party to sales between members, and no payments go through the site."],
       links: [["Go to the marketplace", "marketplace.html"], ["Compare memberships", "membership.html"]] },
     { id: "hire", chip: "Hire equipment", kw: ["hire", "rent", "rental", "renting", "equipment", "tool hire", "plant hire", "trailer", "portable toilet", "toilet"],
-      a: ["Our hire range has about 150 items: cleaning, gardening, power tools, concreting, compaction & earthmoving, generators, ladders & access, plumbing, trailers and more. Most show a daily, weekend and weekly rate (AUD, no GST added); price, availability and terms are confirmed when you call.", "Pickup or delivery: to be confirmed. Silver and Gold members get 5% or 10% off hire."],
+      a: ["Our hire range has about 150 items: cleaning, gardening, power tools, concreting, compaction & earthmoving, generators, ladders & access, plumbing, trailers and more. Most show a daily, weekend and weekly rate (AUD, inc. GST); price, availability and terms are confirmed when you call.", "Pickup or delivery: to be confirmed. Silver and Gold members get 5% or 10% off hire."],
       links: [["See the hire range", "hire.html"]], call: true },
     { id: "tradie", chip: "Find a tradie", kw: ["tradie", "tradies", "tradesman", "tradesperson", "plumber", "electrician", "carpenter", "painter", "handyman", "builder", "quote for", "find someone"],
       a: ["Post your job free (free account) and local tradies can quote. Tradies come to your place. Free accounts pay a connection fee of $9.95–$59.95 when they accept a quote; members pay nothing."],
@@ -39,7 +39,7 @@
       a: ["We come to you to collect scrap metal: gold, silver, copper, brass, aluminium, catalytic converters and more. You get a quote first, then pickup at a time that suits you. Call to check your suburb."],
       links: [["Scrap metal pickup", "services.html#scrap"]], call: true },
     { id: "fees_membership", chip: "Fees & membership", kw: ["membership", "member", "price", "prices", "pricing", "cost", "costs", "how much", "fee", "fees", "basic", "bronze", "gold plan", "silver plan", "subscription", "annual", "commission", "service fee"],
-      a: ["Memberships (AUD per month): Basic $4.99, Bronze $19.99, Silver $39.99, Gold $79.99. Billed monthly; cancel anytime from My account.", "Job fees: free accounts pay a connection fee of $9.95–$59.95 per job, waived for members. Workers pay a service fee of 20%, 18.5%, 14.9% or 12.5% on jobs won.", "Paid memberships are billed monthly through Stripe and renew until you cancel. Cancel anytime; it takes effect at the end of the paid month."],
+      a: ["Memberships (AUD per month, inc. GST): Basic $4.99, Bronze $19.99, Silver $39.99, Gold $79.99. Billed monthly; cancel anytime from My account.", "Job fees: free accounts pay a connection fee of $9.95–$59.95 per job, waived for members. Workers pay a service fee of 20%, 18.5%, 14.9% or 12.5% on jobs won.", "Paid memberships are billed monthly through Stripe and renew until you cancel. Cancel anytime; it takes effect at the end of the paid month."],
       links: [["Compare memberships", "membership.html"], ["How job fees work", "jobs.html#fees"]] },
     { id: "contact_hours", chip: "Contact & hours", kw: ["hours", "open", "opening", "close", "closed", "when can i call", "phone", "call", "contact", "number", "email", "e-mail", "mail", "talk", "speak", "24/7", "weekend", "saturday", "sunday"],
       a: function () { return [hoursLine(), "You can also email us at " + EMAIL + ". The online enquiry form is coming soon."]; },
@@ -48,7 +48,7 @@
       a: ["A featured listing shows at the top of its category results with a Featured badge. Silver includes 2 a month and Gold 10 a month plus top placement. It's planned and arrives with accounts."],
       links: [["Featured listings", "membership.html#featured-listings"]] },
     { id: "company", kw: ["abn", "gst", "company", "business details", "who are you", "pty ltd", "legit"],
-      a: ["Real Time Traders Pty Ltd, ABN 54 642 170 438, based in Brisbane, QLD. We're not registered for GST."],
+      a: ["Real Time Traders Pty Ltd, ABN 54 642 170 438, based in Brisbane, QLD. Prices include GST. Payments are processed by BRIDGE&BITE.CO PTY LTD (ABN 83 692 080 792, GST registered) on behalf of Real Time Traders, and your Stripe receipt is your tax invoice."],
       links: [["Contact page", "contact.html"]] },
     { id: "community", kw: ["community", "donate", "donation", "give away", "free stuff", "need help", "can't afford"],
       a: ["The Community page is for giving unwanted items to people who need them, or asking for help. Donating and requesting are included with Bronze and higher."],
@@ -232,7 +232,7 @@
       if (found.length) {
         var lines = found.slice(0, 3).map(function (it) { return cap(it.name) + ": " + rateText(it) + (it.stock != null ? " In stock: " + it.stock + "." : "."); });
         var more = found.length > 3 ? " We have " + found.length + " matching items; see the hire range for them all." : "";
-        botSays(["Yes, it's in our hire range."].concat(lines).concat(["Prices in AUD, no GST added. Call us, or use Enquire on the hire page to email us, to check availability; price and terms are confirmed when you call." + more, hoursLine()]),
+        botSays(["Yes, it's in our hire range."].concat(lines).concat(["Prices in AUD, inc. GST. Call us, or use Enquire on the hire page to email us, to check availability; price and terms are confirmed when you call." + more, hoursLine()]),
           [["See the hire range", "hire.html"]], true);
         return;
       }

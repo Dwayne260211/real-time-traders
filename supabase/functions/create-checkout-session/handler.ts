@@ -56,8 +56,10 @@ export const handler = endpoint(async (req, ctx) => {
       line_items: lineItems,
       customer_email: c.customer_email,
       client_reference_id: c.booking_id,
-      metadata: { booking_id: c.booking_id, reference: c.reference },
-      payment_intent_data: { metadata: { booking_id: c.booking_id, reference: c.reference }, receipt_email: c.customer_email },
+      metadata: { app: "rtt", booking_id: c.booking_id, reference: c.reference },
+      // Cards only accept a suffix (the account default descriptor is shared with another business).
+      payment_intent_data: { metadata: { app: "rtt", booking_id: c.booking_id, reference: c.reference }, receipt_email: c.customer_email,
+                             statement_descriptor_suffix: "REALTIMETRADERS" },
       expires_at: c.expires_at,
       success_url: `${site}/my-bookings.html?checkout=success&ref=${encodeURIComponent(c.reference)}`,
       cancel_url: `${site}/my-bookings.html?checkout=cancelled&ref=${encodeURIComponent(c.reference)}`,

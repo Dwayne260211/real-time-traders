@@ -59,7 +59,7 @@
       rows.map(function (row) {
         return '<tr><th scope="row">' + row[0] + "</th>" + (row[1] != null ? "<td>" + dollars(row[1]) + "</td><td>" + row[2] + "</td>" : '<td class="is-na" colspan="2">Price on request. Call or email us</td>') + "</tr>";
       }).join("") + "</tbody>";
-    $("[data-pricing-note]").textContent = note || "Prices in AUD, no GST. Availability confirmed when you book.";
+    $("[data-pricing-note]").textContent = note || "Prices in AUD, inc. GST. Availability confirmed when you book.";
   }
   function showStatic(sid) {
     fetch("data/hire-items.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
@@ -134,7 +134,7 @@
       rows.map(function (row) {
         return "<tr><th scope=\"row\">" + row[0] + "</th>" + (row[1] ? "<td>" + H.money(row[1]) + "</td><td>" + row[2] + "</td>" : '<td class="is-na" colspan="2">Not offered online. Call us</td>') + "</tr>";
       }).join("") + "</tbody>";
-    var note = "Prices in AUD. No GST (Real Time Traders is not registered for GST).";
+    var note = "Prices in AUD. Prices include GST.";
     if (!settings.pricing_rule) note += " Totals shown when you pick dates are estimates until our pricing is finalised; we'll confirm your price.";
     else if (settings.pricing_rule === "exact_period") note += " Your total uses the weekend rate for a Saturday to Sunday hire, the weekly rate for whole weeks, and otherwise the daily rate for each day.";
     else note += " Choose daily, weekend (Saturday to Sunday) or weekly (whole weeks, rounded up) when you pick your dates.";

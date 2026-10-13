@@ -20,7 +20,7 @@ export async function ensureCustomer(ctx: Ctx, user: { id: string; email?: strin
   const existing = await customerIdFor(ctx, user.id);
   if (existing) return existing;
   const c = await stripeRequest<{ id: string }>(ctx, "customers",
-    { email: user.email, metadata: { supabase_user_id: user.id } }, `member-customer-${user.id}`);
+    { email: user.email, metadata: { app: "rtt", supabase_user_id: user.id } }, `member-customer-${user.id}`);
   await upsert(ctx, "member_stripe_customers", { user_id: user.id, stripe_customer_id: c.id }, "user_id");
   return c.id;
 }

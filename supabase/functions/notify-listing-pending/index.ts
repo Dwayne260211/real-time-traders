@@ -1,9 +1,11 @@
 // Emails the RTT inbox when a marketplace listing becomes pending (new post or edit sent back to approval).
 // Called by the pg_net trigger public.ml_notify_pending() with header x-notify-secret.
-// Secrets: NOTIFY_SECRET, BREVO_SMTP_KEY (SMTP_USER defaults to the Brevo login). Port 465 (587 is blocked on Edge Functions).
+// Secrets: NOTIFY_SECRET, NOTIFY_EMAILS (comma-separated recipients), BREVO_SMTP_KEY (SMTP_USER defaults to the Brevo login). Port 465 (587 is blocked on Edge Functions).
 import nodemailer from "npm:nodemailer@6.9.16";
 
-const TO = "realtimetraders101@gmail.com";
+const DEFAULT_TO = "realtimetraders101@gmail.com";
+// Recipients: NOTIFY_EMAILS secret (comma-separated) or the RTT inbox.
+const TO = (Deno.env.get("NOTIFY_EMAILS") || DEFAULT_TO).split(",").map((s) => s.trim()).filter(Boolean);
 const FROM = '"Real Time Traders Brisbane" <admin@bridge-bite-co.com>';
 const CATS: Record<string, string> = { "buy-sell": "Buy & sell", rare: "Antiques & rare finds", donated: "Donated / free" };
 const esc = (s: unknown) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]!));

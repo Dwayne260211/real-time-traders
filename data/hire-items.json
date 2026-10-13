@@ -1,7 +1,7 @@
 {
- "updated": "2026-10-10",
+ "updated": "2026-10-13",
  "currency": "AUD",
- "note": "Prices in AUD. No GST added. Price, availability and terms confirmed when you call.",
+ "note": "Prices in AUD, no GST. Availability confirmed when you book.",
  "filters": [
   {
    "slug": "cleaning",
@@ -119,9 +119,9 @@
    "filter": "drilling",
    "weight": "light",
    "rates": {
-    "day": 54.0,
-    "weekend": 81.0,
-    "week": 202.5
+    "day": 60.0,
+    "weekend": 90.0,
+    "week": 225.0
    },
    "type": "Cordless 1/2in impact wrench (18V)",
    "pinned": true,
@@ -144,7 +144,8 @@
      "src": "images/hire/dewalt-impact-wrench-3.webp",
      "alt": "The DeWalt impact wrench kit laid out: wrench, battery and charger"
     }
-   ]
+   ],
+   "deposit": 100
   },
   {
    "id": "pressure-washer-petrol-3000psi",
@@ -153,9 +154,9 @@
    "filter": "cleaning",
    "weight": "heavy",
    "rates": {
-    "day": 62.0,
-    "weekend": 93.0,
-    "week": 289.5
+    "day": 150.0,
+    "weekend": 225.0,
+    "week": 522.5
    },
    "photo": {
     "src": "images/hire/pressure-washer.webp",
@@ -169,7 +170,8 @@
      "license_url": "https://unsplash.com/license",
      "source": "https://unsplash.com/photos/a-man-in-a-yellow-vest-is-cleaning-a-street-gal5jKCgDVo"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "pressure-washer-petrol-2000-2500psi",
@@ -178,9 +180,9 @@
    "filter": "cleaning",
    "weight": "heavy",
    "rates": {
-    "day": 62.0,
-    "weekend": 93.0,
-    "week": 289.5
+    "day": 150.0,
+    "weekend": 225.0,
+    "week": 522.5
    },
    "photo": {
     "src": "images/hire/pressure-washer.webp",
@@ -194,7 +196,8 @@
      "license_url": "https://unsplash.com/license",
      "source": "https://unsplash.com/photos/a-man-in-a-yellow-vest-is-cleaning-a-street-gal5jKCgDVo"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "pressure-washer-petrol-4000psi",
@@ -203,9 +206,9 @@
    "filter": "cleaning",
    "weight": "heavy",
    "rates": {
-    "day": 175.5,
-    "weekend": 263.0,
-    "week": 616.5
+    "day": 242.0,
+    "weekend": 363.0,
+    "week": 889.0
    },
    "photo": {
     "src": "images/hire/pressure-washer.webp",
@@ -219,7 +222,8 @@
      "license_url": "https://unsplash.com/license",
      "source": "https://unsplash.com/photos/a-man-in-a-yellow-vest-is-cleaning-a-street-gal5jKCgDVo"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "pressure-washer-electric",
@@ -228,9 +232,9 @@
    "filter": "cleaning",
    "weight": "light",
    "rates": {
-    "day": 54.0,
-    "weekend": 81.0,
-    "week": 189.0
+    "day": 90.0,
+    "weekend": 135.0,
+    "week": 360.0
    },
    "photo": {
     "src": "images/hire/pressure-washer-electric-800.webp",
@@ -244,7 +248,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en",
      "source": "https://commons.wikimedia.org/wiki/File:Karcher-p1020712.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "pressure-washer-rotary-surface-cleaner-attachment",
@@ -253,9 +258,9 @@
    "filter": "cleaning",
    "weight": "light",
    "rates": {
-    "day": 39.5,
-    "weekend": 59.0,
-    "week": 157.5
+    "day": 58.0,
+    "weekend": 87.0,
+    "week": 215.0
    },
    "photo": {
     "src": "images/hire/pressure-washer.webp",
@@ -269,7 +274,8 @@
      "license_url": "https://unsplash.com/license",
      "source": "https://unsplash.com/photos/a-man-in-a-yellow-vest-is-cleaning-a-street-gal5jKCgDVo"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "carpet-cleaner-hot-water-extraction",
@@ -278,9 +284,9 @@
    "filter": "cleaning",
    "weight": "light",
    "rates": {
-    "day": 39.0,
-    "weekend": 46.5,
-    "week": 237.5
+    "day": 43.5,
+    "weekend": 52.0,
+    "week": 264.0
    },
    "photo": {
     "src": "images/hire/carpet-cleaner-800.webp",
@@ -294,7 +300,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
      "source": "https://commons.wikimedia.org/wiki/File:Floor_cleaner_inside_Sullivan_Hall.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "carpet-dryer-air-mover",
@@ -303,9 +310,9 @@
    "filter": "cleaning",
    "weight": "light",
    "rates": {
-    "day": 15.0,
-    "weekend": 22.5,
-    "week": 144.0
+    "day": 58.5,
+    "weekend": 88.0,
+    "week": 205.0
    },
    "photo": {
     "src": "images/hire/carpet-dryer-800.webp",
@@ -319,7 +326,8 @@
      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
      "source": "https://commons.wikimedia.org/wiki/File:XPower_air_mover_sits_in_the_corner.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "wet-dry-vacuum-industrial",
@@ -328,9 +336,9 @@
    "filter": "cleaning",
    "weight": "light",
    "rates": {
-    "day": 45.0,
-    "weekend": 67.5,
-    "week": 153.0
+    "day": 77.0,
+    "weekend": 115.5,
+    "week": 220.0
    },
    "photo": {
     "src": "images/hire/wet-dry-vacuum-800.webp",
@@ -344,7 +352,8 @@
      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
      "source": "https://commons.wikimedia.org/wiki/File:Advance_VL500_wetdry_vacuum_Yonge.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "h-class-concrete-dust-vacuum",
@@ -353,9 +362,9 @@
    "filter": "cleaning",
    "weight": "light",
    "rates": {
-    "day": 99.0,
-    "weekend": 148.5,
-    "week": 457.0
+    "day": 147.0,
+    "weekend": 220.5,
+    "week": 639.0
    },
    "photo": {
     "src": "images/hire/wet-dry-vacuum-800.webp",
@@ -369,7 +378,8 @@
      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
      "source": "https://commons.wikimedia.org/wiki/File:Advance_VL500_wetdry_vacuum_Yonge.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "steam-cleaner",
@@ -377,7 +387,11 @@
    "category": "Cleaning",
    "filter": "cleaning",
    "weight": "light",
-   "rates": null,
+   "rates": {
+    "day": 44.5,
+    "weekend": 52.0,
+    "week": 185.0
+   },
    "photo": {
     "src": "images/hire/steam-cleaner-800.webp",
     "srcset": "images/hire/steam-cleaner-400.webp 400w, images/hire/steam-cleaner-800.webp 800w",
@@ -390,7 +404,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Polti_steam_mop_or_portable.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "floor-scrubber-walk-behind-compact",
@@ -399,9 +414,9 @@
    "filter": "cleaning",
    "weight": "light",
    "rates": {
-    "day": 155.5,
-    "weekend": 233.0,
-    "week": 572.0
+    "day": 173.0,
+    "weekend": 259.5,
+    "week": 636.0
    },
    "photo": {
     "src": "images/hire/floor-scrubber-800.webp",
@@ -415,7 +430,8 @@
      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
      "source": "https://commons.wikimedia.org/wiki/File:Floor_cleaning_machine_-_Nobles.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "floor-polisher-rotary-machine-400mm",
@@ -424,9 +440,9 @@
    "filter": "cleaning",
    "weight": "light",
    "rates": {
-    "day": 64.0,
-    "weekend": 96.0,
-    "week": 257.0
+    "day": 110.0,
+    "weekend": 165.0,
+    "week": 348.0
    },
    "photo": {
     "src": "images/hire/floor-polisher-800.webp",
@@ -440,7 +456,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%97%E0%B8%B3%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%AA%E0%B8%B0%E0%B8%AD%E0%B8%B2%E0%B8%94.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "dehumidifier",
@@ -449,9 +466,9 @@
    "filter": "cleaning",
    "weight": "light",
    "rates": {
-    "day": 89.0,
-    "weekend": 133.5,
-    "week": 289.5
+    "day": 106.5,
+    "weekend": 160.0,
+    "week": 322.0
    },
    "photo": {
     "src": "images/hire/dehumidifier-800.webp",
@@ -465,7 +482,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:D%C3%A9shumidificateur_d%27air_professionnel.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "floor-stripper-tile-carpet-remover-walk-behind",
@@ -474,10 +492,11 @@
    "filter": "cleaning",
    "weight": "heavy",
    "rates": {
-    "day": 153.0,
-    "weekend": 229.5,
-    "week": 696.5
-   }
+    "day": 186.0,
+    "weekend": 279.0,
+    "week": 774.0
+   },
+   "deposit": 200
   },
   {
    "id": "floor-sander-drum-belt",
@@ -486,9 +505,9 @@
    "filter": "cleaning",
    "weight": "heavy",
    "rates": {
-    "day": 72.5,
-    "weekend": 109.0,
-    "week": 248.0
+    "day": 100.0,
+    "weekend": 150.0,
+    "week": 400.0
    },
    "photo": {
     "src": "images/hire/floor-sander-800.webp",
@@ -502,7 +521,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Artisan-poncage-parquet-paris-francois-gaillard_07.jpg"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "orbital-floor-sander",
@@ -511,10 +531,11 @@
    "filter": "cleaning",
    "weight": "heavy",
    "rates": {
-    "day": 70.0,
-    "weekend": 105.0,
-    "week": 248.0
-   }
+    "day": 129.5,
+    "weekend": 194.5,
+    "week": 447.0
+   },
+   "deposit": 200
   },
   {
    "id": "floor-edger",
@@ -523,10 +544,11 @@
    "filter": "cleaning",
    "weight": "light",
    "rates": {
-    "day": 47.5,
-    "weekend": 71.0,
-    "week": 189.0
-   }
+    "day": 80.0,
+    "weekend": 120.0,
+    "week": 352.0
+   },
+   "deposit": 100
   },
   {
    "id": "tile-saw-electric-wet-bench-table",
@@ -535,9 +557,9 @@
    "filter": "cutting",
    "weight": "light",
    "rates": {
-    "day": 64.0,
-    "weekend": 96.0,
-    "week": 257.0
+    "day": 105.0,
+    "weekend": 157.5,
+    "week": 371.0
    },
    "photo": {
     "src": "images/hire/tile-saw-800.webp",
@@ -551,7 +573,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
      "source": "https://commons.wikimedia.org/wiki/File:Tile_saw.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "tile-cutter-manual-600mm",
@@ -560,9 +583,9 @@
    "filter": "cutting",
    "weight": "light",
    "rates": {
-    "day": 31.5,
-    "weekend": 47.0,
-    "week": 108.0
+    "day": 56.5,
+    "weekend": 85.0,
+    "week": 127.0
    },
    "photo": {
     "src": "images/hire/tile-cutter-800.webp",
@@ -576,7 +599,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Montolit_MASTERPIUMA_93_P3.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "wallpaper-steamer-stripper",
@@ -585,10 +609,11 @@
    "filter": "sanding",
    "weight": "light",
    "rates": {
-    "day": 30.5,
-    "weekend": 46.0,
-    "week": 152.0
-   }
+    "day": 42.5,
+    "weekend": 64.0,
+    "week": 189.0
+   },
+   "deposit": 100
   },
   {
    "id": "airless-paint-sprayer",
@@ -597,9 +622,9 @@
    "filter": "sanding",
    "weight": "light",
    "rates": {
-    "day": 162.0,
-    "weekend": 243.0,
-    "week": 540.0
+    "day": 242.0,
+    "weekend": 363.0,
+    "week": 895.5
    },
    "photo": {
     "src": "images/hire/airless-sprayer-800.webp",
@@ -613,7 +638,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Pompa-Airless-TECNOVER-Testarossa-Superquattromila.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "plasterboard-giraffe-sander",
@@ -622,10 +648,11 @@
    "filter": "sanding",
    "weight": "light",
    "rates": {
-    "day": 54.0,
-    "weekend": 81.0,
-    "week": 189.0
-   }
+    "day": 106.0,
+    "weekend": 159.0,
+    "week": 320.0
+   },
+   "deposit": 100
   },
   {
    "id": "orbital-sander-hand-held",
@@ -634,9 +661,9 @@
    "filter": "sanding",
    "weight": "light",
    "rates": {
-    "day": 13.5,
-    "weekend": 20.0,
-    "week": 45.0
+    "day": 25.0,
+    "weekend": 37.5,
+    "week": 66.0
    },
    "photo": {
     "src": "images/hire/orbital-sander-800.webp",
@@ -650,7 +677,8 @@
      "license_url": "https://creativecommons.org/licenses/by/2.0",
      "source": "https://commons.wikimedia.org/wiki/File:Makita_BO5041_Random_Orbit_Sander_(6169161017).jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "belt-sander-100mm",
@@ -659,9 +687,9 @@
    "filter": "sanding",
    "weight": "light",
    "rates": {
-    "day": 60.0,
-    "weekend": 90.0,
-    "week": 208.5
+    "day": 67.0,
+    "weekend": 100.5,
+    "week": 232.0
    },
    "photo": {
     "src": "images/hire/belt-sander-800.webp",
@@ -675,7 +703,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/ca/deed.en",
      "source": "https://commons.wikimedia.org/wiki/File:Belt_sander_bosch.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "heat-gun-paint-stripper",
@@ -684,9 +713,9 @@
    "filter": "sanding",
    "weight": "light",
    "rates": {
-    "day": 18.0,
-    "weekend": 27.0,
-    "week": 63.0
+    "day": 26.0,
+    "weekend": 39.0,
+    "week": 70.0
    },
    "photo": {
     "src": "images/hire/heat-gun-800.webp",
@@ -700,7 +729,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Hot_air_gun_(1).jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "lawn-mower-push-petrol",
@@ -709,9 +739,9 @@
    "filter": "gardening",
    "weight": "light",
    "rates": {
-    "day": 36.0,
-    "weekend": 54.0,
-    "week": 108.0
+    "day": 50.0,
+    "weekend": 75.0,
+    "week": 150.0
    },
    "photo": {
     "src": "images/hire/lawn-mower-800.webp",
@@ -725,7 +755,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:2015-05-27_12_41_21_A_lawn_mower_on_Tranquility_Court_in_the_Franklin_Farm_section_of_Oak_Hill,_Fairfax_County,_Virginia.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "line-trimmer-whipper-snipper-petrol",
@@ -734,9 +765,9 @@
    "filter": "gardening",
    "weight": "light",
    "rates": {
-    "day": 40.5,
-    "weekend": 61.0,
-    "week": 216.0
+    "day": 61.0,
+    "weekend": 91.5,
+    "week": 250.0
    },
    "photo": {
     "src": "images/hire/line-trimmer.webp",
@@ -750,7 +781,8 @@
      "license_url": "https://unsplash.com/license",
      "source": "https://unsplash.com/photos/man-trims-overgrown-grass-with-a-string-trimmer-dvipT9WMNis"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "hedge-trimmer",
@@ -759,9 +791,9 @@
    "filter": "gardening",
    "weight": "light",
    "rates": {
-    "day": 40.5,
-    "weekend": 61.0,
-    "week": 139.5
+    "day": 88.0,
+    "weekend": 132.0,
+    "week": 256.5
    },
    "photo": {
     "src": "images/hire/hedge-trimmer.webp",
@@ -775,7 +807,8 @@
      "license_url": "https://unsplash.com/license",
      "source": "https://unsplash.com/photos/person-trimming-hedge-on-ladder-QnodCAbcqvc"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "leaf-blower",
@@ -784,9 +817,9 @@
    "filter": "gardening",
    "weight": "light",
    "rates": {
-    "day": 54.0,
-    "weekend": 81.0,
-    "week": 189.0
+    "day": 66.0,
+    "weekend": 99.0,
+    "week": 227.5
    },
    "photo": {
     "src": "images/hire/leaf-blower.webp",
@@ -800,7 +833,8 @@
      "license_url": "https://unsplash.com/license",
      "source": "https://unsplash.com/photos/a-man-with-a-leaf-blower-in-a-yard-20Xibv0RrDo"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "chainsaw-petrol-18-20in",
@@ -809,9 +843,9 @@
    "filter": "gardening",
    "weight": "light",
    "rates": {
-    "day": 85.5,
-    "weekend": 128.0,
-    "week": 342.0
+    "day": 160.0,
+    "weekend": 240.0,
+    "week": 560.0
    },
    "photo": {
     "src": "images/hire/chainsaw-800.webp",
@@ -825,7 +859,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Blocco_catena_motosega_per_wiki5.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "pole-saw-pole-pruner",
@@ -834,9 +869,9 @@
    "filter": "gardening",
    "weight": "light",
    "rates": {
-    "day": 79.0,
-    "weekend": 118.5,
-    "week": 288.5
+    "day": 130.5,
+    "weekend": 196.0,
+    "week": 352.0
    },
    "photo": {
     "src": "images/hire/pole-saw-800.webp",
@@ -850,7 +885,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
      "source": "https://commons.wikimedia.org/wiki/File:Asts%C3%A4ge%26Schere%26Seilzug.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "rotary-hoe-tiller",
@@ -859,9 +895,9 @@
    "filter": "gardening",
    "weight": "heavy",
    "rates": {
-    "day": 69.0,
-    "weekend": 103.5,
-    "week": 277.0
+    "day": 143.0,
+    "weekend": 214.5,
+    "week": 492.5
    },
    "photo": {
     "src": "images/hire/rotary-hoe-800.webp",
@@ -875,7 +911,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
      "source": "https://commons.wikimedia.org/wiki/File:Glebogryzarka.jpg"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "lawn-corer-aerator",
@@ -884,9 +921,9 @@
    "filter": "gardening",
    "weight": "heavy",
    "rates": {
-    "day": 117.0,
-    "weekend": 175.5,
-    "week": 468.0
+    "day": 162.5,
+    "weekend": 244.0,
+    "week": 560.0
    },
    "photo": {
     "src": "images/hire/lawn-aerator-800.webp",
@@ -900,7 +937,8 @@
      "license_url": "https://creativecommons.org/licenses/by/3.0",
      "source": "https://commons.wikimedia.org/wiki/File:AIREADORA_03.JPG"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "lawn-dethatcher-scarifier",
@@ -909,10 +947,11 @@
    "filter": "gardening",
    "weight": "heavy",
    "rates": {
-    "day": 118.5,
-    "weekend": 178.0,
-    "week": 504.0
-   }
+    "day": 160.0,
+    "weekend": 240.0,
+    "week": 618.5
+   },
+   "deposit": 200
   },
   {
    "id": "turf-cutter",
@@ -921,10 +960,11 @@
    "filter": "gardening",
    "weight": "heavy",
    "rates": {
-    "day": 144.0,
-    "weekend": 216.0,
-    "week": 504.0
-   }
+    "day": 176.0,
+    "weekend": 264.0,
+    "week": 815.0
+   },
+   "deposit": 200
   },
   {
    "id": "lawn-roller",
@@ -933,9 +973,9 @@
    "filter": "gardening",
    "weight": "light",
    "rates": {
-    "day": 14.5,
-    "weekend": 22.0,
-    "week": 37.0
+    "day": 20.0,
+    "weekend": 30.0,
+    "week": 75.5
    },
    "photo": {
     "src": "images/hire/lawn-roller-800.webp",
@@ -949,7 +989,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
      "source": "https://commons.wikimedia.org/wiki/File:Kondara_J09_02.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "wood-chipper-small-towable-petrol",
@@ -958,9 +999,9 @@
    "filter": "gardening",
    "weight": "heavy",
    "rates": {
-    "day": 130.5,
-    "weekend": 196.0,
-    "week": 522.0
+    "day": 220.0,
+    "weekend": 330.0,
+    "week": 713.0
    },
    "photo": {
     "src": "images/hire/wood-chipper-800.webp",
@@ -974,7 +1015,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
      "source": "https://commons.wikimedia.org/wiki/File:Wood_chipper_display_-_geograph.org.uk_-_4275105.jpg"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "stump-grinder-small-medium",
@@ -983,9 +1025,9 @@
    "filter": "gardening",
    "weight": "heavy",
    "rates": {
-    "day": 175.5,
-    "weekend": 263.0,
-    "week": 616.5
+    "day": 220.0,
+    "weekend": 330.0,
+    "week": 747.0
    },
    "photo": {
     "src": "images/hire/stump-grinder-800.webp",
@@ -999,7 +1041,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:2023-05-12_08_37_56_A_stump_grinder_being_used_to_grind_up_a_Red_Maple_stump_along_Aquetong_Lane_in_the_Mountainview_section_of_Ewing_Township,_Mercer_County,_New_Jersey.jpg"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "log-splitter-hydraulic",
@@ -1008,9 +1051,9 @@
    "filter": "gardening",
    "weight": "heavy",
    "rates": {
-    "day": 273.5,
-    "weekend": 410.0,
-    "week": 956.5
+    "day": 304.0,
+    "weekend": 456.0,
+    "week": 1063.0
    },
    "photo": {
     "src": "images/hire/log-splitter-800.webp",
@@ -1024,7 +1067,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
      "source": "https://commons.wikimedia.org/wiki/File:Automatic_axe_dsc00844.jpg"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "brush-cutter-scrub-cutter-heavy",
@@ -1033,9 +1077,9 @@
    "filter": "gardening",
    "weight": "light",
    "rates": {
-    "day": 89.0,
-    "weekend": 133.5,
-    "week": 539.0
+    "day": 122.0,
+    "weekend": 183.0,
+    "week": 599.0
    },
    "photo": {
     "src": "images/hire/brush-cutter-800.webp",
@@ -1049,7 +1093,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
      "source": "https://commons.wikimedia.org/wiki/File:Handy_mower.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "knapsack-sprayer",
@@ -1058,9 +1103,9 @@
    "filter": "gardening",
    "weight": "light",
    "rates": {
-    "day": 57.5,
-    "weekend": 86.0,
-    "week": 174.5
+    "day": 64.0,
+    "weekend": 96.0,
+    "week": 194.0
    },
    "photo": {
     "src": "images/hire/knapsack-sprayer-800.webp",
@@ -1074,7 +1119,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Knapsack_sprayer.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "wheelbarrow",
@@ -1083,9 +1129,9 @@
    "filter": "gardening",
    "weight": "light",
    "rates": {
-    "day": 13.5,
-    "weekend": 20.0,
-    "week": 45.0
+    "day": 25.5,
+    "weekend": 38.5,
+    "week": 69.0
    },
    "photo": {
     "src": "images/hire/wheelbarrow-800.webp",
@@ -1099,7 +1145,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Carretilla_Herragro_campo.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "post-hole-digger-2-person-petrol-auger",
@@ -1108,9 +1155,9 @@
    "filter": "gardening",
    "weight": "heavy",
    "rates": {
-    "day": 81.0,
-    "weekend": 121.5,
-    "week": 295.0
+    "day": 115.0,
+    "weekend": 172.5,
+    "week": 360.0
    },
    "photo": {
     "src": "images/hire/post-hole-auger-800.webp",
@@ -1124,7 +1171,8 @@
      "license_url": "https://creativecommons.org/licenses/by/3.0/us/deed.en",
      "source": "https://commons.wikimedia.org/wiki/File:Starr-030429-0041-Chenopodium_oahuense-digging_holes_with_power_auger_with_Derek-Lua_Makika-Kahoolawe_(24003396884).jpg"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "post-hole-digger-1-person-petrol",
@@ -1133,9 +1181,9 @@
    "filter": "gardening",
    "weight": "light",
    "rates": {
-    "day": 67.5,
-    "weekend": 101.0,
-    "week": 234.0
+    "day": 110.0,
+    "weekend": 165.0,
+    "week": 342.5
    },
    "photo": {
     "src": "images/hire/post-hole-auger-800.webp",
@@ -1149,7 +1197,8 @@
      "license_url": "https://creativecommons.org/licenses/by/3.0/us/deed.en",
      "source": "https://commons.wikimedia.org/wiki/File:Starr-030429-0041-Chenopodium_oahuense-digging_holes_with_power_auger_with_Derek-Lua_Makika-Kahoolawe_(24003396884).jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "post-hole-digger-manual",
@@ -1158,9 +1207,9 @@
    "filter": "gardening",
    "weight": "light",
    "rates": {
-    "day": 18.0,
-    "weekend": 27.0,
-    "week": 68.0
+    "day": 27.0,
+    "weekend": 40.5,
+    "week": 76.0
    },
    "photo": {
     "src": "images/hire/post-hole-digger-manual-800.webp",
@@ -1174,7 +1223,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
      "source": "https://commons.wikimedia.org/wiki/File:Erdbohrerp.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "concrete-cement-mixer-3-cu-ft-electric",
@@ -1183,9 +1233,9 @@
    "filter": "concreting",
    "weight": "heavy",
    "rates": {
-    "day": 49.5,
-    "weekend": 74.0,
-    "week": 198.0
+    "day": 66.0,
+    "weekend": 99.0,
+    "week": 266.0
    },
    "photo": {
     "src": "images/hire/cement-mixer-800.webp",
@@ -1199,7 +1249,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Mini_concrete_mixer.jpg"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "cement-mixer-small-2-2-2-cu-ft-electric",
@@ -1208,9 +1259,9 @@
    "filter": "concreting",
    "weight": "heavy",
    "rates": {
-    "day": 39.5,
-    "weekend": 59.0,
-    "week": 158.0
+    "day": 65.0,
+    "weekend": 97.5,
+    "week": 230.0
    },
    "photo": {
     "src": "images/hire/cement-mixer-800.webp",
@@ -1224,7 +1275,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Mini_concrete_mixer.jpg"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "concrete-vibrator-petrol-drive-shaft",
@@ -1233,10 +1285,11 @@
    "filter": "concreting",
    "weight": "light",
    "rates": {
-    "day": 85.5,
-    "weekend": 128.0,
-    "week": 301.5
-   }
+    "day": 125.0,
+    "weekend": 187.5,
+    "week": 473.5
+   },
+   "deposit": 100
   },
   {
    "id": "power-trowel-walk-behind",
@@ -1245,9 +1298,9 @@
    "filter": "concreting",
    "weight": "heavy",
    "rates": {
-    "day": 108.5,
-    "weekend": 163.0,
-    "week": 288.0
+    "day": 130.0,
+    "weekend": 195.0,
+    "week": 381.0
    },
    "photo": {
     "src": "images/hire/power-trowel-800.webp",
@@ -1261,7 +1314,8 @@
      "license_url": "https://creativecommons.org/licenses/by/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Hand-push_electric_concrete_trowel.jpg"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "bull-float",
@@ -1270,9 +1324,9 @@
    "filter": "concreting",
    "weight": "light",
    "rates": {
-    "day": 17.0,
-    "weekend": 25.5,
-    "week": 52.0
+    "day": 32.0,
+    "weekend": 48.0,
+    "week": 74.0
    },
    "photo": {
     "src": "images/hire/bull-float-800.webp",
@@ -1286,7 +1340,8 @@
      "license_url": "https://creativecommons.org/licenses/by/2.0",
      "source": "https://commons.wikimedia.org/wiki/File:Blue_Grass_Chemical_Agent-Destruction_Pilot_Plant_Munitions_Demilitarization_Building_Finishing_Concrete_(4604675852).jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "concrete-screed-manual",
@@ -1295,10 +1350,11 @@
    "filter": "concreting",
    "weight": "light",
    "rates": {
-    "day": 13.0,
-    "weekend": 19.5,
-    "week": 26.0
-   }
+    "day": 25.0,
+    "weekend": 37.5,
+    "week": 90.0
+   },
+   "deposit": 100
   },
   {
    "id": "concrete-floor-grinder-walk-behind-single-head",
@@ -1307,9 +1363,9 @@
    "filter": "concreting",
    "weight": "heavy",
    "rates": {
-    "day": 125.0,
-    "weekend": 187.5,
-    "week": 479.5
+    "day": 290.5,
+    "weekend": 436.0,
+    "week": 1040.0
    },
    "photo": {
     "src": "images/hire/floor-grinder-800.webp",
@@ -1323,7 +1379,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:DURATIQ_concrete_grinding_machine.png"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "concrete-grinder-hand-held",
@@ -1332,9 +1389,9 @@
    "filter": "concreting",
    "weight": "light",
    "rates": {
-    "day": 125.0,
-    "weekend": 187.5,
-    "week": 362.5
+    "day": 197.0,
+    "weekend": 295.5,
+    "week": 403.0
    },
    "photo": {
     "src": "images/hire/concrete-hand-grinder-800.webp",
@@ -1348,7 +1405,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Neuverlegung_%E2%80%9ESpur_der_Erinnerung%E2%80%9C_am_Waidmarkt,_K%C3%B6ln-5813.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "core-drill-to-100-150mm",
@@ -1357,9 +1415,9 @@
    "filter": "drilling",
    "weight": "light",
    "rates": {
-    "day": 135.0,
-    "weekend": 202.5,
-    "week": 472.5
+    "day": 176.0,
+    "weekend": 264.0,
+    "week": 600.0
    },
    "photo": {
     "src": "images/hire/core-drill-800.webp",
@@ -1373,7 +1431,8 @@
      "license_url": "https://creativecommons.org/licenses/by/2.0",
      "source": "https://commons.wikimedia.org/wiki/File:Makita_8406_Diamon_Core_Drill_(4887726030).jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "wall-chaser-125mm",
@@ -1382,9 +1441,9 @@
    "filter": "cutting",
    "weight": "light",
    "rates": {
-    "day": 99.0,
-    "weekend": 148.5,
-    "week": 346.5
+    "day": 143.0,
+    "weekend": 214.5,
+    "week": 480.5
    },
    "photo": {
     "src": "images/hire/wall-chaser-800.webp",
@@ -1398,7 +1457,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
      "source": "https://commons.wikimedia.org/wiki/File:Einhell_TC-MA_1300.JPG"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "concrete-planer-scarifier-200mm",
@@ -1407,10 +1467,11 @@
    "filter": "concreting",
    "weight": "heavy",
    "rates": {
-    "day": 376.0,
-    "weekend": 564.0,
-    "week": 1948.5
-   }
+    "day": 481.5,
+    "weekend": 722.5,
+    "week": 2165.0
+   },
+   "deposit": 200
   },
   {
    "id": "plate-compactor-small-40-55kg",
@@ -1419,9 +1480,9 @@
    "filter": "compaction",
    "weight": "heavy",
    "rates": {
-    "day": 57.5,
-    "weekend": 86.0,
-    "week": 234.0
+    "day": 85.0,
+    "weekend": 127.5,
+    "week": 330.0
    },
    "photo": {
     "src": "images/hire/plate-compactor-800.webp",
@@ -1436,7 +1497,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Building_Fairs_Brno_2011_(160).jpg"
     }
    },
-   "icon": "i-compactor"
+   "icon": "i-compactor",
+   "deposit": 200
   },
   {
    "id": "plate-compactor-medium-70-90kg",
@@ -1445,9 +1507,9 @@
    "filter": "compaction",
    "weight": "heavy",
    "rates": {
-    "day": 62.0,
-    "weekend": 93.0,
-    "week": 238.5
+    "day": 95.0,
+    "weekend": 142.5,
+    "week": 360.0
    },
    "photo": {
     "src": "images/hire/plate-compactor-800.webp",
@@ -1462,7 +1524,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Building_Fairs_Brno_2011_(160).jpg"
     }
    },
-   "icon": "i-compactor"
+   "icon": "i-compactor",
+   "deposit": 200
   },
   {
    "id": "plate-compactor-reversible-150kg",
@@ -1471,9 +1534,9 @@
    "filter": "compaction",
    "weight": "heavy",
    "rates": {
-    "day": 180.0,
-    "weekend": 270.0,
-    "week": 684.5
+    "day": 200.0,
+    "weekend": 300.0,
+    "week": 761.0
    },
    "photo": {
     "src": "images/hire/plate-compactor-reversible-800.webp",
@@ -1488,7 +1551,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Building_Fairs_Brno_2011_(162).jpg"
     }
    },
-   "icon": "i-compactor"
+   "icon": "i-compactor",
+   "deposit": 200
   },
   {
    "id": "rammer-jumping-jack",
@@ -1497,9 +1561,9 @@
    "filter": "compaction",
    "weight": "heavy",
    "rates": {
-    "day": 79.0,
-    "weekend": 118.5,
-    "week": 306.0
+    "day": 102.5,
+    "weekend": 154.0,
+    "week": 352.0
    },
    "photo": {
     "src": "images/hire/rammer-800.webp",
@@ -1514,7 +1578,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Trilstamper.jpg"
     }
    },
-   "icon": "i-compactor"
+   "icon": "i-compactor",
+   "deposit": 200
   },
   {
    "id": "roller-ride-on-double-drum-1-2-1-5t",
@@ -1523,9 +1588,9 @@
    "filter": "compaction",
    "weight": "heavy",
    "rates": {
-    "day": 247.5,
-    "weekend": 371.0,
-    "week": 990.0
+    "day": 308.0,
+    "weekend": 462.0,
+    "week": 1347.0
    },
    "photo": {
     "src": "images/hire/roller-drum-800.webp",
@@ -1540,7 +1605,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Bomag_Tandem_Roller_02.JPG"
     }
    },
-   "icon": "i-compactor"
+   "icon": "i-compactor",
+   "deposit": 200
   },
   {
    "id": "trench-roller-articulated-padfoot",
@@ -1549,9 +1615,9 @@
    "filter": "compaction",
    "weight": "heavy",
    "rates": {
-    "day": 287.0,
-    "weekend": 430.5,
-    "week": 1603.5
+    "day": 363.5,
+    "weekend": 545.5,
+    "week": 1782.0
    },
    "photo": {
     "src": "images/hire/trench-roller-800.webp",
@@ -1566,7 +1632,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:2008-08-28_Wacker_RT_trench_roller.jpg"
     }
    },
-   "icon": "i-compactor"
+   "icon": "i-compactor",
+   "deposit": 200
   },
   {
    "id": "mini-excavator-1-7-1-8t",
@@ -1575,9 +1642,9 @@
    "filter": "compaction",
    "weight": "heavy",
    "rates": {
-    "day": 175.5,
-    "weekend": 263.0,
-    "week": 706.5
+    "day": 324.0,
+    "weekend": 486.0,
+    "week": 1360.0
    },
    "photo": {
     "src": "images/hire/mini-excavator.webp",
@@ -1591,7 +1658,8 @@
      "license_url": "https://unsplash.com/license",
      "source": "https://unsplash.com/photos/mini-excavator-with-coiled-pipes-on-grassy-ground-L3eEgJT2R-c"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "mini-excavator-1t",
@@ -1600,9 +1668,9 @@
    "filter": "compaction",
    "weight": "heavy",
    "rates": {
-    "day": 175.5,
-    "weekend": 263.0,
-    "week": 706.5
+    "day": 324.0,
+    "weekend": 486.0,
+    "week": 1360.0
    },
    "photo": {
     "src": "images/hire/excavator-mini-800.webp",
@@ -1616,7 +1684,8 @@
      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
      "source": "https://commons.wikimedia.org/wiki/File:Unknown_mini_excavator_-_Arlington,_MA.jpg"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "excavator-2-5t",
@@ -1625,9 +1694,9 @@
    "filter": "compaction",
    "weight": "heavy",
    "rates": {
-    "day": 336.5,
-    "weekend": 505.0,
-    "week": 1828.5
+    "day": 462.0,
+    "weekend": 693.0,
+    "week": 2032.0
    },
    "photo": {
     "src": "images/hire/excavator-800.webp",
@@ -1641,7 +1710,8 @@
      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
      "source": "https://commons.wikimedia.org/wiki/File:Case_mini_excavator_-_Arlington,_MA.jpg"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "excavator-3-5t",
@@ -1650,9 +1720,9 @@
    "filter": "compaction",
    "weight": "heavy",
    "rates": {
-    "day": 336.5,
-    "weekend": 505.0,
-    "week": 2312.0
+    "day": 533.5,
+    "weekend": 800.5,
+    "week": 2569.0
    },
    "photo": {
     "src": "images/hire/excavator-800.webp",
@@ -1666,7 +1736,8 @@
      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
      "source": "https://commons.wikimedia.org/wiki/File:Case_mini_excavator_-_Arlington,_MA.jpg"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "mini-loader-dingo-kanga-type",
@@ -1675,9 +1746,9 @@
    "filter": "compaction",
    "weight": "heavy",
    "rates": {
-    "day": 175.5,
-    "weekend": 189.0,
-    "week": 706.5
+    "day": 242.5,
+    "weekend": 242.5,
+    "week": 880.0
    },
    "photo": {
     "src": "images/hire/mini-loader-800.webp",
@@ -1691,7 +1762,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Agritechnica_2023,_Hanover_(P1160270-RR).jpg"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "skid-steer-loader-small-wheeled",
@@ -1700,9 +1772,9 @@
    "filter": "compaction",
    "weight": "heavy",
    "rates": {
-    "day": 277.0,
-    "weekend": 415.5,
-    "week": 1224.0
+    "day": 340.0,
+    "weekend": 510.0,
+    "week": 1374.5
    },
    "photo": {
     "src": "images/hire/skid-steer-800.webp",
@@ -1716,7 +1788,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Araraquara_(2020_October)_337.jpg"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "tracked-dumper-power-barrow-600kg",
@@ -1725,9 +1798,9 @@
    "filter": "compaction",
    "weight": "heavy",
    "rates": {
-    "day": 215.0,
-    "weekend": 322.5,
-    "week": 810.5
+    "day": 239.0,
+    "weekend": 358.5,
+    "week": 901.0
    },
    "photo": {
     "src": "images/hire/tracked-dumper-800.webp",
@@ -1741,7 +1814,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Yanmar_C12R_tracked_dumper_01.jpg"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "trencher-walk-behind-self-propelled",
@@ -1750,9 +1824,9 @@
    "filter": "compaction",
    "weight": "heavy",
    "rates": {
-    "day": 227.5,
-    "weekend": 341.0,
-    "week": 1254.5
+    "day": 324.0,
+    "weekend": 486.0,
+    "week": 1394.0
    },
    "photo": {
     "src": "images/hire/trencher-800.webp",
@@ -1766,7 +1840,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Ditch_Witch_C30X,_2024_Moh%C3%A1cs.jpg"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "demolition-hammer-light-electric",
@@ -1775,9 +1850,9 @@
    "filter": "concreting",
    "weight": "light",
    "rates": {
-    "day": 59.0,
-    "weekend": 88.5,
-    "week": 237.5
+    "day": 110.0,
+    "weekend": 165.0,
+    "week": 374.5
    },
    "photo": {
     "src": "images/hire/demolition-hammer-800.webp",
@@ -1791,7 +1866,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
      "source": "https://commons.wikimedia.org/wiki/File:Pneumatic_drill.jpeg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "demolition-hammer-medium-electric-16kg",
@@ -1800,9 +1876,9 @@
    "filter": "concreting",
    "weight": "light",
    "rates": {
-    "day": 76.5,
-    "weekend": 115.0,
-    "week": 306.0
+    "day": 115.5,
+    "weekend": 173.5,
+    "week": 390.0
    },
    "photo": {
     "src": "images/hire/demolition-hammer-800.webp",
@@ -1816,7 +1892,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
      "source": "https://commons.wikimedia.org/wiki/File:Pneumatic_drill.jpeg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "jackhammer-breaker-heavy-electric-30kg",
@@ -1825,9 +1902,9 @@
    "filter": "concreting",
    "weight": "heavy",
    "rates": {
-    "day": 99.0,
-    "weekend": 148.5,
-    "week": 396.0
+    "day": 165.0,
+    "weekend": 247.5,
+    "week": 586.0
    },
    "photo": {
     "src": "images/hire/demolition-hammer-800.webp",
@@ -1841,7 +1918,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
      "source": "https://commons.wikimedia.org/wiki/File:Pneumatic_drill.jpeg"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "jackhammer-on-trolley-tile-floor-removal",
@@ -1850,9 +1928,9 @@
    "filter": "concreting",
    "weight": "heavy",
    "rates": {
-    "day": 121.5,
-    "weekend": 182.0,
-    "week": 487.5
+    "day": 200.0,
+    "weekend": 300.0,
+    "week": 595.0
    },
    "photo": {
     "src": "images/hire/demolition-hammer-800.webp",
@@ -1866,7 +1944,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
      "source": "https://commons.wikimedia.org/wiki/File:Pneumatic_drill.jpeg"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "demolition-cut-off-saw-petrol-350mm",
@@ -1875,9 +1954,9 @@
    "filter": "cutting",
    "weight": "light",
    "rates": {
-    "day": 198.0,
-    "weekend": 297.0,
-    "week": 693.0
+    "day": 220.0,
+    "weekend": 330.0,
+    "week": 813.0
    },
    "photo": {
     "src": "images/hire/cut-off-saw-petrol-800.webp",
@@ -1891,7 +1970,8 @@
      "license_url": "https://creativecommons.org/licenses/by/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Engine_cutter_55616_2027.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "concrete-floor-saw-walk-behind-350mm-petrol",
@@ -1900,10 +1980,11 @@
    "filter": "cutting",
    "weight": "heavy",
    "rates": {
-    "day": 126.0,
-    "weekend": 189.0,
-    "week": 504.0
-   }
+    "day": 242.0,
+    "weekend": 363.0,
+    "week": 746.5
+   },
+   "deposit": 200
   },
   {
    "id": "brick-paver-saw-350mm",
@@ -1912,10 +1993,11 @@
    "filter": "cutting",
    "weight": "heavy",
    "rates": {
-    "day": 99.0,
-    "weekend": 148.5,
-    "week": 396.0
-   }
+    "day": 165.0,
+    "weekend": 247.5,
+    "week": 600.5
+   },
+   "deposit": 200
   },
   {
    "id": "rotary-hammer-drill-light-sds-plus",
@@ -1924,9 +2006,9 @@
    "filter": "drilling",
    "weight": "light",
    "rates": {
-    "day": 22.5,
-    "weekend": 34.0,
-    "week": 81.0
+    "day": 88.0,
+    "weekend": 132.0,
+    "week": 281.5
    },
    "photo": {
     "src": "images/hire/rotary-hammer-800.webp",
@@ -1940,7 +2022,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
      "source": "https://commons.wikimedia.org/wiki/File:Bohrhammer_Kress_Elektrowerkzeuge.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "rotary-hammer-drill-heavy-sds-max",
@@ -1949,9 +2032,9 @@
    "filter": "drilling",
    "weight": "light",
    "rates": {
-    "day": 45.0,
-    "weekend": 67.5,
-    "week": 157.5
+    "day": 99.0,
+    "weekend": 148.5,
+    "week": 372.5
    },
    "photo": {
     "src": "images/hire/rotary-hammer-800.webp",
@@ -1965,7 +2048,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
      "source": "https://commons.wikimedia.org/wiki/File:Bohrhammer_Kress_Elektrowerkzeuge.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "hammer-percussion-drill-13mm",
@@ -1974,9 +2058,9 @@
    "filter": "drilling",
    "weight": "light",
    "rates": {
-    "day": 36.0,
-    "weekend": 54.0,
-    "week": 126.0
+    "day": 48.5,
+    "weekend": 73.0,
+    "week": 145.0
    },
    "photo": {
     "src": "images/hire/hammer-drill-800.webp",
@@ -1990,7 +2074,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
      "source": "https://commons.wikimedia.org/wiki/File:Hammer_drill-1.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "cordless-drill",
@@ -1999,9 +2084,9 @@
    "filter": "drilling",
    "weight": "light",
    "rates": {
-    "day": 49.5,
-    "weekend": 74.0,
-    "week": 135.0
+    "day": 55.0,
+    "weekend": 82.5,
+    "week": 150.0
    },
    "photo": {
     "src": "images/hire/drill.webp",
@@ -2015,7 +2100,8 @@
      "license_url": "https://unsplash.com/license",
      "source": "https://unsplash.com/photos/red-cordless-powerdrill-CuDoRFyTkAQ"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "electric-impact-wrench-3-4in",
@@ -2024,9 +2110,9 @@
    "filter": "drilling",
    "weight": "light",
    "rates": {
-    "day": 31.5,
-    "weekend": 47.0,
-    "week": 88.0
+    "day": 35.0,
+    "weekend": 52.5,
+    "week": 98.0
    },
    "photo": {
     "src": "images/hire/impact-wrench-800.webp",
@@ -2040,7 +2126,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Cordless_Impact_Wrenches_%26_Driver.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "mixing-drill-paddle-mixer",
@@ -2049,10 +2136,11 @@
    "filter": "drilling",
    "weight": "light",
    "rates": {
-    "day": 71.0,
-    "weekend": 106.5,
-    "week": 203.0
-   }
+    "day": 79.0,
+    "weekend": 118.5,
+    "week": 226.0
+   },
+   "deposit": 100
   },
   {
    "id": "magnetic-base-drill",
@@ -2061,9 +2149,9 @@
    "filter": "drilling",
    "weight": "light",
    "rates": {
-    "day": 128.5,
-    "weekend": 193.0,
-    "week": 504.0
+    "day": 160.0,
+    "weekend": 240.0,
+    "week": 691.0
    },
    "photo": {
     "src": "images/hire/mag-drill-800.webp",
@@ -2077,7 +2165,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Compact_magnetic_drilling_machine.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "angle-grinder-125mm",
@@ -2086,9 +2175,9 @@
    "filter": "cutting",
    "weight": "light",
    "rates": {
-    "day": 45.0,
-    "weekend": 67.5,
-    "week": 153.0
+    "day": 52.5,
+    "weekend": 79.0,
+    "week": 175.0
    },
    "photo": {
     "src": "images/hire/angle-grinder.webp",
@@ -2102,7 +2191,8 @@
      "license_url": "https://unsplash.com/license",
      "source": "https://unsplash.com/photos/a-man-working-with-a-grinder-on-a-piece-of-metal-fZEC4pR4Kpo"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "angle-grinder-230mm",
@@ -2111,9 +2201,9 @@
    "filter": "cutting",
    "weight": "light",
    "rates": {
-    "day": 51.0,
-    "weekend": 76.5,
-    "week": 189.0
+    "day": 58.5,
+    "weekend": 88.0,
+    "week": 212.0
    },
    "photo": {
     "src": "images/hire/angle-grinder.webp",
@@ -2127,7 +2217,8 @@
      "license_url": "https://unsplash.com/license",
      "source": "https://unsplash.com/photos/a-man-working-with-a-grinder-on-a-piece-of-metal-fZEC4pR4Kpo"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "circular-saw-235mm",
@@ -2136,9 +2227,9 @@
    "filter": "cutting",
    "weight": "light",
    "rates": {
-    "day": 27.5,
-    "weekend": 41.0,
-    "week": 61.0
+    "day": 40.5,
+    "weekend": 61.0,
+    "week": 121.5
    },
    "photo": {
     "src": "images/hire/circular-saw.webp",
@@ -2152,7 +2243,8 @@
      "license_url": "https://unsplash.com/license",
      "source": "https://unsplash.com/photos/a-person-using-a-circular-saw-to-cut-a-piece-of-wood-SdGWs9shP0o"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "jigsaw",
@@ -2161,9 +2253,9 @@
    "filter": "cutting",
    "weight": "light",
    "rates": {
-    "day": 18.0,
-    "weekend": 27.0,
-    "week": 63.0
+    "day": 36.0,
+    "weekend": 54.0,
+    "week": 107.0
    },
    "photo": {
     "src": "images/hire/jigsaw-800.webp",
@@ -2177,7 +2269,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Jigsaw_AccuMaster.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "reciprocating-sabre-saw",
@@ -2186,9 +2279,9 @@
    "filter": "cutting",
    "weight": "light",
    "rates": {
-    "day": 27.0,
-    "weekend": 40.5,
-    "week": 61.0
+    "day": 30.5,
+    "weekend": 46.0,
+    "week": 86.5
    },
    "photo": {
     "src": "images/hire/recip-saw-800.webp",
@@ -2202,7 +2295,8 @@
      "license_url": "https://creativecommons.org/licenses/by/2.0",
      "source": "https://commons.wikimedia.org/wiki/File:Makita_JR3070CT_Reciprocating_Saw_(4887119615).jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "mitre-drop-saw",
@@ -2211,9 +2305,9 @@
    "filter": "cutting",
    "weight": "light",
    "rates": {
-    "day": 114.0,
-    "weekend": 171.0,
-    "week": 340.0
+    "day": 127.0,
+    "weekend": 190.5,
+    "week": 378.0
    },
    "photo": {
     "src": "images/hire/mitre-saw-800.webp",
@@ -2227,7 +2321,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
      "source": "https://commons.wikimedia.org/wiki/File:MiterSaw.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "metal-cut-off-saw-355mm",
@@ -2236,9 +2331,9 @@
    "filter": "cutting",
    "weight": "light",
    "rates": {
-    "day": 54.0,
-    "weekend": 81.0,
-    "week": 189.0
+    "day": 81.0,
+    "weekend": 121.5,
+    "week": 284.0
    },
    "photo": {
     "src": "images/hire/metal-cut-off-saw-800.webp",
@@ -2252,7 +2347,8 @@
      "license_url": "https://creativecommons.org/licenses/by/2.0",
      "source": "https://commons.wikimedia.org/wiki/File:Let_the_Sparks_Fly_-_The_Makita_2414NB_Abrasive_Cut_Off_Saw_(4070957523).jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "electric-planer-hand",
@@ -2261,9 +2357,9 @@
    "filter": "cutting",
    "weight": "light",
    "rates": {
-    "day": 18.0,
-    "weekend": 27.0,
-    "week": 63.0
+    "day": 34.0,
+    "weekend": 51.0,
+    "week": 100.0
    },
    "photo": {
     "src": "images/hire/planer-800.webp",
@@ -2277,7 +2373,8 @@
      "license_url": "https://creativecommons.org/licenses/by/2.0",
      "source": "https://commons.wikimedia.org/wiki/File:Makita_KP0800_Planer_(2).jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "framing-nailer",
@@ -2286,9 +2383,9 @@
    "filter": "drilling",
    "weight": "light",
    "rates": {
-    "day": 27.0,
-    "weekend": 40.5,
-    "week": 94.5
+    "day": 48.5,
+    "weekend": 73.0,
+    "week": 192.0
    },
    "photo": {
     "src": "images/hire/framing-nailer-800.webp",
@@ -2302,7 +2399,8 @@
      "license_url": "https://creativecommons.org/licenses/by/2.0",
      "source": "https://commons.wikimedia.org/wiki/File:Makita_GN900SE_Gas_Nailer_(3991070032).png"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "coil-fencing-nailer",
@@ -2311,10 +2409,11 @@
    "filter": "drilling",
    "weight": "light",
    "rates": {
-    "day": 45.5,
-    "weekend": 68.0,
-    "week": 182.5
-   }
+    "day": 60.0,
+    "weekend": 90.0,
+    "week": 210.0
+   },
+   "deposit": 100
   },
   {
    "id": "finish-brad-nailer",
@@ -2323,9 +2422,9 @@
    "filter": "drilling",
    "weight": "light",
    "rates": {
-    "day": 41.0,
-    "weekend": 61.5,
-    "week": 172.5
+    "day": 55.5,
+    "weekend": 83.5,
+    "week": 203.5
    },
    "photo": {
     "src": "images/hire/brad-nailer-800.webp",
@@ -2339,7 +2438,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
      "source": "https://commons.wikimedia.org/wiki/File:Nail_gun_008.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "secret-floor-nailer-stapler",
@@ -2348,10 +2448,11 @@
    "filter": "drilling",
    "weight": "light",
    "rates": {
-    "day": 31.5,
-    "weekend": 47.0,
-    "week": 108.0
-   }
+    "day": 80.0,
+    "weekend": 120.0,
+    "week": 319.5
+   },
+   "deposit": 100
   },
   {
    "id": "air-compressor-small-electric-6-12cfm",
@@ -2360,11 +2461,12 @@
    "filter": "drilling",
    "weight": "light",
    "rates": {
-    "day": 45.5,
-    "weekend": 68.0,
-    "week": 147.0
+    "day": 66.5,
+    "weekend": 100.0,
+    "week": 275.0
    },
-   "icon": "i-compressor"
+   "icon": "i-compressor",
+   "deposit": 100
   },
   {
    "id": "welder-inverter-arc-180a",
@@ -2373,9 +2475,9 @@
    "filter": "drilling",
    "weight": "light",
    "rates": {
-    "day": 124.0,
-    "weekend": 186.0,
-    "week": 435.5
+    "day": 138.0,
+    "weekend": 207.0,
+    "week": 484.0
    },
    "photo": {
     "src": "images/hire/welder-800.webp",
@@ -2389,7 +2491,8 @@
      "license_url": "https://creativecommons.org/licenses/by/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Soldadora_inverter_L%C3%BCsqtoff_Iron-140_(1).jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "torque-wrench-1-2in-manual",
@@ -2398,9 +2501,9 @@
    "filter": "drilling",
    "weight": "light",
    "rates": {
-    "day": 54.0,
-    "weekend": 81.0,
-    "week": 117.0
+    "day": 76.5,
+    "weekend": 115.0,
+    "week": 170.0
    },
    "photo": {
     "src": "images/hire/torque-wrench-800.webp",
@@ -2414,7 +2517,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:1-4%22_5-25Nm.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "generator-2kva",
@@ -2423,9 +2527,9 @@
    "filter": "power",
    "weight": "light",
    "rates": {
-    "day": 45.0,
-    "weekend": 67.5,
-    "week": 279.0
+    "day": 105.5,
+    "weekend": 158.5,
+    "week": 360.0
    },
    "photo": {
     "src": "images/hire/generator-800.webp",
@@ -2439,7 +2543,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
      "source": "https://commons.wikimedia.org/wiki/File:Portable_electrical_generator_angle.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "generator-3kva-inverter",
@@ -2448,9 +2553,9 @@
    "filter": "power",
    "weight": "light",
    "rates": {
-    "day": 45.0,
-    "weekend": 67.5,
-    "week": 279.0
+    "day": 108.5,
+    "weekend": 163.0,
+    "week": 360.0
    },
    "photo": {
     "src": "images/hire/generator-inverter-800.webp",
@@ -2464,7 +2569,8 @@
      "license_url": "https://creativecommons.org/licenses/by/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Gasoline_Generator_2026-08-12_ROYU_Electrical_Inverter_Type_03.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "generator-5kva",
@@ -2473,9 +2579,9 @@
    "filter": "power",
    "weight": "heavy",
    "rates": {
-    "day": 89.0,
-    "weekend": 133.5,
-    "week": 609.0
+    "day": 134.5,
+    "weekend": 202.0,
+    "week": 677.0
    },
    "photo": {
     "src": "images/hire/generator-800.webp",
@@ -2489,7 +2595,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
      "source": "https://commons.wikimedia.org/wiki/File:Portable_electrical_generator_angle.jpg"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "generator-6-7kva",
@@ -2498,9 +2605,9 @@
    "filter": "power",
    "weight": "heavy",
    "rates": {
-    "day": 138.5,
-    "weekend": 208.0,
-    "week": 636.0
+    "day": 176.0,
+    "weekend": 264.0,
+    "week": 707.0
    },
    "photo": {
     "src": "images/hire/generator-800.webp",
@@ -2514,7 +2621,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
      "source": "https://commons.wikimedia.org/wiki/File:Portable_electrical_generator_angle.jpg"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "generator-10kva",
@@ -2523,9 +2631,9 @@
    "filter": "power",
    "weight": "heavy",
    "rates": {
-    "day": 138.5,
-    "weekend": 208.0,
-    "week": 793.5
+    "day": 184.0,
+    "weekend": 276.0,
+    "week": 882.0
    },
    "photo": {
     "src": "images/hire/generator-800.webp",
@@ -2539,7 +2647,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
      "source": "https://commons.wikimedia.org/wiki/File:Portable_electrical_generator_angle.jpg"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "extension-lead-15a-20-30m",
@@ -2548,9 +2657,9 @@
    "filter": "power",
    "weight": "light",
    "rates": {
-    "day": 9.0,
-    "weekend": 13.5,
-    "week": 27.0
+    "day": 11.0,
+    "weekend": 16.5,
+    "week": 46.5
    },
    "photo": {
     "src": "images/hire/extension-lead-800.webp",
@@ -2564,7 +2673,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Extension_cord_02.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "extension-ladder-6-6-5m",
@@ -2573,9 +2683,9 @@
    "filter": "access",
    "weight": "light",
    "rates": {
-    "day": 31.5,
-    "weekend": 47.0,
-    "week": 126.0
+    "day": 48.5,
+    "weekend": 73.0,
+    "week": 145.0
    },
    "photo": {
     "src": "images/hire/ladder.webp",
@@ -2589,7 +2699,8 @@
      "license_url": "https://unsplash.com/license",
      "source": "https://unsplash.com/photos/a-ladder-leaning-up-against-a-concrete-wall-dDZ1JjQXmlY"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "extension-ladder-8-8-5m",
@@ -2598,9 +2709,9 @@
    "filter": "access",
    "weight": "light",
    "rates": {
-    "day": 36.0,
-    "weekend": 54.0,
-    "week": 162.0
+    "day": 55.0,
+    "weekend": 82.5,
+    "week": 185.0
    },
    "photo": {
     "src": "images/hire/ladder.webp",
@@ -2614,7 +2725,8 @@
      "license_url": "https://unsplash.com/license",
      "source": "https://unsplash.com/photos/a-ladder-leaning-up-against-a-concrete-wall-dDZ1JjQXmlY"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "step-ladder-1-8m",
@@ -2623,9 +2735,9 @@
    "filter": "access",
    "weight": "light",
    "rates": {
-    "day": 22.5,
-    "weekend": 34.0,
-    "week": 69.0
+    "day": 28.5,
+    "weekend": 43.0,
+    "week": 88.5
    },
    "photo": {
     "src": "images/hire/step-ladder-800.webp",
@@ -2639,7 +2751,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
      "source": "https://commons.wikimedia.org/wiki/File:Ladder_2.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "platform-ladder-2-4m",
@@ -2648,10 +2761,11 @@
    "filter": "access",
    "weight": "light",
    "rates": {
-    "day": 39.5,
-    "weekend": 59.0,
-    "week": 137.5
-   }
+    "day": 52.5,
+    "weekend": 79.0,
+    "week": 200.0
+   },
+   "deposit": 100
   },
   {
    "id": "trestle-aluminium-adjustable-2-4m",
@@ -2660,10 +2774,11 @@
    "filter": "access",
    "weight": "light",
    "rates": {
-    "day": 13.5,
-    "weekend": 20.0,
-    "week": 27.0
-   }
+    "day": 21.0,
+    "weekend": 31.5,
+    "week": 34.0
+   },
+   "deposit": 100
   },
   {
    "id": "plank-aluminium-4m",
@@ -2672,10 +2787,11 @@
    "filter": "access",
    "weight": "light",
    "rates": {
-    "day": 10.5,
-    "weekend": 16.0,
-    "week": 16.0
-   }
+    "day": 15.5,
+    "weekend": 23.5,
+    "week": 25.0
+   },
+   "deposit": 100
   },
   {
    "id": "mobile-aluminium-scaffold-single-width-4-4-5m",
@@ -2684,9 +2800,9 @@
    "filter": "access",
    "weight": "heavy",
    "rates": {
-    "day": 90.5,
-    "weekend": 136.0,
-    "week": 259.0
+    "day": 144.0,
+    "weekend": 216.0,
+    "week": 309.0
    },
    "photo": {
     "src": "images/hire/scaffold-800.webp",
@@ -2700,7 +2816,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Rollger%C3%BCst_Alu_und_Mist.jpg"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "panel-sheet-lifter",
@@ -2709,10 +2826,11 @@
    "filter": "handling",
    "weight": "heavy",
    "rates": {
-    "day": 36.0,
-    "weekend": 54.0,
-    "week": 99.0
-   }
+    "day": 66.5,
+    "weekend": 100.0,
+    "week": 266.0
+   },
+   "deposit": 200
   },
   {
    "id": "duct-material-lifter-3-6-5m",
@@ -2721,10 +2839,11 @@
    "filter": "handling",
    "weight": "heavy",
    "rates": {
-    "day": 81.0,
-    "weekend": 121.5,
-    "week": 342.0
-   }
+    "day": 121.0,
+    "weekend": 181.5,
+    "week": 388.0
+   },
+   "deposit": 200
   },
   {
    "id": "acrow-prop-steel-no-2-3",
@@ -2733,9 +2852,9 @@
    "filter": "access",
    "weight": "light",
    "rates": {
-    "day": 14.5,
-    "weekend": 18.0,
-    "week": 18.0
+    "day": 14.0,
+    "weekend": 15.5,
+    "week": 15.5
    },
    "photo": {
     "src": "images/hire/acrow-prop-800.webp",
@@ -2749,7 +2868,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
      "source": "https://commons.wikimedia.org/wiki/File:Bauma13_(37).jpeg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "drain-cleaner-electric-eel",
@@ -2758,9 +2878,9 @@
    "filter": "plumbing",
    "weight": "light",
    "rates": {
-    "day": 81.0,
-    "weekend": 121.5,
-    "week": 324.0
+    "day": 121.0,
+    "weekend": 181.5,
+    "week": 477.0
    },
    "photo": {
     "src": "images/hire/drain-eel-800.webp",
@@ -2774,7 +2894,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
      "source": "https://commons.wikimedia.org/wiki/File:Electric-Drain-Cleaner.png"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "drain-jetter-electric-1800psi",
@@ -2783,9 +2904,9 @@
    "filter": "plumbing",
    "weight": "light",
    "rates": {
-    "day": 150.0,
-    "weekend": 225.0,
-    "week": 534.5
+    "day": 167.0,
+    "weekend": 250.5,
+    "week": 594.0
    },
    "photo": {
     "src": "images/hire/drain-jetter-800.webp",
@@ -2799,7 +2920,8 @@
      "license_url": "https://creativecommons.org/licenses/by/3.0",
      "source": "https://commons.wikimedia.org/wiki/File:Pressure-Washer-Sewer-Jetter-Attachment.png"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "drain-snake-cordless",
@@ -2808,9 +2930,9 @@
    "filter": "plumbing",
    "weight": "light",
    "rates": {
-    "day": 56.5,
-    "weekend": 85.0,
-    "week": 158.0
+    "day": 63.0,
+    "weekend": 94.5,
+    "week": 176.0
    },
    "photo": {
     "src": "images/hire/drain-snake-800.webp",
@@ -2824,7 +2946,8 @@
      "license_url": "https://creativecommons.org/licenses/by/3.0",
      "source": "https://commons.wikimedia.org/wiki/File:Handheld-Drain-Auger.png"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "pipe-threader-electric-25-50mm",
@@ -2833,9 +2956,9 @@
    "filter": "plumbing",
    "weight": "light",
    "rates": {
-    "day": 200.5,
-    "weekend": 301.0,
-    "week": 765.0
+    "day": 223.0,
+    "weekend": 334.5,
+    "week": 850.0
    },
    "photo": {
     "src": "images/hire/pipe-threader-800.webp",
@@ -2849,7 +2972,8 @@
      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
      "source": "https://commons.wikimedia.org/wiki/File:Pipe_cutting_and_threading_machine.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "pipe-freezer-kit-electric",
@@ -2858,10 +2982,11 @@
    "filter": "plumbing",
    "weight": "light",
    "rates": {
-    "day": 96.0,
-    "weekend": 144.0,
-    "week": 253.5
-   }
+    "day": 107.0,
+    "weekend": 160.5,
+    "week": 282.0
+   },
+   "deposit": 100
   },
   {
    "id": "pipe-press-crimper-15-50mm",
@@ -2870,9 +2995,9 @@
    "filter": "plumbing",
    "weight": "light",
    "rates": {
-    "day": 114.0,
-    "weekend": 171.0,
-    "week": 382.5
+    "day": 127.0,
+    "weekend": 190.5,
+    "week": 425.0
    },
    "photo": {
     "src": "images/hire/pipe-press-800.webp",
@@ -2886,7 +3011,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
      "source": "https://commons.wikimedia.org/wiki/File:Radial-press-for-press-fitting-systems.JPG"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "submersible-pump-50mm-dirty-water",
@@ -2895,9 +3021,9 @@
    "filter": "plumbing",
    "weight": "light",
    "rates": {
-    "day": 79.0,
-    "weekend": 118.5,
-    "week": 306.0
+    "day": 95.0,
+    "weekend": 142.5,
+    "week": 418.0
    },
    "photo": {
     "src": "images/hire/submersible-pump-800.webp",
@@ -2912,7 +3038,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Submersible_pump_in_action.jpg"
     }
    },
-   "icon": "i-droplet"
+   "icon": "i-droplet",
+   "deposit": 100
   },
   {
    "id": "petrol-transfer-trash-pump-50mm",
@@ -2921,9 +3048,9 @@
    "filter": "plumbing",
    "weight": "heavy",
    "rates": {
-    "day": 79.0,
-    "weekend": 118.5,
-    "week": 316.5
+    "day": 109.0,
+    "weekend": 163.5,
+    "week": 430.0
    },
    "photo": {
     "src": "images/hire/trash-pump-800.webp",
@@ -2938,7 +3065,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Water_pumping_machine.jpg"
     }
    },
-   "icon": "i-droplet"
+   "icon": "i-droplet",
+   "deposit": 200
   },
   {
    "id": "flexdrive-pump-kit-petrol",
@@ -2947,11 +3075,12 @@
    "filter": "plumbing",
    "weight": "light",
    "rates": {
-    "day": 128.5,
-    "weekend": 193.0,
-    "week": 573.0
+    "day": 151.5,
+    "weekend": 227.5,
+    "week": 637.0
    },
-   "icon": "i-droplet"
+   "icon": "i-droplet",
+   "deposit": 100
   },
   {
    "id": "hand-trolley-sack-truck",
@@ -2960,9 +3089,9 @@
    "filter": "handling",
    "weight": "light",
    "rates": {
-    "day": 43.0,
-    "weekend": 64.5,
-    "week": 110.5
+    "day": 48.0,
+    "weekend": 72.0,
+    "week": 123.0
    },
    "photo": {
     "src": "images/hire/hand-truck.webp",
@@ -2976,7 +3105,8 @@
      "license_url": "https://unsplash.com/license",
      "source": "https://unsplash.com/photos/man-pushing-hand-truck-with-plastic-drum-KufOjYrd3mg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "stair-climbing-fridge-trolley",
@@ -2985,10 +3115,11 @@
    "filter": "handling",
    "weight": "light",
    "rates": {
-    "day": 17.0,
-    "weekend": 25.5,
-    "week": 94.5
-   }
+    "day": 24.5,
+    "weekend": 37.0,
+    "week": 105.0
+   },
+   "deposit": 100
   },
   {
    "id": "pallet-jack-2-5t",
@@ -2997,9 +3128,9 @@
    "filter": "handling",
    "weight": "light",
    "rates": {
-    "day": 27.0,
-    "weekend": 40.5,
-    "week": 94.5
+    "day": 42.5,
+    "weekend": 64.0,
+    "week": 127.0
    },
    "photo": {
     "src": "images/hire/pallet-jack-800.webp",
@@ -3013,7 +3144,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
      "source": "https://commons.wikimedia.org/wiki/File:Hubwagen.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "furniture-piano-dolly",
@@ -3022,10 +3154,11 @@
    "filter": "handling",
    "weight": "light",
    "rates": {
-    "day": 13.5,
-    "weekend": 20.0,
-    "week": 45.0
-   }
+    "day": 31.5,
+    "weekend": 47.5,
+    "week": 76.0
+   },
+   "deposit": 100
   },
   {
    "id": "engine-hoist-crane-2t",
@@ -3034,9 +3167,9 @@
    "filter": "handling",
    "weight": "heavy",
    "rates": {
-    "day": 72.0,
-    "weekend": 108.0,
-    "week": 252.0
+    "day": 89.5,
+    "weekend": 134.5,
+    "week": 326.0
    },
    "photo": {
     "src": "images/hire/engine-hoist-800.webp",
@@ -3050,7 +3183,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
      "source": "https://commons.wikimedia.org/wiki/File:ZZ4_on_the_hoist_-_4189433670.jpg"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "chain-block-hoist-2t",
@@ -3059,9 +3193,9 @@
    "filter": "handling",
    "weight": "light",
    "rates": {
-    "day": 27.0,
-    "weekend": 40.5,
-    "week": 108.0
+    "day": 30.0,
+    "weekend": 45.0,
+    "week": 120.0
    },
    "photo": {
     "src": "images/hire/chain-block-800.webp",
@@ -3075,7 +3209,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Chain-block-takel.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "box-trailer-6x4",
@@ -3084,9 +3219,9 @@
    "filter": "trailers",
    "weight": "heavy",
    "rates": {
-    "day": 40.5,
-    "weekend": 61.0,
-    "week": 144.0
+    "day": 47.5,
+    "weekend": 71.5,
+    "week": 180.0
    },
    "photo": {
     "src": "images/hire/box-trailer-800.webp",
@@ -3100,7 +3235,8 @@
      "license_url": "https://creativecommons.org/licenses/by/2.0/",
      "source": "https://www.flickr.com/photos/23299229@N06/4665994311"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "box-trailer-8x5",
@@ -3109,9 +3245,9 @@
    "filter": "trailers",
    "weight": "heavy",
    "rates": {
-    "day": 82.5,
-    "weekend": 124.0,
-    "week": 263.5
+    "day": 92.0,
+    "weekend": 138.0,
+    "week": 293.0
    },
    "photo": {
     "src": "images/hire/box-trailer-800.webp",
@@ -3125,7 +3261,8 @@
      "license_url": "https://creativecommons.org/licenses/by/2.0/",
      "source": "https://www.flickr.com/photos/23299229@N06/4665994311"
     }
-   }
+   },
+   "deposit": 200
   },
   {
    "id": "enclosed-trailer-8x5",
@@ -3134,10 +3271,11 @@
    "filter": "trailers",
    "weight": "heavy",
    "rates": {
-    "day": 128.5,
-    "weekend": 193.0,
-    "week": 442.5
-   }
+    "day": 148.0,
+    "weekend": 222.0,
+    "week": 492.0
+   },
+   "deposit": 200
   },
   {
    "id": "tipping-trailer-8x5",
@@ -3146,10 +3284,11 @@
    "filter": "trailers",
    "weight": "heavy",
    "rates": {
-    "day": 114.0,
-    "weekend": 171.0,
-    "week": 382.5
-   }
+    "day": 127.0,
+    "weekend": 190.5,
+    "week": 425.0
+   },
+   "deposit": 200
   },
   {
    "id": "plant-machinery-trailer-2t",
@@ -3158,10 +3297,11 @@
    "filter": "trailers",
    "weight": "heavy",
    "rates": {
-    "day": 59.0,
-    "weekend": 88.5,
-    "week": 172.5
-   }
+    "day": 77.0,
+    "weekend": 115.5,
+    "week": 346.0
+   },
+   "deposit": 200
   },
   {
    "id": "car-trailer",
@@ -3170,10 +3310,11 @@
    "filter": "trailers",
    "weight": "heavy",
    "rates": {
-    "day": 168.0,
-    "weekend": 252.0,
-    "week": 705.5
-   }
+    "day": 198.0,
+    "weekend": 297.0,
+    "week": 784.0
+   },
+   "deposit": 200
   },
   {
    "id": "pedestal-fan-industrial-600-750mm",
@@ -3182,9 +3323,9 @@
    "filter": "power",
    "weight": "light",
    "rates": {
-    "day": 36.0,
-    "weekend": 54.0,
-    "week": 126.0
+    "day": 60.5,
+    "weekend": 91.0,
+    "week": 185.0
    },
    "photo": {
     "src": "images/hire/pedestal-fan-800.webp",
@@ -3199,7 +3340,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Industrial_pedestal_fan.jpg"
     }
    },
-   "icon": "i-fan"
+   "icon": "i-fan",
+   "deposit": 100
   },
   {
    "id": "portable-air-conditioner",
@@ -3208,9 +3350,9 @@
    "filter": "power",
    "weight": "light",
    "rates": {
-    "day": 44.0,
-    "weekend": 66.0,
-    "week": 153.0
+    "day": 88.0,
+    "weekend": 132.0,
+    "week": 184.5
    },
    "photo": {
     "src": "images/hire/portable-ac-800.webp",
@@ -3225,7 +3367,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Monoblock_air_conditioner.jpg"
     }
    },
-   "icon": "i-fan"
+   "icon": "i-fan",
+   "deposit": 100
   },
   {
    "id": "evaporative-air-cooler",
@@ -3234,9 +3377,9 @@
    "filter": "power",
    "weight": "light",
    "rates": {
-    "day": 99.5,
-    "weekend": 149.0,
-    "week": 362.5
+    "day": 111.0,
+    "weekend": 166.5,
+    "week": 403.0
    },
    "photo": {
     "src": "images/hire/evap-cooler-800.webp",
@@ -3251,7 +3394,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Iwata_air_cooler_(2023-06-19).jpg"
     }
    },
-   "icon": "i-fan"
+   "icon": "i-fan",
+   "deposit": 100
   },
   {
    "id": "exhaust-extraction-fan-300mm",
@@ -3260,9 +3404,9 @@
    "filter": "power",
    "weight": "light",
    "rates": {
-    "day": 58.5,
-    "weekend": 88.0,
-    "week": 220.5
+    "day": 77.0,
+    "weekend": 115.5,
+    "week": 321.5
    },
    "photo": {
     "src": "images/hire/extraction-fan-800.webp",
@@ -3277,7 +3421,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Fan-exhaust-Tamil_Nadu.JPG"
     }
    },
-   "icon": "i-fan"
+   "icon": "i-fan",
+   "deposit": 100
   },
   {
    "id": "patio-heater-lpg",
@@ -3286,9 +3431,9 @@
    "filter": "power",
    "weight": "light",
    "rates": {
-    "day": 39.5,
-    "weekend": 59.0,
-    "week": 144.0
+    "day": 60.5,
+    "weekend": 91.0,
+    "week": 160.0
    },
    "photo": {
     "src": "images/hire/patio-heater-800.webp",
@@ -3303,7 +3448,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:Estufa_exterior_de_butano.jpg"
     }
    },
-   "icon": "i-fan"
+   "icon": "i-fan",
+   "deposit": 100
   },
   {
    "id": "laser-level-rotary",
@@ -3312,9 +3458,9 @@
    "filter": "access",
    "weight": "light",
    "rates": {
-    "day": 70.5,
-    "weekend": 106.0,
-    "week": 283.0
+    "day": 130.0,
+    "weekend": 195.0,
+    "week": 330.0
    },
    "photo": {
     "src": "images/hire/rotary-laser-800.webp",
@@ -3328,7 +3474,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Niwelator_laserowy_NL540.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "automatic-dumpy-level",
@@ -3337,9 +3484,9 @@
    "filter": "access",
    "weight": "light",
    "rates": {
-    "day": 91.5,
-    "weekend": 137.0,
-    "week": 312.0
+    "day": 102.0,
+    "weekend": 153.0,
+    "week": 347.0
    },
    "photo": {
     "src": "images/hire/dumpy-level-800.webp",
@@ -3353,7 +3500,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Niwelator_PZO_Ni30-20.JPG"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "moisture-meter",
@@ -3362,9 +3510,9 @@
    "filter": "access",
    "weight": "light",
    "rates": {
-    "day": 70.0,
-    "weekend": 105.0,
-    "week": 207.0
+    "day": 78.0,
+    "weekend": 117.0,
+    "week": 230.0
    },
    "photo": {
     "src": "images/hire/moisture-meter-800.webp",
@@ -3378,7 +3526,8 @@
      "license_url": "https://creativecommons.org/licenses/by/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:Feuchtemesser.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "laser-distance-measure",
@@ -3387,9 +3536,9 @@
    "filter": "access",
    "weight": "light",
    "rates": {
-    "day": 58.5,
-    "weekend": 88.0,
-    "week": 165.5
+    "day": 65.0,
+    "weekend": 97.5,
+    "week": 184.0
    },
    "photo": {
     "src": "images/hire/laser-distance-800.webp",
@@ -3403,7 +3552,8 @@
      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
      "source": "https://commons.wikimedia.org/wiki/File:2023_Dalmierz_laserowy_Bosh_GLM_30.jpg"
     }
-   }
+   },
+   "deposit": 100
   },
   {
    "id": "temporary-fence-panel-mesh-2-4x1-8m",
@@ -3411,7 +3561,11 @@
    "category": "Site equipment",
    "filter": "access",
    "weight": "light",
-   "rates": null,
+   "rates": {
+    "day": 13.0,
+    "weekend": 13.0,
+    "week": 13.0
+   },
    "flat": 11.5,
    "photo": {
     "src": "images/hire/temp-fence-800.webp",
@@ -3426,7 +3580,8 @@
      "source": "https://commons.wikimedia.org/wiki/File:C_Block,_City_Campus,_Ara_Institute_of_Canterbury,_Christchurch,_New_Zealand_06.jpg"
     }
    },
-   "icon": "i-fence"
+   "icon": "i-fence",
+   "deposit": 100
   },
   {
    "id": "portable-toilet-construction-event",
@@ -3434,7 +3589,11 @@
    "category": "Site equipment",
    "filter": "access",
    "weight": "heavy",
-   "rates": null,
+   "rates": {
+    "day": 143.0,
+    "weekend": 165.0,
+    "week": 242.0
+   },
    "photo": {
     "src": "images/hire/portable-toilet.webp",
     "srcset": "images/hire/portable-toilet-400.webp 400w, images/hire/portable-toilet.webp 640w",
@@ -3448,7 +3607,8 @@
      "source": "https://unsplash.com/photos/a-couple-of-green-portable-toilets-sitting-next-to-each-other-hQZx1b_SJZ4"
     }
    },
-   "icon": "i-fence"
+   "icon": "i-fence",
+   "deposit": 200
   }
  ]
 }

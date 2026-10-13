@@ -27,7 +27,7 @@
 
   var preview = /[?&]gate=preview\b/.test(location.search);
   if (GATED_HOSTS.indexOf(location.hostname.toLowerCase()) === -1 && !preview) return;
-  if (/(^|\/)(admin-login|privacy|terms)\.html$/.test(location.pathname)) return;
+  if (/(^|\/)(admin-login|privacy|terms|refunds)\.html$/.test(location.pathname)) return;
   try { if (!preview && localStorage.getItem(KEY) === GATE_HASH) return; } catch (e) {}
 
   var hide = document.createElement('style');

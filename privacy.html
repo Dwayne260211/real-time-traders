@@ -185,7 +185,7 @@
 <p>This policy explains how REAL TIME TRADERS PTY LTD (ABN 54 642 170 438), based in Brisbane, Queensland ("we", "us"), handles personal information collected through realtimetradersbrisbane.au. We aim to handle personal information in line with the Australian Privacy Principles in the <em>Privacy Act 1988</em> (Cth).</p>
 <h2>What we collect</h2>
 <ul>
-<li><strong>Account details.</strong> When you create an account we collect your email address, your name and, if you choose to give it, your phone number. Your password (if you use one) is handled by our account provider, Supabase.</li>
+<li><strong>Account details.</strong> When you create an account we collect your email address, your name and, if you choose to give it, your phone number. Your password (if you use one) is handled by our account provider, Supabase, and stored only in hashed form.</li>
 <li><strong>Google sign-in.</strong> If you sign in with Google, Google shares your name, email address and profile picture with us (the "openid", "email" and "profile" permissions). We use this only to create your account and sign you in.</li>
 <li><strong>Saved cards.</strong> If you save a payment card, the card details are entered into and handled by Stripe, our payment provider. We never see or store your full card number or security code. We store only the card brand, the last 4 digits, the expiry date and your Stripe customer ID.</li>
 <li><strong>Content you post.</strong> Marketplace listings, job posts, hire bookings and anything else you submit, including the details you include in them.</li>
@@ -195,7 +195,7 @@
 <h2>Browser storage</h2>
 <p>The site uses your browser's local storage to remember whether the site's preview screen has been unlocked and to keep you signed in, and session storage so a visit is only counted once per session. We do not use advertising or tracking cookies.</p>
 <h2>How we use it</h2>
-<p>We use personal information to run your account, sign you in, show and manage your listings, jobs and hire bookings, save cards for payments, respond to you, keep the site secure, and meet our legal obligations. Information you put in a public listing or job post can be seen by other visitors. We do not sell personal information.</p>
+<p>We use personal information to run your account, sign you in, show and manage your listings, jobs and hire bookings, save cards for future payments (saving a card does not charge it), respond to you, keep the site secure, and meet our legal obligations. Information you put in a public listing or job post can be seen by other visitors. We do not sell personal information.</p>
 <h2>Who we share it with</h2>
 <p>We use service providers to run the site: Supabase (accounts and database), GitHub (website hosting), Stripe (payments and saved cards) and Google (if you choose Google sign-in). These providers may store or process information outside Australia. We may also disclose information where the law requires it.</p>
 <h2>How long we keep it</h2>
@@ -267,7 +267,7 @@
       <div class="container footer__bottom-inner">
         <p class="footer__legal"><span>© 2026 Real Time Traders Pty Ltd</span> · <span>ABN 54 642 170 438</span> · <span>ACN 642 170 438</span></p>
         <p class="footer__preview">Preview site: accounts, payments and online booking are coming soon.</p>
-        <p class="footer__links"><a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
+        <p class="footer__links"><a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a> · <a href="refunds.html">Refunds &amp; cancellations</a></p>
         <p class="footer__admin"><a href="admin-login.html">Admin</a></p>
       </div>
     </div>
@@ -301,6 +301,7 @@
               <select id="join-tier" name="tier"><option value="Free">Free account: $0 (connection fee per job)</option><option value="Basic">Basic: $4.99/month</option><option value="Bronze">Bronze: $19.99/month</option><option value="Silver" selected>Silver: $39.99/month</option><option value="Gold">Gold: $79.99/month</option></select>
             </label>
             <p class="note">A free account can post jobs (connection fee $9.95–$59.95 per assigned job). Basic $4.99, Bronze $19.99, Silver $39.99, Gold $79.99 a month, or pay yearly and get 2 months free. <a href="membership.html">Compare memberships</a></p>
+            <p class="note auth-consent">By creating an account you agree to our <a href="terms.html">Terms of use</a>, <a href="privacy.html">Privacy policy</a> and <a href="refunds.html">Refund &amp; cancellation policy</a>.</p>
             <button type="submit" class="btn btn--primary btn--block">Create account</button>
             <p class="form-status form-status--info" role="status" aria-live="polite"></p>
           </form>

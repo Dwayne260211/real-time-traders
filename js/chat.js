@@ -54,7 +54,7 @@
       a: ["The Community page is for giving unwanted items to people who need them, or asking for help. Donating and requesting are included with Bronze and higher."],
       links: [["Community", "community.html"]] },
     { id: "location", kw: ["where are you", "location", "address", "located", "brisbane", "suburb", "area", "deliver", "delivery", "come to me", "come to you"],
-      a: ["We're based in Brisbane and serve South East Queensland. We come to you to collect scrap metal, and tradies come to your place. For hire, pickup or delivery is to be confirmed."],
+      a: ["We're based in Brisbane and serve South East Queensland. We come to you to collect scrap metal, and tradies come to your place. For hire, pickup from our yard is free, or we deliver from $75 each way by distance."],
       links: [["Contact page", "contact.html"]], call: true },
     { id: "accounts", kw: ["account", "sign up", "signup", "register", "login", "log in", "join", "password"],
       a: ["Accounts are coming soon. For now you can preview the site as a free account or member, but no account is created and nobody is charged. Browsing needs no account."],

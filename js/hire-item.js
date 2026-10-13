@@ -59,7 +59,7 @@
       rows.map(function (row) {
         return '<tr><th scope="row">' + row[0] + "</th>" + (row[1] != null ? "<td>" + dollars(row[1]) + "</td><td>" + row[2] + "</td>" : '<td class="is-na" colspan="2">Price on request. Call or email us</td>') + "</tr>";
       }).join("") + "</tbody>";
-    $("[data-pricing-note]").textContent = note || "Prices in AUD. No GST added. Price, availability and terms confirmed when you call.";
+    $("[data-pricing-note]").textContent = note || "Prices in AUD, no GST. Availability confirmed when you book.";
   }
   function showStatic(sid) {
     fetch("data/hire-items.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })

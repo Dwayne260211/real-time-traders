@@ -126,7 +126,7 @@
       });
       if (l.status !== "active") { c.innerHTML = "<p><strong>This item has been sold.</strong></p>"; return; }
       if (user && user.id === l.owner) { c.innerHTML = '<p>This is your listing. Messages from buyers appear in <a href="account.html#messages">your account</a>.</p>'; return; }
-      if (!user) { c.innerHTML = '<p><strong>Sign in to see the seller\u2019s contact details.</strong></p><p><button type="button" class="btn btn--primary btn--sm" data-open-login>Log in / Join free</button></p>';
+      if (!user) { c.innerHTML = '<p><strong>Sign in to message the seller or see their contact details.</strong></p><p><button type="button" class="btn btn--primary btn--sm" data-open-login>Log in / Join free</button></p>';
         $("[data-open-login]", c).addEventListener("click", function () { var b = document.querySelector('[data-auth="login"]'); if (b) b.click(); }); return; }
       var msgBtn = '<button type="button" class="btn btn--primary btn--sm" data-message-seller>' + H.icon("i-message") + " Message seller</button>";
       c.addEventListener("click", function (ev) {

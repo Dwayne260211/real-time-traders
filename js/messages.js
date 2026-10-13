@@ -136,7 +136,7 @@
       if (BAD.test(txt)) { st.className = "form-status is-error"; st.textContent = "Please keep messages respectful."; return; }
       if (URLISH.test(txt)) { st.className = "form-status is-error"; st.textContent = "Links aren't allowed in messages."; return; }
       var btn = ev.target.querySelector("button"); btn.disabled = true;
-      sb.from("messages").insert({ conversation_id: openId, sender: user.id, body: txt }).then(check).then(function () { ta.value = ""; return loadInbox().then(loadThread); })
+      sb.from("messages").insert({ conversation_id: openId, sender: user.id, body: txt }).then(check).then(function () { ta.value = ""; st.className = "form-status"; st.textContent = ""; return loadInbox().then(loadThread); })
         .catch(function (e) { st.className = "form-status is-error"; st.textContent = err(e); }).then(function () { btn.disabled = false; });
     });
     loadInbox().then(loadThread).then(function () { if (location.hash === "#messages") card.scrollIntoView({ block: "start" }); });

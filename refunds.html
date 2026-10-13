@@ -185,8 +185,8 @@
 <p>This policy explains cancellations and refunds for REAL TIME TRADERS PTY LTD (ABN 54 642 170 438), Brisbane, Queensland ("we", "us"). Prices are in Australian dollars. We are not registered for GST, so no GST is added.</p>
 <h2>Your rights under the Australian Consumer Law</h2>
 <p>Our goods and services come with guarantees that cannot be excluded under the Australian Consumer Law. For major failures with the service, you are entitled to cancel your service contract with us and to a refund for the unused portion, or to compensation for its reduced value. You are also entitled to be compensated for any other reasonably foreseeable loss or damage. If the failure does not amount to a major failure, you are entitled to have problems with the service rectified in a reasonable time and, if this is not done, to cancel your contract and obtain a refund for the unused portion of the contract. Nothing in this policy limits those rights.</p>
-<h2>Payments today</h2>
-<p>Payments are processed by Stripe. At the moment you can save a card to your account, but saving a card does not charge it. We will always tell you the price before you are charged.</p>
+<h2>Payments</h2>
+<p>Payments are processed by Stripe. Saving a card to your account does not charge it. Paid memberships are charged monthly as described below. We will always tell you the price before you are charged.</p>
 <h2>Equipment hire</h2>
 <ul>
 <li><strong>Cancellation:</strong> free, with a full refund, any time before the hire starts. If a delivery is cancelled after it has been dispatched, a futile charge of up to the delivery fee may apply.</li>
@@ -195,10 +195,14 @@
 <li><strong>Late returns:</strong> up to 4 hours late is charged as a half day; 4–24 hours late as a full day; further days at the day rate, capped at the week rate. Call before the due time to extend at normal rates.</li>
 <li><strong>Damage, loss and cleaning:</strong> accidental damage is charged at the lesser of the repair cost or 20% of the replacement cost. Loss, theft, wilful damage, use under the influence, overloading, water damage or unlicensed use is charged at full cost. Fair wear and tear is free. Cleaning is $85 per hour (minimum $42.50) if equipment is returned dirty. Fuel is $3.00 per litre if returned short of full.</li>
 </ul>
-<h2>Memberships</h2>
+<h2 id="memberships">Memberships</h2>
 <ul>
-<li>You can cancel a paid membership at any time. Your access continues to the end of the period you have paid for.</li>
-<li>No pro-rata refund is given for a change of mind, except that annual plans get a full refund if cancelled within 14 days of purchase.</li>
+<li><strong>Billing:</strong> paid memberships (Basic $4.99, Bronze $19.99, Silver $39.99 and Gold $79.99 a month, AUD, no GST added) are charged when you subscribe and then automatically every month on the same date until you cancel.</li>
+<li><strong>Cancelling:</strong> you can cancel at any time from My account &gt; Manage billing. Cancelling stops future charges and takes effect at the end of the month you have already paid for; your membership benefits continue until then.</li>
+<li><strong>Change of mind:</strong> we do not give refunds or part-month refunds for a change of mind, for a month you have already started, or for unused listings, quotes or features.</li>
+<li><strong>Upgrades and downgrades:</strong> when you switch plans in Manage billing, the change applies straight away and Stripe adjusts your next invoice for the unused time on your old plan (a prorated credit or charge).</li>
+<li><strong>Failed payments:</strong> if a renewal payment fails, Stripe will retry it. If it still cannot be collected, your membership ends and your account returns to a free account. Existing listings stay, but you cannot add more than the free limit.</li>
+<li><strong>Charged in error or service failure:</strong> if we charged you in error, or the service had a major failure, contact us and we will refund you as the Australian Consumer Law requires.</li>
 </ul>
 <h2>Paid listing and job features</h2>
 <p>Featured listing, bump and boosted or premium job fees are not refunded once the feature has started, unless we removed the listing in error or the service failed.</p>
@@ -265,7 +269,7 @@
     <div class="footer__bottom">
       <div class="container footer__bottom-inner">
         <p class="footer__legal"><span>© 2026 Real Time Traders Pty Ltd</span> · <span>ABN 54 642 170 438</span> · <span>ACN 642 170 438</span></p>
-        <p class="footer__preview">Free accounts and free marketplace listings are open. Payments, job posting and online hire booking are coming soon.</p>
+        <p class="footer__preview">Free accounts, free marketplace listings and paid memberships are open. Job posting and online hire booking are coming soon.</p>
         <p class="footer__links"><a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a> · <a href="refunds.html">Refunds &amp; cancellations</a></p>
         <p class="footer__admin"><a href="admin-login.html">Admin</a></p>
       </div>
@@ -283,7 +287,7 @@
     <div class="modal__box">
       <button type="button" class="modal__close icon-btn" data-close aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
       <picture><source srcset="images/logo-lockup-560.webp" type="image/webp"><img class="modal__logo" src="images/logo-lockup-560.png" alt="Real Time Traders" width="560" height="136" loading="lazy"></picture>
-      <p class="preview-flag"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> Free accounts are open. Paid memberships and payments are coming soon</p>
+      <p class="preview-flag"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> Free accounts are open. Paid memberships are available, billed monthly and you can cancel anytime</p>
       <h2 id="auth-title" class="modal__title">Join Real Time Traders</h2>
       <p class="modal__gate" hidden><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> <span class="modal__gate-text">This needs Basic membership or higher.</span></p>
       <div class="tabs tabs--compact" data-tabs>
@@ -299,7 +303,7 @@
             <label class="field"><span>Membership</span>
               <select id="join-tier" name="tier"><option value="Free">Free account: $0 (connection fee per job)</option><option value="Basic">Basic: $4.99/month</option><option value="Bronze">Bronze: $19.99/month</option><option value="Silver" selected>Silver: $39.99/month</option><option value="Gold">Gold: $79.99/month</option></select>
             </label>
-            <p class="note">A free account can post jobs (connection fee $9.95–$59.95 per assigned job). Listing items is free for now (up to 10 active listings). Paid tiers are coming later: Basic $4.99, Bronze $19.99, Silver $39.99, Gold $79.99 a month. <a href="membership.html">Compare memberships</a></p>
+            <p class="note">A free account can post jobs (connection fee $9.95–$59.95 per assigned job). Listing items is free for now (up to 10 active listings). Paid memberships: Basic $4.99, Bronze $19.99, Silver $39.99, Gold $79.99 a month, cancel anytime. <a href="membership.html">Compare memberships</a></p>
             <p class="note auth-consent">By creating an account you agree to our <a href="terms.html">Terms of use</a>, <a href="privacy.html">Privacy policy</a> and <a href="refunds.html">Refund &amp; cancellation policy</a>.</p>
             <button type="submit" class="btn btn--primary btn--block">Create account</button>
             <p class="form-status form-status--info" role="status" aria-live="polite"></p>
@@ -316,7 +320,7 @@
         </div>
       </div>
       <div class="modal__demo">
-        <p><strong>Accounts are free.</strong> Every new account starts as a free account; paid memberships aren't charged yet and no payments are taken. To see how the site will work, preview it as a free account or a paid member. Questions? <a href="tel:+61422909739">Call us now</a>.</p>
+        <p><strong>Accounts are free.</strong> Every new account starts as a free account. Paid memberships are optional, billed monthly through Stripe, and you can cancel anytime from your account. To see how the site will work, preview it as a free account or a paid member. Questions? <a href="tel:+61422909739">Call us now</a>.</p>
         <div class="modal__demo-btns">
           <button type="button" class="btn btn--outline btn--sm" data-demo-free>Preview with free account</button>
           <button type="button" class="btn btn--outline btn--sm" data-demo-toggle>Preview as member</button>

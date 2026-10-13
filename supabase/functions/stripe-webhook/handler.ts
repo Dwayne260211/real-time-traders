@@ -1,11 +1,12 @@
 // Stripe webhook. Verifies the signature, then confirms the booking in the database.
 // confirm_paid_booking locks the row and relies on the exclusion constraint, so a payment
 // that races another booking for the same dates is flagged 'paid_conflict', never double-booked.
-import { corsHeaders, Ctx, defaultCtx } from "../_shared/context.ts";
+import { corsHeaders, Ctx, defaultCtx, UUID_RE } from "../_shared/context.ts";
 import { rpc } from "../_shared/db.ts";
 import { sendBookingEmail } from "../_shared/notify.ts";
 import { verifyStripeSignature } from "../_shared/stripe.ts";
 import { fetchPaymentMethod, savePaymentMethod, userIdForCustomer } from "../_shared/members.ts";
+import { fetchSubscription, syncSubscription } from "../_shared/membership.ts";
 
 interface StripeEvent { id: string; type: string; data: { object: Record<string, any> } }
 
@@ -24,13 +25,21 @@ export async function handler(req: Request, ctx: Ctx = defaultCtx()): Promise<Re
   let event: StripeEvent;
   try { event = JSON.parse(payload); } catch { return reply(400, { error: "bad_payload" }); }
   const s = event.data?.object ?? {};
-  const bookingId: string | undefined = s.metadata?.booking_id ?? s.client_reference_id;
+  // Only hire bookings carry metadata.booking_id (the Stripe account is shared with another app).
+  const rawBooking = String(s.metadata?.booking_id ?? "");
+  const bookingId: string | undefined = UUID_RE.test(rawBooking) ? rawBooking : undefined;
 
   try {
     let result = "ignored";
     switch (event.type) {
       case "checkout.session.completed":
       case "checkout.session.async_payment_succeeded": {
+        if (s.mode === "subscription") {
+          if (s.metadata?.app !== "rtt" || !s.subscription) break;
+          const subId = typeof s.subscription === "string" ? s.subscription : s.subscription.id;
+          result = await syncSubscription(ctx, await fetchSubscription(ctx, subId));
+          break;
+        }
         if (!bookingId) break;
         if (s.payment_status !== "paid") { result = "awaiting_payment"; break; }
         result = await rpc<string>(ctx, "confirm_paid_booking", {
@@ -42,8 +51,24 @@ export async function handler(req: Request, ctx: Ctx = defaultCtx()): Promise<Re
         if (result === "conflict") await sendBookingEmail(ctx, bookingId, "paid_conflict").catch(console.error);
         break;
       }
+      case "customer.subscription.created":
+      case "customer.subscription.updated":
+      case "customer.subscription.deleted": {
+        // Re-read the subscription so out-of-order events can't apply a stale state.
+        const fresh = await fetchSubscription(ctx, s.id).catch(() => s);
+        result = await syncSubscription(ctx, fresh);
+        break;
+      }
+      case "invoice.payment_failed": {
+        const subId = typeof s.subscription === "string" ? s.subscription
+          : s.subscription?.id ?? s.parent?.subscription_details?.subscription;
+        if (!subId) break;
+        result = await syncSubscription(ctx, await fetchSubscription(ctx, subId));
+        break;
+      }
       case "checkout.session.expired":
       case "checkout.session.async_payment_failed":
+        if (s.mode === "subscription") break;
         if (bookingId) { await rpc(ctx, "release_checkout", { p_booking_id: bookingId }); result = "released"; }
         break;
       // Member saved a card (account.html, SetupIntent + Payment Element): store the summary only.

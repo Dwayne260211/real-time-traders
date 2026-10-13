@@ -133,6 +133,52 @@
       .catch(function (err) { rm.disabled = false; status(payStatus, H.errorText(err), true); });
   });
 
+  /* ---------- Membership (Stripe subscription; tier is set server-side by the webhook only) ---------- */
+  var TIERS = { basic: ["Basic", "$4.99"], bronze: ["Bronze", "$19.99"], silver: ["Silver", "$39.99"], gold: ["Gold", "$79.99"] };
+  var memBody = $("[data-membership-body]"), memStatus = $("[data-membership-status]");
+  function fmtDate(d) { return new Date(d).toLocaleDateString("en-AU", { day: "numeric", month: "long", year: "numeric", timeZone: "Australia/Brisbane" }); }
+  function pendingTier() { try { var t = sessionStorage.getItem("rtt_subscribe"); return TIERS[t] ? t : null; } catch (e) { return null; } }
+  function goTo(fn, body, btn) {
+    if (btn) btn.disabled = true;
+    status(memStatus, fn === "create-portal-session" ? "Opening secure billing page…" : "Opening secure checkout…");
+    H.callFunction(fn, body).then(function (r) {
+      try { sessionStorage.removeItem("rtt_subscribe"); } catch (e) {}
+      if (!r.url) throw new Error("No billing link returned.");
+      location.href = r.url;
+    }).catch(function (err) { if (btn) btn.disabled = false; status(memStatus, H.errorText(err), true); });
+  }
+  function loadMembership(retries) {
+    if (!memBody) return Promise.resolve();
+    return sb.from("profiles").select("membership_tier, subscription_status, current_period_end, cancel_at_period_end").eq("id", user.id).maybeSingle().then(function (r) {
+      var p = (!r.error && r.data) || {}, t = TIERS[p.membership_tier] ? p.membership_tier : null, st = p.subscription_status;
+      if (!t && retries > 0 && qs.get("membership") === "success") { memBody.innerHTML = '<p class="note">Payment received. Activating your membership…</p>'; setTimeout(function () { loadMembership(retries - 1); }, 2500); return; }
+      var html;
+      if (t) {
+        var badge = window.RTTTierBadge ? window.RTTTierBadge(t) : "";
+        var when = p.current_period_end ? fmtDate(p.current_period_end) : null;
+        html = '<div class="plan-box"><p class="plan-box__name">' + H.esc(TIERS[t][0]) + " membership " + badge + "</p>" +
+          "<p>" + H.esc(TIERS[t][1]) + " a month (AUD).</p>" +
+          (st === "past_due" ? '<p class="is-warn">Your last payment didn\u2019t go through. Please update your card in Manage billing.</p>' : "") +
+          (when ? "<p>" + (p.cancel_at_period_end ? "Cancelled: your membership ends on <strong>" + H.esc(when) + "</strong> and won\u2019t renew." : "Renews on <strong>" + H.esc(when) + "</strong>.") + "</p>" : "") +
+          '<div class="plan-box__btns"><button type="button" class="btn btn--primary btn--sm" data-manage-billing>Manage billing</button><a class="btn btn--light btn--sm" href="membership.html">Compare plans</a></div>' +
+          '<p class="note">Change plan, update your card, see invoices or cancel (cancelling takes effect at the end of the paid month).</p></div>';
+      } else {
+        var pend = pendingTier();
+        html = '<div class="plan-box"><p class="plan-box__name">Free account</p><p>Up to 10 active listings. Upgrade for more listings, featured listings and member badges.</p>' +
+          '<div class="plan-box__btns">' + (pend ? '<button type="button" class="btn btn--primary btn--sm" data-subscribe-now="' + pend + '">Continue to ' + TIERS[pend][0] + " checkout (" + TIERS[pend][1] + "/month)</button>" : "") +
+          '<a class="btn btn--' + (pend ? "light" : "primary") + ' btn--sm" href="membership.html">See memberships</a>' +
+          (st && st !== "canceled" && st !== "incomplete_expired" ? '<button type="button" class="btn btn--light btn--sm" data-manage-billing>Manage billing</button>' : "") + "</div></div>";
+      }
+      memBody.innerHTML = html;
+    }).catch(function () { memBody.innerHTML = '<p class="note">Membership details aren\u2019t available right now.</p>'; });
+  }
+  if (memBody) memBody.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-manage-billing]");
+    if (b) return goTo("create-portal-session", {}, b);
+    var s2 = e.target.closest("[data-subscribe-now]");
+    if (s2) goTo("create-checkout-session", { tier: s2.getAttribute("data-subscribe-now") }, s2);
+  });
+
   function showAccount(session) {
     user = session.user;
     signinBox.hidden = true; account.hidden = false;
@@ -140,6 +186,9 @@
     if (qs.get("reset")) { $("[data-password-card]").hidden = false; notice(pageStatus, "Choose a new password below."); }
     if (qs.get("card") === "saved") { notice(pageStatus, "Card saved."); pollCards(6); }
     loadProfile().catch(function () {});
+    if (qs.get("membership") === "success") notice(pageStatus, "Thanks! Your membership is being activated. It can take a few seconds to show below.");
+    if (qs.get("membership") === "cancelled") notice(pageStatus, "Checkout was cancelled. You haven\u2019t been charged.");
+    loadMembership(8);
     if (qs.get("card") !== "saved") loadCards();
   }
 

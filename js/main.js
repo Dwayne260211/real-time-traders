@@ -496,6 +496,7 @@
     return null;
   }
   window.RTT_openStatus = openStatus;
+  window.RTT_openAuth = openAuth;
   function renderStatus() {
     var st = openStatus();
     if (!st) return;

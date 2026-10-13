@@ -22,7 +22,8 @@
   function check(r) { if (r.error) throw r.error; return r.data; }
   function errText(e) {
     var m = (e && (e.message || e.error_description)) || String(e);
-    if (/listing_limit_reached/.test(m)) return "You already have 10 active listings. Mark one as sold or delete it first.";
+    if (/listing_limit_reached/.test(m)) return (e && e.hint ? e.hint + " " : "You've reached your plan's listing limit. ") + "Mark one as sold or delete it first.";
+    if (/featured_not_included|featured_limit_reached|listing_not_active/.test(m)) return (e && e.hint) || "Featured listings come with Silver and Gold memberships.";
     return H.errorText(e);
   }
   function validate(f) {
@@ -57,14 +58,17 @@
       });
     }));
   }
-  function card(l) {
+  var TIER_NAMES = { basic: "Basic", bronze: "Bronze", silver: "Silver", gold: "Gold" };
+  function tierBadge(t) { return TIER_NAMES[t] ? '<span class="tier-badge tier-badge--' + t + '">' + H.icon("i-shield") + " " + TIER_NAMES[t] + " member</span>" : ""; }
+  window.RTTTierBadge = tierBadge;
+  function card(l, tier) {
     var img = l.photos && l.photos.length ? '<img src="' + esc(photoUrl(l.photos[0])) + '" alt="' + esc(l.title) + '" loading="lazy">' : '<div class="listing-noimg">' + H.icon("i-tag") + "</div>";
     return '<article class="product-card member-listing" data-listing-id="' + esc(l.id) + '">' +
-      '<div class="product-card__media">' + (l.status === "sold" ? '<span class="sample-tag sold-tag">Sold</span>' : '<span class="sample-tag member-tag">Member listing</span>') + img + "</div>" +
+      '<div class="product-card__media">' + (l.status === "sold" ? '<span class="sample-tag sold-tag">Sold</span>' : (l.featured ? '<span class="sample-tag featured-badge">' + H.icon("i-star") + " Featured</span>" : '<span class="sample-tag member-tag">Member listing</span>')) + img + "</div>" +
       '<div class="product-card__body"><p class="product-card__price' + (l.price_cents === 0 ? " product-card__price--free" : "") + '">' + esc(price(l)) + "</p>" +
       '<h3 class="product-card__title"><a href="marketplace.html?listing=' + encodeURIComponent(l.id) + '">' + esc(l.title) + "</a></h3>" +
       '<p class="product-card__desc">' + esc((l.condition ? CONDS[l.condition] + ". " : "") + (l.description || "").slice(0, 80)) + "</p>" +
-      '<p class="product-card__meta">' + H.icon("i-pin") + " " + esc(l.suburb) + "</p>" +
+      '<p class="product-card__meta">' + H.icon("i-pin") + " " + esc(l.suburb) + "</p>" + (tier ? '<p class="product-card__member">' + tierBadge(tier) + "</p>" : "") +
       '<div class="product-card__actions"><a class="btn btn--primary btn--sm btn--block" href="marketplace.html?listing=' + encodeURIComponent(l.id) + '">View listing</a></div></div></article>';
   }
 
@@ -88,12 +92,17 @@
   function initMarket(sb) {
     var grids = document.querySelectorAll("[data-member-listings]");
     if (!grids.length) return;
-    sb.from("marketplace_listings").select("id,title,description,category,price_cents,condition,suburb,photos,status,created_at")
-      .in("status", ["active", "sold"]).order("status").order("created_at", { ascending: false }).limit(200).then(check).then(function (rows) {
+    var tiers = {};
+    sb.from("marketplace_listings").select("id,owner,title,description,category,price_cents,condition,suburb,photos,status,created_at,featured")
+      .in("status", ["active", "sold"]).order("status").order("featured", { ascending: false }).order("created_at", { ascending: false }).limit(200).then(check).then(function (rows) {
+        var owners = rows.map(function (l) { return l.owner; }).filter(function (v, i, a) { return v && a.indexOf(v) === i; });
+        return (owners.length ? sb.from("public_profiles").select("id,member_tier").in("id", owners).not("member_tier", "is", null)
+          .then(function (r) { (r.data || []).forEach(function (p) { tiers[p.id] = p.member_tier; }); }) : Promise.resolve()).then(function () { return rows; });
+      }).then(function (rows) {
         grids.forEach(function (g) {
           var cat = g.getAttribute("data-member-listings");
           var list = rows.filter(function (l) { return l.category === cat; });
-          g.innerHTML = list.length ? list.map(card).join("") :
+          g.innerHTML = list.length ? list.map(function (l) { return card(l, tiers[l.owner]); }).join("") :
             '<div class="empty-state listings-empty"><p class="empty-state__title">No listings here yet.</p><p>Got something to sell or give away? Listing is free.</p><a class="btn btn--primary btn--sm" href="post.html#listing-form">Post the first listing</a></div>';
           g.hidden = false;
         });
@@ -114,15 +123,16 @@
         '<p class="breadcrumb-mini"><a href="marketplace.html">Marketplace</a> › ' + esc(CATS[l.category] || "") + "</p>" +
         (photos ? '<div class="listing-photos">' + photos + "</div>" : "") +
         "<div><h2>" + esc(l.title) + (l.status === "sold" ? ' <span class="sold-tag">Sold</span>' : "") + "</h2>" +
+        (l.featured && l.status === "active" ? '<p><span class="featured-badge">' + H.icon("i-star") + " Featured</span></p>" : "") +
         '<p class="product-card__price' + (l.price_cents === 0 ? " product-card__price--free" : "") + '">' + esc(price(l)) + "</p>" +
         '<p class="listing-meta">' + H.icon("i-pin") + " " + esc(l.suburb) + (l.condition ? " · " + esc(CONDS[l.condition]) : "") + " · Listed " + esc(new Date(l.created_at).toLocaleDateString("en-AU")) + "</p>" +
         '<p class="listing-desc">' + esc(l.description || "").replace(/\n/g, "<br>") + "</p>" +
         '<div class="listing-contact" data-contact></div>' +
         '<p class="note">Private sale between members. Real Time Traders isn\u2019t a party to the sale. Meet in a public place and never send money or bank details before you see the item. <a href="' + esc(report) + '">Report listing</a></p></div></div>';
       var c = $("[data-contact]", box);
-      sb.from("public_profiles").select("display_name,avatar_path").eq("id", l.owner).maybeSingle().then(function (r) {
+      sb.from("public_profiles").select("display_name,avatar_path,member_tier").eq("id", l.owner).maybeSingle().then(function (r) {
         var p = r.data || {}, av = window.RTTAvatar ? window.RTTAvatar(p.display_name, p.avatar_path, 40) : "";
-        c.insertAdjacentHTML("beforebegin", '<p class="seller-line">' + av + " <span>Listed by <strong>" + esc(p.display_name || "Member") + "</strong></span></p>");
+        c.insertAdjacentHTML("beforebegin", '<p class="seller-line">' + av + " <span>Listed by <strong>" + esc(p.display_name || "Member") + "</strong></span> " + tierBadge(p.member_tier) + "</p>");
       });
       if (l.status !== "active") { c.innerHTML = "<p><strong>This item has been sold.</strong></p>"; return; }
       if (user && user.id === l.owner) { c.innerHTML = '<p>This is your listing. Messages from buyers appear in <a href="account.html#messages">your account</a>.</p>'; return; }
@@ -209,13 +219,14 @@
     if (!box || !user) return;
     box.closest("[data-my-listings-card]").hidden = false;
     function load() {
-      sb.from("marketplace_listings").select("id,title,status,price_cents,photos,created_at,removed_reason").eq("owner", user.id).order("created_at", { ascending: false }).then(check).then(function (rows) {
+      sb.from("marketplace_listings").select("id,title,status,price_cents,photos,created_at,removed_reason,featured").eq("owner", user.id).order("created_at", { ascending: false }).then(check).then(function (rows) {
         if (!rows.length) { box.innerHTML = '<p>No listings yet.</p><a class="btn btn--primary btn--sm" href="post.html#listing-form">Post a listing</a>'; return; }
         box.innerHTML = '<ul class="my-listings">' + rows.map(function (l) {
           return '<li data-id="' + esc(l.id) + '"><div><a href="marketplace.html?listing=' + encodeURIComponent(l.id) + '"><strong>' + esc(l.title) + "</strong></a> · " + esc(price(l)) +
-            ' <span class="status-pill status-pill--' + esc(l.status) + '">' + esc(LABEL[l.status] || l.status) + "</span>" + (l.status === "removed" && l.removed_reason ? "<br><small>Reason: " + esc(l.removed_reason) + "</small>" : "") + "</div><div class=\"my-listings__btns\">" +
+            ' <span class="status-pill status-pill--' + esc(l.status) + '">' + esc(LABEL[l.status] || l.status) + "</span>" + (l.featured ? ' <span class="featured-badge">' + H.icon("i-star") + " Featured</span>" : "") + (l.status === "removed" && l.removed_reason ? "<br><small>Reason: " + esc(l.removed_reason) + "</small>" : "") + "</div><div class=\"my-listings__btns\">" +
             (l.status !== "removed" ? '<a class="btn btn--light btn--sm" href="post.html?edit=' + encodeURIComponent(l.id) + '#listing-form">Edit</a>' : "") +
             (l.status === "active" ? '<button type="button" class="btn btn--light btn--sm" data-act="sold">Mark sold</button>' : "") +
+            (l.status === "active" ? '<button type="button" class="btn btn--light btn--sm" data-act="' + (l.featured ? "unfeature" : "feature") + '">' + (l.featured ? "Remove Featured" : H.icon("i-star") + " Feature") + "</button>" : "") +
             (l.status === "sold" ? '<button type="button" class="btn btn--light btn--sm" data-act="active">Relist</button>' : "") +
             '<button type="button" class="btn btn--light btn--sm" data-act="delete">Delete</button></div></li>';
         }).join("") + '</ul><p><a class="btn btn--primary btn--sm" href="post.html#listing-form">Post another</a></p>';
@@ -226,7 +237,8 @@
       var b = ev.target.closest("[data-act]"); if (!b) return;
       var id = b.closest("li").getAttribute("data-id"), act = b.getAttribute("data-act");
       var row = (box._rows || []).filter(function (r) { return r.id === id; })[0] || {};
-      var p = act === "delete"
+      var p = (act === "feature" || act === "unfeature") ? sb.rpc("set_listing_featured", { p_listing_id: id, p_featured: act === "feature" }).then(check)
+        : act === "delete"
         ? (confirm("Delete this listing? This can't be undone.") ? sb.from("marketplace_listings").delete().eq("id", id).then(check).then(function () { if (row.photos && row.photos.length) sb.storage.from(BUCKET).remove(row.photos); }) : null)
         : sb.from("marketplace_listings").update({ status: act }).eq("id", id).then(check);
       if (p) p.then(load).catch(function (e) { alert(errText(e)); });

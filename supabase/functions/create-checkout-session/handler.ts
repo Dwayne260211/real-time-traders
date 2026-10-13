@@ -1,3 +1,4 @@
+// POST { tier: "basic"|"bronze"|"silver"|"gold" } -> Stripe Checkout (subscription) for a membership.
 // POST { booking_id } with the customer's Supabase access token.
 // Re-prices the booking on the server, holds the dates, and returns a Stripe Checkout URL.
 // Refuses unless online payments are switched on (env PAYMENTS_LIVE=true or the owner's
@@ -5,6 +6,7 @@
 import { endpoint, HttpError, readJson, siteUrl, UUID_RE } from "../_shared/context.ts";
 import { getSettings, requireUser, rpc } from "../_shared/db.ts";
 import { stripeKey, stripeRequest } from "../_shared/stripe.ts";
+import { membershipCheckout } from "../_shared/membership.ts";
 
 interface Checkout {
   booking_id: string; reference: string; equipment_name: string; start_date: string; end_date: string;
@@ -14,6 +16,7 @@ interface Checkout {
 export const handler = endpoint(async (req, ctx) => {
   const user = await requireUser(ctx, req);
   const body = await readJson(req);
+  if (body.tier !== undefined) return await membershipCheckout(ctx, user, body.tier);
   const bookingId = String(body.booking_id ?? "");
   if (!UUID_RE.test(bookingId)) throw new HttpError(400, "bad_request", "Missing booking.");
 

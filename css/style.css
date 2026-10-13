@@ -1562,3 +1562,19 @@ p { text-wrap: pretty; }
 .msg--theirs { align-self: flex-start; background: #f1f5f9; }
 .thread__form { display: flex; gap: 8px; margin-top: 8px; align-items: flex-end; }
 .thread__form textarea { flex: 1; padding: 10px; border: 1.5px solid var(--line); border-radius: 12px; font: inherit; resize: vertical; }
+
+/* ---------- Paid memberships ---------- */
+.tier-badge { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; line-height: 1.6; vertical-align: middle; white-space: nowrap; border: 1px solid transparent; }
+.tier-badge .icon { width: 12px; height: 12px; }
+.tier-badge--basic { background: #eef2f7; color: #33475b; border-color: #d5dde7; }
+.tier-badge--bronze { background: #f6e7da; color: #7a4515; border-color: #e5c4a4; }
+.tier-badge--silver { background: #eceff3; color: #3c4653; border-color: #c4ccd6; }
+.tier-badge--gold { background: #fff3cc; color: #7a5800; border-color: #f0d478; }
+.product-card__member { margin: 4px 0 0; }
+.sample-tag.featured-badge { background: var(--accent); color: var(--navy); }
+.membership-status:empty { display: none; }
+.membership-status { text-align: center; margin-top: 8px; }
+.plan-box { display: grid; gap: 6px; }
+.plan-box__name { font-size: 20px; font-weight: 800; margin: 0; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.plan-box__btns { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+.plan-box .is-warn { color: #a33; font-weight: 600; }

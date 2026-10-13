@@ -229,7 +229,7 @@ Deno.test("webhook: racing payment for taken dates is reported as conflict, not 
     env: { STRIPE_WEBHOOK_SECRET: "whsec_t" },
     rpc: { confirm_paid_booking: () => [200, "conflict"], claim_email: () => [200, true] },
   });
-  const body = event("checkout.session.completed", { id: "cs", payment_status: "paid", payment_intent: "pi", amount_total: 1, client_reference_id: BOOKING });
+  const body = event("checkout.session.completed", { id: "cs", payment_status: "paid", payment_intent: "pi", amount_total: 1, metadata: { booking_id: BOOKING } });
   const r = await webhook(new Request("https://fn.test", { method: "POST", body, headers: { "stripe-signature": await signed(body, "whsec_t") } }), ctx);
   assertEquals((await r.json()).result, "conflict");
 });

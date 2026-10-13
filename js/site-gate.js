@@ -15,7 +15,10 @@
  */
 (function () {
   var GATE_HASH = '0719008ba43e17b27edf02d5c8884b86e605342b8b7c96dca58a15a0a9a6979f';
-  var GATED_HOSTS = ['realtimetradersbrisbane.au', 'www.realtimetradersbrisbane.au'];
+  /* Gate DISABLED 13 Oct 2026 (site is public). To re-enable, restore:
+     var GATED_HOSTS = ['realtimetradersbrisbane.au', 'www.realtimetradersbrisbane.au']; */
+  var GATED_HOSTS = [];
+  var LIVE_HOSTS = ['realtimetradersbrisbane.au', 'www.realtimetradersbrisbane.au'];
   var KEY = 'rtt_site_gate';
   var VISIT_KEY = 'rtt_visit_counted';
   var PHONE = '+61422909739';
@@ -26,7 +29,19 @@
   window.RTTGate = { unlock: function () { try { localStorage.setItem(KEY, GATE_HASH); } catch (e) {} } };
 
   var preview = /[?&]gate=preview\b/.test(location.search);
-  if (GATED_HOSTS.indexOf(location.hostname.toLowerCase()) === -1 && !preview) return;
+  if (GATED_HOSTS.indexOf(location.hostname.toLowerCase()) === -1 && !preview) {
+    /* Ungated: keep counting visits on the live domain (once per browser session, no cookies). */
+    if (LIVE_HOSTS.indexOf(location.hostname.toLowerCase()) !== -1) {
+      var counted = false;
+      try { counted = sessionStorage.getItem(VISIT_KEY) === '1'; } catch (e) {}
+      if (!counted) window.addEventListener('load', function () {
+        supabaseClient().then(function (sb) { return sb.rpc('record_visit', { p_path: location.pathname }); })
+          .then(function (r) { if (r && !r.error) { try { sessionStorage.setItem(VISIT_KEY, '1'); } catch (e) {} } })
+          .catch(function () {});
+      });
+    }
+    return;
+  }
   if (/(^|\/)(admin-login|privacy|terms|refunds)\.html$/.test(location.pathname)) return;
   try { if (!preview && localStorage.getItem(KEY) === GATE_HASH) return; } catch (e) {}
 

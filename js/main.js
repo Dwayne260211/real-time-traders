@@ -2,6 +2,26 @@
 (function () {
   "use strict";
 
+  /* ---------- Site-wide announcement strip ----------
+     To remove: set ANNOUNCE.enabled = false. Change "id" to show a new message to people who dismissed the old one. */
+  var ANNOUNCE = { enabled: true, id: "launch-2026-10", text: "We\u2019ve just launched! New features like messaging are rolling out this week." };
+  (function () {
+    if (!ANNOUNCE.enabled) return;
+    var key = "rtt_announce_dismissed";
+    try { if (localStorage.getItem(key) === ANNOUNCE.id) return; } catch (e) {}
+    var st = document.createElement("style");
+    st.textContent = ".announce{background:#f5a623;color:#0b1f3a;font-size:14px;font-weight:600;line-height:1.35;padding:7px 44px 7px 16px;text-align:center;position:relative}" +
+      ".announce__close{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:32px;height:32px;border:0;background:transparent;color:#0b1f3a;font-size:22px;line-height:1;cursor:pointer;border-radius:6px}" +
+      ".announce__close:focus-visible{outline:2px solid #0b1f3a}";
+    document.head.appendChild(st);
+    var bar = document.createElement("div");
+    bar.className = "announce"; bar.setAttribute("role", "region"); bar.setAttribute("aria-label", "Announcement");
+    bar.innerHTML = '<span></span><button type="button" class="announce__close" aria-label="Dismiss announcement">\u00d7</button>';
+    bar.firstChild.textContent = ANNOUNCE.text;
+    bar.lastChild.addEventListener("click", function () { bar.remove(); try { localStorage.setItem(key, ANNOUNCE.id); } catch (e) {} });
+    document.body.insertBefore(bar, document.body.firstChild);
+  })();
+
   /* ---------- Supabase auth links (invite / recovery / magic link) ----------
      Links that fall back to the Site URL land here; hand them to the admin sign-in page,
      which knows how to finish them. Hash and query are kept intact. */

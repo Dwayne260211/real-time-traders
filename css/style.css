@@ -1535,3 +1535,7 @@ p { text-wrap: pretty; }
 .status-pill { font-size: 12px; font-weight: 700; padding: 1px 8px; border-radius: 99px; background: #e5e7eb; text-transform: capitalize; }
 .status-pill--active { background: #dcfce7; color: #166534; }
 .status-pill--removed { background: #fee2e2; color: #991b1b; }
+.adm-thumb { width: 56px; height: 56px; object-fit: cover; border-radius: 8px; float: left; margin: 0 10px 4px 0; }
+.adm-desc { font-size: 13px; color: var(--ink-2); margin: 4px 0 0; clear: both; }
+.status-pill--pending { background: #fef3c7; color: #92400e; }
+.listings-empty { grid-column: 1 / -1; text-align: center; padding: 24px; }

@@ -21,7 +21,7 @@
   /* Each entry: keywords (phrases, lower case), answer paragraphs, links [label, href], call (show Call us). */
   var ENTRIES = [
     { id: "buy_sell", chip: "Buy & Sell", kw: ["buy", "sell", "selling", "marketplace", "for sale", "second hand", "secondhand", "used", "list an item", "listing an item"],
-      a: ["Browse the marketplace free, no account needed. With a free account you can see sellers' contact details and post up to 10 free listings (sell or give away) on the Post a listing page.", "Real Time Traders isn't a party to sales between members, and no payments go through the site."],
+      a: ["Browse the marketplace free, no account needed. With a free account you can see sellers' contact details and post up to 10 listings free for now (sell or give away) on the Post a listing page. We approve listings before they go live, usually within a day. Paid tiers are coming later.", "Real Time Traders isn't a party to sales between members, and no payments go through the site."],
       links: [["Go to the marketplace", "marketplace.html"], ["Compare memberships", "membership.html"]] },
     { id: "hire", chip: "Hire equipment", kw: ["hire", "rent", "rental", "renting", "equipment", "tool hire", "plant hire", "trailer", "portable toilet", "toilet"],
       a: ["Our hire range has about 150 items: cleaning, gardening, power tools, concreting, compaction & earthmoving, generators, ladders & access, plumbing, trailers and more. Most show a daily, weekend and weekly rate (AUD, no GST added); price, availability and terms are confirmed when you call.", "Pickup or delivery: to be confirmed. Silver and Gold members get 5% or 10% off hire."],
@@ -33,7 +33,7 @@
       a: ["Posting a job needs a free account. Free and Basic accounts can have up to 5 open jobs; Bronze and higher are unlimited. A connection fee of $9.95–$59.95 applies when a free account accepts a quote, waived for members.", "Online posting is coming soon. Until then we can set it up with you by phone."],
       links: [["Post a job", "jobs.html#post"], ["How job fees work", "jobs.html#fees"]], call: true },
     { id: "post_listing", chip: "Post a listing", kw: ["post a listing", "listing", "advertise", "advertising", "post an ad", "ad", "list my", "put up"],
-      a: ["Free accounts can post marketplace listings online now (up to 10 active). Posting jobs, advertising a trade and owner hire listings are coming soon.", "For jobs or hire, call us and we'll set it up with you."],
+      a: ["Free accounts can post marketplace listings online now, free for now (up to 10 active, approved before they go live). Posting jobs, advertising a trade and owner hire listings are coming soon.", "For jobs or hire, call us and we'll set it up with you."],
       links: [["Post a listing", "post.html"]], call: true },
     { id: "scrap", chip: "Scrap metal pickup", kw: ["scrap", "metal", "copper", "brass", "aluminium", "aluminum", "gold", "silver scrap", "catalytic", "converter", "recycling", "scrap car", "car removal"],
       a: ["We come to you to collect scrap metal: gold, silver, copper, brass, aluminium, catalytic converters and more. You get a quote first, then pickup at a time that suits you. Call to check your suburb."],

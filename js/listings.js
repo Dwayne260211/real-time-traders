@@ -11,6 +11,7 @@
   var BUCKET = "listing-photos", MAX_PHOTOS = 6, MAX_BYTES = 5 * 1024 * 1024, MAX_SIDE = 1600;
   var REPORT = "realtimetraders101@gmail.com";
   var CATS = { "buy-sell": "Buy & sell", rare: "Antiques & rare finds", donated: "Donated / free" };
+  var LABEL = { pending: "Awaiting approval", active: "Live", sold: "Sold", removed: "Rejected / removed" };
   var CONDS = { "new": "New", "like-new": "Like new", good: "Good", fair: "Fair", "for-parts": "For parts / repair" };
   var BAD = /\b(fuck\w*|shit\w*|cunt\w*|bitch\w*|nigg\w*|fag\w*|retard\w*|wank\w*|slut\w*|whore\w*)\b/i;
   var URLISH = /(https?:\/\/|www\.|\b[a-z0-9-]+\.(com|net|org|io|xyz|ru|info|biz|top|click|link)\b)/i;
@@ -83,8 +84,9 @@
         grids.forEach(function (g) {
           var cat = g.getAttribute("data-member-listings");
           var list = rows.filter(function (l) { return l.category === cat; });
-          g.innerHTML = list.map(card).join("");
-          g.hidden = !list.length;
+          g.innerHTML = list.length ? list.map(card).join("") :
+            '<div class="empty-state listings-empty"><p class="empty-state__title">No listings here yet.</p><p>Got something to sell or give away? Listing is free.</p><a class="btn btn--primary btn--sm" href="post.html#listing-form">Post the first listing</a></div>';
+          g.hidden = false;
         });
       }).catch(function () {});
   }
@@ -162,7 +164,7 @@
         var row = { title: f.title, description: f.description, category: e.category.value, price_cents: pr === "" ? null : Math.round(Number(pr) * 100),
           condition: e.condition.value || null, suburb: f.suburb, contact_pref: pref, photos: paths };
         var q = editId ? sb.from("marketplace_listings").update(row).eq("id", editId).select().single()
-                       : sb.from("marketplace_listings").insert(Object.assign({ owner: user.id, status: "active" }, row)).select().single();
+                       : sb.from("marketplace_listings").insert(Object.assign({ owner: user.id, status: "pending" }, row)).select().single();
         return q.then(check).then(function (l) {
           var old = editId && files.length ? existing : [];
           if (old.length) sb.storage.from(BUCKET).remove(old);
@@ -170,7 +172,7 @@
         });
       }).then(function (l) {
         st.className = "form-status is-success";
-        st.innerHTML = 'Your listing is live. <a href="marketplace.html?listing=' + encodeURIComponent(l.id) + '">View it</a> or manage it in <a href="account.html#my-listings">My listings</a>.';
+        st.innerHTML = (editId ? "Changes saved. Your listing" : "Thanks! Your listing") + " will appear in the marketplace once we\u2019ve approved it (usually within a day). Track it in <a href=\"account.html#my-listings\">My listings</a>.";
         if (!editId) form.reset();
       }).catch(function (err) { st.className = "form-status is-error"; st.textContent = errText(err); })
         .then(function () { btn.disabled = false; });
@@ -187,7 +189,7 @@
         if (!rows.length) { box.innerHTML = '<p>No listings yet.</p><a class="btn btn--primary btn--sm" href="post.html#listing-form">Post a listing</a>'; return; }
         box.innerHTML = '<ul class="my-listings">' + rows.map(function (l) {
           return '<li data-id="' + esc(l.id) + '"><div><a href="marketplace.html?listing=' + encodeURIComponent(l.id) + '"><strong>' + esc(l.title) + "</strong></a> · " + esc(price(l)) +
-            ' <span class="status-pill status-pill--' + esc(l.status) + '">' + esc(l.status === "removed" ? "Removed by admin" : l.status) + "</span></div><div class=\"my-listings__btns\">" +
+            ' <span class="status-pill status-pill--' + esc(l.status) + '">' + esc(LABEL[l.status] || l.status) + "</span>" + (l.status === "removed" && l.removed_reason ? "<br><small>Reason: " + esc(l.removed_reason) + "</small>" : "") + "</div><div class=\"my-listings__btns\">" +
             (l.status !== "removed" ? '<a class="btn btn--light btn--sm" href="post.html?edit=' + encodeURIComponent(l.id) + '#listing-form">Edit</a>' : "") +
             (l.status === "active" ? '<button type="button" class="btn btn--light btn--sm" data-act="sold">Mark sold</button>' : "") +
             (l.status === "sold" ? '<button type="button" class="btn btn--light btn--sm" data-act="active">Relist</button>' : "") +
@@ -210,23 +212,30 @@
 
   /* ---------- admin moderation ---------- */
   function initAdmin(sb, user) {
-    var box = $("[data-admin-listings]");
+    var box = $("[data-admin-listings]"), queue = $("[data-admin-queue]");
     if (!box || !user) return;
+    function row(l, btns) {
+      var thumb = l.photos && l.photos.length ? '<img class="adm-thumb" src="' + esc(photoUrl(l.photos[0])) + '" alt="">' : "";
+      return '<li data-id="' + esc(l.id) + '"><div>' + thumb + '<a href="marketplace.html?listing=' + encodeURIComponent(l.id) + '"><strong>' + esc(l.title) + "</strong></a> · " + esc(price(l)) + " · " + esc(l.suburb) +
+        ' <span class="status-pill status-pill--' + esc(l.status) + '">' + esc(LABEL[l.status] || l.status) + "</span><br><small>" + esc(CATS[l.category] || "") + " · " + esc(new Date(l.updated_at).toLocaleString("en-AU")) + " · owner " + esc(l.owner.slice(0, 8)) + (l.removed_reason ? " · " + esc(l.removed_reason) : "") + "</small>" +
+        (l.description ? '<p class="adm-desc">' + esc(l.description.slice(0, 300)) + "</p>" : "") + '</div><div class="my-listings__btns">' + btns + "</div></li>";
+    }
     function load() {
-      sb.from("marketplace_listings").select("id,title,status,suburb,price_cents,created_at,owner,removed_reason").order("created_at", { ascending: false }).limit(300).then(check).then(function (rows) {
-        box.innerHTML = rows.length ? '<ul class="my-listings">' + rows.map(function (l) {
-          return '<li data-id="' + esc(l.id) + '"><div><a href="marketplace.html?listing=' + encodeURIComponent(l.id) + '"><strong>' + esc(l.title) + "</strong></a> · " + esc(price(l)) + " · " + esc(l.suburb) +
-            ' <span class="status-pill status-pill--' + esc(l.status) + '">' + esc(l.status) + "</span><br><small>" + esc(new Date(l.created_at).toLocaleString("en-AU")) + " · owner " + esc(l.owner.slice(0, 8)) + (l.removed_reason ? " · " + esc(l.removed_reason) : "") + "</small></div>" +
-            '<div class="my-listings__btns">' + (l.status === "removed" ? '<button type="button" class="btn btn--light btn--sm" data-act="restore">Restore</button>' : '<button type="button" class="btn btn--light btn--sm" data-act="remove">Remove</button>') + "</div></li>";
-        }).join("") + "</ul>" : "<p>No member listings yet.</p>";
+      sb.from("marketplace_listings").select("*").order("updated_at", { ascending: false }).limit(300).then(check).then(function (rows) {
+        var pend = rows.filter(function (l) { return l.status === "pending"; }), rest = rows.filter(function (l) { return l.status !== "pending"; });
+        var tab = $("#tab-a-listings"); if (tab) tab.textContent = "Member listings" + (pend.length ? " (" + pend.length + " to approve)" : "");
+        queue.innerHTML = pend.length ? '<ul class="my-listings">' + pend.map(function (l) { return row(l, '<button type="button" class="btn btn--primary btn--sm" data-act="approve">Approve</button><button type="button" class="btn btn--light btn--sm" data-act="reject">Reject</button>'); }).join("") + "</ul>" : "<p>Nothing waiting for approval.</p>";
+        box.innerHTML = rest.length ? '<ul class="my-listings">' + rest.map(function (l) { return row(l, l.status === "removed" ? '<button type="button" class="btn btn--light btn--sm" data-act="approve">Restore</button>' : '<button type="button" class="btn btn--light btn--sm" data-act="reject">Remove</button>'); }).join("") + "</ul>" : "<p>No other member listings.</p>";
       }).catch(function (e) { box.textContent = errText(e); });
     }
-    box.addEventListener("click", function (ev) {
+    function act(ev) {
       var b = ev.target.closest("[data-act]"); if (!b) return;
-      var id = b.closest("li").getAttribute("data-id");
-      var upd = b.getAttribute("data-act") === "remove" ? { status: "removed", removed_reason: prompt("Reason for removal (shown to the member):", "Breaches our terms") || "Removed by admin" } : { status: "active", removed_reason: null };
+      var id = b.closest("li").getAttribute("data-id"), upd;
+      if (b.getAttribute("data-act") === "approve") upd = { status: "active", removed_reason: null };
+      else { var why = prompt("Reason (shown to the member):", "Doesn\u2019t meet our listing rules"); if (why === null) return; upd = { status: "removed", removed_reason: why || "Doesn\u2019t meet our listing rules" }; }
       sb.from("marketplace_listings").update(upd).eq("id", id).then(check).then(load).catch(function (e) { alert(errText(e)); });
-    });
+    }
+    box.addEventListener("click", act); queue.addEventListener("click", act);
     load();
   }
 })();

@@ -53,6 +53,7 @@ export const handler = endpoint(async (req, ctx) => {
   try {
     const session = await stripeRequest<{ id: string; url: string }>(ctx, "checkout/sessions", {
       mode: "payment",
+      adaptive_pricing: { enabled: false },
       line_items: lineItems,
       customer_email: c.customer_email,
       client_reference_id: c.booking_id,

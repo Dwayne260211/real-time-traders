@@ -23,7 +23,8 @@
   <meta name="twitter:image" content="https://realtimetradersbrisbane.au/images/og-image.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"></noscript>
   <link rel="icon" href="images/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
@@ -108,7 +109,7 @@
   <!-- ============ HEADER ============ -->
   <header class="header" id="top">
     <div class="container header__inner">
-      <a href="index.html" class="logo" aria-label="Real Time Traders home"><picture><source srcset="images/logo-lockup-560.webp" type="image/webp"><img src="images/logo-lockup-560.png" alt="Real Time Traders" width="560" height="136"></picture></a>
+      <a href="index.html" class="logo" aria-label="Real Time Traders home"><picture><source srcset="images/logo-lockup-280.webp 280w, images/logo-lockup-400.webp 400w, images/logo-lockup-560.webp 560w" sizes="(min-width: 1024px) 230px, 190px" type="image/webp"><img src="images/logo-lockup-560.png" alt="Real Time Traders" width="560" height="136"></picture></a>
 
       <form class="search" role="search" action="marketplace.html" data-site-search>
         <label class="sr-only" for="search-cat">Search in</label>
@@ -301,7 +302,7 @@
 
     <div class="container footer__inner">
       <div class="footer__brand">
-        <a href="index.html" class="logo" aria-label="Real Time Traders home"><picture><source srcset="images/logo-lockup-560.webp" type="image/webp"><img src="images/logo-lockup-560.png" alt="Real Time Traders" width="560" height="136" loading="lazy"></picture></a>
+        <a href="index.html" class="logo" aria-label="Real Time Traders home"><picture><source srcset="images/logo-lockup-280.webp 280w, images/logo-lockup-400.webp 400w, images/logo-lockup-560.webp 560w" sizes="265px" type="image/webp"><img src="images/logo-lockup-560.png" alt="Real Time Traders" width="560" height="136" loading="lazy"></picture></a>
         <p>One Brisbane platform to buy, sell, hire and get work done, plus scrap metal pickup: we come to you to collect it.</p>
         <p class="footer__meta"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Brisbane, QLD</p>
         <div class="footer__hours"><h2 class="footer__title">Phone hours &amp; email</h2><p>Mon–Fri 5am–9pm<br>Sat–Sun 7am–4pm<br><small>Brisbane time</small></p><p class="footer__status" data-open-status data-open-long hidden></p><p class="footer__email"><a href="mailto:realtimetraders101@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> Email us</a><br><small class="email-addr">realtimetraders101@gmail.com</small></p></div>
@@ -367,7 +368,7 @@
   <dialog class="modal" id="auth-modal" aria-labelledby="auth-title">
     <div class="modal__box">
       <button type="button" class="modal__close icon-btn" data-close aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
-      <picture><source srcset="images/logo-lockup-560.webp" type="image/webp"><img class="modal__logo" src="images/logo-lockup-560.png" alt="Real Time Traders" width="560" height="136" loading="lazy"></picture>
+      <picture><source srcset="images/logo-lockup-280.webp 280w, images/logo-lockup-400.webp 400w, images/logo-lockup-560.webp 560w" sizes="265px" type="image/webp"><img class="modal__logo" src="images/logo-lockup-560.png" alt="Real Time Traders" width="560" height="136" loading="lazy"></picture>
       <p class="preview-flag"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> Free accounts are open. Paid memberships are available, billed monthly and you can cancel anytime</p>
       <h2 id="auth-title" class="modal__title">Join Real Time Traders</h2>
       <p class="modal__gate" hidden><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> <span class="modal__gate-text">This needs Basic membership or higher.</span></p>

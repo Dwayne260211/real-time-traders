@@ -66,6 +66,7 @@ Deno.test("checkout: subscription session reuses the member's customer and the t
   assert(calls.some((c) => c.url.includes("lookup_keys[0]=rtt_silver_monthly")));
   const s = new URLSearchParams(calls.find((c) => c.url.endsWith("/checkout/sessions"))!.body);
   assertEquals(s.get("mode"), "subscription");
+  assertEquals(s.get("adaptive_pricing[enabled]"), "false");
   assertEquals(s.get("customer"), "cus_1");
   assertEquals(s.get("line_items[0][price]"), "price_s");
   assertEquals(s.get("subscription_data[metadata][supabase_user_id]"), USER);

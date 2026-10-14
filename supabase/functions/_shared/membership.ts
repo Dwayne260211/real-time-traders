@@ -47,6 +47,7 @@ export async function membershipCheckout(ctx: Ctx, user: { id: string; email?: s
     client_reference_id: user.id,
     line_items: [{ price: price.id, quantity: 1 }],
     allow_promotion_codes: false,
+    adaptive_pricing: { enabled: false },   // always charge in AUD (no local-currency conversion)
     billing_address_collection: "auto",
     metadata: { app: "rtt", supabase_user_id: user.id, tier },
     subscription_data: { metadata: { app: "rtt", supabase_user_id: user.id, tier } },

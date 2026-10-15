@@ -4,18 +4,21 @@ Static website for **Real Time Traders Pty Ltd** (ABN 54 642 170 438, ACN 642 17
 
 Live site: https://realtimetradersbrisbane.au/ (custom domain via the `CNAME` file; `www.realtimetradersbrisbane.au` redirects to it. The old GitHub Pages URL https://dwayne260211.github.io/real-time-traders/ redirects there once the custom domain is set.)
 
-> This is a preview. The equipment hire system is built but switched off until the owner connects Supabase and Stripe (see `docs/hire-system-setup.md`). Accounts, payments, subscriptions, listings, job posting, quoting and online enquiries are not live yet, and the site labels them that way. Visitors are directed to the call buttons. See `docs/backend-architecture.md` for the plan.
+> **Live and public.** Accounts (email + Google), free marketplace listings with photos (admin-approved before they appear), buyer–seller messaging, paid memberships and equipment hire booking with Stripe checkout are all connected to the live Supabase project (`qcfszkrwctwsllcivxwo`). Payments currently go through Dwayne's BRIDGE&BITE.CO PTY LTD Stripe account by choice (see `terms.html` §7); swap the keys in `js/hire-config.js` and the function secrets when a REAL TIME TRADERS PTY LTD Stripe account exists. Job posting and quoting are still "coming soon". The coming-soon gate in `js/site-gate.js` is off (`GATED_HOSTS = []`). Booking/notification emails go out via Brevo SMTP.
+
+> **Open question:** GST. This README previously said the business is not GST registered, while `terms.html`/`membership.html` say prices are "inc. GST" (Bridge&Bite is GST registered). Confirm with John before changing either.
 
 ## Files
 
 ```
 index.html        home: hero, at-a-glance strip, three pillars, services, membership teaser, how it works
-marketplace.html  categories and sample listings (labelled "Sample listing"): featured, antiques & rare finds, donated items
+marketplace.html  live member listings from Supabase (Buy & sell, Antiques & rare finds, Donated), friendly empty state when none
+account.html      member account: profile, my listings, messages, membership/billing, saved cards
 jobs.html         Jobs & Tenders: example jobs, post a job (preview), Find a Tradie, job fees (#fees)
 hire.html         equipment hire catalogue: Cleaning, Gardening, Power tools, General, Plant & portable toilets, Trailers
 hire-item.html    one hire item (?id=): photos, rates, terms, availability, booking request (noindex)
 my-bookings.html  customer sign-in (email link) and their hire bookings (noindex)
-admin.html        hire admin: equipment, bookings, maintenance, condition reports, settings (noindex, not in sitemap)
+admin.html        admin: listing approvals, hire equipment, bookings, maintenance, condition reports, settings, change password (noindex, not in sitemap)
 admin-login.html  staff sign-in (Supabase email + password, reset, email link); admins go to admin.html (noindex, not in sitemap, disallowed in robots.txt)
 post.html         how to post a listing / job (online posting coming soon)
 services.html     scrap metal pickup (we come to you), vehicle services, towing & car removal, home services
@@ -24,7 +27,7 @@ community.html    donating and asking for help
 contact.html      call card, company details, FAQ
 css/style.css     all styles, mobile-first; colour tokens in :root
 js/main.js        menu, tabs, carousel, header search routing, preview gating and the Join/Login preview modal
-js/hire-*.js      hire system front end; js/hire-config.js holds the PUBLIC Supabase URL + anon key (empty = switched off)
+js/hire-*.js      hire system front end; js/hire-config.js holds the PUBLIC Supabase URL, anon key and Stripe publishable key
 js/my-bookings.js customer bookings page
 js/vendor/        supabase-js (MIT), loaded only when the hire system is configured
 supabase/         hire system database migration, Edge Functions (Stripe checkout/webhook, email, cancellation) and tests
@@ -44,7 +47,7 @@ Director: John Carter. No street address is published; the site shows "Brisbane,
 
 ## Pricing (do not change without the client)
 
-Introductory pricing, AUD. Not registered for GST, so no GST is shown or charged.
+Introductory pricing, AUD. GST: unresolved, see the open question above (site copy currently says "inc. GST").
 
 | Tier | Price | Key limits |
 |---|---|---|

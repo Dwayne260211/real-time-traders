@@ -396,6 +396,21 @@
   H.client().then(function (client) {
     sb = client;
     $$("[data-signout]").forEach(function (b) { b.addEventListener("click", function () { sb.auth.signOut().then(function () { toLogin("signed-out"); }); }); });
+    var pwForm = $("[data-change-pw]");
+    if (pwForm) pwForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var st = pwForm.querySelector(".form-status"), btn = pwForm.querySelector("button");
+      var pw = pwForm.elements.password.value, cf = pwForm.elements.confirm.value;
+      function say(t, bad) { st.textContent = t; st.classList.toggle("is-error", !!bad); }
+      if (pw.length < 8) return say("Please use at least 8 characters.", true);
+      if (pw !== cf) return say("The two passwords don't match.", true);
+      btn.disabled = true; say("Updating…");
+      sb.auth.updateUser({ password: pw }).then(function (r) {
+        if (r.error) throw r.error;
+        pwForm.reset(); say("Password updated. Use the new password next time you sign in.");
+      }).catch(function (err) { say(H.errorText ? H.errorText(err) : "Couldn't update the password. Please try again.", true); })
+        .then(function () { btn.disabled = false; });
+    });
     return sb.auth.getSession();
   }).then(function (r) {
     setSession(r.data.session);

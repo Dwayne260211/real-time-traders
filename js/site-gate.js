@@ -3,18 +3,15 @@
  * Runs on the custom domain (realtimetradersbrisbane.au + www); the github.io address is left open.
  * Add ?gate=preview to any URL to see the coming-soon screen on other hosts for testing.
  * admin-login.html is never gated (admins must be able to sign in).
- * Admins get in by either:
- *   a) entering the shared password (Admin link > password), or
- *   b) signing in at admin-login.html with an account where public.is_admin() is true.
- * Both set localStorage[KEY] = GATE_HASH so the full site opens in that browser.
+ * Admins get in only by signing in at admin-login.html with an account where public.is_admin() is true.
+ * There is no shared site password: the gate checks the live Supabase session on every page load,
+ * so removing someone's admin role (public.user_roles) or banning them locks them out straight away.
  * Visit counter: public.record_visit() (supabase/migrations/20261012000000_site_visits.sql), counted
  * once per browser session (sessionStorage), no cookies, no personal data. Fails silently if not set up.
- * To change the password: printf %s 'new-password' | sha256sum  and paste the hash into GATE_HASH.
  * To remove the lock: set GATED_HOSTS = [].
  * Note: a client-side lock to keep the site private until launch. Data security stays in Supabase RLS.
  */
 (function () {
-  var GATE_HASH = '0719008ba43e17b27edf02d5c8884b86e605342b8b7c96dca58a15a0a9a6979f';
   /* Gate DISABLED 13 Oct 2026 (site is public). To re-enable, restore:
      var GATED_HOSTS = ['realtimetradersbrisbane.au', 'www.realtimetradersbrisbane.au']; */
   var GATED_HOSTS = [];
@@ -26,7 +23,9 @@
 
   var script = document.currentScript;
   var base = script && script.src ? script.src.replace(/js\/site-gate\.js(\?.*)?$/, '') : '';
-  window.RTTGate = { unlock: function () { try { localStorage.setItem(KEY, GATE_HASH); } catch (e) {} } };
+  /* Old builds stored a shared-password flag here; clear it so it can never unlock anything. */
+  try { localStorage.removeItem(KEY); } catch (e) {}
+  window.RTTGate = { unlock: function () {} };
 
   var preview = /[?&]gate=preview\b/.test(location.search);
   if (GATED_HOSTS.indexOf(location.hostname.toLowerCase()) === -1 && !preview) {
@@ -43,18 +42,11 @@
     return;
   }
   if (/(^|\/)(admin-login|privacy|terms|refunds)\.html$/.test(location.pathname)) return;
-  try { if (!preview && localStorage.getItem(KEY) === GATE_HASH) return; } catch (e) {}
 
   var hide = document.createElement('style');
   hide.id = 'rtt-gate-hide';
   hide.textContent = 'html,body{background:#011839 !important}body > *:not(#rtt-gate){display:none !important}';
   document.head.appendChild(hide);
-
-  function sha256(text) {
-    return crypto.subtle.digest('SHA-256', new TextEncoder().encode(text)).then(function (buf) {
-      return Array.prototype.map.call(new Uint8Array(buf), function (b) { return ('0' + b.toString(16)).slice(-2); }).join('');
-    });
-  }
 
   function loadScript(src) {
     return new Promise(function (res, rej) {
@@ -89,7 +81,6 @@
   }
 
   function unlock(box) {
-    window.RTTGate.unlock();
     if (box) box.remove();
     var s = document.getElementById('rtt-gate-hide');
     if (s) s.remove();
@@ -186,33 +177,21 @@
       '</main>' +
       '<footer>' +
         '<button type="button" class="g-admin-link" aria-expanded="false" aria-controls="rtt-gate-panel">Admin</button>' +
-        '<form class="g-panel" id="rtt-gate-panel" hidden>' +
+        '<div class="g-panel" id="rtt-gate-panel" hidden>' +
           '<h2>Admin access</h2>' +
-          '<label for="rtt-gate-pw">Site password</label>' +
-          '<input id="rtt-gate-pw" type="password" autocomplete="current-password" required>' +
-          '<p class="g-err" id="rtt-gate-err" role="alert"></p>' +
-          '<button type="submit" class="g-btn">Enter site</button>' +
-          '<p class="g-alt">Have an admin account? <a href="' + base + 'admin-login.html">Sign in to admin</a></p>' +
-        '</form>' +
+          '<p class="g-alt">The full site is open to admin accounts only.</p>' +
+          '<p class="g-alt"><a href="' + base + 'admin-login.html">Sign in to admin</a></p>' +
+        '</div>' +
       '</footer>';
     document.body.appendChild(box);
 
     var toggle = box.querySelector('.g-admin-link');
     var panel = box.querySelector('.g-panel');
-    var input = box.querySelector('#rtt-gate-pw');
-    var err = box.querySelector('#rtt-gate-err');
     toggle.addEventListener('click', function () {
       var open = panel.hidden;
       panel.hidden = !open;
       toggle.setAttribute('aria-expanded', String(open));
-      if (open) { input.focus(); panel.scrollIntoView({ block: 'nearest' }); }
-    });
-    panel.addEventListener('submit', function (ev) {
-      ev.preventDefault();
-      sha256(input.value).then(function (h) {
-        if (h === GATE_HASH) unlock(box);
-        else { err.textContent = 'That password is not right. Please try again.'; input.select(); }
-      });
+      if (open) { var l = panel.querySelector('a'); if (l) l.focus(); panel.scrollIntoView({ block: 'nearest' }); }
     });
 
     recordVisit(box);

@@ -201,6 +201,16 @@
           </div>
           <p class="notice" role="status" aria-live="polite" data-admin-status hidden></p>
 
+          <details class="admin-pw">
+            <summary>Change password</summary>
+            <form class="form" data-change-pw novalidate>
+              <label class="field"><span>New password</span><input type="password" name="password" autocomplete="new-password" minlength="8" required></label>
+              <label class="field"><span>Confirm new password</span><input type="password" name="confirm" autocomplete="new-password" minlength="8" required></label>
+              <button type="submit" class="btn btn--primary btn--sm">Update password</button>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </details>
+
           <div class="tabs" data-tabs>
             <div class="tabs__list" role="tablist" aria-label="Hire admin">
               <button type="button" class="tab is-active" role="tab" id="tab-a-equipment" aria-controls="panel-a-equipment" aria-selected="true">Equipment</button>

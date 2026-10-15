@@ -1529,6 +1529,13 @@ p { text-wrap: pretty; }
 .listing-contact__btns { display: flex; flex-wrap: wrap; gap: 8px; }
 .listing-form { display: grid; gap: 14px; max-width: 640px; }
 .listing-rules { background: #fff7e6; padding: 10px 12px; border-radius: 10px; }
+/* The post form sits in the navy .post-help__box (color: #fff): keep its white card readable. */
+.post-help__box .listing-form { color: var(--ink); }
+.post-help__box .listing-form p { color: var(--ink); max-width: none; }
+.post-help__box .listing-form p.note { color: var(--muted); }
+.post-help__box .listing-form a { color: var(--brand-text); text-decoration: underline; }
+.post-help__box .listing-form .form-status { color: #15803d; }
+.post-help__box .listing-form .form-status.is-error { color: #d93025; }
 .my-listings { list-style: none; padding: 0; margin: 0 0 12px; display: grid; gap: 10px; }
 .my-listings li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding: 10px 0; border-bottom: 1px solid var(--line); }
 .my-listings__btns { display: flex; gap: 6px; flex-wrap: wrap; }

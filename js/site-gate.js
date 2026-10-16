@@ -12,9 +12,8 @@
  * Note: a client-side lock to keep the site private until launch. Data security stays in Supabase RLS.
  */
 (function () {
-  /* Gate DISABLED 13 Oct 2026 (site is public). To re-enable, restore:
-     var GATED_HOSTS = ['realtimetradersbrisbane.au', 'www.realtimetradersbrisbane.au']; */
-  var GATED_HOSTS = [];
+  /* Gate RE-ENABLED 16 Oct 2026 (admin-only). To unlock again: var GATED_HOSTS = []; */
+  var GATED_HOSTS = ['realtimetradersbrisbane.au', 'www.realtimetradersbrisbane.au'];
   var LIVE_HOSTS = ['realtimetradersbrisbane.au', 'www.realtimetradersbrisbane.au'];
   var KEY = 'rtt_site_gate';
   var VISIT_KEY = 'rtt_visit_counted';

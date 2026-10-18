@@ -2,6 +2,25 @@
 (function () {
   "use strict";
 
+  /* ---------- Site-wide "for sale" strip ----------
+     To remove: delete this block (or set FOR_SALE = false). Sits in normal page flow, so it never covers the nav. */
+  var FOR_SALE = true;
+  (function () {
+    if (!FOR_SALE || document.querySelector(".sale-strip")) return;
+    var st = document.createElement("style");
+    st.textContent = ".sale-strip{background:#011839;color:#fff;font-size:14px;font-weight:500;line-height:1.4;padding:7px 16px;text-align:center;border-bottom:1px solid rgba(255,255,255,.18)}" +
+      ".sale-strip a{color:#fdd323;font-weight:700;text-decoration:underline;text-underline-offset:2px;word-break:break-word}" +
+      ".sale-strip a:hover{color:#fff}.sale-strip a:focus-visible{outline:2px solid #fdd323;outline-offset:2px}" +
+      "@media (max-width:480px){.sale-strip{font-size:13px;padding:6px 12px}}";
+    document.head.appendChild(st);
+    var bar = document.createElement("div");
+    bar.className = "sale-strip"; bar.setAttribute("role", "region"); bar.setAttribute("aria-label", "Site for sale");
+    bar.innerHTML = 'This website and domain are for sale. Enquiries: <a href="mailto:admin@bridge-bite-co.com">admin@bridge-bite-co.com</a>';
+    var first = document.body.firstElementChild;
+    if (first && first.classList.contains("skip-link")) document.body.insertBefore(bar, first.nextSibling);
+    else document.body.insertBefore(bar, document.body.firstChild);
+  })();
+
   /* ---------- Supabase auth links (invite / recovery / magic link) ----------
      Links that fall back to the Site URL land here; hand them to the admin sign-in page,
      which knows how to finish them. Hash and query are kept intact. */
